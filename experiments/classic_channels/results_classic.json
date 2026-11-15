@@ -1,0 +1,1844 @@
+{
+ "meta": {
+  "rule_coverage": {
+   "questions_with_any_rule": 48,
+   "mean_fired_per_question": 3.7,
+   "governing_boosted_in_pool": 36
+  },
+  "thesaurus_changed_questions": 45,
+  "numeric_coverage": {
+   "questions_with_numbers": 36,
+   "governing_scored": 15
+  },
+  "editdist_weak_matches": 1896,
+  "summaries": {
+   "baseline": {
+    "top3": 29,
+    "mean_rank": 3.88,
+    "median_rank": 2.0,
+    "top3_entries_vs_baseline": 0,
+    "top3_exits_vs_baseline": 0
+   },
+   "rule": {
+    "top3": 14,
+    "mean_rank": 7.79,
+    "median_rank": 7.0,
+    "top3_entries_vs_baseline": 2,
+    "top3_exits_vs_baseline": 17
+   },
+   "rule_rrf": {
+    "top3": 23,
+    "mean_rank": 4.88,
+    "median_rank": 3.0,
+    "top3_entries_vs_baseline": 2,
+    "top3_exits_vs_baseline": 8
+   },
+   "thesaurus": {
+    "top3": 29,
+    "mean_rank": 3.93,
+    "median_rank": 2.0,
+    "top3_entries_vs_baseline": 0,
+    "top3_exits_vs_baseline": 0
+   },
+   "thesaurus_rrf": {
+    "top3": 29,
+    "mean_rank": 3.9,
+    "median_rank": 2.0,
+    "top3_entries_vs_baseline": 0,
+    "top3_exits_vs_baseline": 0
+   },
+   "numeric": {
+    "top3": 18,
+    "mean_rank": 6.45,
+    "median_rank": 5.0,
+    "top3_entries_vs_baseline": 0,
+    "top3_exits_vs_baseline": 11
+   },
+   "numeric_rrf": {
+    "top3": 27,
+    "mean_rank": 4.26,
+    "median_rank": 2.0,
+    "top3_entries_vs_baseline": 0,
+    "top3_exits_vs_baseline": 2
+   },
+   "editdist": {
+    "top3": 29,
+    "mean_rank": 3.81,
+    "median_rank": 2.0,
+    "top3_entries_vs_baseline": 0,
+    "top3_exits_vs_baseline": 0
+   },
+   "editdist_rrf": {
+    "top3": 29,
+    "mean_rank": 3.83,
+    "median_rank": 2.0,
+    "top3_entries_vs_baseline": 0,
+    "top3_exits_vs_baseline": 0
+   },
+   "minhash": {
+    "top3": 18,
+    "mean_rank": 8.64,
+    "median_rank": 6.0,
+    "top3_entries_vs_baseline": 3,
+    "top3_exits_vs_baseline": 14
+   },
+   "minhash_rrf": {
+    "top3": 25,
+    "mean_rank": 4.86,
+    "median_rank": 3.0,
+    "top3_entries_vs_baseline": 2,
+    "top3_exits_vs_baseline": 6
+   },
+   "simhash": {
+    "top3": 17,
+    "mean_rank": 10.55,
+    "median_rank": 8.0,
+    "top3_entries_vs_baseline": 1,
+    "top3_exits_vs_baseline": 13
+   },
+   "simhash_rrf": {
+    "top3": 22,
+    "mean_rank": 5.69,
+    "median_rank": 2.5,
+    "top3_entries_vs_baseline": 1,
+    "top3_exits_vs_baseline": 8
+   }
+  },
+  "method": "土俵: fifty_measurement 50問・プール30条文・原文のみ。baseline は measure50 の score_docs を複製し results50.json の rank_original と42問全照合一致を確認。順位は (-score, プール順)。合わせ技は RRF k=60。プール外8問は全条件 rank=null、top-3 は分母50・平均順位はプール内42問。"
+ },
+ "questions": {
+  "2017-26": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "suppl0-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 24,
+    "rule_rrf": 11,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 1,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 13,
+    "minhash_rrf": 4,
+    "simhash": 2,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_ホテル旅館",
+     "用途_店舗飲食",
+     "行為_新築",
+     "領域_バリアフリー"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 2,
+    "edit_qwords": 17
+   }
+  },
+  "2017-6": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "108-3",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 20,
+    "rule": 20,
+    "rule_rrf": 20,
+    "thesaurus": 20,
+    "thesaurus_rrf": 20,
+    "numeric": 20,
+    "numeric_rrf": 20,
+    "editdist": 20,
+    "editdist_rrf": 20,
+    "minhash": 3,
+    "minhash_rrf": 12,
+    "simhash": 29,
+    "simhash_rrf": 25
+   },
+   "details": {
+    "rule_fired": [
+     "防火_区画"
+    ],
+    "thesaurus_changed": false,
+    "n_question_numbers": 0,
+    "edit_qwords": 25
+   }
+  },
+  "2017-2": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 3,
+    "rule_rrf": 2,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 3,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 14,
+    "minhash_rrf": 3,
+    "simhash": 6,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_工場倉庫",
+     "階数_地階",
+     "階数_高層",
+     "設備_昇降機",
+     "制限_斜線日影",
+     "制限_容積建蔽"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 2,
+    "edit_qwords": 29
+   }
+  },
+  "2017-29": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "rule": null,
+    "rule_rrf": null,
+    "thesaurus": null,
+    "thesaurus_rrf": null,
+    "numeric": null,
+    "numeric_rrf": null,
+    "editdist": null,
+    "editdist_rrf": null,
+    "minhash": null,
+    "minhash_rrf": null,
+    "simhash": null,
+    "simhash_rrf": null
+   },
+   "details": {
+    "rule_fired": [
+     "設備_給排水",
+     "領域_都市計画",
+     "領域_建築士"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 3,
+    "edit_qwords": 22
+   }
+  },
+  "2017-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "82",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "rule": 7,
+    "rule_rrf": 3,
+    "thesaurus": 2,
+    "thesaurus_rrf": 2,
+    "numeric": 7,
+    "numeric_rrf": 3,
+    "editdist": 2,
+    "editdist_rrf": 2,
+    "minhash": 4,
+    "minhash_rrf": 1,
+    "simhash": 2,
+    "simhash_rrf": 2
+   },
+   "details": {
+    "rule_fired": [
+     "階数_地階",
+     "構造_計算"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 1,
+    "edit_qwords": 24
+   }
+  },
+  "2018-8": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "121",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "rule": 4,
+    "rule_rrf": 2,
+    "thesaurus": 2,
+    "thesaurus_rrf": 2,
+    "numeric": 3,
+    "numeric_rrf": 2,
+    "editdist": 2,
+    "editdist_rrf": 2,
+    "minhash": 2,
+    "minhash_rrf": 2,
+    "simhash": 2,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_共同住宅",
+     "用途_店舗飲食",
+     "用途_事務所",
+     "構造_耐火",
+     "設備_昇降機",
+     "防火_区画",
+     "防火_避難階段"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 12,
+    "edit_qwords": 30
+   }
+  },
+  "2018-5": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "28",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "rule": 9,
+    "rule_rrf": 3,
+    "thesaurus": 2,
+    "thesaurus_rrf": 2,
+    "numeric": 17,
+    "numeric_rrf": 9,
+    "editdist": 2,
+    "editdist_rrf": 2,
+    "minhash": 3,
+    "minhash_rrf": 2,
+    "simhash": 26,
+    "simhash_rrf": 10
+   },
+   "details": {
+    "rule_fired": [
+     "用途_劇場集会",
+     "用途_店舗飲食",
+     "設備_換気"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 8,
+    "edit_qwords": 13
+   }
+  },
+  "2018-24": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "29",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 9,
+    "rule_rrf": 4,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 1,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 8,
+    "minhash_rrf": 3,
+    "simhash": 1,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "階数_地階",
+     "行為_新築",
+     "行為_改築",
+     "行為_用途変更",
+     "領域_都市計画"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 2,
+    "edit_qwords": 24
+   }
+  },
+  "2018-4": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "90-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 12,
+    "rule_rrf": 5,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 8,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 1,
+    "minhash_rrf": 1,
+    "simhash": 1,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_病院",
+     "用途_店舗飲食",
+     "行為_新築",
+     "設備_昇降機",
+     "設備_非常用照明",
+     "領域_建築士"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 6,
+    "edit_qwords": 31
+   }
+  },
+  "2018-22": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "24",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 1,
+    "rule_rrf": 1,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 3,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 3,
+    "minhash_rrf": 1,
+    "simhash": 1,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_事務所",
+     "領域_建築士"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 2,
+    "edit_qwords": 22
+   }
+  },
+  "2019-24": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "29",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 7,
+    "rule_rrf": 4,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 2,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 10,
+    "minhash_rrf": 3,
+    "simhash": 1,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_病院",
+     "用途_店舗飲食",
+     "構造_木造",
+     "階数_地階",
+     "行為_新築",
+     "領域_都市計画"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 3,
+    "edit_qwords": 20
+   }
+  },
+  "2019-29": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "80-3",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 8,
+    "rule_rrf": 2,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 1,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 18,
+    "minhash_rrf": 8,
+    "simhash": 19,
+    "simhash_rrf": 4
+   },
+   "details": {
+    "rule_fired": [
+     "領域_耐震"
+    ],
+    "thesaurus_changed": false,
+    "n_question_numbers": 0,
+    "edit_qwords": 3
+   }
+  },
+  "2019-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "69",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "rule": null,
+    "rule_rrf": null,
+    "thesaurus": null,
+    "thesaurus_rrf": null,
+    "numeric": null,
+    "numeric_rrf": null,
+    "editdist": null,
+    "editdist_rrf": null,
+    "minhash": null,
+    "minhash_rrf": null,
+    "simhash": null,
+    "simhash_rrf": null
+   },
+   "details": {
+    "rule_fired": [
+     "領域_都市計画"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 1,
+    "edit_qwords": 22
+   }
+  },
+  "2019-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 3,
+    "rule": 12,
+    "rule_rrf": 5,
+    "thesaurus": 3,
+    "thesaurus_rrf": 3,
+    "numeric": 8,
+    "numeric_rrf": 1,
+    "editdist": 3,
+    "editdist_rrf": 3,
+    "minhash": 3,
+    "minhash_rrf": 1,
+    "simhash": 28,
+    "simhash_rrf": 13
+   },
+   "details": {
+    "rule_fired": [
+     "用途_病院",
+     "用途_共同住宅",
+     "用途_事務所",
+     "用途_工場倉庫",
+     "行為_新築",
+     "行為_増築",
+     "行為_用途変更",
+     "行為_大規模修繕模様替"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 8,
+    "edit_qwords": 21
+   }
+  },
+  "2019-19": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 2,
+    "rule_rrf": 1,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 1,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 13,
+    "minhash_rrf": 5,
+    "simhash": 16,
+    "simhash_rrf": 7
+   },
+   "details": {
+    "rule_fired": [
+     "用途_共同住宅",
+     "構造_木造",
+     "行為_新築",
+     "手続_確認申請",
+     "設備_昇降機",
+     "制限_容積建蔽"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 0,
+    "edit_qwords": 33
+   }
+  },
+  "2020-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "44",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 6,
+    "rule": 11,
+    "rule_rrf": 8,
+    "thesaurus": 6,
+    "thesaurus_rrf": 6,
+    "numeric": 6,
+    "numeric_rrf": 6,
+    "editdist": 6,
+    "editdist_rrf": 6,
+    "minhash": 3,
+    "minhash_rrf": 3,
+    "simhash": 1,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_店舗飲食",
+     "階数_地階"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 0,
+    "edit_qwords": 15
+   }
+  },
+  "2020-2": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "135-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "rule": 16,
+    "rule_rrf": 7,
+    "thesaurus": 2,
+    "thesaurus_rrf": 2,
+    "numeric": 2,
+    "numeric_rrf": 2,
+    "editdist": 2,
+    "editdist_rrf": 2,
+    "minhash": 1,
+    "minhash_rrf": 1,
+    "simhash": 4,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_店舗飲食",
+     "階数_高層",
+     "制限_斜線日影"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 0,
+    "edit_qwords": 23
+   }
+  },
+  "2020-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 4,
+    "rule": 4,
+    "rule_rrf": 4,
+    "thesaurus": 4,
+    "thesaurus_rrf": 4,
+    "numeric": 4,
+    "numeric_rrf": 4,
+    "editdist": 4,
+    "editdist_rrf": 4,
+    "minhash": 27,
+    "minhash_rrf": 13,
+    "simhash": 12,
+    "simhash_rrf": 5
+   },
+   "details": {
+    "rule_fired": [
+     "構造_耐火"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 0,
+    "edit_qwords": 22
+   }
+  },
+  "2020-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 7,
+    "rule": 12,
+    "rule_rrf": 10,
+    "thesaurus": 8,
+    "thesaurus_rrf": 8,
+    "numeric": 7,
+    "numeric_rrf": 7,
+    "editdist": 7,
+    "editdist_rrf": 7,
+    "minhash": 29,
+    "minhash_rrf": 18,
+    "simhash": 25,
+    "simhash_rrf": 12
+   },
+   "details": {
+    "rule_fired": [
+     "用途_共同住宅",
+     "用途_劇場集会",
+     "構造_木造",
+     "行為_用途変更",
+     "行為_大規模修繕模様替",
+     "設備_昇降機"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 0,
+    "edit_qwords": 16
+   }
+  },
+  "2020-7": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "120",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 4,
+    "rule_rrf": 2,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 1,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 1,
+    "minhash_rrf": 1,
+    "simhash": 8,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_共同住宅",
+     "用途_店舗飲食",
+     "構造_耐火",
+     "防火_避難階段"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 0,
+    "edit_qwords": 26
+   }
+  },
+  "2021-8": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "122",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 3,
+    "rule": 3,
+    "rule_rrf": 1,
+    "thesaurus": 3,
+    "thesaurus_rrf": 3,
+    "numeric": 9,
+    "numeric_rrf": 2,
+    "editdist": 3,
+    "editdist_rrf": 3,
+    "minhash": 2,
+    "minhash_rrf": 2,
+    "simhash": 27,
+    "simhash_rrf": 13
+   },
+   "details": {
+    "rule_fired": [
+     "用途_店舗飲食",
+     "構造_耐火",
+     "構造_準耐火",
+     "設備_排煙",
+     "防火_避難階段"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 6,
+    "edit_qwords": 14
+   }
+  },
+  "2021-17": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "68-4",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 1,
+    "rule_rrf": 1,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 1,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 8,
+    "minhash_rrf": 3,
+    "simhash": 15,
+    "simhash_rrf": 5
+   },
+   "details": {
+    "rule_fired": [
+     "行為_新築",
+     "制限_容積建蔽"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 0,
+    "edit_qwords": 8
+   }
+  },
+  "2021-20": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "68-7",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 6,
+    "rule": 8,
+    "rule_rrf": 4,
+    "thesaurus": 7,
+    "thesaurus_rrf": 6,
+    "numeric": 8,
+    "numeric_rrf": 6,
+    "editdist": 7,
+    "editdist_rrf": 6,
+    "minhash": 7,
+    "minhash_rrf": 4,
+    "simhash": 29,
+    "simhash_rrf": 19
+   },
+   "details": {
+    "rule_fired": [
+     "用途_共同住宅",
+     "制限_容積建蔽",
+     "制限_接道道路",
+     "領域_都市計画"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 2,
+    "edit_qwords": 25
+   }
+  },
+  "2021-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 4,
+    "rule": 2,
+    "rule_rrf": 2,
+    "thesaurus": 4,
+    "thesaurus_rrf": 4,
+    "numeric": 5,
+    "numeric_rrf": 4,
+    "editdist": 4,
+    "editdist_rrf": 4,
+    "minhash": 19,
+    "minhash_rrf": 8,
+    "simhash": 14,
+    "simhash_rrf": 8
+   },
+   "details": {
+    "rule_fired": [
+     "用途_共同住宅"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 2,
+    "edit_qwords": 10
+   }
+  },
+  "2021-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "56-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 1,
+    "rule_rrf": 1,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 8,
+    "numeric_rrf": 2,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 1,
+    "minhash_rrf": 1,
+    "simhash": 8,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "階数_高層",
+     "行為_新築",
+     "制限_斜線日影"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 4,
+    "edit_qwords": 15
+   }
+  },
+  "2022-7": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "121",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 2,
+    "rule_rrf": 1,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 2,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 12,
+    "minhash_rrf": 4,
+    "simhash": 9,
+    "simhash_rrf": 4
+   },
+   "details": {
+    "rule_fired": [
+     "用途_共同住宅",
+     "用途_ホテル旅館",
+     "用途_店舗飲食",
+     "用途_事務所",
+     "構造_耐火",
+     "防火_避難階段"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 11,
+    "edit_qwords": 21
+   }
+  },
+  "2022-23": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "23",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "rule": null,
+    "rule_rrf": null,
+    "thesaurus": null,
+    "thesaurus_rrf": null,
+    "numeric": null,
+    "numeric_rrf": null,
+    "editdist": null,
+    "editdist_rrf": null,
+    "minhash": null,
+    "minhash_rrf": null,
+    "simhash": null,
+    "simhash_rrf": null
+   },
+   "details": {
+    "rule_fired": [
+     "領域_建築士"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 0,
+    "edit_qwords": 13
+   }
+  },
+  "2022-21": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "rule": 2,
+    "rule_rrf": 2,
+    "thesaurus": 2,
+    "thesaurus_rrf": 2,
+    "numeric": 2,
+    "numeric_rrf": 2,
+    "editdist": 2,
+    "editdist_rrf": 2,
+    "minhash": 3,
+    "minhash_rrf": 3,
+    "simhash": 3,
+    "simhash_rrf": 2
+   },
+   "details": {
+    "rule_fired": [
+     "領域_建築士"
+    ],
+    "thesaurus_changed": false,
+    "n_question_numbers": 0,
+    "edit_qwords": 14
+   }
+  },
+  "2022-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "56",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 24,
+    "rule": 12,
+    "rule_rrf": 18,
+    "thesaurus": 24,
+    "thesaurus_rrf": 24,
+    "numeric": 24,
+    "numeric_rrf": 24,
+    "editdist": 20,
+    "editdist_rrf": 22,
+    "minhash": 8,
+    "minhash_rrf": 16,
+    "simhash": 30,
+    "simhash_rrf": 28
+   },
+   "details": {
+    "rule_fired": [
+     "階数_高層",
+     "行為_新築",
+     "制限_斜線日影"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 0,
+    "edit_qwords": 13
+   }
+  },
+  "2022-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "43",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 6,
+    "rule": 6,
+    "rule_rrf": 6,
+    "thesaurus": 6,
+    "thesaurus_rrf": 6,
+    "numeric": 4,
+    "numeric_rrf": 4,
+    "editdist": 6,
+    "editdist_rrf": 6,
+    "minhash": 3,
+    "minhash_rrf": 2,
+    "simhash": 11,
+    "simhash_rrf": 5
+   },
+   "details": {
+    "rule_fired": [],
+    "thesaurus_changed": true,
+    "n_question_numbers": 5,
+    "edit_qwords": 16
+   }
+  },
+  "2023-8": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "87-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 1,
+    "rule_rrf": 1,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 1,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 2,
+    "minhash_rrf": 1,
+    "simhash": 1,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_病院",
+     "用途_学校",
+     "用途_店舗飲食",
+     "設備_排煙",
+     "防火_内装"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 2,
+    "edit_qwords": 26
+   }
+  },
+  "2023-15": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 8,
+    "rule_rrf": 2,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 11,
+    "numeric_rrf": 3,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 7,
+    "minhash_rrf": 2,
+    "simhash": 2,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_工場倉庫",
+     "行為_新築"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 5,
+    "edit_qwords": 16
+   }
+  },
+  "2023-19": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "86",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 21,
+    "rule_rrf": 9,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 5,
+    "numeric_rrf": 3,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 10,
+    "minhash_rrf": 3,
+    "simhash": 1,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_ホテル旅館",
+     "構造_木造",
+     "行為_増築",
+     "手続_確認申請",
+     "設備_昇降機"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 1,
+    "edit_qwords": 28
+   }
+  },
+  "2023-9": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "128-5",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 7,
+    "rule_rrf": 2,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 3,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 2,
+    "minhash_rrf": 1,
+    "simhash": 1,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_病院",
+     "用途_事務所",
+     "構造_耐火",
+     "防火_内装"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 4,
+    "edit_qwords": 16
+   }
+  },
+  "2023-26": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "17",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "rule": null,
+    "rule_rrf": null,
+    "thesaurus": null,
+    "thesaurus_rrf": null,
+    "numeric": null,
+    "numeric_rrf": null,
+    "editdist": null,
+    "editdist_rrf": null,
+    "minhash": null,
+    "minhash_rrf": null,
+    "simhash": null,
+    "simhash_rrf": null
+   },
+   "details": {
+    "rule_fired": [
+     "用途_共同住宅",
+     "用途_店舗飲食",
+     "用途_事務所",
+     "行為_新築",
+     "領域_バリアフリー"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 1,
+    "edit_qwords": 13
+   }
+  },
+  "2024-28": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "12",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 8,
+    "rule": 10,
+    "rule_rrf": 7,
+    "thesaurus": 8,
+    "thesaurus_rrf": 8,
+    "numeric": 15,
+    "numeric_rrf": 12,
+    "editdist": 8,
+    "editdist_rrf": 8,
+    "minhash": 21,
+    "minhash_rrf": 12,
+    "simhash": 9,
+    "simhash_rrf": 6
+   },
+   "details": {
+    "rule_fired": [
+     "用途_店舗飲食",
+     "構造_木造",
+     "構造_耐火",
+     "構造_準耐火",
+     "行為_新築",
+     "構造_計算",
+     "領域_建築士"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 7,
+    "edit_qwords": 28
+   }
+  },
+  "2024-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "rule": 1,
+    "rule_rrf": 2,
+    "thesaurus": 2,
+    "thesaurus_rrf": 2,
+    "numeric": 3,
+    "numeric_rrf": 1,
+    "editdist": 2,
+    "editdist_rrf": 2,
+    "minhash": 24,
+    "minhash_rrf": 8,
+    "simhash": 25,
+    "simhash_rrf": 12
+   },
+   "details": {
+    "rule_fired": [
+     "構造_耐火",
+     "行為_新築"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 5,
+    "edit_qwords": 19
+   }
+  },
+  "2024-25": {
+   "governing": {
+    "law_id": "336CO0000000037",
+    "law_name": "消防法施行令",
+    "art": "10",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "rule": null,
+    "rule_rrf": null,
+    "thesaurus": null,
+    "thesaurus_rrf": null,
+    "numeric": null,
+    "numeric_rrf": null,
+    "editdist": null,
+    "editdist_rrf": null,
+    "minhash": null,
+    "minhash_rrf": null,
+    "simhash": null,
+    "simhash_rrf": null
+   },
+   "details": {
+    "rule_fired": [
+     "用途_共同住宅",
+     "用途_店舗飲食",
+     "用途_工場倉庫",
+     "構造_耐火",
+     "領域_消防"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 6,
+    "edit_qwords": 24
+   }
+  },
+  "2024-26": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "17",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "rule": null,
+    "rule_rrf": null,
+    "thesaurus": null,
+    "thesaurus_rrf": null,
+    "numeric": null,
+    "numeric_rrf": null,
+    "editdist": null,
+    "editdist_rrf": null,
+    "minhash": null,
+    "minhash_rrf": null,
+    "simhash": null,
+    "simhash_rrf": null
+   },
+   "details": {
+    "rule_fired": [
+     "用途_ホテル旅館",
+     "行為_新築",
+     "設備_昇降機",
+     "領域_バリアフリー"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 3,
+    "edit_qwords": 19
+   }
+  },
+  "2024-6": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "113",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "rule": 10,
+    "rule_rrf": 5,
+    "thesaurus": 2,
+    "thesaurus_rrf": 2,
+    "numeric": 14,
+    "numeric_rrf": 6,
+    "editdist": 2,
+    "editdist_rrf": 2,
+    "minhash": 1,
+    "minhash_rrf": 1,
+    "simhash": 2,
+    "simhash_rrf": 2
+   },
+   "details": {
+    "rule_fired": [
+     "用途_学校",
+     "用途_事務所",
+     "構造_木造",
+     "構造_耐火",
+     "構造_準耐火",
+     "階数_地階",
+     "設備_給排水",
+     "防火_区画",
+     "領域_消防"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 3,
+    "edit_qwords": 27
+   }
+  },
+  "2025-23": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "43",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 7,
+    "rule": 2,
+    "rule_rrf": 3,
+    "thesaurus": 7,
+    "thesaurus_rrf": 7,
+    "numeric": 7,
+    "numeric_rrf": 7,
+    "editdist": 7,
+    "editdist_rrf": 7,
+    "minhash": 4,
+    "minhash_rrf": 5,
+    "simhash": 18,
+    "simhash_rrf": 11
+   },
+   "details": {
+    "rule_fired": [
+     "行為_新築",
+     "設備_給排水",
+     "領域_都市計画"
+    ],
+    "thesaurus_changed": false,
+    "n_question_numbers": 0,
+    "edit_qwords": 23
+   }
+  },
+  "2025-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "42",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 9,
+    "rule_rrf": 3,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 1,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 1,
+    "minhash_rrf": 1,
+    "simhash": 12,
+    "simhash_rrf": 3
+   },
+   "details": {
+    "rule_fired": [
+     "用途_共同住宅",
+     "行為_新築"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 5,
+    "edit_qwords": 17
+   }
+  },
+  "2025-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "36",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "rule": null,
+    "rule_rrf": null,
+    "thesaurus": null,
+    "thesaurus_rrf": null,
+    "numeric": null,
+    "numeric_rrf": null,
+    "editdist": null,
+    "editdist_rrf": null,
+    "minhash": null,
+    "minhash_rrf": null,
+    "simhash": null,
+    "simhash_rrf": null
+   },
+   "details": {
+    "rule_fired": [],
+    "thesaurus_changed": true,
+    "n_question_numbers": 4,
+    "edit_qwords": 13
+   }
+  },
+  "2025-9": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "129-13-3",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 5,
+    "rule": 6,
+    "rule_rrf": 4,
+    "thesaurus": 5,
+    "thesaurus_rrf": 5,
+    "numeric": 6,
+    "numeric_rrf": 4,
+    "editdist": 5,
+    "editdist_rrf": 5,
+    "minhash": 27,
+    "minhash_rrf": 13,
+    "simhash": 18,
+    "simhash_rrf": 8
+   },
+   "details": {
+    "rule_fired": [
+     "用途_店舗飲食",
+     "用途_事務所",
+     "構造_耐火",
+     "階数_地階",
+     "設備_昇降機",
+     "防火_内装"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 7,
+    "edit_qwords": 25
+   }
+  },
+  "2025-5": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "23",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "rule": 1,
+    "rule_rrf": 1,
+    "thesaurus": 1,
+    "thesaurus_rrf": 1,
+    "numeric": 5,
+    "numeric_rrf": 1,
+    "editdist": 1,
+    "editdist_rrf": 1,
+    "minhash": 1,
+    "minhash_rrf": 1,
+    "simhash": 1,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_共同住宅",
+     "防火_避難階段"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 1,
+    "edit_qwords": 8
+   }
+  },
+  "2026-7": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "rule": 1,
+    "rule_rrf": 1,
+    "thesaurus": 2,
+    "thesaurus_rrf": 2,
+    "numeric": 13,
+    "numeric_rrf": 3,
+    "editdist": 2,
+    "editdist_rrf": 2,
+    "minhash": 5,
+    "minhash_rrf": 2,
+    "simhash": 3,
+    "simhash_rrf": 2
+   },
+   "details": {
+    "rule_fired": [
+     "用途_病院",
+     "用途_ホテル旅館",
+     "構造_耐火",
+     "設備_排煙",
+     "防火_区画"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 5,
+    "edit_qwords": 23
+   }
+  },
+  "2026-25": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "suppl0-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 8,
+    "rule": 28,
+    "rule_rrf": 17,
+    "thesaurus": 8,
+    "thesaurus_rrf": 8,
+    "numeric": 11,
+    "numeric_rrf": 9,
+    "editdist": 8,
+    "editdist_rrf": 8,
+    "minhash": 17,
+    "minhash_rrf": 11,
+    "simhash": 15,
+    "simhash_rrf": 11
+   },
+   "details": {
+    "rule_fired": [
+     "用途_劇場集会",
+     "用途_店舗飲食",
+     "行為_新築",
+     "領域_バリアフリー"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 2,
+    "edit_qwords": 19
+   }
+  },
+  "2026-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "82-4",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 15,
+    "rule": 15,
+    "rule_rrf": 15,
+    "thesaurus": 15,
+    "thesaurus_rrf": 15,
+    "numeric": 16,
+    "numeric_rrf": 16,
+    "editdist": 15,
+    "editdist_rrf": 15,
+    "minhash": 9,
+    "minhash_rrf": 11,
+    "simhash": 4,
+    "simhash_rrf": 5
+   },
+   "details": {
+    "rule_fired": [
+     "階数_地階",
+     "構造_計算"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 2,
+    "edit_qwords": 21
+   }
+  },
+  "2026-4": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "85",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "rule": null,
+    "rule_rrf": null,
+    "thesaurus": null,
+    "thesaurus_rrf": null,
+    "numeric": null,
+    "numeric_rrf": null,
+    "editdist": null,
+    "editdist_rrf": null,
+    "minhash": null,
+    "minhash_rrf": null,
+    "simhash": null,
+    "simhash_rrf": null
+   },
+   "details": {
+    "rule_fired": [
+     "用途_病院",
+     "用途_店舗飲食",
+     "行為_新築",
+     "行為_増築",
+     "手続_定期報告"
+    ],
+    "thesaurus_changed": false,
+    "n_question_numbers": 0,
+    "edit_qwords": 17
+   }
+  },
+  "2026-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 3,
+    "rule": 5,
+    "rule_rrf": 3,
+    "thesaurus": 3,
+    "thesaurus_rrf": 3,
+    "numeric": 2,
+    "numeric_rrf": 2,
+    "editdist": 3,
+    "editdist_rrf": 3,
+    "minhash": 13,
+    "minhash_rrf": 7,
+    "simhash": 1,
+    "simhash_rrf": 1
+   },
+   "details": {
+    "rule_fired": [
+     "用途_共同住宅",
+     "行為_新築",
+     "行為_増築",
+     "手続_中間検査",
+     "構造_計算"
+    ],
+    "thesaurus_changed": true,
+    "n_question_numbers": 4,
+    "edit_qwords": 24
+   }
+  }
+ }
+}

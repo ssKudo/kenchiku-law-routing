@@ -1,0 +1,4905 @@
+{
+ "meta": {
+  "n_questions": 50,
+  "ruler": "TF-IDF (measure50 score_docs replication; engine idf/avg over full corpus)",
+  "prf": "1 round; top-3 pool articles as feedback; up to 20 added words; additions only",
+  "prf_vocab": "engine TERMS + word-tag vocabulary (article-side words only)",
+  "metadata": "chapter/section (lawapp data) + fingerprint words present in article text (procedure/actor/act/use lists) + canonical numeric tokens (extract_numbers)",
+  "conditions": [
+   "prf_text_orig",
+   "prf_tag_orig",
+   "prf_tag_fulltags",
+   "meta_append",
+   "meta_rerank"
+  ],
+  "references": {
+   "baseline": "29/3.88 (results50)",
+   "raw_fulltags": "31/3.48 (tag_counting cond.4)",
+   "safe_exp_fulltags": "31/3.74 (tag_counting cond.2)"
+  },
+  "diagnostics": {
+   "prf": {
+    "governing_in_feedback_top3": "29/42",
+    "prf_tag_rank_change_when_governing_in_feedback": "+0.48 (悪化)",
+    "prf_tag_rank_change_when_not": "+0.92 (悪化)",
+    "added_words_hitting_governing": "tag版 平均5.8/20語 / text版 平均10.7/20語（辞書拡張の正解タグ新規ヒット +0.9語と対照的に、橋自体は届くようになった）"
+   },
+   "meta_append_vs_cond4": {
+    "top3_entries": 1,
+    "top3_exits": 1,
+    "improved": 3,
+    "worsened": 1
+   },
+   "meta_rerank": {
+    "governing_mean_matches": 2.38,
+    "reranked_top1_mean_matches": 3.56,
+    "in_exit_questions": "正解の一致数 平均0.90 vs 1位 平均3.00 (n=10)",
+    "mean_features_fired": "3.8/42",
+    "governing_in_baseline_top10": "39/42"
+   },
+   "metadata_stats": {
+    "mean_chars": 42,
+    "with_chapter": "431/463",
+    "with_section": "176/463",
+    "mean_fingerprint_words": 3.6,
+    "mean_numeric_tokens": 1.9
+   }
+  }
+ },
+ "questions": {
+  "2017-26": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "suppl0-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "路外駐車場",
+    "管理",
+    "特定路外駐車場",
+    "条例",
+    "新設",
+    "特定建築物",
+    "新設特定路外駐車場",
+    "路外駐車場管理者",
+    "路外駐車場管理者等",
+    "特別特定建築物",
+    "高齢者身体障害者等",
+    "路外駐車場移動等円滑化基準",
+    "広報",
+    "自然的社会的条件",
+    "広報活動",
+    "啓発",
+    "啓発活動",
+    "管理者等",
+    "管理者",
+    "建築主等"
+   ],
+   "prf_added_tag": [
+    "情報提供",
+    "維持義務",
+    "バリアフリー",
+    "引下げ",
+    "旧法二本",
+    "適合させなければならない",
+    "車椅子使用者",
+    "車椅子使用者用駐車施設",
+    "広報",
+    "努力義務",
+    "維持しなければならない",
+    "自然的社会的条件",
+    "設置時",
+    "車椅子用駐車スペース",
+    "路外駐車場",
+    "啓発",
+    "かごの奥行き",
+    "病院劇場百貨店",
+    "百貨店",
+    "廃止法"
+   ],
+   "prf_top3": [
+    [
+     "418AC0000000091",
+     "suppl0-2"
+    ],
+    [
+     "418AC0000000091",
+     "11"
+    ],
+    [
+     "418AC0000000091",
+     "14"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 2,
+    "safe_exp_fulltags": 4,
+    "prf_text_orig": 2,
+    "prf_tag_orig": 2,
+    "prf_tag_fulltags": 6,
+    "meta_append": 2,
+    "meta_rerank": 4
+   },
+   "governing_score_prf_text_orig": 1772.23,
+   "governing_score_prf_tag_orig": 1238.16,
+   "governing_score_prf_tag_fulltags": 1152.34,
+   "governing_score_meta_append": 1069.74,
+   "rerank_diag": {
+    "n_features_fired": 4,
+    "fired": [
+     "用途_ホテル旅館",
+     "用途_店舗飲食",
+     "行為_新築",
+     "領域_バリアフリー"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "領域_バリアフリー"
+    ],
+    "top1_key": [
+     "418AC0000000091",
+     "2"
+    ],
+    "top1_matches": 4
+   }
+  },
+  "2017-6": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "108-3",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "仕上げ",
+    "高さ",
+    "材料",
+    "天井",
+    "大臣",
+    "国土交通大臣",
+    "限る",
+    "大臣が定める",
+    "特定主要構造部",
+    "排煙",
+    "国土交通大臣が定める",
+    "大臣が定める方法",
+    "天井の仕上げ",
+    "確かめること",
+    "床面",
+    "耐火構造",
+    "避難階",
+    "定め",
+    "降下",
+    "床面積"
+   ],
+   "prf_added_tag": [
+    "階避難安全性能",
+    "準耐火",
+    "不燃材料",
+    "計算で安全を確かめる",
+    "国土交通大臣の認定",
+    "準耐火構造",
+    "大臣認定",
+    "感度分析",
+    "在館者全員",
+    "自重",
+    "火災継続時間",
+    "保有耐火時間",
+    "骨組みの耐火",
+    "階段への煙の流入",
+    "内装の除外",
+    "排煙の除外",
+    "建物全体",
+    "共用部の圧縮",
+    "屋上広場",
+    "オフィス設計の活用"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "129-2"
+    ],
+    [
+     "325CO0000000338",
+     "129"
+    ],
+    [
+     "325CO0000000338",
+     "108-4"
+    ]
+   ],
+   "ranks": {
+    "baseline": 20,
+    "raw_fulltags": 18,
+    "safe_exp_fulltags": 18,
+    "prf_text_orig": 22,
+    "prf_tag_orig": 22,
+    "prf_tag_fulltags": 18,
+    "meta_append": 18,
+    "meta_rerank": 20
+   },
+   "governing_score_prf_text_orig": 1126.25,
+   "governing_score_prf_tag_orig": 1051.23,
+   "governing_score_prf_tag_fulltags": 1231.94,
+   "governing_score_meta_append": 1120.81,
+   "rerank_diag": {
+    "n_features_fired": 1,
+    "fired": [
+     "防火_区画"
+    ],
+    "governing_in_base_top10": false,
+    "governing_matches": null,
+    "governing_match_names": null,
+    "top1_key": [
+     "325CO0000000338",
+     "129-2"
+    ],
+    "top1_matches": 1
+   }
+  },
+  "2017-2": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "地盤面",
+    "地盤",
+    "平均",
+    "メートル",
+    "前面道路",
+    "位置",
+    "十分",
+    "床面",
+    "誘導",
+    "高低差",
+    "床面積",
+    "延べ面積",
+    "限度",
+    "一メートル",
+    "床面積の合計",
+    "五メートル",
+    "後退",
+    "誘導地区",
+    "地域",
+    "隣地"
+   ],
+   "prf_added_tag": [
+    "平均地盤面",
+    "切り捨て",
+    "係数",
+    "日影の苦情",
+    "備蓄倉庫",
+    "線路敷",
+    "地形",
+    "道路水面線路敷",
+    "水面",
+    "測量の依頼",
+    "中心線で測る",
+    "車庫",
+    "備蓄倉庫の不算入",
+    "地盤面が低い",
+    "一五倍",
+    "老人ホームの不算入",
+    "ドライエリア",
+    "影の決まりの除外",
+    "共用部分",
+    "適用除外"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "52"
+    ],
+    [
+     "325CO0000000338",
+     "2"
+    ],
+    [
+     "325CO0000000338",
+     "135-12"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 1,
+    "prf_tag_orig": 2,
+    "prf_tag_fulltags": 2,
+    "meta_append": 1,
+    "meta_rerank": 1
+   },
+   "governing_score_prf_text_orig": 2099.95,
+   "governing_score_prf_tag_orig": 1933.93,
+   "governing_score_prf_tag_fulltags": 2017.23,
+   "governing_score_meta_append": 1818.29,
+   "rerank_diag": {
+    "n_features_fired": 6,
+    "fired": [
+     "用途_工場倉庫",
+     "階数_地階",
+     "階数_高層",
+     "設備_昇降機",
+     "制限_斜線日影",
+     "制限_容積建蔽"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 6,
+    "governing_match_names": [
+     "用途_工場倉庫",
+     "階数_地階",
+     "階数_高層",
+     "設備_昇降機",
+     "制限_容積建蔽",
+     "数値"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "52"
+    ],
+    "top1_matches": 6
+   }
+  },
+  "2017-29": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": false,
+   "prf_added_text": [
+    "津波",
+    "土石",
+    "盛土",
+    "定め",
+    "施設",
+    "防災",
+    "地域",
+    "想定",
+    "限る",
+    "自然現象",
+    "地区",
+    "周辺",
+    "崖崩れ",
+    "土砂災害特別警戒区域",
+    "景観",
+    "居住",
+    "適合",
+    "環境",
+    "地盤",
+    "公共施設"
+   ],
+   "prf_added_tag": [
+    "擁壁の設置",
+    "河道閉塞",
+    "崖崩れ",
+    "土石流",
+    "出来形",
+    "がけ",
+    "土石",
+    "雨水貯留",
+    "土砂の現象",
+    "官報",
+    "衝撃を遮る",
+    "自然現象",
+    "騒音対策",
+    "工区ごと",
+    "最大の力",
+    "樹木の保存",
+    "最大の力の大きさ等",
+    "掲示",
+    "雨水の排水",
+    "擁壁"
+   ],
+   "prf_top3": [
+    [
+     "343AC0000000100",
+     "33"
+    ],
+    [
+     "325CO0000000338",
+     "80-3"
+    ],
+    [
+     "343AC0000000100",
+     "36"
+    ]
+   ],
+   "ranks": {
+    "baseline": null,
+    "raw_fulltags": null,
+    "safe_exp_fulltags": null,
+    "prf_text_orig": null,
+    "prf_tag_orig": null,
+    "prf_tag_fulltags": null,
+    "meta_append": null,
+    "meta_rerank": null
+   }
+  },
+  "2017-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "82",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "荷重",
+    "周期",
+    "固有周期",
+    "変位",
+    "方向",
+    "積雪時",
+    "積載荷重",
+    "損傷限界",
+    "加速度",
+    "層間変位",
+    "暴風時",
+    "速度",
+    "損傷限界固有周期",
+    "水平力",
+    "損傷",
+    "安全限界固有周期",
+    "大臣が定める方法",
+    "安全限界",
+    "外力",
+    "振動"
+   ],
+   "prf_added_tag": [
+    "組合せ",
+    "記号",
+    "塑性ヒンジ",
+    "塑性率",
+    "周期",
+    "増幅",
+    "増幅率",
+    "固有周期",
+    "塑性化",
+    "低減",
+    "変位",
+    "暴風時",
+    "層間変位",
+    "損傷限界固有周期",
+    "安全限界固有周期",
+    "表層地盤",
+    "積雪時",
+    "加速度",
+    "損傷限界",
+    "スペクトル"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "82-5"
+    ],
+    [
+     "325CO0000000338",
+     "82"
+    ],
+    [
+     "325CO0000000338",
+     "82-3"
+    ]
+   ],
+   "ranks": {
+    "baseline": 2,
+    "raw_fulltags": 2,
+    "safe_exp_fulltags": 3,
+    "prf_text_orig": 3,
+    "prf_tag_orig": 3,
+    "prf_tag_fulltags": 2,
+    "meta_append": 2,
+    "meta_rerank": 5
+   },
+   "governing_score_prf_text_orig": 1665.32,
+   "governing_score_prf_tag_orig": 1557.68,
+   "governing_score_prf_tag_fulltags": 1802.77,
+   "governing_score_meta_append": 1677.91,
+   "rerank_diag": {
+    "n_features_fired": 2,
+    "fired": [
+     "階数_地階",
+     "構造_計算"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "構造_計算"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "82-5"
+    ],
+    "top1_matches": 2
+   }
+  },
+  "2018-8": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "121",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "五階",
+    "メートル",
+    "部分",
+    "不燃",
+    "準耐火",
+    "百平方メートル",
+    "不燃材料",
+    "設備",
+    "除く",
+    "準耐火構造",
+    "五階以上",
+    "材料",
+    "主要構造部が不燃材料",
+    "通路",
+    "数値",
+    "防火設備",
+    "地下",
+    "十五階",
+    "重複区間",
+    "歩行距離"
+   ],
+   "prf_added_tag": [
+    "歩行距離",
+    "不燃材料",
+    "十五階",
+    "六階",
+    "重複区間",
+    "プランニング",
+    "宿泊室",
+    "100平方メートル",
+    "傾斜路",
+    "集会室",
+    "乗降ロビー",
+    "病室",
+    "深い地下",
+    "高い階",
+    "全館避難時間",
+    "キャバレー",
+    "階段を二つ",
+    "避難器具の代替",
+    "家具の配置",
+    "公会堂"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "122"
+    ],
+    [
+     "325CO0000000338",
+     "121"
+    ],
+    [
+     "325CO0000000338",
+     "120"
+    ]
+   ],
+   "ranks": {
+    "baseline": 2,
+    "raw_fulltags": 2,
+    "safe_exp_fulltags": 2,
+    "prf_text_orig": 2,
+    "prf_tag_orig": 2,
+    "prf_tag_fulltags": 2,
+    "meta_append": 2,
+    "meta_rerank": 2
+   },
+   "governing_score_prf_text_orig": 2433.37,
+   "governing_score_prf_tag_orig": 2338.31,
+   "governing_score_prf_tag_fulltags": 2493.56,
+   "governing_score_meta_append": 2171.46,
+   "rerank_diag": {
+    "n_features_fired": 7,
+    "fired": [
+     "用途_共同住宅",
+     "用途_店舗飲食",
+     "用途_事務所",
+     "構造_耐火",
+     "設備_昇降機",
+     "防火_区画",
+     "防火_避難階段"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 5,
+    "governing_match_names": [
+     "用途_共同住宅",
+     "用途_店舗飲食",
+     "構造_耐火",
+     "防火_避難階段",
+     "数値"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "122"
+    ],
+    "top1_matches": 6
+   }
+  },
+  "2018-5": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "28",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "算定",
+    "数値",
+    "建築物",
+    "メートル",
+    "敷地内",
+    "隣地",
+    "境界線",
+    "境界",
+    "専用",
+    "敷地",
+    "公告対象区域",
+    "隣地境界",
+    "隣地境界線",
+    "公告",
+    "対象区域",
+    "定め",
+    "住居専用地域",
+    "区域",
+    "一敷地内許可建築物",
+    "住居地域"
+   ],
+   "prf_added_tag": [
+    "採光の計算",
+    "二室一室",
+    "クロルピリホス",
+    "窓の分割",
+    "天空図",
+    "上限",
+    "ふすま",
+    "ふすま障子",
+    "障子",
+    "ホルムアルデヒド",
+    "教室",
+    "浴室",
+    "病室",
+    "病院の病室",
+    "調理室",
+    "自然換気",
+    "手すりの影響",
+    "ひさしの影響",
+    "バルコニーの影響",
+    "間仕切り"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "21"
+    ],
+    [
+     "325AC0000000201",
+     "28"
+    ],
+    [
+     "325CO0000000338",
+     "20"
+    ]
+   ],
+   "ranks": {
+    "baseline": 2,
+    "raw_fulltags": 2,
+    "safe_exp_fulltags": 3,
+    "prf_text_orig": 4,
+    "prf_tag_orig": 2,
+    "prf_tag_fulltags": 1,
+    "meta_append": 2,
+    "meta_rerank": 2
+   },
+   "governing_score_prf_text_orig": 891.74,
+   "governing_score_prf_tag_orig": 1097.27,
+   "governing_score_prf_tag_fulltags": 1478.74,
+   "governing_score_meta_append": 911.72,
+   "rerank_diag": {
+    "n_features_fired": 3,
+    "fired": [
+     "用途_劇場集会",
+     "用途_店舗飲食",
+     "設備_換気"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 2,
+    "governing_match_names": [
+     "設備_換気",
+     "数値"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "121"
+    ],
+    "top1_matches": 3
+   }
+  },
+  "2018-24": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "29",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "周辺",
+    "居住",
+    "災害",
+    "地域",
+    "政令",
+    "環境",
+    "事業",
+    "工作物",
+    "保全",
+    "特定工作物",
+    "市街化区域",
+    "条例",
+    "集落",
+    "政令で定める",
+    "防止",
+    "環境の保全",
+    "条件",
+    "指定都市等",
+    "促進",
+    "盛土"
+   ],
+   "prf_added_tag": [
+    "公民館",
+    "帰属",
+    "公益施設",
+    "連たん",
+    "鉱物資源",
+    "がけ",
+    "雨水貯留",
+    "中核市",
+    "観光資源",
+    "盛土",
+    "騒音対策",
+    "樹木の保存",
+    "日用品の店舗",
+    "宅地造成等規制法",
+    "雨水の排水",
+    "厳しい条件",
+    "分譲",
+    "道路の帰属",
+    "擁壁",
+    "造成"
+   ],
+   "prf_top3": [
+    [
+     "343AC0000000100",
+     "29"
+    ],
+    [
+     "343AC0000000100",
+     "33"
+    ],
+    [
+     "343AC0000000100",
+     "34"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 1,
+    "prf_tag_orig": 2,
+    "prf_tag_fulltags": 2,
+    "meta_append": 1,
+    "meta_rerank": 4
+   },
+   "governing_score_prf_text_orig": 1566.28,
+   "governing_score_prf_tag_orig": 1447.19,
+   "governing_score_prf_tag_fulltags": 1580.61,
+   "governing_score_meta_append": 1467.53,
+   "rerank_diag": {
+    "n_features_fired": 5,
+    "fired": [
+     "階数_地階",
+     "行為_新築",
+     "行為_改築",
+     "行為_用途変更",
+     "領域_都市計画"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "領域_都市計画"
+    ],
+    "top1_key": [
+     "343AC0000000100",
+     "43"
+    ],
+    "top1_matches": 4
+   }
+  },
+  "2018-4": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "90-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "検査",
+    "国の機関の長",
+    "国の機関",
+    "省令",
+    "建築主事等",
+    "国土交通省令",
+    "審査",
+    "指定",
+    "国土交通省",
+    "関係",
+    "機関",
+    "定め",
+    "期間",
+    "国土交通省令で定める",
+    "都道府県",
+    "設計",
+    "工程",
+    "通知",
+    "計算",
+    "置く市町村"
+   ],
+   "prf_added_tag": [
+    "劣化",
+    "台帳",
+    "オーナーの義務",
+    "既存不適格",
+    "ホテル",
+    "落下防止",
+    "クレーンの安全",
+    "百貨店",
+    "外壁の落下",
+    "腐食",
+    "粉じん対策",
+    "点検のみ",
+    "定期調査",
+    "完了通知",
+    "点検",
+    "工事着手",
+    "官公庁の建物",
+    "定期的に報告",
+    "遊戯施設",
+    "定期報告"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "90-3"
+    ],
+    [
+     "325AC0000000201",
+     "12"
+    ],
+    [
+     "325AC0000000201",
+     "18"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 3,
+    "prf_text_orig": 3,
+    "prf_tag_orig": 1,
+    "prf_tag_fulltags": 2,
+    "meta_append": 1,
+    "meta_rerank": 3
+   },
+   "governing_score_prf_text_orig": 1362.72,
+   "governing_score_prf_tag_orig": 1320.41,
+   "governing_score_prf_tag_fulltags": 1399.76,
+   "governing_score_meta_append": 1273.34,
+   "rerank_diag": {
+    "n_features_fired": 6,
+    "fired": [
+     "用途_病院",
+     "用途_店舗飲食",
+     "行為_新築",
+     "設備_昇降機",
+     "設備_非常用照明",
+     "領域_建築士"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 2,
+    "governing_match_names": [
+     "用途_病院",
+     "行為_新築"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "12"
+    ],
+    "top1_matches": 5
+   }
+  },
+  "2018-22": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "24",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "木造",
+    "木造建築士",
+    "二級建築士",
+    "属する",
+    "閉鎖",
+    "建築士事務所に属する",
+    "意見",
+    "準用",
+    "処分",
+    "事務所の閉鎖",
+    "監督",
+    "法定代理人",
+    "準用する",
+    "代理人",
+    "届出",
+    "条例",
+    "代理",
+    "不正",
+    "事務所の登録",
+    "建築士事務所の登録"
+   ],
+   "prf_added_tag": [
+    "戒告",
+    "専任",
+    "修了考査",
+    "名義貸しの禁止",
+    "コンプライアンス",
+    "専任の責任者",
+    "教育訓練",
+    "証票の提示",
+    "聴聞",
+    "弁明の機会",
+    "閉鎖命令",
+    "名義貸し調査",
+    "内部統制",
+    "1年の閉鎖",
+    "総括責任者",
+    "開設者は意見を尊重",
+    "不利益処分",
+    "段階的処分",
+    "業務停止",
+    "難易度の判断"
+   ],
+   "prf_top3": [
+    [
+     "325AC1000000202",
+     "24"
+    ],
+    [
+     "325AC1000000202",
+     "26"
+    ],
+    [
+     "325AC1000000202",
+     "26-2"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 1,
+    "prf_tag_orig": 1,
+    "prf_tag_fulltags": 1,
+    "meta_append": 1,
+    "meta_rerank": 1
+   },
+   "governing_score_prf_text_orig": 1755.38,
+   "governing_score_prf_tag_orig": 1739.51,
+   "governing_score_prf_tag_fulltags": 2123.4,
+   "governing_score_meta_append": 1674.48,
+   "rerank_diag": {
+    "n_features_fired": 2,
+    "fired": [
+     "用途_事務所",
+     "領域_建築士"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 3,
+    "governing_match_names": [
+     "用途_事務所",
+     "領域_建築士",
+     "数値"
+    ],
+    "top1_key": [
+     "325AC1000000202",
+     "24"
+    ],
+    "top1_matches": 3
+   }
+  },
+  "2019-24": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "29",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "開発区域",
+    "周辺",
+    "居住",
+    "災害",
+    "調整",
+    "地域",
+    "市街化調整区域",
+    "政令",
+    "環境",
+    "事業",
+    "工作物",
+    "調整区域",
+    "用途",
+    "保全",
+    "特定工作物",
+    "条例",
+    "集落",
+    "政令で定める",
+    "防止",
+    "必要"
+   ],
+   "prf_added_tag": [
+    "公民館",
+    "帰属",
+    "公益施設",
+    "連たん",
+    "鉱物資源",
+    "がけ",
+    "雨水貯留",
+    "中核市",
+    "観光資源",
+    "盛土",
+    "騒音対策",
+    "樹木の保存",
+    "日用品の店舗",
+    "宅地造成等規制法",
+    "雨水の排水",
+    "厳しい条件",
+    "分譲",
+    "道路の帰属",
+    "擁壁",
+    "造成"
+   ],
+   "prf_top3": [
+    [
+     "343AC0000000100",
+     "29"
+    ],
+    [
+     "343AC0000000100",
+     "34"
+    ],
+    [
+     "343AC0000000100",
+     "33"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 2,
+    "prf_tag_orig": 1,
+    "prf_tag_fulltags": 1,
+    "meta_append": 1,
+    "meta_rerank": 7
+   },
+   "governing_score_prf_text_orig": 1647.81,
+   "governing_score_prf_tag_orig": 1535.48,
+   "governing_score_prf_tag_fulltags": 1634.9,
+   "governing_score_meta_append": 1513.13,
+   "rerank_diag": {
+    "n_features_fired": 6,
+    "fired": [
+     "用途_病院",
+     "用途_店舗飲食",
+     "構造_木造",
+     "階数_地階",
+     "行為_新築",
+     "領域_都市計画"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "領域_都市計画"
+    ],
+    "top1_key": [
+     "343AC0000000100",
+     "34"
+    ],
+    "top1_matches": 3
+   }
+  },
+  "2019-29": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "80-3",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "開発",
+    "防止",
+    "土石",
+    "盛土",
+    "開発行為",
+    "定め",
+    "計画",
+    "開発区域",
+    "想定",
+    "自然現象",
+    "周辺",
+    "土砂災害警戒区域",
+    "崖崩れ",
+    "景観",
+    "居住",
+    "構造",
+    "津波",
+    "環境",
+    "限る",
+    "開発区域内"
+   ],
+   "prf_added_tag": [
+    "擁壁の設置",
+    "両罰",
+    "河道閉塞",
+    "崖崩れ",
+    "土石流",
+    "がけ",
+    "土石",
+    "雨水貯留",
+    "土砂の現象",
+    "衝撃を遮る",
+    "対象の棟数",
+    "自然現象",
+    "騒音対策",
+    "最大の力",
+    "樹木の保存",
+    "最大の力の大きさ等",
+    "雨水の排水",
+    "小学校老人ホーム",
+    "擁壁",
+    "土砂災害防止法"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "80-3"
+    ],
+    [
+     "407AC0000000123",
+     "suppl0-3"
+    ],
+    [
+     "343AC0000000100",
+     "33"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 2,
+    "safe_exp_fulltags": 3,
+    "prf_text_orig": 1,
+    "prf_tag_orig": 1,
+    "prf_tag_fulltags": 1,
+    "meta_append": 2,
+    "meta_rerank": 4
+   },
+   "governing_score_prf_text_orig": 833.59,
+   "governing_score_prf_tag_orig": 1092.37,
+   "governing_score_prf_tag_fulltags": 1240.22,
+   "governing_score_meta_append": 536.27,
+   "rerank_diag": {
+    "n_features_fired": 1,
+    "fired": [
+     "領域_耐震"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 0,
+    "governing_match_names": [],
+    "top1_key": [
+     "407AC0000000123",
+     "suppl0-3"
+    ],
+    "top1_matches": 1
+   }
+  },
+  "2019-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "69",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "prf_added_text": [
+    "沿道",
+    "限度",
+    "最高限度",
+    "沿道地区計画",
+    "歴史的風致",
+    "風致",
+    "容積率",
+    "敷地",
+    "利便",
+    "最低限度",
+    "向上",
+    "容積率の最高限度",
+    "壁面の位置",
+    "内容に適合",
+    "壁面の位置の制限",
+    "適合",
+    "空地",
+    "適用しない",
+    "沿道再開発等促進区",
+    "限る"
+   ],
+   "prf_added_tag": [
+    "有効な空地",
+    "高度利用",
+    "前面道路",
+    "歩行者空間",
+    "沿道地区計画",
+    "容積率の最高限度",
+    "容積率",
+    "公開空地",
+    "壁面の位置",
+    "制限の特例",
+    "配列",
+    "アーケード",
+    "間口",
+    "間口率",
+    "商店街の連続性",
+    "広い空地",
+    "形態",
+    "日影",
+    "まちづくり条例",
+    "沿道の活性化"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "68-5-5"
+    ],
+    [
+     "325AC0000000201",
+     "68-3"
+    ],
+    [
+     "325AC0000000201",
+     "68-5-3"
+    ]
+   ],
+   "ranks": {
+    "baseline": null,
+    "raw_fulltags": null,
+    "safe_exp_fulltags": null,
+    "prf_text_orig": null,
+    "prf_tag_orig": null,
+    "prf_tag_fulltags": null,
+    "meta_append": null,
+    "meta_rerank": null
+   }
+  },
+  "2019-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "建築物",
+    "部分",
+    "除く",
+    "合計",
+    "面積の合計",
+    "限る",
+    "範囲",
+    "政令",
+    "適合",
+    "設備",
+    "定め",
+    "床面積の合計",
+    "主事",
+    "外壁",
+    "政令で定める",
+    "延長",
+    "適用",
+    "構造",
+    "設計",
+    "木造"
+   ],
+   "prf_added_tag": [
+    "工作物",
+    "補正",
+    "リフォーム",
+    "全て可",
+    "確認が不要",
+    "既存不適格",
+    "工事着手前",
+    "七日",
+    "耐震改修の組合せ",
+    "コンバージョン",
+    "用途変更との組合せ",
+    "マンションの駐車場計画",
+    "建てられる車庫",
+    "形態制限は全て可",
+    "平面駐車の転換",
+    "移転",
+    "申請の時期",
+    "危険性",
+    "既存の建物",
+    "駐車台数の算定"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "130-8"
+    ],
+    [
+     "325CO0000000338",
+     "137-12"
+    ],
+    [
+     "325AC0000000201",
+     "6"
+    ]
+   ],
+   "ranks": {
+    "baseline": 3,
+    "raw_fulltags": 4,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 3,
+    "prf_tag_orig": 3,
+    "prf_tag_fulltags": 3,
+    "meta_append": 4,
+    "meta_rerank": 3
+   },
+   "governing_score_prf_text_orig": 809.56,
+   "governing_score_prf_tag_orig": 710.16,
+   "governing_score_prf_tag_fulltags": 883.17,
+   "governing_score_meta_append": 730.92,
+   "rerank_diag": {
+    "n_features_fired": 8,
+    "fired": [
+     "用途_病院",
+     "用途_共同住宅",
+     "用途_事務所",
+     "用途_工場倉庫",
+     "行為_新築",
+     "行為_増築",
+     "行為_用途変更",
+     "行為_大規模修繕模様替"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 5,
+    "governing_match_names": [
+     "行為_新築",
+     "行為_増築",
+     "行為_用途変更",
+     "行為_大規模修繕模様替",
+     "数値"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "2"
+    ],
+    "top1_matches": 8
+   }
+  },
+  "2019-19": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "用途",
+    "十分",
+    "誘導",
+    "前面道路",
+    "道路",
+    "誘導地区",
+    "地域",
+    "壁面線",
+    "数値",
+    "幅員",
+    "住居地域",
+    "都道府県都市計画審議会",
+    "定め",
+    "地面",
+    "用途誘導地区",
+    "地区",
+    "高層住居",
+    "専用",
+    "政令",
+    "住居専用地域"
+   ],
+   "prf_added_tag": [
+    "容積率の計算",
+    "不算入",
+    "公害",
+    "係数",
+    "と畜場",
+    "ごみ焼却場",
+    "騒音対策",
+    "縦の空間",
+    "ごみ処理場",
+    "卸売市場",
+    "廃棄物処理",
+    "エスカレーターは対象外",
+    "小荷物専用昇降機",
+    "汚物処理場",
+    "備蓄倉庫の不算入",
+    "一五倍",
+    "老人ホームの不算入",
+    "短い条文",
+    "共用部分",
+    "地域住民の同意"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "52"
+    ],
+    [
+     "325CO0000000338",
+     "135-16"
+    ],
+    [
+     "325AC0000000201",
+     "51"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 1,
+    "prf_tag_orig": 1,
+    "prf_tag_fulltags": 1,
+    "meta_append": 1,
+    "meta_rerank": 1
+   },
+   "governing_score_prf_text_orig": 2029.44,
+   "governing_score_prf_tag_orig": 1696.57,
+   "governing_score_prf_tag_fulltags": 1809.58,
+   "governing_score_meta_append": 1610.58,
+   "rerank_diag": {
+    "n_features_fired": 6,
+    "fired": [
+     "用途_共同住宅",
+     "構造_木造",
+     "行為_新築",
+     "手続_確認申請",
+     "設備_昇降機",
+     "制限_容積建蔽"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 3,
+    "governing_match_names": [
+     "用途_共同住宅",
+     "設備_昇降機",
+     "制限_容積建蔽"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "52"
+    ],
+    "top1_matches": 3
+   }
+  },
+  "2020-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "44",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "境界線",
+    "境界",
+    "指定",
+    "地域",
+    "メートル",
+    "地区",
+    "住宅",
+    "敷地",
+    "十分",
+    "誘導",
+    "議を経て",
+    "審議会の議",
+    "審議会",
+    "前面道路",
+    "誘導地区",
+    "壁面線",
+    "都市計画審議会の議",
+    "二メートル",
+    "面積",
+    "数値"
+   ],
+   "prf_added_tag": [
+    "崖地",
+    "農道",
+    "私道",
+    "重複",
+    "係数",
+    "水路",
+    "定義",
+    "既存の道",
+    "台帳の整理",
+    "中心線",
+    "崖地川に沿う場合",
+    "備蓄倉庫の不算入",
+    "後退",
+    "一五倍",
+    "老人ホームの不算入",
+    "乱開発の抑制",
+    "道路調査",
+    "短い条文",
+    "共用部分",
+    "角地の道路"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "42"
+    ],
+    [
+     "343AC0000000100",
+     "23-2"
+    ],
+    [
+     "325AC0000000201",
+     "52"
+    ]
+   ],
+   "ranks": {
+    "baseline": 6,
+    "raw_fulltags": 2,
+    "safe_exp_fulltags": 2,
+    "prf_text_orig": 17,
+    "prf_tag_orig": 9,
+    "prf_tag_fulltags": 3,
+    "meta_append": 2,
+    "meta_rerank": 4
+   },
+   "governing_score_prf_text_orig": 456.74,
+   "governing_score_prf_tag_orig": 441.88,
+   "governing_score_prf_tag_fulltags": 632.67,
+   "governing_score_meta_append": 657.06,
+   "rerank_diag": {
+    "n_features_fired": 2,
+    "fired": [
+     "用途_店舗飲食",
+     "階数_地階"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "階数_地階"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "52"
+    ],
+    "top1_matches": 1
+   }
+  },
+  "2020-2": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "135-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "道路",
+    "前面道路",
+    "境界線",
+    "境界",
+    "水面",
+    "メートル",
+    "北側",
+    "一メートル",
+    "隣地境界",
+    "隣地境界線",
+    "これらに類するもの",
+    "予定道路",
+    "計画道路",
+    "線路",
+    "中心線",
+    "線路敷",
+    "水面線路敷",
+    "北側の前面道路",
+    "距離",
+    "倉庫"
+   ],
+   "prf_added_tag": [
+    "水面",
+    "地盤面が低い",
+    "予定道路",
+    "半分だけ外側",
+    "計画道路",
+    "計画道路予定道路",
+    "幅の2分の1だけ外側",
+    "2分の1だけ高い",
+    "隣地境界線はないものとみなす",
+    "切り捨て",
+    "特定行政庁",
+    "緩和措置",
+    "備蓄倉庫",
+    "北側",
+    "線路",
+    "線路敷",
+    "地形",
+    "水面線路敷",
+    "幅の測り方",
+    "境界の確定"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "2"
+    ],
+    [
+     "325CO0000000338",
+     "135-3"
+    ],
+    [
+     "325CO0000000338",
+     "135-4"
+    ]
+   ],
+   "ranks": {
+    "baseline": 2,
+    "raw_fulltags": 2,
+    "safe_exp_fulltags": 2,
+    "prf_text_orig": 3,
+    "prf_tag_orig": 2,
+    "prf_tag_fulltags": 2,
+    "meta_append": 2,
+    "meta_rerank": 6
+   },
+   "governing_score_prf_text_orig": 1862.56,
+   "governing_score_prf_tag_orig": 1956.84,
+   "governing_score_prf_tag_fulltags": 2215.17,
+   "governing_score_meta_append": 1584.52,
+   "rerank_diag": {
+    "n_features_fired": 3,
+    "fired": [
+     "用途_店舗飲食",
+     "階数_高層",
+     "制限_斜線日影"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "制限_斜線日影"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "135-7"
+    ],
+    "top1_matches": 2
+   }
+  },
+  "2020-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "温度",
+    "屋内",
+    "不燃",
+    "不燃材料",
+    "区画",
+    "一時間",
+    "延焼",
+    "材料",
+    "屋根",
+    "損傷",
+    "準耐火",
+    "方法",
+    "特定主要構造部",
+    "十分",
+    "準不燃",
+    "構造方法",
+    "防火区画",
+    "開口部",
+    "仕上げ",
+    "開口"
+   ],
+   "prf_added_tag": [
+    "アトリウム",
+    "随時閉鎖",
+    "ダクトの貫通",
+    "配管の貫通",
+    "仕様の組合せ",
+    "ケーブルの貫通",
+    "常時閉鎖",
+    "火災継続時間",
+    "保有耐火時間",
+    "骨組みの耐火",
+    "検証法",
+    "床の仕様",
+    "吹抜けの区画",
+    "小屋裏",
+    "スパンドレル",
+    "客席",
+    "性能検証",
+    "耐火性能検証法",
+    "屋根の仕様",
+    "準耐火の代替"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "108-4"
+    ],
+    [
+     "325CO0000000338",
+     "112"
+    ],
+    [
+     "325CO0000000338",
+     "109-3"
+    ]
+   ],
+   "ranks": {
+    "baseline": 4,
+    "raw_fulltags": 4,
+    "safe_exp_fulltags": 3,
+    "prf_text_orig": 4,
+    "prf_tag_orig": 4,
+    "prf_tag_fulltags": 4,
+    "meta_append": 4,
+    "meta_rerank": 4
+   },
+   "governing_score_prf_text_orig": 1298.16,
+   "governing_score_prf_tag_orig": 1242.63,
+   "governing_score_prf_tag_fulltags": 1232.63,
+   "governing_score_meta_append": 1136.85,
+   "rerank_diag": {
+    "n_features_fired": 1,
+    "fired": [
+     "構造_耐火"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "構造_耐火"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "108-4"
+    ],
+    "top1_matches": 1
+   }
+  },
+  "2020-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "メートル",
+    "建築物",
+    "住居地域",
+    "田園住居",
+    "附属",
+    "敷地",
+    "車庫",
+    "田園住居地域",
+    "自動車車庫",
+    "第二種低層住居専用地域",
+    "築造面積",
+    "第二種",
+    "限度",
+    "敷地内",
+    "高さの限度",
+    "公告対象区域",
+    "工作物",
+    "中高層",
+    "超える",
+    "加えた値"
+   ],
+   "prf_added_tag": [
+    "高さの限度",
+    "十メートル",
+    "木柱",
+    "鉄柱",
+    "建築物の高さの限度",
+    "10メートル制限の地域",
+    "サイロ",
+    "上限",
+    "焼却場",
+    "撤去の費用",
+    "ごみ焼却場",
+    "学校の体育館",
+    "高架水槽",
+    "10メートル",
+    "観覧車",
+    "広告塔",
+    "広告物の落下事故",
+    "擁壁",
+    "コースター",
+    "ウオーターシュート"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "138"
+    ],
+    [
+     "325AC0000000201",
+     "55"
+    ],
+    [
+     "343AC0000000100",
+     "suppl34-7"
+    ]
+   ],
+   "ranks": {
+    "baseline": 7,
+    "raw_fulltags": 3,
+    "safe_exp_fulltags": 2,
+    "prf_text_orig": 23,
+    "prf_tag_orig": 15,
+    "prf_tag_fulltags": 9,
+    "meta_append": 3,
+    "meta_rerank": 1
+   },
+   "governing_score_prf_text_orig": 538.43,
+   "governing_score_prf_tag_orig": 560.54,
+   "governing_score_prf_tag_fulltags": 644.87,
+   "governing_score_meta_append": 556.06,
+   "rerank_diag": {
+    "n_features_fired": 6,
+    "fired": [
+     "用途_共同住宅",
+     "用途_劇場集会",
+     "構造_木造",
+     "行為_用途変更",
+     "行為_大規模修繕模様替",
+     "設備_昇降機"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 4,
+    "governing_match_names": [
+     "構造_木造",
+     "行為_用途変更",
+     "行為_大規模修繕模様替",
+     "設備_昇降機"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "6"
+    ],
+    "top1_matches": 4
+   }
+  },
+  "2020-7": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "120",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "メートル",
+    "五階",
+    "準耐火",
+    "準耐火構造",
+    "数値",
+    "除く",
+    "設備",
+    "重複区間",
+    "重複",
+    "百平方メートル",
+    "合計",
+    "床面積の合計",
+    "寝室",
+    "面積の合計",
+    "児童福祉施設",
+    "児童福祉施設等",
+    "主要構造部が不燃材料",
+    "適用",
+    "主たる用途",
+    "区分"
+   ],
+   "prf_added_tag": [
+    "準耐火構造",
+    "四十メートル",
+    "六階",
+    "重複区間",
+    "プランニング",
+    "宿泊室",
+    "界壁",
+    "傾斜路",
+    "集会室",
+    "病室",
+    "40メートル",
+    "遮音性能",
+    "ホテルの客室",
+    "全館避難時間",
+    "キャバレー",
+    "階段を二つ",
+    "避難器具の代替",
+    "家具の配置",
+    "公会堂",
+    "ホテル"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "120"
+    ],
+    [
+     "325CO0000000338",
+     "121"
+    ],
+    [
+     "325CO0000000338",
+     "123-2"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 1,
+    "prf_tag_orig": 1,
+    "prf_tag_fulltags": 1,
+    "meta_append": 1,
+    "meta_rerank": 3
+   },
+   "governing_score_prf_text_orig": 2881.05,
+   "governing_score_prf_tag_orig": 2742.51,
+   "governing_score_prf_tag_fulltags": 2885.63,
+   "governing_score_meta_append": 2645.0,
+   "rerank_diag": {
+    "n_features_fired": 4,
+    "fired": [
+     "用途_共同住宅",
+     "用途_店舗飲食",
+     "構造_耐火",
+     "防火_避難階段"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 3,
+    "governing_match_names": [
+     "用途_共同住宅",
+     "構造_耐火",
+     "防火_避難階段"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "121"
+    ],
+    "top1_matches": 4
+   }
+  },
+  "2021-8": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "122",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "特別避難階段",
+    "五階",
+    "階段室",
+    "メートル",
+    "付室",
+    "三階",
+    "五階以上",
+    "バルコニー",
+    "不燃",
+    "防火設備",
+    "地下",
+    "不燃材料",
+    "はめごろし戸",
+    "はめごろし",
+    "材料",
+    "百平方メートル",
+    "地下三階",
+    "二階",
+    "十五階",
+    "開口面積"
+   ],
+   "prf_added_tag": [
+    "特別避難階段",
+    "百平方メートル",
+    "加圧防煙",
+    "防火設備",
+    "踊り場",
+    "はめごろし戸",
+    "重複区間",
+    "付室",
+    "踏面",
+    "予備電源",
+    "100平方メートル",
+    "蹴上げ",
+    "所要幅",
+    "乗降ロビー",
+    "売場",
+    "深い地下",
+    "高い階",
+    "直上階",
+    "除外",
+    "吹抜けの扱い"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "124"
+    ],
+    [
+     "325CO0000000338",
+     "123"
+    ],
+    [
+     "325CO0000000338",
+     "122"
+    ]
+   ],
+   "ranks": {
+    "baseline": 3,
+    "raw_fulltags": 3,
+    "safe_exp_fulltags": 3,
+    "prf_text_orig": 3,
+    "prf_tag_orig": 3,
+    "prf_tag_fulltags": 3,
+    "meta_append": 3,
+    "meta_rerank": 1
+   },
+   "governing_score_prf_text_orig": 1398.09,
+   "governing_score_prf_tag_orig": 1259.47,
+   "governing_score_prf_tag_fulltags": 1398.06,
+   "governing_score_meta_append": 1054.54,
+   "rerank_diag": {
+    "n_features_fired": 5,
+    "fired": [
+     "用途_店舗飲食",
+     "構造_耐火",
+     "構造_準耐火",
+     "設備_排煙",
+     "防火_避難階段"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 5,
+    "governing_match_names": [
+     "用途_店舗飲食",
+     "構造_耐火",
+     "設備_排煙",
+     "防火_避難階段",
+     "数値"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "122"
+    ],
+    "top1_matches": 5
+   }
+  },
+  "2021-17": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "68-4",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "整備",
+    "地区整備計画",
+    "沿道",
+    "区域",
+    "計画",
+    "地区計画",
+    "防災",
+    "防災街区",
+    "街区",
+    "区分",
+    "防災街区整備",
+    "制限",
+    "防災街区整備地区計画",
+    "定め",
+    "整備地区計画",
+    "最低限度",
+    "密集市街地整備法",
+    "密集市街地",
+    "密集市街地整備",
+    "沿道地区計画"
+   ],
+   "prf_added_tag": [
+    "容積率の特例",
+    "容積の配分",
+    "条例で制限",
+    "容積を適正に配分",
+    "容積率の最低限度",
+    "沿道地区計画",
+    "防災街区整備地区計画",
+    "壁面の位置",
+    "敷地面積の最低限度",
+    "壁面の位置の制限",
+    "区域を区分して",
+    "地区整備計画",
+    "地区計画",
+    "歴史的建造物",
+    "周辺への抑制",
+    "まちづくりの誘導",
+    "整備水準",
+    "上限の引上げ",
+    "下水道",
+    "壁面後退"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "68-4"
+    ],
+    [
+     "325AC0000000201",
+     "68-5-2"
+    ],
+    [
+     "325AC0000000201",
+     "68-5"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 1,
+    "prf_tag_orig": 3,
+    "prf_tag_fulltags": 3,
+    "meta_append": 1,
+    "meta_rerank": 1
+   },
+   "governing_score_prf_text_orig": 1423.62,
+   "governing_score_prf_tag_orig": 1202.47,
+   "governing_score_prf_tag_fulltags": 1314.19,
+   "governing_score_meta_append": 515.12,
+   "rerank_diag": {
+    "n_features_fired": 2,
+    "fired": [
+     "行為_新築",
+     "制限_容積建蔽"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "制限_容積建蔽"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "68-4"
+    ],
+    "top1_matches": 1
+   }
+  },
+  "2021-20": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "68-7",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "専用",
+    "住居専用地域",
+    "低層住居専用地域",
+    "メートル",
+    "十分",
+    "誘導",
+    "誘導地区",
+    "用途",
+    "第一種",
+    "壁面線",
+    "第二種",
+    "数値",
+    "幅員",
+    "第一種低層住居専用地域",
+    "部分",
+    "老人ホーム",
+    "用途誘導地区",
+    "高層住居",
+    "議を経て",
+    "第二種低層住居専用地域"
+   ],
+   "prf_added_tag": [
+    "十二メートル",
+    "参加",
+    "加入のメリット",
+    "係数",
+    "学校の体育館",
+    "仮換地",
+    "隣接地",
+    "絶対的な上限",
+    "加入のデメリット",
+    "備蓄倉庫の不算入",
+    "合意",
+    "借地権",
+    "一五倍",
+    "隣接地は全員合意",
+    "老人ホームの不算入",
+    "不動産取引",
+    "共用部分",
+    "屋根の形状",
+    "角地の道路",
+    "天空率との関係"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "75-2"
+    ],
+    [
+     "325AC0000000201",
+     "55"
+    ],
+    [
+     "325AC0000000201",
+     "52"
+    ]
+   ],
+   "ranks": {
+    "baseline": 6,
+    "raw_fulltags": 5,
+    "safe_exp_fulltags": 7,
+    "prf_text_orig": 12,
+    "prf_tag_orig": 8,
+    "prf_tag_fulltags": 6,
+    "meta_append": 5,
+    "meta_rerank": 3
+   },
+   "governing_score_prf_text_orig": 1182.01,
+   "governing_score_prf_tag_orig": 1173.46,
+   "governing_score_prf_tag_fulltags": 1267.46,
+   "governing_score_meta_append": 1259.26,
+   "rerank_diag": {
+    "n_features_fired": 4,
+    "fired": [
+     "用途_共同住宅",
+     "制限_容積建蔽",
+     "制限_接道道路",
+     "領域_都市計画"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 3,
+    "governing_match_names": [
+     "制限_容積建蔽",
+     "制限_接道道路",
+     "領域_都市計画"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "52"
+    ],
+    "top1_matches": 5
+   }
+  },
+  "2021-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "準耐火",
+    "耐火",
+    "一時間",
+    "二階",
+    "区画",
+    "一時間準耐火",
+    "一時間準耐火基準",
+    "耐火構造",
+    "準耐火構造",
+    "防火設備",
+    "天井",
+    "加熱",
+    "部分",
+    "不燃",
+    "防火設備で区画",
+    "間仕切壁",
+    "火熱",
+    "不燃材料",
+    "床面",
+    "構造"
+   ],
+   "prf_added_tag": [
+    "短い条文",
+    "二階の床",
+    "中間検査",
+    "アトリウム",
+    "随時閉鎖",
+    "ダクトの貫通",
+    "配管の貫通",
+    "ケーブルの貫通",
+    "かぶり厚さ",
+    "常時閉鎖",
+    "吹抜けの区画",
+    "小屋裏",
+    "スパンドレル",
+    "スペーサー",
+    "二階",
+    "客席",
+    "終えたら申請",
+    "基礎の配筋",
+    "覆う工事",
+    "スプリンクラー"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "112"
+    ],
+    [
+     "325CO0000000338",
+     "11"
+    ],
+    [
+     "325CO0000000338",
+     "12"
+    ]
+   ],
+   "ranks": {
+    "baseline": 4,
+    "raw_fulltags": 5,
+    "safe_exp_fulltags": 4,
+    "prf_text_orig": 3,
+    "prf_tag_orig": 6,
+    "prf_tag_fulltags": 6,
+    "meta_append": 5,
+    "meta_rerank": 4
+   },
+   "governing_score_prf_text_orig": 612.47,
+   "governing_score_prf_tag_orig": 436.26,
+   "governing_score_prf_tag_fulltags": 471.9,
+   "governing_score_meta_append": 447.59,
+   "rerank_diag": {
+    "n_features_fired": 1,
+    "fired": [
+     "用途_共同住宅"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 2,
+    "governing_match_names": [
+     "用途_共同住宅",
+     "数値"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "112"
+    ],
+    "top1_matches": 2
+   }
+  },
+  "2021-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "56-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "平均",
+    "メートル",
+    "区域",
+    "境界線",
+    "境界",
+    "位置",
+    "距離",
+    "平均地盤面",
+    "適用",
+    "水平距離",
+    "接する",
+    "超える",
+    "隣地高さ制限",
+    "線路",
+    "線路敷",
+    "水面線路敷",
+    "道路水面線路敷",
+    "定め",
+    "水面",
+    "高さ制限"
+   ],
+   "prf_added_tag": [
+    "平均地盤面",
+    "日影規制",
+    "日影による高さの制限",
+    "五メートル",
+    "敷地境界線から5メートル超",
+    "半球",
+    "真太陽時",
+    "冬至",
+    "冬至日",
+    "勾配",
+    "想定半球",
+    "日影の苦情",
+    "日影図",
+    "種別",
+    "等時間日影図",
+    "線路敷",
+    "北海道",
+    "地形",
+    "測定位置",
+    "ホテル"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "56-2"
+    ],
+    [
+     "325CO0000000338",
+     "135-12"
+    ],
+    [
+     "325CO0000000338",
+     "135-7"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 5,
+    "prf_tag_orig": 2,
+    "prf_tag_fulltags": 1,
+    "meta_append": 1,
+    "meta_rerank": 2
+   },
+   "governing_score_prf_text_orig": 870.62,
+   "governing_score_prf_tag_orig": 969.53,
+   "governing_score_prf_tag_fulltags": 1202.88,
+   "governing_score_meta_append": 749.46,
+   "rerank_diag": {
+    "n_features_fired": 3,
+    "fired": [
+     "階数_高層",
+     "行為_新築",
+     "制限_斜線日影"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 2,
+    "governing_match_names": [
+     "階数_高層",
+     "制限_斜線日影"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "135-7"
+    ],
+    "top1_matches": 3
+   }
+  },
+  "2022-7": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "121",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "五階",
+    "メートル",
+    "部分",
+    "不燃",
+    "準耐火",
+    "百平方メートル",
+    "不燃材料",
+    "設備",
+    "除く",
+    "準耐火構造",
+    "五階以上",
+    "材料",
+    "主要構造部が不燃材料",
+    "通路",
+    "廊下",
+    "避難階又は地上に通ずる",
+    "数値",
+    "防火設備",
+    "地下",
+    "十五階"
+   ],
+   "prf_added_tag": [
+    "歩行距離",
+    "不燃材料",
+    "十五階",
+    "六階",
+    "重複区間",
+    "プランニング",
+    "15階以上",
+    "100平方メートル",
+    "傾斜路",
+    "集会室",
+    "乗降ロビー",
+    "病室",
+    "深い地下",
+    "高い階",
+    "全館避難時間",
+    "キャバレー",
+    "階段を二つ",
+    "避難器具の代替",
+    "家具の配置",
+    "公会堂"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "121"
+    ],
+    [
+     "325CO0000000338",
+     "120"
+    ],
+    [
+     "325CO0000000338",
+     "122"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 1,
+    "prf_tag_orig": 1,
+    "prf_tag_fulltags": 1,
+    "meta_append": 1,
+    "meta_rerank": 1
+   },
+   "governing_score_prf_text_orig": 1953.59,
+   "governing_score_prf_tag_orig": 1801.02,
+   "governing_score_prf_tag_fulltags": 1973.41,
+   "governing_score_meta_append": 1641.55,
+   "rerank_diag": {
+    "n_features_fired": 6,
+    "fired": [
+     "用途_共同住宅",
+     "用途_ホテル旅館",
+     "用途_店舗飲食",
+     "用途_事務所",
+     "構造_耐火",
+     "防火_避難階段"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 6,
+    "governing_match_names": [
+     "用途_共同住宅",
+     "用途_ホテル旅館",
+     "用途_店舗飲食",
+     "構造_耐火",
+     "防火_避難階段",
+     "数値"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "121"
+    ],
+    "top1_matches": 6
+   }
+  },
+  "2022-23": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "23",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "prf_added_text": [
+    "図書",
+    "建築物",
+    "位置",
+    "敷地",
+    "認定",
+    "部分",
+    "申請",
+    "除く",
+    "一団地",
+    "書類",
+    "構造",
+    "適用",
+    "平面図",
+    "各階平面図",
+    "明示",
+    "写し",
+    "対象区域",
+    "面積",
+    "限る",
+    "計画"
+   ],
+   "prf_added_tag": [
+    "両罰",
+    "工区",
+    "五階",
+    "付近見取図",
+    "コンプライアンス",
+    "正本",
+    "給排水設備",
+    "工区を分けて",
+    "両罰規定",
+    "縦覧",
+    "小荷物専用昇降機",
+    "一団地",
+    "団地再生",
+    "図面の省略",
+    "副本",
+    "正本一通及び副本一通",
+    "浄化槽",
+    "設備用",
+    "三階",
+    "総合的設計"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "150"
+    ],
+    [
+     "325M50004000040",
+     "2-2"
+    ],
+    [
+     "325AC0000000201",
+     "86"
+    ]
+   ],
+   "ranks": {
+    "baseline": null,
+    "raw_fulltags": null,
+    "safe_exp_fulltags": null,
+    "prf_text_orig": null,
+    "prf_tag_orig": null,
+    "prf_tag_fulltags": null,
+    "meta_append": null,
+    "meta_rerank": null
+   }
+  },
+  "2022-21": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "設備",
+    "構造設計図書",
+    "建築設備",
+    "基準",
+    "設備設計",
+    "免許",
+    "建築士とは",
+    "木造",
+    "名称",
+    "適合",
+    "定め",
+    "工事施工者",
+    "延べ面積",
+    "木造建築士",
+    "省令",
+    "建築設備士",
+    "表示",
+    "施工",
+    "国土交通省令",
+    "国土交通省"
+   ],
+   "prf_added_tag": [
+    "瑕疵",
+    "図面と照合",
+    "ダブルチェック",
+    "住宅瑕疵担保",
+    "定義",
+    "説明の努力義務",
+    "直ちに指摘",
+    "用語の定義",
+    "適切な説明",
+    "誠実に",
+    "紛争",
+    "保有水平耐力",
+    "積雪荷重",
+    "許容応力度",
+    "工事の差止め",
+    "名称の定義",
+    "地震力",
+    "記名の特例",
+    "委託者への説明",
+    "設計の品質"
+   ],
+   "prf_top3": [
+    [
+     "325AC1000000202",
+     "18"
+    ],
+    [
+     "325AC1000000202",
+     "2"
+    ],
+    [
+     "325AC1000000202",
+     "20-2"
+    ]
+   ],
+   "ranks": {
+    "baseline": 2,
+    "raw_fulltags": 2,
+    "safe_exp_fulltags": 2,
+    "prf_text_orig": 2,
+    "prf_tag_orig": 2,
+    "prf_tag_fulltags": 2,
+    "meta_append": 2,
+    "meta_rerank": 2
+   },
+   "governing_score_prf_text_orig": 1450.18,
+   "governing_score_prf_tag_orig": 1206.97,
+   "governing_score_prf_tag_fulltags": 1418.41,
+   "governing_score_meta_append": 1218.72,
+   "rerank_diag": {
+    "n_features_fired": 1,
+    "fired": [
+     "領域_建築士"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "領域_建築士"
+    ],
+    "top1_key": [
+     "325AC1000000202",
+     "18"
+    ],
+    "top1_matches": 1
+   }
+  },
+  "2022-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "56",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "平均",
+    "メートル",
+    "区域",
+    "境界線",
+    "境界",
+    "位置",
+    "距離",
+    "平均地盤面",
+    "適用",
+    "水平距離",
+    "接する",
+    "超える",
+    "隣地高さ制限",
+    "線路",
+    "線路敷",
+    "水面線路敷",
+    "道路水面線路敷",
+    "道路",
+    "定め",
+    "水面"
+   ],
+   "prf_added_tag": [
+    "平均地盤面",
+    "日影規制",
+    "日影による高さの制限",
+    "五メートル",
+    "敷地境界線から5メートル超",
+    "半球",
+    "真太陽時",
+    "冬至",
+    "冬至日",
+    "勾配",
+    "想定半球",
+    "日影の苦情",
+    "日影図",
+    "種別",
+    "等時間日影図",
+    "線路敷",
+    "北海道",
+    "地形",
+    "測定位置",
+    "ホテル"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "56-2"
+    ],
+    [
+     "325CO0000000338",
+     "135-7"
+    ],
+    [
+     "325CO0000000338",
+     "135-12"
+    ]
+   ],
+   "ranks": {
+    "baseline": 24,
+    "raw_fulltags": 13,
+    "safe_exp_fulltags": 12,
+    "prf_text_orig": 13,
+    "prf_tag_orig": 15,
+    "prf_tag_fulltags": 9,
+    "meta_append": 12,
+    "meta_rerank": 24
+   },
+   "governing_score_prf_text_orig": 627.31,
+   "governing_score_prf_tag_orig": 587.24,
+   "governing_score_prf_tag_fulltags": 718.12,
+   "governing_score_meta_append": 527.66,
+   "rerank_diag": {
+    "n_features_fired": 3,
+    "fired": [
+     "階数_高層",
+     "行為_新築",
+     "制限_斜線日影"
+    ],
+    "governing_in_base_top10": false,
+    "governing_matches": null,
+    "governing_match_names": null,
+    "top1_key": [
+     "325AC0000000201",
+     "56-2"
+    ],
+    "top1_matches": 2
+   }
+  },
+  "2022-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "43",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "地区",
+    "前面道路",
+    "境界線",
+    "境界",
+    "算定",
+    "地盤面",
+    "用途",
+    "容積率",
+    "地盤",
+    "地域",
+    "限度",
+    "十分",
+    "敷地内",
+    "平均",
+    "誘導",
+    "地面",
+    "北側",
+    "除く",
+    "誘導地区",
+    "日影"
+   ],
+   "prf_added_tag": [
+    "給油所",
+    "休憩所",
+    "係数",
+    "駅前広場",
+    "バスターミナル",
+    "副本の返却",
+    "タイル",
+    "日影図",
+    "天空率",
+    "落下",
+    "給油所休憩所",
+    "道路上空",
+    "自転車駐車場",
+    "付近見取図",
+    "見取図",
+    "ガラス",
+    "影の図",
+    "落下防止",
+    "正本",
+    "説明"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "145"
+    ],
+    [
+     "325AC0000000201",
+     "52"
+    ],
+    [
+     "325M50004000040",
+     "10-16"
+    ]
+   ],
+   "ranks": {
+    "baseline": 6,
+    "raw_fulltags": 3,
+    "safe_exp_fulltags": 4,
+    "prf_text_orig": 9,
+    "prf_tag_orig": 7,
+    "prf_tag_fulltags": 5,
+    "meta_append": 3,
+    "meta_rerank": 4
+   },
+   "governing_score_prf_text_orig": 768.32,
+   "governing_score_prf_tag_orig": 738.8,
+   "governing_score_prf_tag_fulltags": 803.67,
+   "governing_score_meta_append": 834.36,
+   "rerank_diag": {
+    "n_features_fired": 0,
+    "fired": [],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "数値"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "52"
+    ],
+    "top1_matches": 1
+   }
+  },
+  "2023-8": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "87-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "興行場等",
+    "公益的",
+    "延長",
+    "公益的建築物",
+    "被災者",
+    "救助用",
+    "適用しない",
+    "限る",
+    "理由",
+    "施工",
+    "二年",
+    "二年以内",
+    "一年",
+    "災害救助用建築物",
+    "メートル",
+    "仮設興行場",
+    "公益上やむを得ない",
+    "緩和",
+    "博覧会",
+    "申請"
+   ],
+   "prf_added_tag": [
+    "緩和",
+    "制限の緩和",
+    "興行場等",
+    "公益的",
+    "延長",
+    "2年以内",
+    "国自治体日本赤十字社",
+    "公益的建築物",
+    "防火地域は除く",
+    "用途変更",
+    "三月",
+    "審査会の同意",
+    "建築審査会の同意",
+    "二年以内",
+    "一年以内",
+    "一年延長",
+    "1年以内の期間",
+    "代替",
+    "博覧会",
+    "1年延長"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "87-3"
+    ],
+    [
+     "325AC0000000201",
+     "85"
+    ],
+    [
+     "325CO0000000338",
+     "147"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 1,
+    "prf_tag_orig": 1,
+    "prf_tag_fulltags": 1,
+    "meta_append": 1,
+    "meta_rerank": 1
+   },
+   "governing_score_prf_text_orig": 2909.06,
+   "governing_score_prf_tag_orig": 2838.07,
+   "governing_score_prf_tag_fulltags": 3032.07,
+   "governing_score_meta_append": 2424.39,
+   "rerank_diag": {
+    "n_features_fired": 5,
+    "fired": [
+     "用途_病院",
+     "用途_学校",
+     "用途_店舗飲食",
+     "設備_排煙",
+     "防火_内装"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 4,
+    "governing_match_names": [
+     "用途_病院",
+     "用途_学校",
+     "用途_店舗飲食",
+     "数値"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "87-3"
+    ],
+    "top1_matches": 4
+   }
+  },
+  "2023-15": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "車庫",
+    "自動車車庫",
+    "附属",
+    "敷地",
+    "区域",
+    "除く",
+    "敷地内",
+    "公告対象区域",
+    "用途に供する部分",
+    "公告",
+    "対象区域",
+    "十分",
+    "誘導",
+    "前面道路",
+    "道路",
+    "三階",
+    "誘導地区",
+    "築造",
+    "都市計画",
+    "壁面線"
+   ],
+   "prf_added_tag": [
+    "附属自動車車庫",
+    "車庫",
+    "公告対象区域",
+    "工作物の築造面積",
+    "附属車庫",
+    "工作物",
+    "延べ面積を超えない",
+    "3階以上は除く",
+    "税務署",
+    "複合化",
+    "3階以上",
+    "保健所",
+    "係数",
+    "警察署",
+    "放送施設",
+    "除く",
+    "電気通信の拠点",
+    "超えない",
+    "ドクターヘリ",
+    "備蓄倉庫の不算入"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "52"
+    ],
+    [
+     "325CO0000000338",
+     "130-7-2"
+    ],
+    [
+     "325CO0000000338",
+     "130-8"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 2,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 3,
+    "prf_tag_orig": 5,
+    "prf_tag_fulltags": 5,
+    "meta_append": 2,
+    "meta_rerank": 2
+   },
+   "governing_score_prf_text_orig": 978.41,
+   "governing_score_prf_tag_orig": 780.39,
+   "governing_score_prf_tag_fulltags": 845.56,
+   "governing_score_meta_append": 734.0,
+   "rerank_diag": {
+    "n_features_fired": 2,
+    "fired": [
+     "用途_工場倉庫",
+     "行為_新築"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "用途_工場倉庫"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "appdx2"
+    ],
+    "top1_matches": 2
+   }
+  },
+  "2023-19": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "86",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "乗降ロビー",
+    "各階",
+    "種別",
+    "入口",
+    "認定",
+    "材料",
+    "出入口",
+    "避難",
+    "配置",
+    "詳細図",
+    "図書",
+    "二面",
+    "予備電源",
+    "昇降路",
+    "算出方法",
+    "設備",
+    "断面",
+    "耐火",
+    "許可",
+    "平面図"
+   ],
+   "prf_added_tag": [
+    "求積図",
+    "台数",
+    "工区",
+    "軸組図",
+    "連結送水管",
+    "予備電源",
+    "仕様書",
+    "矩計図",
+    "日影図",
+    "乗降ロビー",
+    "付近見取図",
+    "詳細図",
+    "基礎伏図",
+    "積載量",
+    "立面図",
+    "消火活動の拠点",
+    "かごの大きさ",
+    "正本",
+    "呼び戻し装置",
+    "かごの戸"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "86"
+    ],
+    [
+     "325M50004000040",
+     "1-3"
+    ],
+    [
+     "325CO0000000338",
+     "129-13-3"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 2,
+    "prf_text_orig": 3,
+    "prf_tag_orig": 3,
+    "prf_tag_fulltags": 3,
+    "meta_append": 1,
+    "meta_rerank": 9
+   },
+   "governing_score_prf_text_orig": 1273.59,
+   "governing_score_prf_tag_orig": 1264.1,
+   "governing_score_prf_tag_fulltags": 1271.72,
+   "governing_score_meta_append": 1262.35,
+   "rerank_diag": {
+    "n_features_fired": 5,
+    "fired": [
+     "用途_ホテル旅館",
+     "構造_木造",
+     "行為_増築",
+     "手続_確認申請",
+     "設備_昇降機"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 0,
+    "governing_match_names": [],
+    "top1_key": [
+     "325M50004000040",
+     "1-3"
+    ],
+    "top1_matches": 5
+   }
+  },
+  "2023-9": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "128-5",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "準耐火",
+    "準耐火構造",
+    "メートル",
+    "床面",
+    "設備",
+    "避難",
+    "区画",
+    "階数",
+    "除く",
+    "床面積",
+    "防火設備",
+    "百平方メートル",
+    "住戸",
+    "消火",
+    "特殊建築物",
+    "一時間",
+    "大臣",
+    "特定主要構造部",
+    "共同住宅",
+    "国土交通大臣"
+   ],
+   "prf_added_tag": [
+    "区画",
+    "百平方メートル",
+    "アトリウム",
+    "プランニング",
+    "随時閉鎖",
+    "ダクトの貫通",
+    "配管の貫通",
+    "傾斜路",
+    "ケーブルの貫通",
+    "常時閉鎖",
+    "全館避難時間",
+    "吹抜けの区画",
+    "小屋裏",
+    "調理室等",
+    "家具の配置",
+    "除外",
+    "スパンドレル",
+    "住戸",
+    "客席",
+    "歩行距離の測定方法"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "128-5"
+    ],
+    [
+     "325CO0000000338",
+     "112"
+    ],
+    [
+     "325CO0000000338",
+     "120"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 1,
+    "prf_tag_orig": 1,
+    "prf_tag_fulltags": 1,
+    "meta_append": 1,
+    "meta_rerank": 4
+   },
+   "governing_score_prf_text_orig": 2462.16,
+   "governing_score_prf_tag_orig": 2167.92,
+   "governing_score_prf_tag_fulltags": 2231.56,
+   "governing_score_meta_append": 2087.54,
+   "rerank_diag": {
+    "n_features_fired": 4,
+    "fired": [
+     "用途_病院",
+     "用途_事務所",
+     "構造_耐火",
+     "防火_内装"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 2,
+    "governing_match_names": [
+     "防火_内装",
+     "数値"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "128-4"
+    ],
+    "top1_matches": 4
+   }
+  },
+  "2023-26": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "17",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "prf_added_text": [
+    "施設",
+    "特定建築物",
+    "旅客施設",
+    "管理",
+    "特別特定建築物",
+    "新設",
+    "義務等",
+    "新設旅客施設",
+    "車両",
+    "新設旅客施設等",
+    "公共交通事業者",
+    "公共交通事業者等",
+    "提供",
+    "義務",
+    "事業",
+    "移動等円滑化のため",
+    "規模",
+    "建築物特定施設",
+    "広報",
+    "広報活動"
+   ],
+   "prf_added_tag": [
+    "情報提供",
+    "バリアフリー",
+    "適合義務",
+    "用途変更",
+    "音声案内",
+    "引下げ",
+    "介助",
+    "乗継ぎ",
+    "適合させなければならない",
+    "車椅子スペース",
+    "努力義務",
+    "教育訓練",
+    "バリアフリーリフォーム",
+    "かごの奥行き",
+    "病院劇場百貨店",
+    "百貨店",
+    "出入口廊下",
+    "エレベーターの籠の大きさ",
+    "新設旅客施設",
+    "車両"
+   ],
+   "prf_top3": [
+    [
+     "418AC0000000091",
+     "16"
+    ],
+    [
+     "418AC0000000091",
+     "14"
+    ],
+    [
+     "418AC0000000091",
+     "8"
+    ]
+   ],
+   "ranks": {
+    "baseline": null,
+    "raw_fulltags": null,
+    "safe_exp_fulltags": null,
+    "prf_text_orig": null,
+    "prf_tag_orig": null,
+    "prf_tag_fulltags": null,
+    "meta_append": null,
+    "meta_rerank": null
+   }
+  },
+  "2024-28": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "12",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "図書",
+    "種別",
+    "詳細図",
+    "二面",
+    "算出方法",
+    "断面",
+    "平面図",
+    "表示",
+    "排気",
+    "各階平面図",
+    "求積図",
+    "換気",
+    "排水",
+    "配管",
+    "構造詳細図",
+    "排煙",
+    "給気",
+    "一覧",
+    "一覧表",
+    "断面図"
+   ],
+   "prf_added_tag": [
+    "証を提示",
+    "図書に表示",
+    "昇降機",
+    "表示をして記名",
+    "対象建築物",
+    "適合の確認",
+    "上乗せルール",
+    "適合確認の表示",
+    "ポンプ",
+    "専門家への確認",
+    "求積図",
+    "冷暖房",
+    "軸組図",
+    "専門家でない一級建築士",
+    "電気配線",
+    "ダクト",
+    "仕様書",
+    "ボイラー",
+    "矩計図",
+    "日影図"
+   ],
+   "prf_top3": [
+    [
+     "325M50004000040",
+     "1-3"
+    ],
+    [
+     "325AC1000000202",
+     "20-2"
+    ],
+    [
+     "325AC1000000202",
+     "20-3"
+    ]
+   ],
+   "ranks": {
+    "baseline": 8,
+    "raw_fulltags": 7,
+    "safe_exp_fulltags": 7,
+    "prf_text_orig": 9,
+    "prf_tag_orig": 8,
+    "prf_tag_fulltags": 7,
+    "meta_append": 7,
+    "meta_rerank": 9
+   },
+   "governing_score_prf_text_orig": 950.86,
+   "governing_score_prf_tag_orig": 982.38,
+   "governing_score_prf_tag_fulltags": 999.42,
+   "governing_score_meta_append": 965.19,
+   "rerank_diag": {
+    "n_features_fired": 7,
+    "fired": [
+     "用途_店舗飲食",
+     "構造_木造",
+     "構造_耐火",
+     "構造_準耐火",
+     "行為_新築",
+     "構造_計算",
+     "領域_建築士"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 2,
+    "governing_match_names": [
+     "用途_店舗飲食",
+     "領域_建築士"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "2"
+    ],
+    "top1_matches": 6
+   }
+  },
+  "2024-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "主要構造部",
+    "地区",
+    "ガス",
+    "準耐火",
+    "地域",
+    "整備",
+    "沿道",
+    "専用",
+    "街区",
+    "歴史的風致",
+    "風致",
+    "集落",
+    "工作物",
+    "適合",
+    "技術的基準",
+    "地区整備計画",
+    "防災街区",
+    "計画",
+    "防災",
+    "誘導"
+   ],
+   "prf_added_tag": [
+    "木材",
+    "断熱材",
+    "コンクリート",
+    "主要構造部",
+    "集成材",
+    "塗料",
+    "二つの道",
+    "保育所",
+    "合板",
+    "遊技場",
+    "ホルムアルデヒド発散",
+    "防水材",
+    "畜舎",
+    "ボーリング場",
+    "日本農林規格",
+    "外装",
+    "過半",
+    "展示場",
+    "ガラス",
+    "定義"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "144-3"
+    ],
+    [
+     "325AC0000000201",
+     "2"
+    ],
+    [
+     "325AC0000000201",
+     "37"
+    ]
+   ],
+   "ranks": {
+    "baseline": 2,
+    "raw_fulltags": 3,
+    "safe_exp_fulltags": 3,
+    "prf_text_orig": 2,
+    "prf_tag_orig": 3,
+    "prf_tag_fulltags": 3,
+    "meta_append": 3,
+    "meta_rerank": 1
+   },
+   "governing_score_prf_text_orig": 1055.73,
+   "governing_score_prf_tag_orig": 795.23,
+   "governing_score_prf_tag_fulltags": 885.52,
+   "governing_score_meta_append": 696.35,
+   "rerank_diag": {
+    "n_features_fired": 2,
+    "fired": [
+     "構造_耐火",
+     "行為_新築"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 3,
+    "governing_match_names": [
+     "構造_耐火",
+     "行為_新築",
+     "数値"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "2"
+    ],
+    "top1_matches": 3
+   }
+  },
+  "2024-25": {
+   "governing": {
+    "law_id": "336CO0000000037",
+    "law_name": "消防法施行令",
+    "art": "10",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "prf_added_text": [
+    "準耐火",
+    "天井",
+    "準耐火構造",
+    "床面",
+    "不燃",
+    "メートル",
+    "防火設備",
+    "百平方メートル",
+    "床面積",
+    "不燃材料",
+    "材料",
+    "認定",
+    "一時間",
+    "居室",
+    "大臣",
+    "間仕切壁",
+    "用途",
+    "昇降機",
+    "準耐火構造の床若しくは壁",
+    "一時間準耐火"
+   ],
+   "prf_added_tag": [
+    "地下街",
+    "百平方メートル",
+    "防煙たれ壁",
+    "垂れ壁",
+    "アトリウム",
+    "防煙壁",
+    "随時閉鎖",
+    "ダクトの貫通",
+    "配管の貫通",
+    "一酸化炭素",
+    "500平方メートル",
+    "ケーブルの貫通",
+    "手動開放装置",
+    "排煙口",
+    "違反の是正",
+    "常時閉鎖",
+    "気候",
+    "風土",
+    "排煙の免除",
+    "無窓の居室"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "112"
+    ],
+    [
+     "325CO0000000338",
+     "126-2"
+    ],
+    [
+     "323AC1000000186",
+     "17"
+    ]
+   ],
+   "ranks": {
+    "baseline": null,
+    "raw_fulltags": null,
+    "safe_exp_fulltags": null,
+    "prf_text_orig": null,
+    "prf_tag_orig": null,
+    "prf_tag_fulltags": null,
+    "meta_append": null,
+    "meta_rerank": null
+   }
+  },
+  "2024-26": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "17",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "prf_added_text": [
+    "建築物特定施設",
+    "協定",
+    "主務省令",
+    "資金",
+    "適合",
+    "基準",
+    "資金計画",
+    "事業",
+    "配置",
+    "主事",
+    "事項",
+    "省令",
+    "協定建築物",
+    "移動等円滑化基準",
+    "高齢者身体障害者等",
+    "副主事",
+    "困難",
+    "基準に適合",
+    "旅客施設",
+    "困難旅客施設"
+   ],
+   "prf_added_tag": [
+    "資金計画",
+    "補助金",
+    "旧法二本",
+    "近接",
+    "隣接",
+    "廃止法",
+    "地下街との接続",
+    "困難旅客施設",
+    "ベビーカー",
+    "資金",
+    "経路協定施設協定",
+    "経路協定",
+    "費用負担の分担",
+    "ペデストリアンデッキ",
+    "認定のメリット",
+    "高齢者身体障害者等",
+    "置き換えられる二つの旧法",
+    "施設協定",
+    "移動等円滑化困難旅客施設",
+    "一本化の立法過程"
+   ],
+   "prf_top3": [
+    [
+     "418AC0000000091",
+     "suppl0-2"
+    ],
+    [
+     "418AC0000000091",
+     "22-2"
+    ],
+    [
+     "418AC0000000091",
+     "17"
+    ]
+   ],
+   "ranks": {
+    "baseline": null,
+    "raw_fulltags": null,
+    "safe_exp_fulltags": null,
+    "prf_text_orig": null,
+    "prf_tag_orig": null,
+    "prf_tag_fulltags": null,
+    "meta_append": null,
+    "meta_rerank": null
+   }
+  },
+  "2024-6": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "113",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "仕上げ",
+    "天井",
+    "メートル",
+    "除く",
+    "準不燃",
+    "方法",
+    "大臣",
+    "壁及び天井",
+    "百平方メートル",
+    "国土交通大臣",
+    "廊下",
+    "一時間",
+    "階数",
+    "準不燃材料",
+    "室内に面する部分",
+    "通常の火災",
+    "高さ",
+    "火熱",
+    "準耐火構造の床若しくは壁",
+    "一時間準耐火"
+   ],
+   "prf_added_tag": [
+    "特定防火設備",
+    "百平方メートル",
+    "アトリウム",
+    "管の貫通",
+    "随時閉鎖",
+    "ダクトの貫通",
+    "配管の貫通",
+    "体育館",
+    "ケーブルの貫通",
+    "難燃",
+    "風道の貫通",
+    "常時閉鎖",
+    "調理室",
+    "吹抜けの区画",
+    "内装",
+    "小屋裏",
+    "調理室等",
+    "除外",
+    "スパンドレル",
+    "客席"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "112"
+    ],
+    [
+     "325CO0000000338",
+     "113"
+    ],
+    [
+     "325CO0000000338",
+     "128-5"
+    ]
+   ],
+   "ranks": {
+    "baseline": 2,
+    "raw_fulltags": 2,
+    "safe_exp_fulltags": 3,
+    "prf_text_orig": 4,
+    "prf_tag_orig": 2,
+    "prf_tag_fulltags": 2,
+    "meta_append": 2,
+    "meta_rerank": 2
+   },
+   "governing_score_prf_text_orig": 1521.06,
+   "governing_score_prf_tag_orig": 1477.74,
+   "governing_score_prf_tag_fulltags": 1698.77,
+   "governing_score_meta_append": 1480.25,
+   "rerank_diag": {
+    "n_features_fired": 9,
+    "fired": [
+     "用途_学校",
+     "用途_事務所",
+     "構造_木造",
+     "構造_耐火",
+     "構造_準耐火",
+     "階数_地階",
+     "設備_給排水",
+     "防火_区画",
+     "領域_消防"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 6,
+    "governing_match_names": [
+     "用途_学校",
+     "構造_木造",
+     "構造_耐火",
+     "構造_準耐火",
+     "設備_給排水",
+     "防火_区画"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "112"
+    ],
+    "top1_matches": 6
+   }
+  },
+  "2025-23": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "43",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "地区",
+    "災害",
+    "居住",
+    "工作物",
+    "用途",
+    "整備",
+    "特定工作物",
+    "条例",
+    "集落",
+    "地区計画",
+    "防止",
+    "条件",
+    "促進",
+    "盛土",
+    "自己の居住",
+    "政令",
+    "環境",
+    "地区整備計画",
+    "保全",
+    "造成"
+   ],
+   "prf_added_tag": [
+    "公民館",
+    "連たん",
+    "鉱物資源",
+    "がけ",
+    "雨水貯留",
+    "観光資源",
+    "騒音対策",
+    "樹木の保存",
+    "日用品の店舗",
+    "宅地造成等規制法",
+    "雨水の排水",
+    "厳しい条件",
+    "擁壁",
+    "観点",
+    "密接な関連の工場",
+    "立地基準",
+    "同意等",
+    "集落の維持",
+    "下水道",
+    "帰属の条件"
+   ],
+   "prf_top3": [
+    [
+     "343AC0000000100",
+     "33"
+    ],
+    [
+     "343AC0000000100",
+     "32"
+    ],
+    [
+     "343AC0000000100",
+     "34"
+    ]
+   ],
+   "ranks": {
+    "baseline": 7,
+    "raw_fulltags": 4,
+    "safe_exp_fulltags": 5,
+    "prf_text_orig": 6,
+    "prf_tag_orig": 7,
+    "prf_tag_fulltags": 5,
+    "meta_append": 3,
+    "meta_rerank": 2
+   },
+   "governing_score_prf_text_orig": 1179.13,
+   "governing_score_prf_tag_orig": 1069.27,
+   "governing_score_prf_tag_fulltags": 1253.5,
+   "governing_score_meta_append": 1252.89,
+   "rerank_diag": {
+    "n_features_fired": 3,
+    "fired": [
+     "行為_新築",
+     "設備_給排水",
+     "領域_都市計画"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 2,
+    "governing_match_names": [
+     "行為_新築",
+     "領域_都市計画"
+    ],
+    "top1_key": [
+     "343AC0000000100",
+     "33"
+    ],
+    "top1_matches": 2
+   }
+  },
+  "2025-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "42",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "メートル",
+    "地区",
+    "境界線",
+    "境界",
+    "地域",
+    "十分",
+    "安全",
+    "二メートル",
+    "支障",
+    "用途",
+    "誘導",
+    "議を経て",
+    "限る",
+    "除く",
+    "支障がない",
+    "審議会の議",
+    "規模",
+    "審議会",
+    "前面道路",
+    "誘導地区"
+   ],
+   "prf_added_tag": [
+    "同意",
+    "建築審査会の同意",
+    "崖地",
+    "私道",
+    "袋路",
+    "はしご車",
+    "係数",
+    "水路",
+    "間口",
+    "袋路状道路",
+    "広い空地",
+    "定義",
+    "消防車の進入",
+    "既存の道",
+    "避難経路",
+    "中心線",
+    "崖地川に沿う場合",
+    "備蓄倉庫の不算入",
+    "後退",
+    "一五倍"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "42"
+    ],
+    [
+     "325AC0000000201",
+     "43"
+    ],
+    [
+     "325AC0000000201",
+     "52"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 1,
+    "prf_tag_orig": 1,
+    "prf_tag_fulltags": 1,
+    "meta_append": 1,
+    "meta_rerank": 5
+   },
+   "governing_score_prf_text_orig": 1365.51,
+   "governing_score_prf_tag_orig": 1295.65,
+   "governing_score_prf_tag_fulltags": 1378.28,
+   "governing_score_meta_append": 1161.63,
+   "rerank_diag": {
+    "n_features_fired": 2,
+    "fired": [
+     "用途_共同住宅",
+     "行為_新築"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "数値"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "52"
+    ],
+    "top1_matches": 2
+   }
+  },
+  "2025-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "36",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "prf_added_text": [
+    "メートル",
+    "リベット",
+    "併用",
+    "地階",
+    "階数",
+    "地階を除く階数",
+    "大臣",
+    "コンクリートの強度",
+    "四以上",
+    "国土交通大臣",
+    "地階を除く",
+    "ブロック造",
+    "組積造",
+    "補強",
+    "補強コンクリートブロック造",
+    "ニュートン",
+    "コンクリートブロック造",
+    "鉄骨鉄筋コンクリート造",
+    "均質",
+    "埋まる"
+   ],
+   "prf_added_tag": [
+    "均質",
+    "埋まる",
+    "均質で密実",
+    "密実",
+    "調合",
+    "リスト",
+    "リベット孔",
+    "れんが造",
+    "リベット",
+    "リベットの歴史",
+    "塩化物量測定",
+    "穴の大きさ",
+    "高力ボルトボルト及びリベット",
+    "国土交通大臣が指定",
+    "併用",
+    "空気量試験",
+    "鋼材の接合部品",
+    "除外",
+    "液状化対策",
+    "3つの金物"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "68"
+    ],
+    [
+     "325CO0000000338",
+     "74"
+    ],
+    [
+     "325CO0000000338",
+     "36-2"
+    ]
+   ],
+   "ranks": {
+    "baseline": null,
+    "raw_fulltags": null,
+    "safe_exp_fulltags": null,
+    "prf_text_orig": null,
+    "prf_tag_orig": null,
+    "prf_tag_fulltags": null,
+    "meta_append": null,
+    "meta_rerank": null
+   }
+  },
+  "2025-9": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "129-13-3",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "メートル",
+    "準耐火",
+    "階段室",
+    "避難",
+    "三階",
+    "準耐火構造",
+    "合計",
+    "除く",
+    "屋根",
+    "準ずる",
+    "付室",
+    "バルコニー",
+    "大臣",
+    "国土交通大臣",
+    "屋内",
+    "閉鎖",
+    "百平方メートル",
+    "面積の合計",
+    "一時間",
+    "階数"
+   ],
+   "prf_added_tag": [
+    "百平方メートル",
+    "踊り場",
+    "はめごろし戸",
+    "重複区間",
+    "アトリウム",
+    "付室",
+    "踏面",
+    "随時閉鎖",
+    "予備電源",
+    "ダクトの貫通",
+    "配管の貫通",
+    "蹴上げ",
+    "ケーブルの貫通",
+    "常時閉鎖",
+    "調理室",
+    "吹抜けの区画",
+    "小屋裏",
+    "調理室等",
+    "除外",
+    "スパンドレル"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "128-5"
+    ],
+    [
+     "325CO0000000338",
+     "112"
+    ],
+    [
+     "325CO0000000338",
+     "123"
+    ]
+   ],
+   "ranks": {
+    "baseline": 5,
+    "raw_fulltags": 5,
+    "safe_exp_fulltags": 5,
+    "prf_text_orig": 5,
+    "prf_tag_orig": 5,
+    "prf_tag_fulltags": 5,
+    "meta_append": 5,
+    "meta_rerank": 4
+   },
+   "governing_score_prf_text_orig": 1588.26,
+   "governing_score_prf_tag_orig": 1504.69,
+   "governing_score_prf_tag_fulltags": 1538.44,
+   "governing_score_meta_append": 1402.37,
+   "rerank_diag": {
+    "n_features_fired": 6,
+    "fired": [
+     "用途_店舗飲食",
+     "用途_事務所",
+     "構造_耐火",
+     "階数_地階",
+     "設備_昇降機",
+     "防火_内装"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 3,
+    "governing_match_names": [
+     "設備_昇降機",
+     "防火_内装",
+     "数値"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "112"
+    ],
+    "top1_matches": 4
+   }
+  },
+  "2025-5": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "23",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "種別",
+    "メートル",
+    "避難",
+    "部分",
+    "屋外",
+    "詳細図",
+    "設備",
+    "二面",
+    "位置",
+    "算出方法",
+    "用途",
+    "断面",
+    "平面図",
+    "排気",
+    "各階平面図",
+    "材料",
+    "各階",
+    "求積図",
+    "避難階",
+    "構造詳細図"
+   ],
+   "prf_added_tag": [
+    "六階",
+    "客用",
+    "求積図",
+    "重複区間",
+    "踊場",
+    "軸組図",
+    "生徒用",
+    "宿泊室",
+    "仕様書",
+    "矩計図",
+    "集会室",
+    "日影図",
+    "児童用",
+    "売場",
+    "病室",
+    "付近見取図",
+    "詳細図",
+    "基礎伏図",
+    "キャバレー",
+    "階段を二つ"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "23"
+    ],
+    [
+     "325CO0000000338",
+     "121"
+    ],
+    [
+     "325M50004000040",
+     "1-3"
+    ]
+   ],
+   "ranks": {
+    "baseline": 1,
+    "raw_fulltags": 1,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 1,
+    "prf_tag_orig": 1,
+    "prf_tag_fulltags": 1,
+    "meta_append": 1,
+    "meta_rerank": 7
+   },
+   "governing_score_prf_text_orig": 1136.55,
+   "governing_score_prf_tag_orig": 1159.94,
+   "governing_score_prf_tag_fulltags": 1151.52,
+   "governing_score_meta_append": 1042.12,
+   "rerank_diag": {
+    "n_features_fired": 2,
+    "fired": [
+     "用途_共同住宅",
+     "防火_避難階段"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "用途_共同住宅"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "122"
+    ],
+    "top1_matches": 3
+   }
+  },
+  "2026-7": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "外壁",
+    "性能",
+    "開口部",
+    "耐火性",
+    "開口",
+    "延焼",
+    "耐火性能",
+    "防火設備",
+    "地区",
+    "方法",
+    "定め",
+    "大臣",
+    "壁柱床",
+    "国土交通大臣",
+    "技術的基準",
+    "地域",
+    "関係",
+    "不燃",
+    "整備",
+    "関係規定"
+   ],
+   "prf_added_tag": [
+    "保育所",
+    "遊技場",
+    "畜舎",
+    "自重",
+    "ボーリング場",
+    "過半",
+    "展示場",
+    "火災継続時間",
+    "保有耐火時間",
+    "定義",
+    "骨組みの耐火",
+    "用語の意義",
+    "検証法",
+    "公会堂",
+    "飲食店",
+    "スポーツ練習場",
+    "落下防止",
+    "クレーンの安全",
+    "用語の定義",
+    "下宿"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "108-4"
+    ],
+    [
+     "325AC0000000201",
+     "2"
+    ],
+    [
+     "325AC0000000201",
+     "90-3"
+    ]
+   ],
+   "ranks": {
+    "baseline": 2,
+    "raw_fulltags": 2,
+    "safe_exp_fulltags": 1,
+    "prf_text_orig": 2,
+    "prf_tag_orig": 2,
+    "prf_tag_fulltags": 1,
+    "meta_append": 2,
+    "meta_rerank": 3
+   },
+   "governing_score_prf_text_orig": 1450.65,
+   "governing_score_prf_tag_orig": 1375.1,
+   "governing_score_prf_tag_fulltags": 1541.86,
+   "governing_score_meta_append": 1226.76,
+   "rerank_diag": {
+    "n_features_fired": 5,
+    "fired": [
+     "用途_病院",
+     "用途_ホテル旅館",
+     "構造_耐火",
+     "設備_排煙",
+     "防火_区画"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 3,
+    "governing_match_names": [
+     "用途_病院",
+     "用途_ホテル旅館",
+     "構造_耐火"
+    ],
+    "top1_key": [
+     "325CO0000000338",
+     "112"
+    ],
+    "top1_matches": 4
+   }
+  },
+  "2026-25": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "suppl0-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "路外駐車場",
+    "駐車場",
+    "管理",
+    "特定路外駐車場",
+    "市長",
+    "新設",
+    "新設特定路外駐車場",
+    "新高齢者移動等円滑化法",
+    "路外駐車場管理者",
+    "路外駐車場管理者等",
+    "定め",
+    "協議",
+    "特別特定建築物",
+    "主務省令",
+    "路外駐車場移動等円滑化基準",
+    "広報",
+    "第百六十二条",
+    "自然的社会的条件",
+    "広報活動",
+    "啓発"
+   ],
+   "prf_added_tag": [
+    "情報提供",
+    "維持義務",
+    "バリアフリー",
+    "引下げ",
+    "市長",
+    "システムの引継ぎ",
+    "適合させなければならない",
+    "車椅子使用者用駐車施設",
+    "広報",
+    "努力義務",
+    "維持しなければならない",
+    "自然的社会的条件",
+    "設置時",
+    "引継ぎ",
+    "車椅子用駐車スペース",
+    "路外駐車場",
+    "啓発",
+    "かごの奥行き",
+    "病院劇場百貨店",
+    "百貨店"
+   ],
+   "prf_top3": [
+    [
+     "418AC0000000091",
+     "14"
+    ],
+    [
+     "418AC0000000091",
+     "11"
+    ],
+    [
+     "418AC0000000091",
+     "suppl5-72"
+    ]
+   ],
+   "ranks": {
+    "baseline": 8,
+    "raw_fulltags": 12,
+    "safe_exp_fulltags": 16,
+    "prf_text_orig": 8,
+    "prf_tag_orig": 10,
+    "prf_tag_fulltags": 16,
+    "meta_append": 12,
+    "meta_rerank": 8
+   },
+   "governing_score_prf_text_orig": 995.0,
+   "governing_score_prf_tag_orig": 879.18,
+   "governing_score_prf_tag_fulltags": 823.29,
+   "governing_score_meta_append": 794.8,
+   "rerank_diag": {
+    "n_features_fired": 4,
+    "fired": [
+     "用途_劇場集会",
+     "用途_店舗飲食",
+     "行為_新築",
+     "領域_バリアフリー"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 1,
+    "governing_match_names": [
+     "領域_バリアフリー"
+    ],
+    "top1_key": [
+     "418AC0000000091",
+     "14"
+    ],
+    "top1_matches": 4
+   }
+  },
+  "2026-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "82-4",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "荷重",
+    "積載荷重",
+    "周期",
+    "固定荷重",
+    "固有周期",
+    "変位",
+    "数値",
+    "方向",
+    "振動",
+    "積雪時",
+    "積雪荷重",
+    "各階",
+    "多雪区域",
+    "損傷限界",
+    "加速度",
+    "層間変位",
+    "暴風時",
+    "速度",
+    "大臣",
+    "損傷限界固有周期"
+   ],
+   "prf_added_tag": [
+    "組合せ",
+    "固定荷重",
+    "積雪荷重",
+    "多雪区域",
+    "積載荷重",
+    "記号",
+    "震度",
+    "塑性ヒンジ",
+    "塑性率",
+    "周期",
+    "増幅",
+    "増幅率",
+    "固有周期",
+    "塑性化",
+    "低減",
+    "変位",
+    "暴風時",
+    "層間変位",
+    "損傷限界固有周期",
+    "水平震度"
+   ],
+   "prf_top3": [
+    [
+     "325CO0000000338",
+     "82-5"
+    ],
+    [
+     "325CO0000000338",
+     "82"
+    ],
+    [
+     "325CO0000000338",
+     "88"
+    ]
+   ],
+   "ranks": {
+    "baseline": 15,
+    "raw_fulltags": 17,
+    "safe_exp_fulltags": 21,
+    "prf_text_orig": 16,
+    "prf_tag_orig": 16,
+    "prf_tag_fulltags": 18,
+    "meta_append": 14,
+    "meta_rerank": 15
+   },
+   "governing_score_prf_text_orig": 849.27,
+   "governing_score_prf_tag_orig": 847.09,
+   "governing_score_prf_tag_fulltags": 810.5,
+   "governing_score_meta_append": 1002.93,
+   "rerank_diag": {
+    "n_features_fired": 2,
+    "fired": [
+     "階数_地階",
+     "構造_計算"
+    ],
+    "governing_in_base_top10": false,
+    "governing_matches": null,
+    "governing_match_names": null,
+    "top1_key": [
+     "325CO0000000338",
+     "82-5"
+    ],
+    "top1_matches": 2
+   }
+  },
+  "2026-4": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "85",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "prf_added_text": [
+    "規模",
+    "仮使用",
+    "模様替",
+    "申請",
+    "修繕",
+    "大規模の模様替",
+    "大規模の修繕",
+    "交付",
+    "理由",
+    "通知書",
+    "仮使用認定",
+    "施工",
+    "避難",
+    "部分",
+    "工程",
+    "審査",
+    "延長",
+    "引受け",
+    "検査の引受け",
+    "安全"
+   ],
+   "prf_added_tag": [
+    "仮囲い",
+    "保健所長",
+    "保健所",
+    "平面図の添付",
+    "尿浄化槽",
+    "各階平面図",
+    "浄化槽",
+    "完了通知",
+    "事前相談",
+    "同意の期限",
+    "工事着手",
+    "安全防火避難の対策",
+    "官公庁の建物",
+    "配置図",
+    "経由して提出",
+    "同意の電子化",
+    "防火対策",
+    "仮に使う認定",
+    "仮使用認定",
+    "併用住宅の扱い"
+   ],
+   "prf_top3": [
+    [
+     "325M50004000040",
+     "4-16"
+    ],
+    [
+     "325AC0000000201",
+     "93"
+    ],
+    [
+     "325AC0000000201",
+     "18"
+    ]
+   ],
+   "ranks": {
+    "baseline": null,
+    "raw_fulltags": null,
+    "safe_exp_fulltags": null,
+    "prf_text_orig": null,
+    "prf_tag_orig": null,
+    "prf_tag_fulltags": null,
+    "meta_append": null,
+    "meta_rerank": null
+   }
+  },
+  "2026-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "prf_added_text": [
+    "主事",
+    "規模",
+    "建築主事等",
+    "建築主事",
+    "延長",
+    "建築主",
+    "期間",
+    "理由",
+    "通知",
+    "模様替",
+    "四日",
+    "修繕",
+    "大規模の模様替",
+    "通知書",
+    "大規模の修繕",
+    "省令",
+    "敷地",
+    "国土交通省令",
+    "審査",
+    "国土交通省"
+   ],
+   "prf_added_tag": [
+    "指定確認検査機関",
+    "建築主事",
+    "補正",
+    "審査期間",
+    "配筋",
+    "不合格",
+    "マンション",
+    "確認が不要",
+    "工事着手前",
+    "七日",
+    "施工中",
+    "工程ごと",
+    "完了通知",
+    "途中の検査",
+    "工事着手",
+    "鉄筋工事",
+    "官公庁の建物",
+    "移転",
+    "申請の時期",
+    "施工の記録"
+   ],
+   "prf_top3": [
+    [
+     "325AC0000000201",
+     "18"
+    ],
+    [
+     "325AC0000000201",
+     "7-3"
+    ],
+    [
+     "325AC0000000201",
+     "6"
+    ]
+   ],
+   "ranks": {
+    "baseline": 3,
+    "raw_fulltags": 3,
+    "safe_exp_fulltags": 2,
+    "prf_text_orig": 3,
+    "prf_tag_orig": 3,
+    "prf_tag_fulltags": 3,
+    "meta_append": 4,
+    "meta_rerank": 2
+   },
+   "governing_score_prf_text_orig": 1541.24,
+   "governing_score_prf_tag_orig": 1276.36,
+   "governing_score_prf_tag_fulltags": 1395.31,
+   "governing_score_meta_append": 1226.17,
+   "rerank_diag": {
+    "n_features_fired": 5,
+    "fired": [
+     "用途_共同住宅",
+     "行為_新築",
+     "行為_増築",
+     "手続_中間検査",
+     "構造_計算"
+    ],
+    "governing_in_base_top10": true,
+    "governing_matches": 3,
+    "governing_match_names": [
+     "行為_新築",
+     "行為_増築",
+     "数値"
+    ],
+    "top1_key": [
+     "325AC0000000201",
+     "18"
+    ],
+    "top1_matches": 6
+   }
+  }
+ }
+}
