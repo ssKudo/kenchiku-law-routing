@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "建築法規の入口ルーティング実験 — 言葉数え・下ごしらえ・小型採点モデルの実測（小型モデルの座席表）"
+authors:
+  - name: "ssKudo"
+version: "1.0.0"
+date-released: "2026-11-15"
+doi: "10.5281/zenodo.24242199"
+license: MIT
+repository-code: "https://github.com/ssKudo/kenchiku-law-routing"
