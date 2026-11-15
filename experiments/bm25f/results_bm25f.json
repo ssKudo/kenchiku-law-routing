@@ -1,0 +1,3248 @@
+{
+ "meta": {
+  "n_questions": 50,
+  "task": "Step 1 (other-AI report proposal 3): BM25F field-weighted scoring vs concatenated stack",
+  "fields": {
+   "body": "article full text (engine full, caption included)",
+   "meta": "chapter/section + fingerprint words + canonical numeric tokens (countermeasures meta_string, identical construction)",
+   "tag": "word tags (tag_vector/word_tags.jsonl)",
+   "exception": "exception clauses (fingerprint/fingerprints.json exceptions, reused as-is)"
+  },
+  "variants": {
+   "tfidf": "measure50 score_docs formula applied per field; per-field length normalization (body uses engine avg_tot, others use pool-field means); body includes caption boost (cap_grams x2.2, term-in-cap +1.1)",
+   "bm25": "textbook BM25 per field; per-field IDF over the 463 pool articles log(1+(N-df+0.5)/(df+0.5)); tokens = char 2/3-grams + TERMS (occurrence tf); query grams distinct; params body k1=1.2 b=0.75, meta k1=1.2 b=0.3, tag k1=0.2 b=0.75, exception k1=1.2 b=0.75",
+   "bm25_bmeta0": "same as bm25 but meta b=0.0 (proposal range 0.0-0.3 lower end)"
+  },
+  "weights": "body fixed 1.0; grid meta{0.4,0.5,0.6} x tag{0.2,0.25,0.3} x exc{0.2,0.3,0.4} = 27 patterns, all reported; diagnostics body_only and center_noexc",
+  "center_pattern": {
+   "meta": 0.5,
+   "tag": 0.25,
+   "exc": 0.3
+  },
+  "verification": "baseline and concatenated stack (meta_append) reproduced for all in-pool questions before measuring",
+  "references": {
+   "baseline": "29/3.88",
+   "concat_stack": "31/3.38"
+  },
+  "field_avg_grams": {
+   "body": 2184.7,
+   "meta": 65.7,
+   "tag": 605.7,
+   "exception": 497.3
+  }
+ },
+ "patterns": {
+  "tfidf|m0.4_t0.2_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.2,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.4,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 3,
+    "improved": 8,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.4,
+    "median_rank": 2.0,
+    "entries": 1,
+    "exits": 0,
+    "improved": 8,
+    "worsened": 3
+   }
+  },
+  "tfidf|m0.4_t0.2_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.2,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 3.45,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 4,
+    "improved": 8,
+    "worsened": 7
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 3.45,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 2,
+    "improved": 8,
+    "worsened": 6
+   }
+  },
+  "tfidf|m0.4_t0.2_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.2,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 3.64,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 5,
+    "improved": 8,
+    "worsened": 13
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 3.64,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 2,
+    "improved": 9,
+    "worsened": 10
+   }
+  },
+  "tfidf|m0.4_t0.25_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.25,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 31,
+    "mean_rank": 3.33,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 2,
+    "improved": 8,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 31,
+    "mean_rank": 3.33,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 0,
+    "improved": 9,
+    "worsened": 3
+   }
+  },
+  "tfidf|m0.4_t0.25_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.25,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.38,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 9,
+    "worsened": 7
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.38,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 1,
+    "improved": 8,
+    "worsened": 4
+   }
+  },
+  "tfidf|m0.4_t0.25_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.25,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.55,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 8,
+    "worsened": 11
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.55,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 2,
+    "improved": 8,
+    "worsened": 10
+   }
+  },
+  "tfidf|m0.4_t0.3_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.3,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 31,
+    "mean_rank": 3.31,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 2,
+    "improved": 9,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 31,
+    "mean_rank": 3.31,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 0,
+    "improved": 9,
+    "worsened": 3
+   }
+  },
+  "tfidf|m0.4_t0.3_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.3,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.38,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 9,
+    "worsened": 7
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.38,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 1,
+    "improved": 8,
+    "worsened": 4
+   }
+  },
+  "tfidf|m0.4_t0.3_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.3,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.55,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 8,
+    "worsened": 11
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.55,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 2,
+    "improved": 8,
+    "worsened": 10
+   }
+  },
+  "tfidf|m0.5_t0.2_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.2,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.4,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 3,
+    "improved": 8,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.4,
+    "median_rank": 2.0,
+    "entries": 1,
+    "exits": 0,
+    "improved": 9,
+    "worsened": 3
+   }
+  },
+  "tfidf|m0.5_t0.2_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.2,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.45,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 9,
+    "worsened": 7
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.45,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 1,
+    "improved": 8,
+    "worsened": 5
+   }
+  },
+  "tfidf|m0.5_t0.2_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.2,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.67,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 8,
+    "worsened": 12
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.67,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 2,
+    "improved": 8,
+    "worsened": 10
+   }
+  },
+  "tfidf|m0.5_t0.25_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.25,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 31,
+    "mean_rank": 3.38,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 2,
+    "improved": 8,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 31,
+    "mean_rank": 3.38,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 0,
+    "improved": 9,
+    "worsened": 3
+   }
+  },
+  "tfidf|m0.5_t0.25_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.25,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.38,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 9,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.38,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 1,
+    "improved": 9,
+    "worsened": 4
+   }
+  },
+  "tfidf|m0.5_t0.25_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.25,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.5,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 9,
+    "worsened": 9
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.5,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 2,
+    "improved": 9,
+    "worsened": 9
+   }
+  },
+  "tfidf|m0.5_t0.3_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.3,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 31,
+    "mean_rank": 3.33,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 2,
+    "improved": 9,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 31,
+    "mean_rank": 3.33,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 0,
+    "improved": 9,
+    "worsened": 3
+   }
+  },
+  "tfidf|m0.5_t0.3_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.3,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.38,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 3,
+    "improved": 9,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.38,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 1,
+    "improved": 8,
+    "worsened": 4
+   }
+  },
+  "tfidf|m0.5_t0.3_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.3,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 3.55,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 4,
+    "improved": 8,
+    "worsened": 10
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 3.55,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 2,
+    "improved": 8,
+    "worsened": 10
+   }
+  },
+  "tfidf|m0.6_t0.2_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.2,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.4,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 3,
+    "improved": 8,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.4,
+    "median_rank": 2.0,
+    "entries": 1,
+    "exits": 0,
+    "improved": 9,
+    "worsened": 3
+   }
+  },
+  "tfidf|m0.6_t0.2_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.2,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.43,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 9,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.43,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 1,
+    "improved": 9,
+    "worsened": 5
+   }
+  },
+  "tfidf|m0.6_t0.2_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.2,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.55,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 8,
+    "worsened": 11
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.55,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 2,
+    "improved": 9,
+    "worsened": 10
+   }
+  },
+  "tfidf|m0.6_t0.25_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.25,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 31,
+    "mean_rank": 3.38,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 2,
+    "improved": 8,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 31,
+    "mean_rank": 3.38,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 0,
+    "improved": 9,
+    "worsened": 3
+   }
+  },
+  "tfidf|m0.6_t0.25_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.25,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 3.4,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 4,
+    "improved": 9,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 3.4,
+    "median_rank": 2.0,
+    "entries": 1,
+    "exits": 1,
+    "improved": 8,
+    "worsened": 4
+   }
+  },
+  "tfidf|m0.6_t0.25_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.25,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 3.52,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 4,
+    "improved": 8,
+    "worsened": 10
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 3.52,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 2,
+    "improved": 8,
+    "worsened": 10
+   }
+  },
+  "tfidf|m0.6_t0.3_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.3,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.36,
+    "median_rank": 2.0,
+    "entries": 1,
+    "exits": 2,
+    "improved": 8,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.36,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 1,
+    "improved": 9,
+    "worsened": 4
+   }
+  },
+  "tfidf|m0.6_t0.3_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.3,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.36,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 3,
+    "improved": 9,
+    "worsened": 6
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.36,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 1,
+    "improved": 9,
+    "worsened": 4
+   }
+  },
+  "tfidf|m0.6_t0.3_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.3,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 3.5,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 4,
+    "improved": 8,
+    "worsened": 9
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 3.5,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 2,
+    "improved": 8,
+    "worsened": 9
+   }
+  },
+  "tfidf|m0.0_t0.0_e0.0": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.0,
+    "tag": 0.0,
+    "exc": 0.0
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 3.88,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 4,
+    "improved": 8,
+    "worsened": 9
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 3.88,
+    "median_rank": 2.0,
+    "entries": 0,
+    "exits": 0,
+    "improved": 0,
+    "worsened": 0
+   }
+  },
+  "tfidf|m0.5_t0.25_e0.0": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.25,
+    "exc": 0.0
+   },
+   "vs_stack": {
+    "top3": 31,
+    "mean_rank": 3.4,
+    "median_rank": 2.0,
+    "entries": 1,
+    "exits": 1,
+    "improved": 6,
+    "worsened": 2
+   },
+   "vs_baseline": {
+    "top3": 31,
+    "mean_rank": 3.4,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 1,
+    "improved": 9,
+    "worsened": 5
+   }
+  },
+  "bm25|m0.4_t0.2_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.2,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.12,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 12,
+    "worsened": 15
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.12,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 12
+   }
+  },
+  "bm25|m0.4_t0.2_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.2,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 27,
+    "mean_rank": 4.45,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 8,
+    "improved": 11,
+    "worsened": 19
+   },
+   "vs_baseline": {
+    "top3": 27,
+    "mean_rank": 4.45,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 5,
+    "improved": 10,
+    "worsened": 14
+   }
+  },
+  "bm25|m0.4_t0.2_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.2,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.64,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 9,
+    "improved": 11,
+    "worsened": 18
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.64,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 6,
+    "improved": 8,
+    "worsened": 15
+   }
+  },
+  "bm25|m0.4_t0.25_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.25,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.05,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 12,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.05,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 15,
+    "worsened": 12
+   }
+  },
+  "bm25|m0.4_t0.25_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.25,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.29,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 11,
+    "worsened": 16
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.29,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 13,
+    "worsened": 13
+   }
+  },
+  "bm25|m0.4_t0.25_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.25,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.57,
+    "median_rank": 2.5,
+    "entries": 4,
+    "exits": 9,
+    "improved": 11,
+    "worsened": 19
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.57,
+    "median_rank": 2.5,
+    "entries": 3,
+    "exits": 6,
+    "improved": 9,
+    "worsened": 15
+   }
+  },
+  "bm25|m0.4_t0.3_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.3,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 4.02,
+    "median_rank": 2.0,
+    "entries": 5,
+    "exits": 6,
+    "improved": 13,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 4.02,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 12
+   }
+  },
+  "bm25|m0.4_t0.3_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.3,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 12,
+    "worsened": 16
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 13,
+    "worsened": 13
+   }
+  },
+  "bm25|m0.4_t0.3_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.3,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 27,
+    "mean_rank": 4.45,
+    "median_rank": 2.5,
+    "entries": 4,
+    "exits": 8,
+    "improved": 11,
+    "worsened": 19
+   },
+   "vs_baseline": {
+    "top3": 27,
+    "mean_rank": 4.45,
+    "median_rank": 2.5,
+    "entries": 3,
+    "exits": 5,
+    "improved": 10,
+    "worsened": 14
+   }
+  },
+  "bm25|m0.5_t0.2_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.2,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.17,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 12,
+    "worsened": 15
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.17,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 13
+   }
+  },
+  "bm25|m0.5_t0.2_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.2,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 27,
+    "mean_rank": 4.38,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 8,
+    "improved": 11,
+    "worsened": 17
+   },
+   "vs_baseline": {
+    "top3": 27,
+    "mean_rank": 4.38,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 5,
+    "improved": 12,
+    "worsened": 13
+   }
+  },
+  "bm25|m0.5_t0.2_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.2,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.64,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 9,
+    "improved": 11,
+    "worsened": 18
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.64,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 6,
+    "improved": 8,
+    "worsened": 14
+   }
+  },
+  "bm25|m0.5_t0.25_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.25,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.07,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 13,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.07,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 15,
+    "worsened": 12
+   }
+  },
+  "bm25|m0.5_t0.25_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.25,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.21,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 12,
+    "worsened": 15
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.21,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 12,
+    "worsened": 12
+   }
+  },
+  "bm25|m0.5_t0.25_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.25,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.5,
+    "median_rank": 2.5,
+    "entries": 4,
+    "exits": 9,
+    "improved": 11,
+    "worsened": 18
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.5,
+    "median_rank": 2.5,
+    "entries": 3,
+    "exits": 6,
+    "improved": 10,
+    "worsened": 14
+   }
+  },
+  "bm25|m0.5_t0.3_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.3,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.02,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 13,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.02,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 12
+   }
+  },
+  "bm25|m0.5_t0.3_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.3,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.17,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 12,
+    "worsened": 15
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.17,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 13,
+    "worsened": 12
+   }
+  },
+  "bm25|m0.5_t0.3_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.3,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 27,
+    "mean_rank": 4.43,
+    "median_rank": 2.5,
+    "entries": 4,
+    "exits": 8,
+    "improved": 11,
+    "worsened": 17
+   },
+   "vs_baseline": {
+    "top3": 27,
+    "mean_rank": 4.43,
+    "median_rank": 2.5,
+    "entries": 3,
+    "exits": 5,
+    "improved": 11,
+    "worsened": 14
+   }
+  },
+  "bm25|m0.6_t0.2_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.2,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.14,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 12,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.14,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 14,
+    "worsened": 13
+   }
+  },
+  "bm25|m0.6_t0.2_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.2,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 27,
+    "mean_rank": 4.31,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 8,
+    "improved": 12,
+    "worsened": 17
+   },
+   "vs_baseline": {
+    "top3": 27,
+    "mean_rank": 4.31,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 5,
+    "improved": 12,
+    "worsened": 13
+   }
+  },
+  "bm25|m0.6_t0.2_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.2,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.6,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 9,
+    "improved": 11,
+    "worsened": 17
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.6,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 6,
+    "improved": 9,
+    "worsened": 13
+   }
+  },
+  "bm25|m0.6_t0.25_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.25,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.07,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 13,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.07,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 12
+   }
+  },
+  "bm25|m0.6_t0.25_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.25,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 12,
+    "worsened": 16
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 12,
+    "worsened": 13
+   }
+  },
+  "bm25|m0.6_t0.25_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.25,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.5,
+    "median_rank": 2.5,
+    "entries": 4,
+    "exits": 9,
+    "improved": 11,
+    "worsened": 17
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.5,
+    "median_rank": 2.5,
+    "entries": 3,
+    "exits": 6,
+    "improved": 11,
+    "worsened": 14
+   }
+  },
+  "bm25|m0.6_t0.3_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.3,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.05,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 6,
+    "improved": 12,
+    "worsened": 15
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.05,
+    "median_rank": 2.0,
+    "entries": 2,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 13
+   }
+  },
+  "bm25|m0.6_t0.3_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.3,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.14,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 12,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.14,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 12,
+    "worsened": 12
+   }
+  },
+  "bm25|m0.6_t0.3_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.3,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 27,
+    "mean_rank": 4.43,
+    "median_rank": 2.5,
+    "entries": 4,
+    "exits": 8,
+    "improved": 11,
+    "worsened": 17
+   },
+   "vs_baseline": {
+    "top3": 27,
+    "mean_rank": 4.43,
+    "median_rank": 2.5,
+    "entries": 3,
+    "exits": 5,
+    "improved": 11,
+    "worsened": 14
+   }
+  },
+  "bm25|m0.0_t0.0_e0.0": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.0,
+    "tag": 0.0,
+    "exc": 0.0
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.48,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 11,
+    "worsened": 12
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.48,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 13,
+    "worsened": 10
+   }
+  },
+  "bm25|m0.5_t0.25_e0.0": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.25,
+    "exc": 0.0
+   },
+   "vs_stack": {
+    "top3": 30,
+    "mean_rank": 3.9,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 5,
+    "improved": 12,
+    "worsened": 13
+   },
+   "vs_baseline": {
+    "top3": 30,
+    "mean_rank": 3.9,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 12
+   }
+  },
+  "bm25_bmeta0|m0.4_t0.2_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.2,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.14,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 12,
+    "worsened": 15
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.14,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 12
+   }
+  },
+  "bm25_bmeta0|m0.4_t0.2_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.2,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 27,
+    "mean_rank": 4.38,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 8,
+    "improved": 12,
+    "worsened": 18
+   },
+   "vs_baseline": {
+    "top3": 27,
+    "mean_rank": 4.38,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 5,
+    "improved": 11,
+    "worsened": 14
+   }
+  },
+  "bm25_bmeta0|m0.4_t0.2_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.2,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.69,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 9,
+    "improved": 11,
+    "worsened": 18
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.69,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 6,
+    "improved": 8,
+    "worsened": 15
+   }
+  },
+  "bm25_bmeta0|m0.4_t0.25_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.25,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.1,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 12,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.1,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 15,
+    "worsened": 12
+   }
+  },
+  "bm25_bmeta0|m0.4_t0.25_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.25,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.26,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 11,
+    "worsened": 15
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.26,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 12,
+    "worsened": 13
+   }
+  },
+  "bm25_bmeta0|m0.4_t0.25_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.25,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.6,
+    "median_rank": 2.5,
+    "entries": 4,
+    "exits": 9,
+    "improved": 11,
+    "worsened": 19
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.6,
+    "median_rank": 2.5,
+    "entries": 3,
+    "exits": 6,
+    "improved": 8,
+    "worsened": 15
+   }
+  },
+  "bm25_bmeta0|m0.4_t0.3_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.3,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.05,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 13,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.05,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 15,
+    "worsened": 12
+   }
+  },
+  "bm25_bmeta0|m0.4_t0.3_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.3,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.14,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 12,
+    "worsened": 15
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.14,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 13,
+    "worsened": 12
+   }
+  },
+  "bm25_bmeta0|m0.4_t0.3_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.4,
+    "tag": 0.3,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 27,
+    "mean_rank": 4.43,
+    "median_rank": 2.5,
+    "entries": 4,
+    "exits": 8,
+    "improved": 12,
+    "worsened": 18
+   },
+   "vs_baseline": {
+    "top3": 27,
+    "mean_rank": 4.43,
+    "median_rank": 2.5,
+    "entries": 3,
+    "exits": 5,
+    "improved": 10,
+    "worsened": 13
+   }
+  },
+  "bm25_bmeta0|m0.5_t0.2_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.2,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 12,
+    "worsened": 15
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 13
+   }
+  },
+  "bm25_bmeta0|m0.5_t0.2_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.2,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 27,
+    "mean_rank": 4.36,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 8,
+    "improved": 12,
+    "worsened": 17
+   },
+   "vs_baseline": {
+    "top3": 27,
+    "mean_rank": 4.36,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 5,
+    "improved": 12,
+    "worsened": 14
+   }
+  },
+  "bm25_bmeta0|m0.5_t0.2_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.2,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.64,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 9,
+    "improved": 11,
+    "worsened": 17
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.64,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 6,
+    "improved": 9,
+    "worsened": 15
+   }
+  },
+  "bm25_bmeta0|m0.5_t0.25_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.25,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.14,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 12,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.14,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 12
+   }
+  },
+  "bm25_bmeta0|m0.5_t0.25_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.25,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.24,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 12,
+    "worsened": 16
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.24,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 13,
+    "worsened": 14
+   }
+  },
+  "bm25_bmeta0|m0.5_t0.25_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.25,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.5,
+    "median_rank": 2.5,
+    "entries": 4,
+    "exits": 9,
+    "improved": 12,
+    "worsened": 18
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.5,
+    "median_rank": 2.5,
+    "entries": 3,
+    "exits": 6,
+    "improved": 9,
+    "worsened": 13
+   }
+  },
+  "bm25_bmeta0|m0.5_t0.3_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.3,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.07,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 13,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.07,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 15,
+    "worsened": 12
+   }
+  },
+  "bm25_bmeta0|m0.5_t0.3_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.3,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 12,
+    "worsened": 15
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 12,
+    "worsened": 13
+   }
+  },
+  "bm25_bmeta0|m0.5_t0.3_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.5,
+    "tag": 0.3,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.45,
+    "median_rank": 2.5,
+    "entries": 4,
+    "exits": 9,
+    "improved": 12,
+    "worsened": 17
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.45,
+    "median_rank": 2.5,
+    "entries": 3,
+    "exits": 6,
+    "improved": 11,
+    "worsened": 13
+   }
+  },
+  "bm25_bmeta0|m0.6_t0.2_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.2,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 12,
+    "worsened": 15
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 13
+   }
+  },
+  "bm25_bmeta0|m0.6_t0.2_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.2,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 27,
+    "mean_rank": 4.31,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 8,
+    "improved": 13,
+    "worsened": 17
+   },
+   "vs_baseline": {
+    "top3": 27,
+    "mean_rank": 4.31,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 5,
+    "improved": 13,
+    "worsened": 14
+   }
+  },
+  "bm25_bmeta0|m0.6_t0.2_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.2,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.55,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 9,
+    "improved": 11,
+    "worsened": 16
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.55,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 6,
+    "improved": 10,
+    "worsened": 13
+   }
+  },
+  "bm25_bmeta0|m0.6_t0.25_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.25,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.12,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 13,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.12,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 12
+   }
+  },
+  "bm25_bmeta0|m0.6_t0.25_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.25,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 13,
+    "worsened": 16
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 13,
+    "worsened": 13
+   }
+  },
+  "bm25_bmeta0|m0.6_t0.25_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.25,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.5,
+    "median_rank": 2.5,
+    "entries": 4,
+    "exits": 9,
+    "improved": 12,
+    "worsened": 16
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.5,
+    "median_rank": 2.5,
+    "entries": 3,
+    "exits": 6,
+    "improved": 10,
+    "worsened": 13
+   }
+  },
+  "bm25_bmeta0|m0.6_t0.3_e0.2": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.3,
+    "exc": 0.2
+   },
+   "vs_stack": {
+    "top3": 29,
+    "mean_rank": 4.07,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 6,
+    "improved": 13,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 29,
+    "mean_rank": 4.07,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 3,
+    "improved": 14,
+    "worsened": 12
+   }
+  },
+  "bm25_bmeta0|m0.6_t0.3_e0.3": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.3,
+    "exc": 0.3
+   },
+   "vs_stack": {
+    "top3": 28,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 4,
+    "exits": 7,
+    "improved": 12,
+    "worsened": 14
+   },
+   "vs_baseline": {
+    "top3": 28,
+    "mean_rank": 4.19,
+    "median_rank": 2.0,
+    "entries": 3,
+    "exits": 4,
+    "improved": 12,
+    "worsened": 13
+   }
+  },
+  "bm25_bmeta0|m0.6_t0.3_e0.4": {
+   "weights": {
+    "body": 1.0,
+    "meta": 0.6,
+    "tag": 0.3,
+    "exc": 0.4
+   },
+   "vs_stack": {
+    "top3": 26,
+    "mean_rank": 4.4,
+    "median_rank": 2.5,
+    "entries": 4,
+    "exits": 9,
+    "improved": 12,
+    "worsened": 16
+   },
+   "vs_baseline": {
+    "top3": 26,
+    "mean_rank": 4.4,
+    "median_rank": 2.5,
+    "entries": 3,
+    "exits": 6,
+    "improved": 11,
+    "worsened": 12
+   }
+  }
+ },
+ "questions": {
+  "2017-26": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "suppl0-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 2,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 20,
+    "bm25|m0.0_t0.0_e0.0": 19,
+    "bm25|m0.5_t0.25_e0.0": 18,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 20
+   }
+  },
+  "2017-6": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "108-3",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 20,
+    "concat_stack": 18,
+    "tfidf|m0.5_t0.25_e0.3": 20,
+    "tfidf|m0.0_t0.0_e0.0": 20,
+    "tfidf|m0.5_t0.25_e0.0": 18,
+    "bm25|m0.5_t0.25_e0.3": 19,
+    "bm25|m0.0_t0.0_e0.0": 18,
+    "bm25|m0.5_t0.25_e0.0": 14,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 19
+   }
+  },
+  "2017-2": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2017-29": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "concat_stack": null,
+    "tfidf|m0.5_t0.25_e0.3": null,
+    "tfidf|m0.0_t0.0_e0.0": null,
+    "tfidf|m0.5_t0.25_e0.0": null,
+    "bm25|m0.5_t0.25_e0.3": null,
+    "bm25|m0.0_t0.0_e0.0": null,
+    "bm25|m0.5_t0.25_e0.0": null,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": null
+   }
+  },
+  "2017-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "82",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "concat_stack": 2,
+    "tfidf|m0.5_t0.25_e0.3": 2,
+    "tfidf|m0.0_t0.0_e0.0": 2,
+    "tfidf|m0.5_t0.25_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.3": 2,
+    "bm25|m0.0_t0.0_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.0": 2,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 2
+   }
+  },
+  "2018-8": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "121",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "concat_stack": 2,
+    "tfidf|m0.5_t0.25_e0.3": 2,
+    "tfidf|m0.0_t0.0_e0.0": 2,
+    "tfidf|m0.5_t0.25_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.3": 2,
+    "bm25|m0.0_t0.0_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.0": 2,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 2
+   }
+  },
+  "2018-5": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "28",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "concat_stack": 2,
+    "tfidf|m0.5_t0.25_e0.3": 2,
+    "tfidf|m0.0_t0.0_e0.0": 2,
+    "tfidf|m0.5_t0.25_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.3": 2,
+    "bm25|m0.0_t0.0_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.0": 3,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 3
+   }
+  },
+  "2018-24": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "29",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 2,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 2
+   }
+  },
+  "2018-4": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "90-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 2,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 2,
+    "bm25|m0.0_t0.0_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.0": 2,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 2
+   }
+  },
+  "2018-22": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "24",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2019-24": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "29",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 2,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 2,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 2
+   }
+  },
+  "2019-29": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "80-3",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 2,
+    "tfidf|m0.5_t0.25_e0.3": 2,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.3": 4,
+    "bm25|m0.0_t0.0_e0.0": 7,
+    "bm25|m0.5_t0.25_e0.0": 3,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 4
+   }
+  },
+  "2019-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "69",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "concat_stack": null,
+    "tfidf|m0.5_t0.25_e0.3": null,
+    "tfidf|m0.0_t0.0_e0.0": null,
+    "tfidf|m0.5_t0.25_e0.0": null,
+    "bm25|m0.5_t0.25_e0.3": null,
+    "bm25|m0.0_t0.0_e0.0": null,
+    "bm25|m0.5_t0.25_e0.0": null,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": null
+   }
+  },
+  "2019-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 3,
+    "concat_stack": 4,
+    "tfidf|m0.5_t0.25_e0.3": 3,
+    "tfidf|m0.0_t0.0_e0.0": 3,
+    "tfidf|m0.5_t0.25_e0.0": 3,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 2
+   }
+  },
+  "2019-19": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2020-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "44",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 6,
+    "concat_stack": 2,
+    "tfidf|m0.5_t0.25_e0.3": 4,
+    "tfidf|m0.0_t0.0_e0.0": 6,
+    "tfidf|m0.5_t0.25_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.3": 4,
+    "bm25|m0.0_t0.0_e0.0": 6,
+    "bm25|m0.5_t0.25_e0.0": 2,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 4
+   }
+  },
+  "2020-2": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "135-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "concat_stack": 2,
+    "tfidf|m0.5_t0.25_e0.3": 4,
+    "tfidf|m0.0_t0.0_e0.0": 2,
+    "tfidf|m0.5_t0.25_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.3": 4,
+    "bm25|m0.0_t0.0_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.0": 2,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 4
+   }
+  },
+  "2020-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 4,
+    "concat_stack": 4,
+    "tfidf|m0.5_t0.25_e0.3": 4,
+    "tfidf|m0.0_t0.0_e0.0": 4,
+    "tfidf|m0.5_t0.25_e0.0": 4,
+    "bm25|m0.5_t0.25_e0.3": 3,
+    "bm25|m0.0_t0.0_e0.0": 3,
+    "bm25|m0.5_t0.25_e0.0": 4,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 3
+   }
+  },
+  "2020-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 7,
+    "concat_stack": 3,
+    "tfidf|m0.5_t0.25_e0.3": 2,
+    "tfidf|m0.0_t0.0_e0.0": 7,
+    "tfidf|m0.5_t0.25_e0.0": 3,
+    "bm25|m0.5_t0.25_e0.3": 7,
+    "bm25|m0.0_t0.0_e0.0": 6,
+    "bm25|m0.5_t0.25_e0.0": 5,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 8
+   }
+  },
+  "2020-7": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "120",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2021-8": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "122",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 3,
+    "concat_stack": 3,
+    "tfidf|m0.5_t0.25_e0.3": 3,
+    "tfidf|m0.0_t0.0_e0.0": 3,
+    "tfidf|m0.5_t0.25_e0.0": 3,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2021-17": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "68-4",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 9,
+    "bm25|m0.5_t0.25_e0.0": 7,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2021-20": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "68-7",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 6,
+    "concat_stack": 5,
+    "tfidf|m0.5_t0.25_e0.3": 5,
+    "tfidf|m0.0_t0.0_e0.0": 6,
+    "tfidf|m0.5_t0.25_e0.0": 5,
+    "bm25|m0.5_t0.25_e0.3": 5,
+    "bm25|m0.0_t0.0_e0.0": 5,
+    "bm25|m0.5_t0.25_e0.0": 5,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 5
+   }
+  },
+  "2021-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 4,
+    "concat_stack": 5,
+    "tfidf|m0.5_t0.25_e0.3": 3,
+    "tfidf|m0.0_t0.0_e0.0": 4,
+    "tfidf|m0.5_t0.25_e0.0": 5,
+    "bm25|m0.5_t0.25_e0.3": 5,
+    "bm25|m0.0_t0.0_e0.0": 5,
+    "bm25|m0.5_t0.25_e0.0": 5,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 5
+   }
+  },
+  "2021-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "56-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2022-7": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "121",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2022-23": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "23",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "concat_stack": null,
+    "tfidf|m0.5_t0.25_e0.3": null,
+    "tfidf|m0.0_t0.0_e0.0": null,
+    "tfidf|m0.5_t0.25_e0.0": null,
+    "bm25|m0.5_t0.25_e0.3": null,
+    "bm25|m0.0_t0.0_e0.0": null,
+    "bm25|m0.5_t0.25_e0.0": null,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": null
+   }
+  },
+  "2022-21": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "concat_stack": 2,
+    "tfidf|m0.5_t0.25_e0.3": 2,
+    "tfidf|m0.0_t0.0_e0.0": 2,
+    "tfidf|m0.5_t0.25_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2022-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "56",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 24,
+    "concat_stack": 12,
+    "tfidf|m0.5_t0.25_e0.3": 12,
+    "tfidf|m0.0_t0.0_e0.0": 24,
+    "tfidf|m0.5_t0.25_e0.0": 17,
+    "bm25|m0.5_t0.25_e0.3": 5,
+    "bm25|m0.0_t0.0_e0.0": 10,
+    "bm25|m0.5_t0.25_e0.0": 6,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 4
+   }
+  },
+  "2022-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "43",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 6,
+    "concat_stack": 3,
+    "tfidf|m0.5_t0.25_e0.3": 4,
+    "tfidf|m0.0_t0.0_e0.0": 6,
+    "tfidf|m0.5_t0.25_e0.0": 3,
+    "bm25|m0.5_t0.25_e0.3": 2,
+    "bm25|m0.0_t0.0_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.0": 2,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 2
+   }
+  },
+  "2023-8": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "87-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 2,
+    "bm25|m0.0_t0.0_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.0": 2,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 2
+   }
+  },
+  "2023-15": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 2,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2023-19": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "86",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 2,
+    "bm25|m0.0_t0.0_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.0": 3,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 2
+   }
+  },
+  "2023-9": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "128-5",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2023-26": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "17",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "concat_stack": null,
+    "tfidf|m0.5_t0.25_e0.3": null,
+    "tfidf|m0.0_t0.0_e0.0": null,
+    "tfidf|m0.5_t0.25_e0.0": null,
+    "bm25|m0.5_t0.25_e0.3": null,
+    "bm25|m0.0_t0.0_e0.0": null,
+    "bm25|m0.5_t0.25_e0.0": null,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": null
+   }
+  },
+  "2024-28": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "12",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 8,
+    "concat_stack": 7,
+    "tfidf|m0.5_t0.25_e0.3": 6,
+    "tfidf|m0.0_t0.0_e0.0": 8,
+    "tfidf|m0.5_t0.25_e0.0": 6,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2024-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "concat_stack": 3,
+    "tfidf|m0.5_t0.25_e0.3": 2,
+    "tfidf|m0.0_t0.0_e0.0": 2,
+    "tfidf|m0.5_t0.25_e0.0": 3,
+    "bm25|m0.5_t0.25_e0.3": 2,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2024-25": {
+   "governing": {
+    "law_id": "336CO0000000037",
+    "law_name": "消防法施行令",
+    "art": "10",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "concat_stack": null,
+    "tfidf|m0.5_t0.25_e0.3": null,
+    "tfidf|m0.0_t0.0_e0.0": null,
+    "tfidf|m0.5_t0.25_e0.0": null,
+    "bm25|m0.5_t0.25_e0.3": null,
+    "bm25|m0.0_t0.0_e0.0": null,
+    "bm25|m0.5_t0.25_e0.0": null,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": null
+   }
+  },
+  "2024-26": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "17",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "concat_stack": null,
+    "tfidf|m0.5_t0.25_e0.3": null,
+    "tfidf|m0.0_t0.0_e0.0": null,
+    "tfidf|m0.5_t0.25_e0.0": null,
+    "bm25|m0.5_t0.25_e0.3": null,
+    "bm25|m0.0_t0.0_e0.0": null,
+    "bm25|m0.5_t0.25_e0.0": null,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": null
+   }
+  },
+  "2024-6": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "113",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "concat_stack": 2,
+    "tfidf|m0.5_t0.25_e0.3": 2,
+    "tfidf|m0.0_t0.0_e0.0": 2,
+    "tfidf|m0.5_t0.25_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.3": 6,
+    "bm25|m0.0_t0.0_e0.0": 8,
+    "bm25|m0.5_t0.25_e0.0": 4,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 6
+   }
+  },
+  "2025-23": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "43",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 7,
+    "concat_stack": 3,
+    "tfidf|m0.5_t0.25_e0.3": 5,
+    "tfidf|m0.0_t0.0_e0.0": 7,
+    "tfidf|m0.5_t0.25_e0.0": 6,
+    "bm25|m0.5_t0.25_e0.3": 7,
+    "bm25|m0.0_t0.0_e0.0": 6,
+    "bm25|m0.5_t0.25_e0.0": 6,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 7
+   }
+  },
+  "2025-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "42",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2025-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "36",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "concat_stack": null,
+    "tfidf|m0.5_t0.25_e0.3": null,
+    "tfidf|m0.0_t0.0_e0.0": null,
+    "tfidf|m0.5_t0.25_e0.0": null,
+    "bm25|m0.5_t0.25_e0.3": null,
+    "bm25|m0.0_t0.0_e0.0": null,
+    "bm25|m0.5_t0.25_e0.0": null,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": null
+   }
+  },
+  "2025-9": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "129-13-3",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 5,
+    "concat_stack": 5,
+    "tfidf|m0.5_t0.25_e0.3": 5,
+    "tfidf|m0.0_t0.0_e0.0": 5,
+    "tfidf|m0.5_t0.25_e0.0": 5,
+    "bm25|m0.5_t0.25_e0.3": 4,
+    "bm25|m0.0_t0.0_e0.0": 5,
+    "bm25|m0.5_t0.25_e0.0": 3,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 4
+   }
+  },
+  "2025-5": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "23",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 1,
+    "concat_stack": 1,
+    "tfidf|m0.5_t0.25_e0.3": 1,
+    "tfidf|m0.0_t0.0_e0.0": 1,
+    "tfidf|m0.5_t0.25_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.3": 1,
+    "bm25|m0.0_t0.0_e0.0": 1,
+    "bm25|m0.5_t0.25_e0.0": 1,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 1
+   }
+  },
+  "2026-7": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 2,
+    "concat_stack": 2,
+    "tfidf|m0.5_t0.25_e0.3": 2,
+    "tfidf|m0.0_t0.0_e0.0": 2,
+    "tfidf|m0.5_t0.25_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.3": 3,
+    "bm25|m0.0_t0.0_e0.0": 2,
+    "bm25|m0.5_t0.25_e0.0": 3,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 3
+   }
+  },
+  "2026-25": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "suppl0-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 8,
+    "concat_stack": 12,
+    "tfidf|m0.5_t0.25_e0.3": 11,
+    "tfidf|m0.0_t0.0_e0.0": 8,
+    "tfidf|m0.5_t0.25_e0.0": 10,
+    "bm25|m0.5_t0.25_e0.3": 30,
+    "bm25|m0.0_t0.0_e0.0": 29,
+    "bm25|m0.5_t0.25_e0.0": 29,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 30
+   }
+  },
+  "2026-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "82-4",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 15,
+    "concat_stack": 14,
+    "tfidf|m0.5_t0.25_e0.3": 14,
+    "tfidf|m0.0_t0.0_e0.0": 15,
+    "tfidf|m0.5_t0.25_e0.0": 13,
+    "bm25|m0.5_t0.25_e0.3": 13,
+    "bm25|m0.0_t0.0_e0.0": 13,
+    "bm25|m0.5_t0.25_e0.0": 11,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 13
+   }
+  },
+  "2026-4": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "85",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "ranks": {
+    "baseline": null,
+    "concat_stack": null,
+    "tfidf|m0.5_t0.25_e0.3": null,
+    "tfidf|m0.0_t0.0_e0.0": null,
+    "tfidf|m0.5_t0.25_e0.0": null,
+    "bm25|m0.5_t0.25_e0.3": null,
+    "bm25|m0.0_t0.0_e0.0": null,
+    "bm25|m0.5_t0.25_e0.0": null,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": null
+   }
+  },
+  "2026-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "ranks": {
+    "baseline": 3,
+    "concat_stack": 4,
+    "tfidf|m0.5_t0.25_e0.3": 3,
+    "tfidf|m0.0_t0.0_e0.0": 3,
+    "tfidf|m0.5_t0.25_e0.0": 4,
+    "bm25|m0.5_t0.25_e0.3": 3,
+    "bm25|m0.0_t0.0_e0.0": 3,
+    "bm25|m0.5_t0.25_e0.0": 3,
+    "bm25_bmeta0|m0.5_t0.25_e0.3": 3
+   }
+  }
+ }
+}

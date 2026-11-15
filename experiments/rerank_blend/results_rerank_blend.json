@@ -1,0 +1,1700 @@
+{
+ "meta": {
+  "task": "Step 5: 日本語リランカー混合版（提案⑤の再戦）",
+  "arena": "fifty 50問・原文TF-IDF上位30プール",
+  "lexical": "連結スタック（原文＋単語タグ＋メタデータ）生スコア（再検証済み 31/3.38）",
+  "ce_jp": "hotchpotch/japanese-reranker-cross-encoder-small-v1（XLMRobertaForSequenceClassification, MiniLM-L12-H384, 約118M）公式ONNX無し→torch読込し自前でONNX変換、ORT実行。ORT vs torch 最大差1e-6",
+  "ce_bge_fallback": "rerank_ce 保存済み bge-reranker-v2-m3 ペアスコア（単独 13/9.33 を再現照合済み）",
+  "windowing": "rerank_ce と同一： [s] q [/s][/s] chunk [/s]、上限512、窓幅=512-(問題トークン+4)、重なりなし、最大4窓・等間隔サンプリング（先頭含む）、条文スコア=窓最大値",
+  "fusion": "プール内 Min-Max 正規化 → S = w_lex·stack + w_ce·CE",
+  "references": {
+   "baseline": [
+    29,
+    3.88
+   ],
+   "stack": [
+    31,
+    3.38
+   ],
+   "stack_x_ruri_best": {
+    "alpha0.80": [
+     33,
+     3.26
+    ],
+    "alpha0.85": [
+     33,
+     3.33
+    ],
+    "alpha0.90": [
+     33,
+     3.31
+    ]
+   },
+   "bge_solo": [
+    13,
+    9.33
+   ],
+   "ceiling_top3": 42
+  }
+ },
+ "cells": {
+  "jpCE_solo": {
+   "top3": 13,
+   "avg": 8.88,
+   "vs_stack": {
+    "entries": [
+     "2019-3",
+     "2026-25",
+     "2026-3"
+    ],
+    "exits": [
+     "2017-2",
+     "2018-8",
+     "2018-5",
+     "2018-24",
+     "2019-24",
+     "2019-29",
+     "2019-19",
+     "2020-14",
+     "2020-2",
+     "2021-8",
+     "2021-18",
+     "2022-7",
+     "2022-21",
+     "2022-14",
+     "2023-8",
+     "2023-15",
+     "2023-19",
+     "2023-9",
+     "2024-1",
+     "2025-23",
+     "2025-5"
+    ],
+    "improved": 7,
+    "worsened": 30,
+    "improved_q": [
+     "2017-6",
+     "2017-11",
+     "2019-3",
+     "2020-3",
+     "2021-1",
+     "2026-25",
+     "2026-3"
+    ],
+    "worsened_q": [
+     "2017-26",
+     "2017-2",
+     "2018-8",
+     "2018-5",
+     "2018-24",
+     "2018-22",
+     "2019-24",
+     "2019-29",
+     "2019-19",
+     "2020-14",
+     "2020-2",
+     "2020-1",
+     "2021-8",
+     "2021-17",
+     "2021-20",
+     "2021-18",
+     "2022-7",
+     "2022-21",
+     "2022-18",
+     "2022-14",
+     "2023-8",
+     "2023-15",
+     "2023-19",
+     "2023-9",
+     "2024-28",
+     "2024-1",
+     "2025-23",
+     "2025-14",
+     "2025-9",
+     "2025-5"
+    ]
+   }
+  },
+  "bgeCE_solo": {
+   "top3": 13,
+   "avg": 9.33,
+   "vs_stack": {
+    "entries": [
+     "2019-3",
+     "2021-1",
+     "2026-25"
+    ],
+    "exits": [
+     "2017-2",
+     "2017-11",
+     "2018-8",
+     "2018-5",
+     "2019-24",
+     "2019-29",
+     "2019-19",
+     "2020-14",
+     "2020-2",
+     "2020-7",
+     "2021-8",
+     "2021-18",
+     "2022-7",
+     "2022-21",
+     "2022-14",
+     "2023-8",
+     "2023-15",
+     "2023-9",
+     "2024-1",
+     "2025-23",
+     "2026-7"
+    ],
+    "improved": 6,
+    "worsened": 31,
+    "improved_q": [
+     "2017-6",
+     "2019-3",
+     "2020-3",
+     "2021-1",
+     "2024-6",
+     "2026-25"
+    ],
+    "worsened_q": [
+     "2017-26",
+     "2017-2",
+     "2017-11",
+     "2018-8",
+     "2018-5",
+     "2018-24",
+     "2018-22",
+     "2019-24",
+     "2019-29",
+     "2019-19",
+     "2020-14",
+     "2020-2",
+     "2020-1",
+     "2020-7",
+     "2021-8",
+     "2021-17",
+     "2021-20",
+     "2021-18",
+     "2022-7",
+     "2022-21",
+     "2022-14",
+     "2023-8",
+     "2023-15",
+     "2023-9",
+     "2024-28",
+     "2024-1",
+     "2025-23",
+     "2025-9",
+     "2026-7",
+     "2026-11",
+     "2026-3"
+    ]
+   }
+  },
+  "stackxjpCE@0.8/0.2": {
+   "top3": 33,
+   "avg": 3.4,
+   "vs_stack": {
+    "entries": [
+     "2019-3",
+     "2020-1",
+     "2026-3"
+    ],
+    "exits": [
+     "2025-23"
+    ],
+    "improved": 7,
+    "worsened": 10,
+    "improved_q": [
+     "2017-11",
+     "2019-3",
+     "2020-1",
+     "2020-3",
+     "2026-7",
+     "2026-25",
+     "2026-3"
+    ],
+    "worsened_q": [
+     "2017-2",
+     "2018-5",
+     "2019-24",
+     "2019-29",
+     "2020-2",
+     "2021-20",
+     "2022-18",
+     "2023-8",
+     "2024-28",
+     "2025-23"
+    ]
+   },
+   "vs_current_best": {
+    "entries": [
+     "2020-1"
+    ],
+    "exits": [
+     "2025-23"
+    ],
+    "improved": 7,
+    "worsened": 11,
+    "improved_q": [
+     "2017-11",
+     "2019-3",
+     "2020-1",
+     "2020-3",
+     "2025-9",
+     "2026-7",
+     "2026-25"
+    ],
+    "worsened_q": [
+     "2017-2",
+     "2018-5",
+     "2019-24",
+     "2019-29",
+     "2020-2",
+     "2021-20",
+     "2022-18",
+     "2023-8",
+     "2024-28",
+     "2025-23",
+     "2026-11"
+    ]
+   }
+  },
+  "stackxjpCE@0.7/0.3": {
+   "top3": 33,
+   "avg": 3.33,
+   "vs_stack": {
+    "entries": [
+     "2019-3",
+     "2020-1",
+     "2026-3"
+    ],
+    "exits": [
+     "2019-29"
+    ],
+    "improved": 9,
+    "worsened": 10,
+    "improved_q": [
+     "2017-26",
+     "2017-11",
+     "2019-3",
+     "2020-1",
+     "2020-3",
+     "2026-7",
+     "2026-25",
+     "2026-11",
+     "2026-3"
+    ],
+    "worsened_q": [
+     "2017-2",
+     "2018-5",
+     "2018-24",
+     "2019-24",
+     "2019-29",
+     "2020-2",
+     "2021-20",
+     "2022-18",
+     "2023-8",
+     "2024-28"
+    ]
+   },
+   "vs_current_best": {
+    "entries": [
+     "2020-1"
+    ],
+    "exits": [
+     "2019-29"
+    ],
+    "improved": 8,
+    "worsened": 10,
+    "improved_q": [
+     "2017-26",
+     "2017-11",
+     "2019-3",
+     "2020-1",
+     "2020-3",
+     "2025-9",
+     "2026-7",
+     "2026-25"
+    ],
+    "worsened_q": [
+     "2017-2",
+     "2018-5",
+     "2018-24",
+     "2019-24",
+     "2019-29",
+     "2020-2",
+     "2021-20",
+     "2022-18",
+     "2023-8",
+     "2024-28"
+    ]
+   }
+  },
+  "stackxjpCE@0.6/0.4": {
+   "top3": 28,
+   "avg": 3.79,
+   "vs_stack": {
+    "entries": [
+     "2019-3",
+     "2020-1",
+     "2026-3"
+    ],
+    "exits": [
+     "2018-5",
+     "2019-29",
+     "2020-2",
+     "2022-14",
+     "2024-1",
+     "2025-23"
+    ],
+    "improved": 9,
+    "worsened": 18,
+    "improved_q": [
+     "2017-26",
+     "2017-6",
+     "2017-11",
+     "2019-3",
+     "2020-1",
+     "2020-3",
+     "2026-7",
+     "2026-25",
+     "2026-3"
+    ],
+    "worsened_q": [
+     "2017-2",
+     "2018-5",
+     "2018-24",
+     "2019-24",
+     "2019-29",
+     "2020-14",
+     "2020-2",
+     "2021-20",
+     "2021-1",
+     "2021-18",
+     "2022-18",
+     "2022-14",
+     "2023-8",
+     "2023-19",
+     "2024-28",
+     "2024-1",
+     "2025-23",
+     "2025-9"
+    ]
+   },
+   "vs_current_best": {
+    "entries": [
+     "2020-1"
+    ],
+    "exits": [
+     "2018-5",
+     "2019-29",
+     "2020-2",
+     "2022-14",
+     "2024-1",
+     "2025-23"
+    ],
+    "improved": 8,
+    "worsened": 19,
+    "improved_q": [
+     "2017-26",
+     "2017-6",
+     "2017-11",
+     "2019-3",
+     "2020-1",
+     "2020-3",
+     "2026-7",
+     "2026-25"
+    ],
+    "worsened_q": [
+     "2017-2",
+     "2018-5",
+     "2018-24",
+     "2019-24",
+     "2019-29",
+     "2020-14",
+     "2020-2",
+     "2021-20",
+     "2021-1",
+     "2021-18",
+     "2022-18",
+     "2022-14",
+     "2023-8",
+     "2023-19",
+     "2024-28",
+     "2024-1",
+     "2025-23",
+     "2025-9",
+     "2026-11"
+    ]
+   }
+  },
+  "stackxbgeCE@0.8/0.2": {
+   "top3": 34,
+   "avg": 3.14,
+   "vs_stack": {
+    "entries": [
+     "2019-3",
+     "2021-1",
+     "2026-3"
+    ],
+    "exits": [],
+    "improved": 9,
+    "worsened": 4,
+    "improved_q": [
+     "2017-26",
+     "2019-3",
+     "2020-3",
+     "2021-1",
+     "2022-18",
+     "2024-1",
+     "2026-7",
+     "2026-25",
+     "2026-3"
+    ],
+    "worsened_q": [
+     "2017-2",
+     "2018-5",
+     "2020-7",
+     "2025-9"
+    ]
+   },
+   "vs_current_best": {
+    "entries": [
+     "2021-1"
+    ],
+    "exits": [],
+    "improved": 9,
+    "worsened": 4,
+    "improved_q": [
+     "2017-26",
+     "2019-3",
+     "2020-1",
+     "2020-3",
+     "2021-1",
+     "2022-18",
+     "2024-1",
+     "2026-7",
+     "2026-25"
+    ],
+    "worsened_q": [
+     "2017-2",
+     "2018-5",
+     "2020-7",
+     "2026-11"
+    ]
+   }
+  },
+  "stackxbgeCE@0.7/0.3": {
+   "top3": 34,
+   "avg": 3.33,
+   "vs_stack": {
+    "entries": [
+     "2019-3",
+     "2020-1",
+     "2021-1",
+     "2026-3"
+    ],
+    "exits": [
+     "2022-14"
+    ],
+    "improved": 9,
+    "worsened": 10,
+    "improved_q": [
+     "2017-26",
+     "2019-3",
+     "2020-1",
+     "2020-3",
+     "2021-1",
+     "2022-18",
+     "2026-7",
+     "2026-25",
+     "2026-3"
+    ],
+    "worsened_q": [
+     "2017-2",
+     "2017-11",
+     "2018-5",
+     "2019-29",
+     "2020-7",
+     "2021-20",
+     "2021-18",
+     "2022-14",
+     "2023-8",
+     "2025-9"
+    ]
+   },
+   "vs_current_best": {
+    "entries": [
+     "2020-1",
+     "2021-1"
+    ],
+    "exits": [
+     "2022-14"
+    ],
+    "improved": 8,
+    "worsened": 11,
+    "improved_q": [
+     "2017-26",
+     "2019-3",
+     "2020-1",
+     "2020-3",
+     "2021-1",
+     "2022-18",
+     "2026-7",
+     "2026-25"
+    ],
+    "worsened_q": [
+     "2017-2",
+     "2017-11",
+     "2018-5",
+     "2019-29",
+     "2020-7",
+     "2021-20",
+     "2021-18",
+     "2022-14",
+     "2023-8",
+     "2025-9",
+     "2026-11"
+    ]
+   }
+  },
+  "stackxbgeCE@0.6/0.4": {
+   "top3": 32,
+   "avg": 3.36,
+   "vs_stack": {
+    "entries": [
+     "2019-3",
+     "2020-1",
+     "2021-1",
+     "2026-3"
+    ],
+    "exits": [
+     "2017-11",
+     "2022-14",
+     "2024-1"
+    ],
+    "improved": 10,
+    "worsened": 12,
+    "improved_q": [
+     "2017-26",
+     "2017-6",
+     "2019-3",
+     "2020-1",
+     "2020-3",
+     "2021-1",
+     "2022-18",
+     "2026-7",
+     "2026-25",
+     "2026-3"
+    ],
+    "worsened_q": [
+     "2017-2",
+     "2017-11",
+     "2019-29",
+     "2020-2",
+     "2020-7",
+     "2021-20",
+     "2021-18",
+     "2022-14",
+     "2023-8",
+     "2024-1",
+     "2025-9",
+     "2026-11"
+    ]
+   },
+   "vs_current_best": {
+    "entries": [
+     "2020-1",
+     "2021-1"
+    ],
+    "exits": [
+     "2017-11",
+     "2022-14",
+     "2024-1"
+    ],
+    "improved": 10,
+    "worsened": 12,
+    "improved_q": [
+     "2017-26",
+     "2017-6",
+     "2019-3",
+     "2020-1",
+     "2020-3",
+     "2021-1",
+     "2022-18",
+     "2026-7",
+     "2026-25",
+     "2026-3"
+    ],
+    "worsened_q": [
+     "2017-2",
+     "2017-11",
+     "2019-29",
+     "2020-2",
+     "2020-7",
+     "2021-20",
+     "2021-18",
+     "2022-14",
+     "2023-8",
+     "2024-1",
+     "2025-9",
+     "2026-11"
+    ]
+   }
+  }
+ },
+ "questions": {
+  "2017-26": {
+   "stackxjpCE@0.8/0.2": 2,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "418AC0000000091",
+    "suppl0-2"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 2,
+   "rank_ruri_solo": 6,
+   "rank_best_stackxruri085": 2,
+   "rank_jpCE_solo": 3,
+   "rank_bgeCE_solo": 3,
+   "jpCE_score_gov": 0.2096998244524002,
+   "bge_score_gov": -0.5334582328796387
+  },
+  "2017-6": {
+   "stackxjpCE@0.8/0.2": 18,
+   "stackxjpCE@0.7/0.3": 18,
+   "stackxjpCE@0.6/0.4": 16,
+   "stackxbgeCE@0.8/0.2": 18,
+   "stackxbgeCE@0.7/0.3": 18,
+   "stackxbgeCE@0.6/0.4": 13,
+   "governing": [
+    "325CO0000000338",
+    "108-3"
+   ],
+   "in_pool": true,
+   "rank_baseline": 20,
+   "rank_stack": 18,
+   "rank_ruri_solo": 12,
+   "rank_best_stackxruri085": 18,
+   "rank_jpCE_solo": 7,
+   "rank_bgeCE_solo": 7,
+   "jpCE_score_gov": 0.10938811302185059,
+   "bge_score_gov": -1.95369553565979
+  },
+  "2017-2": {
+   "stackxjpCE@0.8/0.2": 2,
+   "stackxjpCE@0.7/0.3": 2,
+   "stackxjpCE@0.6/0.4": 2,
+   "stackxbgeCE@0.8/0.2": 2,
+   "stackxbgeCE@0.7/0.3": 2,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325AC0000000201",
+    "52"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 3,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 14,
+   "rank_bgeCE_solo": 13,
+   "jpCE_score_gov": 0.39160025119781494,
+   "bge_score_gov": -2.4357688426971436
+  },
+  "2017-29": {
+   "stackxjpCE@0.8/0.2": null,
+   "stackxjpCE@0.7/0.3": null,
+   "stackxjpCE@0.6/0.4": null,
+   "stackxbgeCE@0.8/0.2": null,
+   "stackxbgeCE@0.7/0.3": null,
+   "stackxbgeCE@0.6/0.4": null,
+   "governing": [
+    "343AC0000000100",
+    "2"
+   ],
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_stack": null,
+   "rank_ruri_solo": null,
+   "rank_best_stackxruri085": null,
+   "rank_jpCE_solo": null,
+   "rank_bgeCE_solo": null,
+   "jpCE_score_gov": null,
+   "bge_score_gov": null
+  },
+  "2017-11": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 2,
+   "stackxbgeCE@0.7/0.3": 3,
+   "stackxbgeCE@0.6/0.4": 4,
+   "governing": [
+    "325CO0000000338",
+    "82"
+   ],
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_stack": 2,
+   "rank_ruri_solo": 13,
+   "rank_best_stackxruri085": 2,
+   "rank_jpCE_solo": 1,
+   "rank_bgeCE_solo": 23,
+   "jpCE_score_gov": 0.5879685282707214,
+   "bge_score_gov": -1.6492751836776733
+  },
+  "2018-8": {
+   "stackxjpCE@0.8/0.2": 2,
+   "stackxjpCE@0.7/0.3": 2,
+   "stackxjpCE@0.6/0.4": 2,
+   "stackxbgeCE@0.8/0.2": 2,
+   "stackxbgeCE@0.7/0.3": 2,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325CO0000000338",
+    "121"
+   ],
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_stack": 2,
+   "rank_ruri_solo": 4,
+   "rank_best_stackxruri085": 2,
+   "rank_jpCE_solo": 10,
+   "rank_bgeCE_solo": 5,
+   "jpCE_score_gov": 0.23896844685077667,
+   "bge_score_gov": -1.05008065700531
+  },
+  "2018-5": {
+   "stackxjpCE@0.8/0.2": 3,
+   "stackxjpCE@0.7/0.3": 3,
+   "stackxjpCE@0.6/0.4": 4,
+   "stackxbgeCE@0.8/0.2": 3,
+   "stackxbgeCE@0.7/0.3": 3,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325AC0000000201",
+    "28"
+   ],
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_stack": 2,
+   "rank_ruri_solo": 11,
+   "rank_best_stackxruri085": 2,
+   "rank_jpCE_solo": 19,
+   "rank_bgeCE_solo": 27,
+   "jpCE_score_gov": 0.043470337986946106,
+   "bge_score_gov": -6.2568678855896
+  },
+  "2018-24": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 2,
+   "stackxjpCE@0.6/0.4": 2,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "343AC0000000100",
+    "29"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 13,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 8,
+   "rank_bgeCE_solo": 3,
+   "jpCE_score_gov": 0.1669788360595703,
+   "bge_score_gov": -2.0137135982513428
+  },
+  "2018-4": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "325AC0000000201",
+    "90-3"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 3,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 1,
+   "rank_bgeCE_solo": 1,
+   "jpCE_score_gov": 0.6633121967315674,
+   "bge_score_gov": -2.4516940116882324
+  },
+  "2018-22": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "325AC1000000202",
+    "24"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 1,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 2,
+   "rank_bgeCE_solo": 3,
+   "jpCE_score_gov": 0.44885358214378357,
+   "bge_score_gov": -2.6758182048797607
+  },
+  "2019-24": {
+   "stackxjpCE@0.8/0.2": 2,
+   "stackxjpCE@0.7/0.3": 2,
+   "stackxjpCE@0.6/0.4": 2,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "343AC0000000100",
+    "29"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 7,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 8,
+   "rank_bgeCE_solo": 6,
+   "jpCE_score_gov": 0.17993415892124176,
+   "bge_score_gov": -2.6083130836486816
+  },
+  "2019-29": {
+   "stackxjpCE@0.8/0.2": 3,
+   "stackxjpCE@0.7/0.3": 4,
+   "stackxjpCE@0.6/0.4": 5,
+   "stackxbgeCE@0.8/0.2": 2,
+   "stackxbgeCE@0.7/0.3": 3,
+   "stackxbgeCE@0.6/0.4": 3,
+   "governing": [
+    "325CO0000000338",
+    "80-3"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 2,
+   "rank_ruri_solo": 5,
+   "rank_best_stackxruri085": 2,
+   "rank_jpCE_solo": 17,
+   "rank_bgeCE_solo": 17,
+   "jpCE_score_gov": 0.045992411673069,
+   "bge_score_gov": -3.8947091102600098
+  },
+  "2019-18": {
+   "stackxjpCE@0.8/0.2": null,
+   "stackxjpCE@0.7/0.3": null,
+   "stackxjpCE@0.6/0.4": null,
+   "stackxbgeCE@0.8/0.2": null,
+   "stackxbgeCE@0.7/0.3": null,
+   "stackxbgeCE@0.6/0.4": null,
+   "governing": [
+    "325AC0000000201",
+    "69"
+   ],
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_stack": null,
+   "rank_ruri_solo": null,
+   "rank_best_stackxruri085": null,
+   "rank_jpCE_solo": null,
+   "rank_bgeCE_solo": null,
+   "jpCE_score_gov": null,
+   "bge_score_gov": null
+  },
+  "2019-3": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "325AC0000000201",
+    "6"
+   ],
+   "in_pool": true,
+   "rank_baseline": 3,
+   "rank_stack": 4,
+   "rank_ruri_solo": 5,
+   "rank_best_stackxruri085": 3,
+   "rank_jpCE_solo": 1,
+   "rank_bgeCE_solo": 1,
+   "jpCE_score_gov": 0.6714518070220947,
+   "bge_score_gov": 0.6075506806373596
+  },
+  "2019-19": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "325AC0000000201",
+    "52"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 3,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 6,
+   "rank_bgeCE_solo": 8,
+   "jpCE_score_gov": 0.11971105635166168,
+   "bge_score_gov": -4.408830642700195
+  },
+  "2020-14": {
+   "stackxjpCE@0.8/0.2": 2,
+   "stackxjpCE@0.7/0.3": 2,
+   "stackxjpCE@0.6/0.4": 3,
+   "stackxbgeCE@0.8/0.2": 2,
+   "stackxbgeCE@0.7/0.3": 2,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325AC0000000201",
+    "44"
+   ],
+   "in_pool": true,
+   "rank_baseline": 6,
+   "rank_stack": 2,
+   "rank_ruri_solo": 4,
+   "rank_best_stackxruri085": 2,
+   "rank_jpCE_solo": 27,
+   "rank_bgeCE_solo": 12,
+   "jpCE_score_gov": 0.028029533103108406,
+   "bge_score_gov": -2.6460366249084473
+  },
+  "2020-2": {
+   "stackxjpCE@0.8/0.2": 3,
+   "stackxjpCE@0.7/0.3": 3,
+   "stackxjpCE@0.6/0.4": 4,
+   "stackxbgeCE@0.8/0.2": 2,
+   "stackxbgeCE@0.7/0.3": 2,
+   "stackxbgeCE@0.6/0.4": 3,
+   "governing": [
+    "325CO0000000338",
+    "135-3"
+   ],
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_stack": 2,
+   "rank_ruri_solo": 22,
+   "rank_best_stackxruri085": 2,
+   "rank_jpCE_solo": 26,
+   "rank_bgeCE_solo": 27,
+   "jpCE_score_gov": 0.23244595527648926,
+   "bge_score_gov": -3.729173421859741
+  },
+  "2020-1": {
+   "stackxjpCE@0.8/0.2": 3,
+   "stackxjpCE@0.7/0.3": 3,
+   "stackxjpCE@0.6/0.4": 3,
+   "stackxbgeCE@0.8/0.2": 4,
+   "stackxbgeCE@0.7/0.3": 3,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325AC0000000201",
+    "2"
+   ],
+   "in_pool": true,
+   "rank_baseline": 4,
+   "rank_stack": 4,
+   "rank_ruri_solo": 28,
+   "rank_best_stackxruri085": 5,
+   "rank_jpCE_solo": 7,
+   "rank_bgeCE_solo": 5,
+   "jpCE_score_gov": 0.4688142240047455,
+   "bge_score_gov": -3.121730327606201
+  },
+  "2020-3": {
+   "stackxjpCE@0.8/0.2": 2,
+   "stackxjpCE@0.7/0.3": 2,
+   "stackxjpCE@0.6/0.4": 2,
+   "stackxbgeCE@0.8/0.2": 2,
+   "stackxbgeCE@0.7/0.3": 2,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325AC0000000201",
+    "6"
+   ],
+   "in_pool": true,
+   "rank_baseline": 7,
+   "rank_stack": 3,
+   "rank_ruri_solo": 3,
+   "rank_best_stackxruri085": 3,
+   "rank_jpCE_solo": 2,
+   "rank_bgeCE_solo": 1,
+   "jpCE_score_gov": 0.515975832939148,
+   "bge_score_gov": -0.5439733862876892
+  },
+  "2020-7": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 2,
+   "stackxbgeCE@0.7/0.3": 2,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325CO0000000338",
+    "120"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 1,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 1,
+   "rank_bgeCE_solo": 19,
+   "jpCE_score_gov": 0.43433547019958496,
+   "bge_score_gov": -0.9325594902038574
+  },
+  "2021-8": {
+   "stackxjpCE@0.8/0.2": 3,
+   "stackxjpCE@0.7/0.3": 3,
+   "stackxjpCE@0.6/0.4": 3,
+   "stackxbgeCE@0.8/0.2": 3,
+   "stackxbgeCE@0.7/0.3": 3,
+   "stackxbgeCE@0.6/0.4": 3,
+   "governing": [
+    "325CO0000000338",
+    "122"
+   ],
+   "in_pool": true,
+   "rank_baseline": 3,
+   "rank_stack": 3,
+   "rank_ruri_solo": 1,
+   "rank_best_stackxruri085": 3,
+   "rank_jpCE_solo": 6,
+   "rank_bgeCE_solo": 5,
+   "jpCE_score_gov": 0.2753826975822449,
+   "bge_score_gov": 0.4457019567489624
+  },
+  "2021-17": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "325AC0000000201",
+    "68-4"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 3,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 2,
+   "rank_bgeCE_solo": 2,
+   "jpCE_score_gov": 0.7600820064544678,
+   "bge_score_gov": 0.41387510299682617
+  },
+  "2021-20": {
+   "stackxjpCE@0.8/0.2": 6,
+   "stackxjpCE@0.7/0.3": 6,
+   "stackxjpCE@0.6/0.4": 6,
+   "stackxbgeCE@0.8/0.2": 5,
+   "stackxbgeCE@0.7/0.3": 8,
+   "stackxbgeCE@0.6/0.4": 11,
+   "governing": [
+    "325AC0000000201",
+    "68-7"
+   ],
+   "in_pool": true,
+   "rank_baseline": 6,
+   "rank_stack": 5,
+   "rank_ruri_solo": 23,
+   "rank_best_stackxruri085": 5,
+   "rank_jpCE_solo": 12,
+   "rank_bgeCE_solo": 25,
+   "jpCE_score_gov": 0.09614148736000061,
+   "bge_score_gov": -4.8240251541137695
+  },
+  "2021-1": {
+   "stackxjpCE@0.8/0.2": 5,
+   "stackxjpCE@0.7/0.3": 5,
+   "stackxjpCE@0.6/0.4": 6,
+   "stackxbgeCE@0.8/0.2": 3,
+   "stackxbgeCE@0.7/0.3": 2,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "325AC0000000201",
+    "2"
+   ],
+   "in_pool": true,
+   "rank_baseline": 4,
+   "rank_stack": 5,
+   "rank_ruri_solo": 12,
+   "rank_best_stackxruri085": 5,
+   "rank_jpCE_solo": 4,
+   "rank_bgeCE_solo": 1,
+   "jpCE_score_gov": 0.13562768697738647,
+   "bge_score_gov": -0.11617547273635864
+  },
+  "2021-18": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 3,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 2,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325AC0000000201",
+    "56-2"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 15,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 23,
+   "rank_bgeCE_solo": 13,
+   "jpCE_score_gov": 0.32232439517974854,
+   "bge_score_gov": 1.3923232555389404
+  },
+  "2022-7": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "325CO0000000338",
+    "121"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 2,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 20,
+   "rank_bgeCE_solo": 11,
+   "jpCE_score_gov": 0.09885910898447037,
+   "bge_score_gov": -0.23775188624858856
+  },
+  "2022-23": {
+   "stackxjpCE@0.8/0.2": null,
+   "stackxjpCE@0.7/0.3": null,
+   "stackxjpCE@0.6/0.4": null,
+   "stackxbgeCE@0.8/0.2": null,
+   "stackxbgeCE@0.7/0.3": null,
+   "stackxbgeCE@0.6/0.4": null,
+   "governing": [
+    "325AC1000000202",
+    "23"
+   ],
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_stack": null,
+   "rank_ruri_solo": null,
+   "rank_best_stackxruri085": null,
+   "rank_jpCE_solo": null,
+   "rank_bgeCE_solo": null,
+   "jpCE_score_gov": null,
+   "bge_score_gov": null
+  },
+  "2022-21": {
+   "stackxjpCE@0.8/0.2": 2,
+   "stackxjpCE@0.7/0.3": 2,
+   "stackxjpCE@0.6/0.4": 2,
+   "stackxbgeCE@0.8/0.2": 2,
+   "stackxbgeCE@0.7/0.3": 2,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325AC1000000202",
+    "2"
+   ],
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_stack": 2,
+   "rank_ruri_solo": 7,
+   "rank_best_stackxruri085": 2,
+   "rank_jpCE_solo": 5,
+   "rank_bgeCE_solo": 7,
+   "jpCE_score_gov": 0.9631541967391968,
+   "bge_score_gov": 1.641696572303772
+  },
+  "2022-18": {
+   "stackxjpCE@0.8/0.2": 15,
+   "stackxjpCE@0.7/0.3": 15,
+   "stackxjpCE@0.6/0.4": 18,
+   "stackxbgeCE@0.8/0.2": 11,
+   "stackxbgeCE@0.7/0.3": 10,
+   "stackxbgeCE@0.6/0.4": 10,
+   "governing": [
+    "325AC0000000201",
+    "56"
+   ],
+   "in_pool": true,
+   "rank_baseline": 24,
+   "rank_stack": 12,
+   "rank_ruri_solo": 6,
+   "rank_best_stackxruri085": 12,
+   "rank_jpCE_solo": 13,
+   "rank_bgeCE_solo": 12,
+   "jpCE_score_gov": 0.3144819438457489,
+   "bge_score_gov": 1.1360726356506348
+  },
+  "2022-14": {
+   "stackxjpCE@0.8/0.2": 3,
+   "stackxjpCE@0.7/0.3": 3,
+   "stackxjpCE@0.6/0.4": 4,
+   "stackxbgeCE@0.8/0.2": 3,
+   "stackxbgeCE@0.7/0.3": 4,
+   "stackxbgeCE@0.6/0.4": 4,
+   "governing": [
+    "325AC0000000201",
+    "43"
+   ],
+   "in_pool": true,
+   "rank_baseline": 6,
+   "rank_stack": 3,
+   "rank_ruri_solo": 6,
+   "rank_best_stackxruri085": 3,
+   "rank_jpCE_solo": 8,
+   "rank_bgeCE_solo": 4,
+   "jpCE_score_gov": 0.15480837225914001,
+   "bge_score_gov": -2.217352867126465
+  },
+  "2023-8": {
+   "stackxjpCE@0.8/0.2": 2,
+   "stackxjpCE@0.7/0.3": 2,
+   "stackxjpCE@0.6/0.4": 2,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 2,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325AC0000000201",
+    "87-3"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 2,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 5,
+   "rank_bgeCE_solo": 8,
+   "jpCE_score_gov": 0.3815961480140686,
+   "bge_score_gov": -1.6688809394836426
+  },
+  "2023-15": {
+   "stackxjpCE@0.8/0.2": 2,
+   "stackxjpCE@0.7/0.3": 2,
+   "stackxjpCE@0.6/0.4": 2,
+   "stackxbgeCE@0.8/0.2": 2,
+   "stackxbgeCE@0.7/0.3": 2,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325AC0000000201",
+    "52"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 2,
+   "rank_ruri_solo": 12,
+   "rank_best_stackxruri085": 2,
+   "rank_jpCE_solo": 11,
+   "rank_bgeCE_solo": 14,
+   "jpCE_score_gov": 0.1486663818359375,
+   "bge_score_gov": -2.185532331466675
+  },
+  "2023-19": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 2,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "325AC0000000201",
+    "86"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 6,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 5,
+   "rank_bgeCE_solo": 1,
+   "jpCE_score_gov": 0.2440831959247589,
+   "bge_score_gov": -0.9491336941719055
+  },
+  "2023-9": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "325CO0000000338",
+    "128-5"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 1,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 9,
+   "rank_bgeCE_solo": 10,
+   "jpCE_score_gov": 0.13596054911613464,
+   "bge_score_gov": -2.4480884075164795
+  },
+  "2023-26": {
+   "stackxjpCE@0.8/0.2": null,
+   "stackxjpCE@0.7/0.3": null,
+   "stackxjpCE@0.6/0.4": null,
+   "stackxbgeCE@0.8/0.2": null,
+   "stackxbgeCE@0.7/0.3": null,
+   "stackxbgeCE@0.6/0.4": null,
+   "governing": [
+    "418AC0000000091",
+    "17"
+   ],
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_stack": null,
+   "rank_ruri_solo": null,
+   "rank_best_stackxruri085": null,
+   "rank_jpCE_solo": null,
+   "rank_bgeCE_solo": null,
+   "jpCE_score_gov": null,
+   "bge_score_gov": null
+  },
+  "2024-28": {
+   "stackxjpCE@0.8/0.2": 9,
+   "stackxjpCE@0.7/0.3": 10,
+   "stackxjpCE@0.6/0.4": 11,
+   "stackxbgeCE@0.8/0.2": 7,
+   "stackxbgeCE@0.7/0.3": 7,
+   "stackxbgeCE@0.6/0.4": 7,
+   "governing": [
+    "325AC0000000201",
+    "12"
+   ],
+   "in_pool": true,
+   "rank_baseline": 8,
+   "rank_stack": 7,
+   "rank_ruri_solo": 7,
+   "rank_best_stackxruri085": 7,
+   "rank_jpCE_solo": 23,
+   "rank_bgeCE_solo": 17,
+   "jpCE_score_gov": 0.19610926508903503,
+   "bge_score_gov": -3.1707992553710938
+  },
+  "2024-1": {
+   "stackxjpCE@0.8/0.2": 3,
+   "stackxjpCE@0.7/0.3": 3,
+   "stackxjpCE@0.6/0.4": 4,
+   "stackxbgeCE@0.8/0.2": 2,
+   "stackxbgeCE@0.7/0.3": 3,
+   "stackxbgeCE@0.6/0.4": 4,
+   "governing": [
+    "325AC0000000201",
+    "2"
+   ],
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_stack": 3,
+   "rank_ruri_solo": 17,
+   "rank_best_stackxruri085": 3,
+   "rank_jpCE_solo": 11,
+   "rank_bgeCE_solo": 11,
+   "jpCE_score_gov": 0.13947942852973938,
+   "bge_score_gov": -2.7492964267730713
+  },
+  "2024-25": {
+   "stackxjpCE@0.8/0.2": null,
+   "stackxjpCE@0.7/0.3": null,
+   "stackxjpCE@0.6/0.4": null,
+   "stackxbgeCE@0.8/0.2": null,
+   "stackxbgeCE@0.7/0.3": null,
+   "stackxbgeCE@0.6/0.4": null,
+   "governing": [
+    "336CO0000000037",
+    "10"
+   ],
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_stack": null,
+   "rank_ruri_solo": null,
+   "rank_best_stackxruri085": null,
+   "rank_jpCE_solo": null,
+   "rank_bgeCE_solo": null,
+   "jpCE_score_gov": null,
+   "bge_score_gov": null
+  },
+  "2024-26": {
+   "stackxjpCE@0.8/0.2": null,
+   "stackxjpCE@0.7/0.3": null,
+   "stackxjpCE@0.6/0.4": null,
+   "stackxbgeCE@0.8/0.2": null,
+   "stackxbgeCE@0.7/0.3": null,
+   "stackxbgeCE@0.6/0.4": null,
+   "governing": [
+    "325AC0000000201",
+    "17"
+   ],
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_stack": null,
+   "rank_ruri_solo": null,
+   "rank_best_stackxruri085": null,
+   "rank_jpCE_solo": null,
+   "rank_bgeCE_solo": null,
+   "jpCE_score_gov": null,
+   "bge_score_gov": null
+  },
+  "2024-6": {
+   "stackxjpCE@0.8/0.2": 2,
+   "stackxjpCE@0.7/0.3": 2,
+   "stackxjpCE@0.6/0.4": 2,
+   "stackxbgeCE@0.8/0.2": 2,
+   "stackxbgeCE@0.7/0.3": 2,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325CO0000000338",
+    "113"
+   ],
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_stack": 2,
+   "rank_ruri_solo": 5,
+   "rank_best_stackxruri085": 2,
+   "rank_jpCE_solo": 2,
+   "rank_bgeCE_solo": 1,
+   "jpCE_score_gov": 0.6822958588600159,
+   "bge_score_gov": 1.1477744579315186
+  },
+  "2025-23": {
+   "stackxjpCE@0.8/0.2": 4,
+   "stackxjpCE@0.7/0.3": 3,
+   "stackxjpCE@0.6/0.4": 4,
+   "stackxbgeCE@0.8/0.2": 3,
+   "stackxbgeCE@0.7/0.3": 3,
+   "stackxbgeCE@0.6/0.4": 3,
+   "governing": [
+    "343AC0000000100",
+    "43"
+   ],
+   "in_pool": true,
+   "rank_baseline": 7,
+   "rank_stack": 3,
+   "rank_ruri_solo": 2,
+   "rank_best_stackxruri085": 3,
+   "rank_jpCE_solo": 4,
+   "rank_bgeCE_solo": 6,
+   "jpCE_score_gov": 0.36523014307022095,
+   "bge_score_gov": -3.1793622970581055
+  },
+  "2025-14": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "325AC0000000201",
+    "42"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 1,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 3,
+   "rank_bgeCE_solo": 1,
+   "jpCE_score_gov": 0.5035325288772583,
+   "bge_score_gov": -0.4946496784687042
+  },
+  "2025-11": {
+   "stackxjpCE@0.8/0.2": null,
+   "stackxjpCE@0.7/0.3": null,
+   "stackxjpCE@0.6/0.4": null,
+   "stackxbgeCE@0.8/0.2": null,
+   "stackxbgeCE@0.7/0.3": null,
+   "stackxbgeCE@0.6/0.4": null,
+   "governing": [
+    "325CO0000000338",
+    "36"
+   ],
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_stack": null,
+   "rank_ruri_solo": null,
+   "rank_best_stackxruri085": null,
+   "rank_jpCE_solo": null,
+   "rank_bgeCE_solo": null,
+   "jpCE_score_gov": null,
+   "bge_score_gov": null
+  },
+  "2025-9": {
+   "stackxjpCE@0.8/0.2": 5,
+   "stackxjpCE@0.7/0.3": 5,
+   "stackxjpCE@0.6/0.4": 11,
+   "stackxbgeCE@0.8/0.2": 7,
+   "stackxbgeCE@0.7/0.3": 10,
+   "stackxbgeCE@0.6/0.4": 13,
+   "governing": [
+    "325CO0000000338",
+    "129-13-3"
+   ],
+   "in_pool": true,
+   "rank_baseline": 5,
+   "rank_stack": 5,
+   "rank_ruri_solo": 28,
+   "rank_best_stackxruri085": 7,
+   "rank_jpCE_solo": 19,
+   "rank_bgeCE_solo": 27,
+   "jpCE_score_gov": 0.10501300543546677,
+   "bge_score_gov": -2.5180044174194336
+  },
+  "2025-5": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "325CO0000000338",
+    "23"
+   ],
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_stack": 1,
+   "rank_ruri_solo": 1,
+   "rank_best_stackxruri085": 1,
+   "rank_jpCE_solo": 7,
+   "rank_bgeCE_solo": 1,
+   "jpCE_score_gov": 0.12368690967559814,
+   "bge_score_gov": 0.8360170125961304
+  },
+  "2026-7": {
+   "stackxjpCE@0.8/0.2": 1,
+   "stackxjpCE@0.7/0.3": 1,
+   "stackxjpCE@0.6/0.4": 1,
+   "stackxbgeCE@0.8/0.2": 1,
+   "stackxbgeCE@0.7/0.3": 1,
+   "stackxbgeCE@0.6/0.4": 1,
+   "governing": [
+    "325AC0000000201",
+    "2"
+   ],
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_stack": 2,
+   "rank_ruri_solo": 22,
+   "rank_best_stackxruri085": 2,
+   "rank_jpCE_solo": 2,
+   "rank_bgeCE_solo": 4,
+   "jpCE_score_gov": 0.5566186308860779,
+   "bge_score_gov": -0.3187522888183594
+  },
+  "2026-25": {
+   "stackxjpCE@0.8/0.2": 8,
+   "stackxjpCE@0.7/0.3": 5,
+   "stackxjpCE@0.6/0.4": 4,
+   "stackxbgeCE@0.8/0.2": 8,
+   "stackxbgeCE@0.7/0.3": 7,
+   "stackxbgeCE@0.6/0.4": 7,
+   "governing": [
+    "418AC0000000091",
+    "suppl0-2"
+   ],
+   "in_pool": true,
+   "rank_baseline": 8,
+   "rank_stack": 12,
+   "rank_ruri_solo": 11,
+   "rank_best_stackxruri085": 10,
+   "rank_jpCE_solo": 2,
+   "rank_bgeCE_solo": 3,
+   "jpCE_score_gov": 0.35944125056266785,
+   "bge_score_gov": -0.3844074308872223
+  },
+  "2026-11": {
+   "stackxjpCE@0.8/0.2": 14,
+   "stackxjpCE@0.7/0.3": 13,
+   "stackxjpCE@0.6/0.4": 14,
+   "stackxbgeCE@0.8/0.2": 14,
+   "stackxbgeCE@0.7/0.3": 14,
+   "stackxbgeCE@0.6/0.4": 15,
+   "governing": [
+    "325CO0000000338",
+    "82-4"
+   ],
+   "in_pool": true,
+   "rank_baseline": 15,
+   "rank_stack": 14,
+   "rank_ruri_solo": 11,
+   "rank_best_stackxruri085": 13,
+   "rank_jpCE_solo": 14,
+   "rank_bgeCE_solo": 22,
+   "jpCE_score_gov": 0.21410320699214935,
+   "bge_score_gov": -1.50728178024292
+  },
+  "2026-4": {
+   "stackxjpCE@0.8/0.2": null,
+   "stackxjpCE@0.7/0.3": null,
+   "stackxjpCE@0.6/0.4": null,
+   "stackxbgeCE@0.8/0.2": null,
+   "stackxbgeCE@0.7/0.3": null,
+   "stackxbgeCE@0.6/0.4": null,
+   "governing": [
+    "325AC0000000201",
+    "85"
+   ],
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_stack": null,
+   "rank_ruri_solo": null,
+   "rank_best_stackxruri085": null,
+   "rank_jpCE_solo": null,
+   "rank_bgeCE_solo": null,
+   "jpCE_score_gov": null,
+   "bge_score_gov": null
+  },
+  "2026-3": {
+   "stackxjpCE@0.8/0.2": 3,
+   "stackxjpCE@0.7/0.3": 3,
+   "stackxjpCE@0.6/0.4": 3,
+   "stackxbgeCE@0.8/0.2": 3,
+   "stackxbgeCE@0.7/0.3": 3,
+   "stackxbgeCE@0.6/0.4": 2,
+   "governing": [
+    "325AC0000000201",
+    "6"
+   ],
+   "in_pool": true,
+   "rank_baseline": 3,
+   "rank_stack": 4,
+   "rank_ruri_solo": 4,
+   "rank_best_stackxruri085": 3,
+   "rank_jpCE_solo": 3,
+   "rank_bgeCE_solo": 5,
+   "jpCE_score_gov": 0.3598598837852478,
+   "bge_score_gov": -2.921844720840454
+  }
+ }
+}

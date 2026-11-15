@@ -1,0 +1,1585 @@
+{
+ "meta": {
+  "model": "bge-reranker-v2-m3 (ONNX, self dynamic-quantized int8 for MatMul weights; Attention/Gemm/embeddings fp32)",
+  "model_source": "EmbeddedLLM/bge-reranker-v2-m3-onnx-o3-cpu (fp32) + manual dynamic quantization",
+  "arena": "fifty_measurement 50 questions, original TF-IDF top-30 pools",
+  "question_text": "c_full stem + choices (same as measure50)",
+  "passage_text": "qtag50_pool_texts original article text",
+  "windowing": "window = 512 - (question tokens + 4 specials); no overlap; max 4 windows per article; if more needed, 4 windows evenly sampled over the article (head always included); article score = max window score",
+  "total_pairs": 4109,
+  "total_scoring_sec": 6686,
+  "speed_sec_per_pair": 1.63,
+  "quant_check_18pairs": {
+   "pearson": 0.991,
+   "spearman": 0.963
+  },
+  "references": {
+   "baseline": "29/3.88",
+   "meta_append_stack": "31/3.38",
+   "ceiling_top3": 42
+  },
+  "rerank_result": {
+   "top3": 13,
+   "avg_rank_inpool": 9.33
+  },
+  "movement_vs_baseline": {
+   "improved": 9,
+   "worsened": 29,
+   "same": 4,
+   "top3_entries": 3,
+   "top3_exits": 19
+  }
+ },
+ "questions": {
+  "2017-26": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "suppl0-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 2,
+   "rank_rerank": 3,
+   "governing_score": -0.5334582328796387,
+   "top3_rerank": [
+    [
+     "418AC0000000091",
+     "suppl5-72",
+     0.055
+    ],
+    [
+     "418AC0000000091",
+     "suppl0-5",
+     -0.227
+    ],
+    [
+     "418AC0000000091",
+     "suppl0-2",
+     -0.533
+    ]
+   ],
+   "n_windows_gov": 1
+  },
+  "2017-6": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "108-3",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 20,
+   "rank_meta_append": 18,
+   "rank_rerank": 7,
+   "governing_score": -1.95369553565979,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "108-2",
+     -1.836
+    ],
+    [
+     "325CO0000000338",
+     "110",
+     -1.856
+    ],
+    [
+     "325CO0000000338",
+     "136-2",
+     -1.892
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2017-2": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 13,
+   "governing_score": -2.4357688426971436,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "2",
+     0.045
+    ],
+    [
+     "325AC0000000201",
+     "56",
+     -1.391
+    ],
+    [
+     "407AC0000000123",
+     "17",
+     -1.563
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2017-29": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_meta_append": null,
+   "rank_rerank": null,
+   "governing_score": null,
+   "top3_rerank": [
+    [
+     "343AC0000000100",
+     "29",
+     -4.664
+    ],
+    [
+     "325AC0000000201",
+     "52",
+     -5.314
+    ],
+    [
+     "325CO0000000338",
+     "136-2-5",
+     -5.637
+    ]
+   ],
+   "n_windows_gov": null
+  },
+  "2017-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "82",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_meta_append": 2,
+   "rank_rerank": 23,
+   "governing_score": -1.6492751836776733,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "82-6",
+     0.182
+    ],
+    [
+     "325AC0000000201",
+     "20",
+     -0.114
+    ],
+    [
+     "325CO0000000338",
+     "81",
+     -0.141
+    ]
+   ],
+   "n_windows_gov": 3
+  },
+  "2018-8": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "121",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_meta_append": 2,
+   "rank_rerank": 5,
+   "governing_score": -1.05008065700531,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "13",
+     0.27
+    ],
+    [
+     "325AC0000000201",
+     "26",
+     -0.759
+    ],
+    [
+     "325CO0000000338",
+     "129-13-3",
+     -0.815
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2018-5": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "28",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_meta_append": 2,
+   "rank_rerank": 27,
+   "governing_score": -6.2568678855896,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "20",
+     -2.871
+    ],
+    [
+     "325CO0000000338",
+     "2",
+     -3.47
+    ],
+    [
+     "325CO0000000338",
+     "129-2-5",
+     -4.1
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2018-24": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "29",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 3,
+   "governing_score": -2.0137135982513428,
+   "top3_rerank": [
+    [
+     "343AC0000000100",
+     "13",
+     -1.887
+    ],
+    [
+     "325AC0000000201",
+     "52",
+     -1.975
+    ],
+    [
+     "343AC0000000100",
+     "29",
+     -2.014
+    ]
+   ],
+   "n_windows_gov": 3
+  },
+  "2018-4": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "90-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 1,
+   "governing_score": -2.4516940116882324,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "90-3",
+     -2.452
+    ],
+    [
+     "325CO0000000338",
+     "147-2",
+     -3.238
+    ],
+    [
+     "407AC0000000123",
+     "17",
+     -3.344
+    ]
+   ],
+   "n_windows_gov": 1
+  },
+  "2018-22": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "24",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 3,
+   "governing_score": -2.6758182048797607,
+   "top3_rerank": [
+    [
+     "325AC1000000202",
+     "26-4",
+     -0.58
+    ],
+    [
+     "325AC1000000202",
+     "26-3",
+     -1.531
+    ],
+    [
+     "325AC1000000202",
+     "24",
+     -2.676
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2019-24": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "29",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 6,
+   "governing_score": -2.6083130836486816,
+   "top3_rerank": [
+    [
+     "343AC0000000100",
+     "53",
+     -2.178
+    ],
+    [
+     "343AC0000000100",
+     "13",
+     -2.185
+    ],
+    [
+     "343AC0000000100",
+     "59",
+     -2.299
+    ]
+   ],
+   "n_windows_gov": 3
+  },
+  "2019-29": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "80-3",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 2,
+   "rank_rerank": 17,
+   "governing_score": -3.8947091102600098,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "2",
+     -2.405
+    ],
+    [
+     "418AC0000000091",
+     "suppl5-1",
+     -2.525
+    ],
+    [
+     "325CO0000000338",
+     "136-2-5",
+     -2.63
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2019-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "69",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_meta_append": null,
+   "rank_rerank": null,
+   "governing_score": null,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "136-2-5",
+     0.044
+    ],
+    [
+     "343AC0000000100",
+     "12-5",
+     -0.176
+    ],
+    [
+     "325AC0000000201",
+     "68-5-5",
+     -0.298
+    ]
+   ],
+   "n_windows_gov": null
+  },
+  "2019-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 3,
+   "rank_meta_append": 4,
+   "rank_rerank": 1,
+   "governing_score": 0.6075506806373596,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "6",
+     0.608
+    ],
+    [
+     "407AC0000000123",
+     "17",
+     0.355
+    ],
+    [
+     "343AC0000000100",
+     "13",
+     -0.166
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2019-19": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 8,
+   "governing_score": -4.408830642700195,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "43",
+     -3.624
+    ],
+    [
+     "325AC0000000201",
+     "94",
+     -3.683
+    ],
+    [
+     "407AC0000000123",
+     "17",
+     -4.055
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2020-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "44",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 6,
+   "rank_meta_append": 2,
+   "rank_rerank": 12,
+   "governing_score": -2.6460366249084473,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "42",
+     -0.559
+    ],
+    [
+     "325AC0000000201",
+     "6",
+     -1.064
+    ],
+    [
+     "343AC0000000100",
+     "29",
+     -1.352
+    ]
+   ],
+   "n_windows_gov": 1
+  },
+  "2020-2": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "135-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_meta_append": 2,
+   "rank_rerank": 27,
+   "governing_score": -3.729173421859741,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "2",
+     0.065
+    ],
+    [
+     "325AC0000000201",
+     "92",
+     -1.674
+    ],
+    [
+     "325CO0000000338",
+     "135-6",
+     -1.754
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2020-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 4,
+   "rank_meta_append": 4,
+   "rank_rerank": 5,
+   "governing_score": -3.121730327606201,
+   "top3_rerank": [
+    [
+     "407AC0000000123",
+     "17",
+     -2.838
+    ],
+    [
+     "325CO0000000338",
+     "136-2",
+     -3.06
+    ],
+    [
+     "325CO0000000338",
+     "109-5",
+     -3.083
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2020-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 7,
+   "rank_meta_append": 3,
+   "rank_rerank": 1,
+   "governing_score": -0.5439733862876892,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "6",
+     -0.544
+    ],
+    [
+     "325AC0000000201",
+     "appdx2",
+     -1.289
+    ],
+    [
+     "325AC0000000201",
+     "7-6",
+     -1.755
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2020-7": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "120",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 19,
+   "governing_score": -0.9325594902038574,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "13",
+     0.713
+    ],
+    [
+     "325CO0000000338",
+     "145",
+     0.25
+    ],
+    [
+     "325CO0000000338",
+     "121",
+     0.172
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2021-8": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "122",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 3,
+   "rank_meta_append": 3,
+   "rank_rerank": 5,
+   "governing_score": 0.4457019567489624,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "121",
+     1.389
+    ],
+    [
+     "325CO0000000338",
+     "124",
+     0.902
+    ],
+    [
+     "325CO0000000338",
+     "123",
+     0.754
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2021-17": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "68-4",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 2,
+   "governing_score": 0.41387510299682617,
+   "top3_rerank": [
+    [
+     "343AC0000000100",
+     "9",
+     0.968
+    ],
+    [
+     "325AC0000000201",
+     "68-4",
+     0.414
+    ],
+    [
+     "325AC0000000201",
+     "68-5",
+     0.256
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2021-20": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "68-7",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 6,
+   "rank_meta_append": 5,
+   "rank_rerank": 25,
+   "governing_score": -4.8240251541137695,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "55",
+     -2.51
+    ],
+    [
+     "343AC0000000100",
+     "9",
+     -2.825
+    ],
+    [
+     "325AC0000000201",
+     "53-2",
+     -2.855
+    ]
+   ],
+   "n_windows_gov": 3
+  },
+  "2021-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 4,
+   "rank_meta_append": 5,
+   "rank_rerank": 1,
+   "governing_score": -0.11617547273635864,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "2",
+     -0.116
+    ],
+    [
+     "325AC0000000201",
+     "27",
+     -2.954
+    ],
+    [
+     "325CO0000000338",
+     "126-2",
+     -3.092
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2021-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "56-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 13,
+   "governing_score": 1.3923232555389404,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "2",
+     2.933
+    ],
+    [
+     "325CO0000000338",
+     "135-3",
+     2.888
+    ],
+    [
+     "325M50004000040",
+     "1-3",
+     2.67
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2022-7": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "121",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 11,
+   "governing_score": -0.23775188624858856,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "128-4",
+     0.582
+    ],
+    [
+     "325AC0000000201",
+     "26",
+     0.468
+    ],
+    [
+     "325CO0000000338",
+     "112",
+     0.367
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2022-23": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "23",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_meta_append": null,
+   "rank_rerank": null,
+   "governing_score": null,
+   "top3_rerank": [
+    [
+     "325AC1000000202",
+     "suppl29-3",
+     -3.785
+    ],
+    [
+     "325AC1000000202",
+     "22-2",
+     -3.975
+    ],
+    [
+     "325CO0000000338",
+     "149",
+     -4.908
+    ]
+   ],
+   "n_windows_gov": null
+  },
+  "2022-21": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_meta_append": 2,
+   "rank_rerank": 7,
+   "governing_score": 1.641696572303772,
+   "top3_rerank": [
+    [
+     "325AC1000000202",
+     "suppl29-3",
+     2.219
+    ],
+    [
+     "325AC1000000202",
+     "24-7",
+     2.154
+    ],
+    [
+     "325AC0000000201",
+     "6",
+     1.993
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2022-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "56",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 24,
+   "rank_meta_append": 12,
+   "rank_rerank": 12,
+   "governing_score": 1.1360726356506348,
+   "top3_rerank": [
+    [
+     "325M50004000040",
+     "10-21",
+     1.722
+    ],
+    [
+     "325CO0000000338",
+     "2",
+     1.614
+    ],
+    [
+     "325M50004000040",
+     "1-3",
+     1.541
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2022-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "43",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 6,
+   "rank_meta_append": 3,
+   "rank_rerank": 4,
+   "governing_score": -2.217352867126465,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "42",
+     -1.088
+    ],
+    [
+     "325AC0000000201",
+     "52",
+     -1.918
+    ],
+    [
+     "325M50004000040",
+     "3-2",
+     -2.112
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2023-8": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "87-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 8,
+   "governing_score": -1.6688809394836426,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "85",
+     -0.82
+    ],
+    [
+     "325CO0000000338",
+     "147",
+     -0.836
+    ],
+    [
+     "407AC0000000123",
+     "17",
+     -1.192
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2023-15": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 2,
+   "rank_rerank": 14,
+   "governing_score": -2.185532331466675,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "130",
+     -0.042
+    ],
+    [
+     "325AC0000000201",
+     "appdx2",
+     -0.471
+    ],
+    [
+     "343AC0000000100",
+     "8",
+     -0.627
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2023-19": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "86",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 1,
+   "governing_score": -0.9491336941719055,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "86",
+     -0.949
+    ],
+    [
+     "325AC0000000201",
+     "43",
+     -1.167
+    ],
+    [
+     "325M50004000040",
+     "10-16",
+     -1.376
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2023-9": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "128-5",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 10,
+   "governing_score": -2.4480884075164795,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "35-3",
+     0.406
+    ],
+    [
+     "325CO0000000338",
+     "128-3-2",
+     -0.04
+    ],
+    [
+     "325CO0000000338",
+     "144-5",
+     -0.395
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2023-26": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "17",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_meta_append": null,
+   "rank_rerank": null,
+   "governing_score": null,
+   "top3_rerank": [
+    [
+     "418AC0000000091",
+     "suppl5-72",
+     -0.014
+    ],
+    [
+     "418AC0000000091",
+     "suppl0-2",
+     -0.586
+    ],
+    [
+     "418AC0000000091",
+     "10",
+     -0.776
+    ]
+   ],
+   "n_windows_gov": null
+  },
+  "2024-28": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "12",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 8,
+   "rank_meta_append": 7,
+   "rank_rerank": 17,
+   "governing_score": -3.1707992553710938,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "129",
+     -0.988
+    ],
+    [
+     "325AC0000000201",
+     "21",
+     -1.022
+    ],
+    [
+     "325CO0000000338",
+     "124",
+     -1.335
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2024-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_meta_append": 3,
+   "rank_rerank": 11,
+   "governing_score": -2.7492964267730713,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "144-3",
+     -1.753
+    ],
+    [
+     "325CO0000000338",
+     "112",
+     -1.884
+    ],
+    [
+     "325AC0000000201",
+     "26",
+     -1.894
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2024-25": {
+   "governing": {
+    "law_id": "336CO0000000037",
+    "law_name": "消防法施行令",
+    "art": "10",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_meta_append": null,
+   "rank_rerank": null,
+   "governing_score": null,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "115-2",
+     -2.115
+    ],
+    [
+     "325CO0000000338",
+     "128-5",
+     -2.213
+    ],
+    [
+     "325CO0000000338",
+     "123",
+     -2.302
+    ]
+   ],
+   "n_windows_gov": null
+  },
+  "2024-26": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "17",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_meta_append": null,
+   "rank_rerank": null,
+   "governing_score": null,
+   "top3_rerank": [
+    [
+     "418AC0000000091",
+     "suppl5-72",
+     -2.086
+    ],
+    [
+     "418AC0000000091",
+     "2",
+     -2.446
+    ],
+    [
+     "418AC0000000091",
+     "suppl0-2",
+     -2.712
+    ]
+   ],
+   "n_windows_gov": null
+  },
+  "2024-6": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "113",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_meta_append": 2,
+   "rank_rerank": 1,
+   "governing_score": 1.1477744579315186,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "113",
+     1.148
+    ],
+    [
+     "325CO0000000338",
+     "129-2-4",
+     0.77
+    ],
+    [
+     "325CO0000000338",
+     "137-3",
+     0.674
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2025-23": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "43",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 7,
+   "rank_meta_append": 3,
+   "rank_rerank": 6,
+   "governing_score": -3.1793622970581055,
+   "top3_rerank": [
+    [
+     "343AC0000000100",
+     "4",
+     -0.912
+    ],
+    [
+     "343AC0000000100",
+     "29",
+     -1.247
+    ],
+    [
+     "343AC0000000100",
+     "12-5",
+     -1.966
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2025-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "42",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 1,
+   "governing_score": -0.4946496784687042,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "42",
+     -0.495
+    ],
+    [
+     "343AC0000000100",
+     "12-5",
+     -0.606
+    ],
+    [
+     "407AC0000000123",
+     "17",
+     -0.783
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2025-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "36",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_meta_append": null,
+   "rank_rerank": null,
+   "governing_score": null,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "20",
+     0.066
+    ],
+    [
+     "325CO0000000338",
+     "139",
+     -0.085
+    ],
+    [
+     "325CO0000000338",
+     "51",
+     -0.207
+    ]
+   ],
+   "n_windows_gov": null
+  },
+  "2025-9": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "129-13-3",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 5,
+   "rank_meta_append": 5,
+   "rank_rerank": 27,
+   "governing_score": -2.5180044174194336,
+   "top3_rerank": [
+    [
+     "325AC0000000201",
+     "35-3",
+     1.304
+    ],
+    [
+     "325CO0000000338",
+     "120",
+     1.153
+    ],
+    [
+     "325CO0000000338",
+     "111",
+     1.03
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2025-5": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "23",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_baseline": 1,
+   "rank_meta_append": 1,
+   "rank_rerank": 1,
+   "governing_score": 0.8360170125961304,
+   "top3_rerank": [
+    [
+     "325CO0000000338",
+     "23",
+     0.836
+    ],
+    [
+     "325CO0000000338",
+     "121",
+     -1.228
+    ],
+    [
+     "325CO0000000338",
+     "120",
+     -1.247
+    ]
+   ],
+   "n_windows_gov": 2
+  },
+  "2026-7": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 2,
+   "rank_meta_append": 2,
+   "rank_rerank": 4,
+   "governing_score": -0.3187522888183594,
+   "top3_rerank": [
+    [
+     "407AC0000000123",
+     "17",
+     0.179
+    ],
+    [
+     "325CO0000000338",
+     "115-2",
+     -0.199
+    ],
+    [
+     "325CO0000000338",
+     "109-7",
+     -0.28
+    ]
+   ],
+   "n_windows_gov": 4
+  },
+  "2026-25": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "suppl0-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_baseline": 8,
+   "rank_meta_append": 12,
+   "rank_rerank": 3,
+   "governing_score": -0.3844074308872223,
+   "top3_rerank": [
+    [
+     "418AC0000000091",
+     "10",
+     -0.023
+    ],
+    [
+     "418AC0000000091",
+     "suppl5-72",
+     -0.222
+    ],
+    [
+     "418AC0000000091",
+     "suppl0-2",
+     -0.384
+    ]
+   ],
+   "n_windows_gov": 1
+  },
+  "2026-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "82-4",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 15,
+   "rank_meta_append": 14,
+   "rank_rerank": 22,
+   "governing_score": -1.50728178024292,
+   "top3_rerank": [
+    [
+     "325M50004000040",
+     "3",
+     0.088
+    ],
+    [
+     "325CO0000000338",
+     "82-6",
+     0.041
+    ],
+    [
+     "325CO0000000338",
+     "82-5",
+     -0.042
+    ]
+   ],
+   "n_windows_gov": 1
+  },
+  "2026-4": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "85",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_baseline": null,
+   "rank_meta_append": null,
+   "rank_rerank": null,
+   "governing_score": null,
+   "top3_rerank": [
+    [
+     "427AC0000000053",
+     "11",
+     1.789
+    ],
+    [
+     "325M50004000040",
+     "8-2",
+     1.642
+    ],
+    [
+     "325AC0000000201",
+     "12",
+     1.432
+    ]
+   ],
+   "n_windows_gov": null
+  },
+  "2026-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_baseline": 3,
+   "rank_meta_append": 4,
+   "rank_rerank": 5,
+   "governing_score": -2.921844720840454,
+   "top3_rerank": [
+    [
+     "407AC0000000123",
+     "17",
+     -1.874
+    ],
+    [
+     "418AC0000000091",
+     "17",
+     -2.438
+    ],
+    [
+     "325AC0000000201",
+     "6-2",
+     -2.569
+    ]
+   ],
+   "n_windows_gov": 4
+  }
+ }
+}
