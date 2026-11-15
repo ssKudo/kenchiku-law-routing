@@ -1,0 +1,406 @@
+{
+ "definition": {
+  "B": "フックA5 (374条文) + leave-one-out おなじみ",
+  "おなじみ(q)": "governing.jsonl 全299件の正解頻度 total に対し、total - (q自身の正解条文なら1) >= 2 を満たす条文の集合",
+  "候補": "total>=2 の66条文（下記）。問題ごとに実際に加わるのはこのうち LOO 条件を満たすもの（A5 との重複を除き +25〜26条文/問、B 全体は399〜400条文）",
+  "per_question": "問題別の追加分は hooks_B_per_question.json、測定結果は results_hook.json の records (familiar_added_B / B.gov_via_familiar)"
+ },
+ "familiar_candidates": [
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "2",
+   "total_count": 11
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "112",
+   "total_count": 8
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "6",
+   "total_count": 7
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "52",
+   "total_count": 6
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "121",
+   "total_count": 6
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "2",
+   "total_count": 6
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "46",
+   "total_count": 4
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "53",
+   "total_count": 4
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "86",
+   "total_count": 4
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "90-3",
+   "total_count": 4
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "85",
+   "total_count": 4
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "80-3",
+   "total_count": 4
+  },
+  {
+   "law_id": "325AC1000000202",
+   "law_name": "建築士法",
+   "art": "24",
+   "total_count": 4
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "20",
+   "total_count": 4
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "129-13-3",
+   "total_count": 4
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "128-5",
+   "total_count": 3
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "120",
+   "total_count": 3
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "20-3",
+   "total_count": 3
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "56-2",
+   "total_count": 3
+  },
+  {
+   "law_id": "325AC1000000202",
+   "law_name": "建築士法",
+   "art": "20",
+   "total_count": 3
+  },
+  {
+   "law_id": "325AC1000000202",
+   "law_name": "建築士法",
+   "art": "23",
+   "total_count": 3
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "56",
+   "total_count": 3
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "65",
+   "total_count": 3
+  },
+  {
+   "law_id": "418AC0000000091",
+   "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+   "art": "14",
+   "total_count": 3
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "87",
+   "total_count": 3
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "42",
+   "total_count": 3
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "68-4",
+   "total_count": 3
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "123",
+   "total_count": 3
+  },
+  {
+   "law_id": "325AC1000000202",
+   "law_name": "建築士法",
+   "art": "18",
+   "total_count": 3
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "122",
+   "total_count": 3
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "136-2",
+   "total_count": 3
+  },
+  {
+   "law_id": "325AC1000000202",
+   "law_name": "建築士法",
+   "art": "24-4",
+   "total_count": 3
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "91",
+   "total_count": 3
+  },
+  {
+   "law_id": "427AC0000000053",
+   "law_name": "建築物のエネルギー消費性能の向上等に関する法律",
+   "art": "11",
+   "total_count": 3
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "135-7",
+   "total_count": 3
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "23",
+   "total_count": 3
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "26",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "82",
+   "total_count": 2
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "44",
+   "total_count": 2
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "61",
+   "total_count": 2
+  },
+  {
+   "law_id": "343AC0000000100",
+   "law_name": "都市計画法",
+   "art": "58-2",
+   "total_count": 2
+  },
+  {
+   "law_id": "418AC0000000091",
+   "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+   "art": "suppl0-2",
+   "total_count": 2
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "28",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "135-3",
+   "total_count": 2
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "27",
+   "total_count": 2
+  },
+  {
+   "law_id": "343AC0000000100",
+   "law_name": "都市計画法",
+   "art": "29",
+   "total_count": 2
+  },
+  {
+   "law_id": "325AC1000000202",
+   "law_name": "建築士法",
+   "art": "3-3",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "137-12",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "129-12",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "82-4",
+   "total_count": 2
+  },
+  {
+   "law_id": "325AC1000000202",
+   "law_name": "建築士法",
+   "art": "2",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "81",
+   "total_count": 2
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "87-2",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "109-2",
+   "total_count": 2
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "68-7",
+   "total_count": 2
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "30",
+   "total_count": 2
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "43",
+   "total_count": 2
+  },
+  {
+   "law_id": "343AC0000000100",
+   "law_name": "都市計画法",
+   "art": "53",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "11",
+   "total_count": 2
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "87-3",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "66",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "135-16",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "126-6",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "36",
+   "total_count": 2
+  },
+  {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "130",
+   "total_count": 2
+  },
+  {
+   "law_id": "325AC0000000201",
+   "law_name": "建築基準法",
+   "art": "85",
+   "total_count": 2
+  }
+ ]
+}
