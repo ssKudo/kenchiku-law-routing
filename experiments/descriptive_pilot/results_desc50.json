@@ -1,0 +1,7455 @@
+{
+ "meta": {
+  "n_questions": 50,
+  "conditions": [
+   "descboard_origq",
+   "orig_descq",
+   "desc_descq"
+  ],
+  "board_chars": {
+   "mean": 1741.2,
+   "median": 813,
+   "min": 86,
+   "max": 154890,
+   "total": 806183
+  },
+  "converted_question_chars": {
+   "mean": 647.7,
+   "median": 658.0,
+   "min": 236,
+   "max": 1255,
+   "total": 32386
+  },
+  "note": "描写変換条件のみ。既存8条件は fifty_measurement/results50.json を参照。"
+ },
+ "questions": {
+  "2017-26": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "suppl0-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "418AC0000000091",
+     "art": "suppl0-2",
+     "score": 1005.67
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "11",
+     "score": 972.89
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "suppl5-72",
+     "score": 895.97
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "14",
+     "score": 890.17
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "6",
+     "score": 870.53
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "10",
+     "score": 858.57
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "4",
+     "score": 856.04
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "13",
+     "score": 845.1
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "8",
+     "score": 831.24
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "2",
+     "score": 822.98
+    }
+   ],
+   "governing_score_descboard_origq": 1005.67,
+   "rank_orig_descq": 29,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 618.55
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 571.44
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 542.19
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-4-3",
+     "score": 511.16
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 505.91
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "8",
+     "score": 479.79
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "14",
+     "score": 472.65
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "10",
+     "score": 457.38
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "20-3",
+     "score": 444.94
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "25",
+     "score": 443.39
+    }
+   ],
+   "governing_score_orig_descq": 66.93,
+   "rank_desc_descq": 27,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "418AC0000000091",
+     "art": "2",
+     "score": 1333.27
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1237.95
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 1219.74
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "8",
+     "score": 1213.18
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 1208.68
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1161.24
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "11",
+     "score": 1136.84
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "10",
+     "score": 1133.14
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-4-3",
+     "score": 1086.59
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "14",
+     "score": 1007.45
+    }
+   ],
+   "governing_score_desc_descq": 342.76
+  },
+  "2017-6": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "108-3",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 25,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "129-2",
+     "score": 2766.52
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 2541.6
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108-4",
+     "score": 2534.41
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-7",
+     "score": 2306.0
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "110",
+     "score": 1986.13
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1697.54
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "109-8",
+     "score": 1592.66
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "109-10",
+     "score": 1584.79
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108",
+     "score": 1559.27
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "109-5",
+     "score": 1532.57
+    }
+   ],
+   "governing_score_descboard_origq": 1032.18,
+   "rank_orig_descq": 29,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "129-2",
+     "score": 979.74
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108-4",
+     "score": 958.85
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 953.51
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 916.4
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-7",
+     "score": 893.29
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 853.71
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-4",
+     "score": 729.86
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "107",
+     "score": 705.15
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "109-8",
+     "score": 680.09
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "110",
+     "score": 672.4
+    }
+   ],
+   "governing_score_orig_descq": 342.32,
+   "rank_desc_descq": 8,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "128-7",
+     "score": 2275.38
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 2181.73
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108-4",
+     "score": 2023.95
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2",
+     "score": 1999.01
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1808.84
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1695.61
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 1525.38
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108-3",
+     "score": 1499.0
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1415.12
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "110",
+     "score": 1406.68
+    }
+   ],
+   "governing_score_desc_descq": 1499.0
+  },
+  "2017-2": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1704.1
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 1625.66
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-12",
+     "score": 1383.49
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "131-2",
+     "score": 1230.85
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1215.22
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "56",
+     "score": 1178.17
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-4",
+     "score": 1175.46
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "130-12",
+     "score": 1130.86
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 1108.57
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 1097.98
+    }
+   ],
+   "governing_score_descboard_origq": 1704.1,
+   "rank_orig_descq": 2,
+   "top3_orig_descq": true,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1059.34
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1001.25
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 946.98
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 921.03
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "56",
+     "score": 824.28
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "130-12",
+     "score": 822.23
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-4",
+     "score": 809.37
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-12",
+     "score": 761.25
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 742.57
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-6",
+     "score": 726.09
+    }
+   ],
+   "governing_score_orig_descq": 1001.25,
+   "rank_desc_descq": 1,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 2261.04
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 2204.7
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 2108.33
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 1793.57
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 1789.46
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "56",
+     "score": 1763.16
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-12",
+     "score": 1745.63
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-21",
+     "score": 1685.75
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "67",
+     "score": 1678.66
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "43",
+     "score": 1668.86
+    }
+   ],
+   "governing_score_desc_descq": 2261.04
+  },
+  "2017-29": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": false,
+   "rank_descboard_origq": null,
+   "top3_descboard_origq": false,
+   "rank_orig_descq": null,
+   "top3_orig_descq": false,
+   "rank_desc_descq": null,
+   "top3_desc_descq": false
+  },
+  "2017-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "82",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 2,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "82-5",
+     "score": 1745.98
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "82",
+     "score": 1482.4
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "82-2",
+     "score": 1423.14
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "82-3",
+     "score": 1371.31
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1336.36
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "20",
+     "score": 1304.96
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "81",
+     "score": 1259.25
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-3",
+     "score": 1230.46
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "82-6",
+     "score": 1220.44
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "46",
+     "score": 1140.12
+    }
+   ],
+   "governing_score_descboard_origq": 1482.4,
+   "rank_orig_descq": 13,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "82-5",
+     "score": 1206.4
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 972.32
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-4",
+     "score": 925.56
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-3",
+     "score": 787.2
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2",
+     "score": 785.8
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "82-6",
+     "score": 766.17
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "20",
+     "score": 761.5
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 737.86
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-7",
+     "score": 736.63
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108-4",
+     "score": 686.78
+    }
+   ],
+   "governing_score_orig_descq": 637.83,
+   "rank_desc_descq": 5,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "82-5",
+     "score": 2185.13
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "46",
+     "score": 1768.49
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "81",
+     "score": 1762.09
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "20",
+     "score": 1730.32
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "82",
+     "score": 1728.6
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-4",
+     "score": 1711.72
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 1693.39
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "82-6",
+     "score": 1621.24
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1563.76
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-3",
+     "score": 1557.46
+    }
+   ],
+   "governing_score_desc_descq": 1728.6
+  },
+  "2018-8": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "121",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 2,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 2248.26
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 1852.74
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 1429.33
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1427.93
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "124",
+     "score": 1414.02
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1351.72
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1299.22
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123-2",
+     "score": 1180.7
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 1168.48
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-4",
+     "score": 1096.69
+    }
+   ],
+   "governing_score_descboard_origq": 1852.74,
+   "rank_orig_descq": 2,
+   "top3_orig_descq": true,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 1159.03
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 1096.09
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1041.78
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 837.31
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 822.23
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "23",
+     "score": 791.35
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 789.28
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 785.94
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 782.72
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 750.45
+    }
+   ],
+   "governing_score_orig_descq": 1096.09,
+   "rank_desc_descq": 2,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 2291.56
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 2277.24
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 2011.7
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1936.66
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1934.67
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 1761.03
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "27",
+     "score": 1713.61
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 1704.57
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 1682.57
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 1677.99
+    }
+   ],
+   "governing_score_desc_descq": 2277.24
+  },
+  "2018-5": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "28",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 3,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "21",
+     "score": 1152.16
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "20",
+     "score": 815.14
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "28",
+     "score": 813.93
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "20-3",
+     "score": 767.4
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 748.89
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 731.24
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 726.1
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "23",
+     "score": 721.29
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 718.1
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 706.01
+    }
+   ],
+   "governing_score_descboard_origq": 813.93,
+   "rank_orig_descq": 29,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "21",
+     "score": 854.25
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 777.08
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 727.37
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 703.96
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 694.42
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 679.91
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 671.8
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 666.26
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "24",
+     "score": 664.22
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 663.76
+    }
+   ],
+   "governing_score_orig_descq": 287.01,
+   "rank_desc_descq": 21,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "20-3",
+     "score": 1213.38
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1190.39
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1179.11
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 1140.87
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1140.0
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1137.15
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 1132.83
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 1125.27
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "21",
+     "score": 1114.77
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 1055.87
+    }
+   ],
+   "governing_score_desc_descq": 885.38
+  },
+  "2018-24": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "29",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "343AC0000000100",
+     "art": "29",
+     "score": 1259.86
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 1152.63
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "34",
+     "score": 1126.9
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "43",
+     "score": 1068.62
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-5",
+     "score": 918.73
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-4",
+     "score": 873.36
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "42",
+     "score": 866.72
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "13",
+     "score": 857.31
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "23-2",
+     "score": 843.16
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5-4",
+     "score": 828.72
+    }
+   ],
+   "governing_score_descboard_origq": 1259.86,
+   "rank_orig_descq": 9,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 763.81
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 740.83
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 723.75
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 709.96
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "34",
+     "score": 638.7
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-5",
+     "score": 638.21
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "13",
+     "score": 595.72
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 591.55
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "29",
+     "score": 566.41
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "14",
+     "score": 541.28
+    }
+   ],
+   "governing_score_orig_descq": 566.41,
+   "rank_desc_descq": 10,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "343AC0000000100",
+     "art": "34",
+     "score": 2108.32
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 2032.8
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 1866.88
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "35-2",
+     "score": 1829.23
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "43",
+     "score": 1800.35
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "58-2",
+     "score": 1769.28
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1742.02
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1678.25
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "42",
+     "score": 1667.52
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "29",
+     "score": 1655.7
+    }
+   ],
+   "governing_score_desc_descq": 1655.7
+  },
+  "2018-4": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "90-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "90-3",
+     "score": 1228.28
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "score": 1111.89
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 1063.51
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 975.58
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 935.42
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 932.03
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-6",
+     "score": 917.29
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86-8",
+     "score": 863.52
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 857.26
+    },
+    {
+     "law": "325M50004000040",
+     "art": "11-2",
+     "score": 853.4
+    }
+   ],
+   "governing_score_descboard_origq": 1228.28,
+   "rank_orig_descq": 26,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 1238.32
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1145.49
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1104.3
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 1096.27
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1028.49
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 926.27
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 909.61
+    },
+    {
+     "law": "427AC0000000053",
+     "art": "11",
+     "score": 908.56
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "85",
+     "score": 810.26
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 793.13
+    }
+   ],
+   "governing_score_orig_descq": 452.29,
+   "rank_desc_descq": 16,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 3250.24
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "score": 2992.1
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 2882.87
+    },
+    {
+     "law": "325M50004000040",
+     "art": "4-16",
+     "score": 2866.05
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-6",
+     "score": 2750.77
+    },
+    {
+     "law": "427AC0000000053",
+     "art": "11",
+     "score": 2684.63
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 2634.93
+    },
+    {
+     "law": "325M50004000040",
+     "art": "11-2",
+     "score": 2489.29
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "85",
+     "score": 2477.86
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "9",
+     "score": 2441.49
+    }
+   ],
+   "governing_score_desc_descq": 2317.03
+  },
+  "2018-22": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "24",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC1000000202",
+     "art": "24",
+     "score": 1448.27
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "26-2",
+     "score": 953.6
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "27-2",
+     "score": 926.81
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "26",
+     "score": 915.79
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "10-2",
+     "score": 897.18
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "24-7",
+     "score": 829.03
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "suppl29-3",
+     "score": 804.71
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "23-5",
+     "score": 793.38
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "26-3",
+     "score": 731.12
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "23-6",
+     "score": 720.94
+    }
+   ],
+   "governing_score_descboard_origq": 1448.27,
+   "rank_orig_descq": 3,
+   "top3_orig_descq": true,
+   "top10_orig_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 785.94
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "27-2",
+     "score": 651.73
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "24",
+     "score": 612.55
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "suppl29-3",
+     "score": 583.77
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "22-4",
+     "score": 564.56
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "score": 557.72
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "26",
+     "score": 517.62
+    },
+    {
+     "law": "323AC1000000186",
+     "art": "13-16",
+     "score": 501.67
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "10-2",
+     "score": 459.24
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "27-5",
+     "score": 456.88
+    }
+   ],
+   "governing_score_orig_descq": 612.55,
+   "rank_desc_descq": 4,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325AC1000000202",
+     "art": "26",
+     "score": 2340.0
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "27-2",
+     "score": 2249.24
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "10-2",
+     "score": 2206.79
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "24",
+     "score": 2174.0
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "22-4",
+     "score": 2149.57
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "24-7",
+     "score": 2137.7
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "score": 2092.84
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "10-3",
+     "score": 2091.12
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 2062.84
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "10-13",
+     "score": 1947.51
+    }
+   ],
+   "governing_score_desc_descq": 2174.0
+  },
+  "2019-24": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "29",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "343AC0000000100",
+     "art": "29",
+     "score": 1327.4
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "34",
+     "score": 1244.61
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 1160.56
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-5",
+     "score": 948.56
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "58-2",
+     "score": 875.96
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "53",
+     "score": 853.89
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "13",
+     "score": 823.67
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 790.17
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5-4",
+     "score": 778.17
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "52",
+     "score": 758.96
+    }
+   ],
+   "governing_score_descboard_origq": 1327.4,
+   "rank_orig_descq": 6,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 750.09
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 726.13
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 670.65
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "34",
+     "score": 662.22
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-5",
+     "score": 597.79
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "29",
+     "score": 589.58
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "13",
+     "score": 565.65
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 552.95
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-11",
+     "score": 521.93
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "58-2",
+     "score": 502.43
+    }
+   ],
+   "governing_score_orig_descq": 589.58,
+   "rank_desc_descq": 5,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "343AC0000000100",
+     "art": "34",
+     "score": 1826.41
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 1817.56
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "58-2",
+     "score": 1605.21
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "35-2",
+     "score": 1584.8
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "29",
+     "score": 1573.06
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1564.19
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "43",
+     "score": 1438.7
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1429.88
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "59",
+     "score": 1331.42
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "52",
+     "score": 1315.13
+    }
+   ],
+   "governing_score_desc_descq": 1573.06
+  },
+  "2019-29": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "80-3",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 2,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "407AC0000000123",
+     "art": "suppl0-3",
+     "score": 533.95
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "80-3",
+     "score": 490.89
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 474.9
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "26",
+     "score": 462.19
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-4",
+     "score": 430.99
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "67",
+     "score": 422.87
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "suppl59-2",
+     "score": 418.39
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "12",
+     "score": 408.7
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5-2",
+     "score": 403.2
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "7-2",
+     "score": 399.9
+    }
+   ],
+   "governing_score_descboard_origq": 490.89,
+   "rank_orig_descq": 16,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "407AC0000000123",
+     "art": "5",
+     "score": 327.07
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "13",
+     "score": 310.1
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 280.51
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 265.62
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "6",
+     "score": 262.08
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 243.15
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "14",
+     "score": 213.27
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-12",
+     "score": 212.05
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "67",
+     "score": 196.53
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-4",
+     "score": 185.25
+    }
+   ],
+   "governing_score_orig_descq": 134.87,
+   "rank_desc_descq": 27,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "343AC0000000100",
+     "art": "14",
+     "score": 842.3
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 832.24
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "13",
+     "score": 801.97
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 784.44
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 782.65
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-4",
+     "score": 769.27
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "6",
+     "score": 735.54
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "5",
+     "score": 728.86
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "67",
+     "score": 611.82
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "suppl59-2",
+     "score": 610.42
+    }
+   ],
+   "governing_score_desc_descq": 315.04
+  },
+  "2019-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "69",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_descboard_origq": null,
+   "top3_descboard_origq": false,
+   "rank_orig_descq": null,
+   "top3_orig_descq": false,
+   "rank_desc_descq": null,
+   "top3_desc_descq": false
+  },
+  "2019-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 3,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "130-8",
+     "score": 699.6
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "137-12",
+     "score": 677.74
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 635.22
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "138",
+     "score": 612.34
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 609.56
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "130-7-2",
+     "score": 592.86
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 571.91
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 563.26
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "3",
+     "score": 534.56
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-6",
+     "score": 525.15
+    }
+   ],
+   "governing_score_descboard_origq": 635.22,
+   "rank_orig_descq": 8,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 656.01
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 645.16
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 586.02
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 583.49
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 539.63
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 537.96
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 462.0
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 458.7
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "3",
+     "score": 445.74
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "145",
+     "score": 440.16
+    }
+   ],
+   "governing_score_orig_descq": 458.7,
+   "rank_desc_descq": 2,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 1416.12
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 1374.4
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1344.4
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 1338.07
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "130-2-3",
+     "score": 1323.08
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "138",
+     "score": 1310.13
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "appdx2",
+     "score": 1294.59
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 1288.26
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1280.94
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-6",
+     "score": 1225.83
+    }
+   ],
+   "governing_score_desc_descq": 1374.4
+  },
+  "2019-19": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1439.75
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-16",
+     "score": 1166.02
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "51",
+     "score": 1141.44
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "42",
+     "score": 1013.21
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1005.38
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "137-8",
+     "score": 977.29
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "94",
+     "score": 976.95
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 976.59
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 911.99
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 907.13
+    }
+   ],
+   "governing_score_descboard_origq": 1439.75,
+   "rank_orig_descq": 5,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 866.9
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 811.14
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 783.27
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 781.47
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 734.73
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 695.04
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 678.34
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 643.22
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 633.25
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 632.94
+    }
+   ],
+   "governing_score_orig_descq": 734.73,
+   "rank_desc_descq": 2,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 2087.06
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 2048.87
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 1991.45
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 1966.72
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1910.16
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "67",
+     "score": 1836.49
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 1814.92
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 1794.11
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "57-2",
+     "score": 1773.66
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "score": 1757.77
+    }
+   ],
+   "governing_score_desc_descq": 2048.87
+  },
+  "2020-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "44",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 9,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "42",
+     "score": 589.42
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-11",
+     "score": 515.32
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 494.98
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "2",
+     "score": 459.36
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "57",
+     "score": 451.96
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "145",
+     "score": 449.33
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 445.57
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "131-2",
+     "score": 441.65
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "44",
+     "score": 433.0
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "23-2",
+     "score": 420.22
+    }
+   ],
+   "governing_score_descboard_origq": 433.0,
+   "rank_orig_descq": 22,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 541.72
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 449.96
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "42",
+     "score": 442.89
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "43",
+     "score": 426.45
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "145",
+     "score": 418.35
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 416.54
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 415.02
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "2",
+     "score": 391.53
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-7",
+     "score": 382.38
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "131-2",
+     "score": 361.61
+    }
+   ],
+   "governing_score_orig_descq": 288.41,
+   "rank_desc_descq": 1,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "44",
+     "score": 1094.18
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1048.72
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1020.88
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "42",
+     "score": 971.3
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 915.93
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 899.14
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-7",
+     "score": 897.32
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "43",
+     "score": 888.04
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 887.99
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "85",
+     "score": 879.86
+    }
+   ],
+   "governing_score_desc_descq": 1094.18
+  },
+  "2020-2": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "135-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 2,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 1751.18
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-3",
+     "score": 1486.51
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-4",
+     "score": 1437.37
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-10",
+     "score": 1424.32
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-12",
+     "score": 1411.1
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-7",
+     "score": 1367.47
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-8",
+     "score": 1343.79
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-11",
+     "score": 1335.21
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1201.38
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 1173.92
+    }
+   ],
+   "governing_score_descboard_origq": 1486.51,
+   "rank_orig_descq": 4,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 1051.14
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-7",
+     "score": 878.27
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 876.27
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-3",
+     "score": 852.84
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-10",
+     "score": 838.49
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-4",
+     "score": 819.65
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 787.2
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 787.01
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-11",
+     "score": 779.7
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-8",
+     "score": 760.12
+    }
+   ],
+   "governing_score_orig_descq": 852.84,
+   "rank_desc_descq": 5,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 2147.66
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1734.68
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-7",
+     "score": 1725.72
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1706.6
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-3",
+     "score": 1644.61
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-10",
+     "score": 1591.93
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-12",
+     "score": 1587.43
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-11",
+     "score": 1578.1
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-21",
+     "score": 1565.9
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 1563.44
+    }
+   ],
+   "governing_score_desc_descq": 1644.61
+  },
+  "2020-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 5,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "108-4",
+     "score": 1424.73
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1224.67
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "109-3",
+     "score": 1194.77
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "110",
+     "score": 1106.45
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 1103.59
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 1003.4
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "109-5",
+     "score": 1003.11
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108",
+     "score": 1002.25
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "137-10",
+     "score": 993.87
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "115-2",
+     "score": 989.72
+    }
+   ],
+   "governing_score_descboard_origq": 1103.59,
+   "rank_orig_descq": 8,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 714.09
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108-4",
+     "score": 693.04
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 654.69
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "115-2",
+     "score": 540.98
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 529.67
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 516.78
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "114",
+     "score": 515.99
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 506.0
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "109-8",
+     "score": 505.84
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "137-10",
+     "score": 485.05
+    }
+   ],
+   "governing_score_orig_descq": 506.0,
+   "rank_desc_descq": 3,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1748.8
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108-4",
+     "score": 1707.53
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 1522.24
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "21",
+     "score": 1509.02
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "137-10",
+     "score": 1508.92
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "114",
+     "score": 1480.83
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 1447.31
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 1437.04
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "115-2",
+     "score": 1380.58
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "27",
+     "score": 1359.57
+    }
+   ],
+   "governing_score_desc_descq": 1522.24
+  },
+  "2020-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 7,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "138",
+     "score": 663.59
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "55",
+     "score": 510.34
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "suppl34-7",
+     "score": 502.36
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 493.1
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "54",
+     "score": 488.48
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 471.65
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 466.08
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 461.88
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-4-9",
+     "score": 445.86
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "23",
+     "score": 441.13
+    }
+   ],
+   "governing_score_descboard_origq": 466.08,
+   "rank_orig_descq": 7,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 550.51
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 417.91
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 399.64
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 389.29
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "appdx2",
+     "score": 374.85
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 366.57
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 365.48
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "3",
+     "score": 355.71
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "130-10",
+     "score": 330.07
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "55",
+     "score": 323.02
+    }
+   ],
+   "governing_score_orig_descq": 365.48,
+   "rank_desc_descq": 4,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "138",
+     "score": 1236.8
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 1146.33
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "appdx2",
+     "score": 1143.84
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 1132.72
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "130-2-3",
+     "score": 1124.53
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1105.99
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1085.7
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 1065.89
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "3",
+     "score": 987.57
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "130-4",
+     "score": 968.8
+    }
+   ],
+   "governing_score_desc_descq": 1132.72
+  },
+  "2020-7": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "120",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 2522.55
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 2069.48
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123-2",
+     "score": 1973.06
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 1884.63
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 1612.54
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1547.87
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 1496.68
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1484.49
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-3",
+     "score": 1479.11
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1455.64
+    }
+   ],
+   "governing_score_descboard_origq": 2522.55,
+   "rank_orig_descq": 4,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1054.96
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 1030.52
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 1030.02
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 997.08
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 941.45
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 887.95
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 871.26
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 856.04
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-3",
+     "score": 811.95
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 758.29
+    }
+   ],
+   "governing_score_orig_descq": 997.08,
+   "rank_desc_descq": 2,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 2115.31
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 2103.85
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 2077.68
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1969.94
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1933.26
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 1915.93
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-3",
+     "score": 1872.76
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 1824.87
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-7",
+     "score": 1773.53
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 1749.36
+    }
+   ],
+   "governing_score_desc_descq": 2103.85
+  },
+  "2021-8": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "122",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 2,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "124",
+     "score": 1193.24
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 975.72
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 970.79
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 860.52
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2",
+     "score": 740.51
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121-2",
+     "score": 675.5
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 674.71
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 644.69
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 640.25
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 567.93
+    }
+   ],
+   "governing_score_descboard_origq": 975.72,
+   "rank_orig_descq": 4,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 652.65
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "23",
+     "score": 567.32
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "124",
+     "score": 566.77
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 551.18
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 547.6
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 545.89
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 530.86
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-4-3",
+     "score": 505.34
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 467.05
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 457.39
+    }
+   ],
+   "governing_score_orig_descq": 551.18,
+   "rank_desc_descq": 4,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 1207.88
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1067.21
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1046.72
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 988.89
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 985.69
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "124",
+     "score": 958.56
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 917.59
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-3",
+     "score": 879.38
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-4-3",
+     "score": 866.15
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 852.76
+    }
+   ],
+   "governing_score_desc_descq": 988.89
+  },
+  "2021-17": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "68-4",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "68-4",
+     "score": 410.47
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5-2",
+     "score": 384.52
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5",
+     "score": 358.88
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "57-2",
+     "score": 352.7
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-6",
+     "score": 338.54
+    },
+    {
+     "law": "427AC0000000053",
+     "art": "35",
+     "score": 322.23
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "19",
+     "score": 301.71
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-14",
+     "score": 300.24
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 296.33
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5-4",
+     "score": 289.6
+    }
+   ],
+   "governing_score_descboard_origq": 410.47,
+   "rank_orig_descq": 11,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 331.37
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 280.2
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "57-2",
+     "score": 253.4
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-5",
+     "score": 253.39
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 242.43
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-3",
+     "score": 198.99
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5-2",
+     "score": 194.95
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5",
+     "score": 179.14
+    },
+    {
+     "law": "420AC0000000087",
+     "art": "18",
+     "score": 174.96
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5-5",
+     "score": 169.18
+    }
+   ],
+   "governing_score_orig_descq": 165.55,
+   "rank_desc_descq": 16,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "68-5-2",
+     "score": 794.43
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "59-2",
+     "score": 776.61
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 768.47
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 765.41
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "57-2",
+     "score": 752.3
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "59",
+     "score": 750.83
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5-3",
+     "score": 747.6
+    },
+    {
+     "law": "420AC0000000087",
+     "art": "18",
+     "score": 731.66
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "60-3",
+     "score": 717.13
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "60-2",
+     "score": 711.53
+    }
+   ],
+   "governing_score_desc_descq": 589.08
+  },
+  "2021-20": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "68-7",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 9,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "75-2",
+     "score": 1786.67
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "55",
+     "score": 1603.14
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1418.24
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1242.9
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "47",
+     "score": 1233.09
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 1169.9
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "24",
+     "score": 1158.72
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 1148.91
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-7",
+     "score": 1143.87
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86-2",
+     "score": 1121.8
+    }
+   ],
+   "governing_score_descboard_origq": 1143.87,
+   "rank_orig_descq": 10,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1014.35
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "55",
+     "score": 896.17
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 866.68
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 763.43
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "56-2",
+     "score": 735.92
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "57-2",
+     "score": 715.79
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-5",
+     "score": 706.31
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "75-2",
+     "score": 703.64
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 693.67
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-7",
+     "score": 682.86
+    }
+   ],
+   "governing_score_orig_descq": 682.86,
+   "rank_desc_descq": 9,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "55",
+     "score": 2255.81
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 2183.89
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 2151.58
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86-2",
+     "score": 2022.64
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "57-2",
+     "score": 1978.95
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1968.09
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 1866.48
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 1808.82
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-7",
+     "score": 1768.37
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "56-2",
+     "score": 1761.6
+    }
+   ],
+   "governing_score_desc_descq": 1768.37
+  },
+  "2021-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 4,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 540.54
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "12",
+     "score": 470.75
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "11",
+     "score": 468.21
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 443.69
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-3",
+     "score": 416.6
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 366.56
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 355.16
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "79-4",
+     "score": 352.57
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "27",
+     "score": 343.94
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "110",
+     "score": 336.52
+    }
+   ],
+   "governing_score_descboard_origq": 443.69,
+   "rank_orig_descq": 7,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 444.19
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 397.87
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 373.98
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108-4",
+     "score": 346.31
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "145",
+     "score": 346.09
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 329.33
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 326.25
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 314.28
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "72",
+     "score": 271.55
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-3",
+     "score": 265.35
+    }
+   ],
+   "governing_score_orig_descq": 326.25,
+   "rank_desc_descq": 2,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 904.63
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 856.13
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 849.18
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 826.18
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 795.19
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-3",
+     "score": 769.92
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 769.3
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108-4",
+     "score": 728.58
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "137-10",
+     "score": 723.14
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "27",
+     "score": 688.49
+    }
+   ],
+   "governing_score_desc_descq": 856.13
+  },
+  "2021-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "56-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "56-2",
+     "score": 675.17
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-12",
+     "score": 667.47
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 640.98
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-7",
+     "score": 600.31
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-21",
+     "score": 567.77
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-9",
+     "score": 562.3
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 555.23
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-8",
+     "score": 554.57
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 535.49
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68",
+     "score": 517.94
+    }
+   ],
+   "governing_score_descboard_origq": 675.17,
+   "rank_orig_descq": 3,
+   "top3_orig_descq": true,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 572.62
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 508.41
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "56-2",
+     "score": 494.63
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "55",
+     "score": 482.89
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-7",
+     "score": 476.87
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-12",
+     "score": 450.52
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 450.35
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 442.38
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 432.16
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-6",
+     "score": 412.8
+    }
+   ],
+   "governing_score_orig_descq": 494.63,
+   "rank_desc_descq": 6,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1081.98
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "55",
+     "score": 1073.01
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 1060.37
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-12",
+     "score": 1021.33
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-21",
+     "score": 983.04
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "56-2",
+     "score": 981.12
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 975.26
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 949.82
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68",
+     "score": 937.65
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 931.89
+    }
+   ],
+   "governing_score_desc_descq": 981.12
+  },
+  "2022-7": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "121",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 1409.23
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 1120.92
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-4",
+     "score": 1115.64
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 1115.19
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1006.91
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 994.77
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 906.8
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "124",
+     "score": 863.81
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123-2",
+     "score": 859.78
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 795.7
+    }
+   ],
+   "governing_score_descboard_origq": 1409.23,
+   "rank_orig_descq": 1,
+   "top3_orig_descq": true,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 948.37
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 891.8
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 882.61
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 751.82
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 716.14
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "23",
+     "score": 689.56
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 679.54
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 678.0
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "27",
+     "score": 665.76
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-4",
+     "score": 640.39
+    }
+   ],
+   "governing_score_orig_descq": 948.37,
+   "rank_desc_descq": 1,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 2167.96
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 2097.17
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1892.17
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 1854.23
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1846.76
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 1839.86
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "27",
+     "score": 1834.05
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-4",
+     "score": 1789.19
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 1753.48
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-7",
+     "score": 1736.53
+    }
+   ],
+   "governing_score_desc_descq": 2167.96
+  },
+  "2022-23": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "23",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_descboard_origq": null,
+   "top3_descboard_origq": false,
+   "rank_orig_descq": null,
+   "top3_orig_descq": false,
+   "rank_desc_descq": null,
+   "top3_desc_descq": false
+  },
+  "2022-21": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 2,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC1000000202",
+     "art": "18",
+     "score": 1140.27
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "2",
+     "score": 1070.62
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "20",
+     "score": 1018.6
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "5-6",
+     "score": 1010.57
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "20-2",
+     "score": 995.58
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 878.82
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "24-7",
+     "score": 868.31
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "3-3",
+     "score": 867.87
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "3-2",
+     "score": 838.24
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 830.46
+    }
+   ],
+   "governing_score_descboard_origq": 1070.62,
+   "rank_orig_descq": 7,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 742.59
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 637.36
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 617.36
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86-8",
+     "score": 598.97
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "18",
+     "score": 578.52
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "9",
+     "score": 536.39
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "2",
+     "score": 514.9
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6-3",
+     "score": 495.92
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "5-6",
+     "score": 494.21
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "5",
+     "score": 449.66
+    }
+   ],
+   "governing_score_orig_descq": 514.9,
+   "rank_desc_descq": 3,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325AC1000000202",
+     "art": "18",
+     "score": 2225.36
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "24-7",
+     "score": 1977.4
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "2",
+     "score": 1914.76
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "score": 1880.07
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "22-3-3",
+     "score": 1803.63
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "5-6",
+     "score": 1798.58
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "20",
+     "score": 1765.63
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "20-2",
+     "score": 1662.47
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 1651.9
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "26",
+     "score": 1599.49
+    }
+   ],
+   "governing_score_desc_descq": 1914.76
+  },
+  "2022-18": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "56",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 19,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "56-2",
+     "score": 696.9
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-7",
+     "score": 658.35
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-12",
+     "score": 654.92
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 622.85
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-8",
+     "score": 619.55
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-9",
+     "score": 571.74
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-21",
+     "score": 553.98
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 548.15
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 520.1
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68",
+     "score": 519.43
+    }
+   ],
+   "governing_score_descboard_origq": 470.71,
+   "rank_orig_descq": 15,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 574.7
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-7",
+     "score": 515.75
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "56-2",
+     "score": 498.28
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "55",
+     "score": 492.18
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 486.42
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "suppl34-7",
+     "score": 477.99
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-12",
+     "score": 453.64
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-8",
+     "score": 449.12
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 413.56
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 411.19
+    }
+   ],
+   "governing_score_orig_descq": 378.11,
+   "rank_desc_descq": 15,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "55",
+     "score": 956.0
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 951.53
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 950.71
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "56-2",
+     "score": 938.26
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-12",
+     "score": 914.02
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 874.33
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-21",
+     "score": 863.58
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 856.97
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-7",
+     "score": 847.51
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "135-3",
+     "score": 843.1
+    }
+   ],
+   "governing_score_desc_descq": 775.15
+  },
+  "2022-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "43",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 4,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "145",
+     "score": 1256.97
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 863.2
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 843.25
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "43",
+     "score": 768.88
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "42",
+     "score": 749.13
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 731.98
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 714.9
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "57",
+     "score": 711.42
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "56",
+     "score": 709.19
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 709.13
+    }
+   ],
+   "governing_score_descboard_origq": 768.88,
+   "rank_orig_descq": 8,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 885.44
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "145",
+     "score": 791.7
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 748.85
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 729.17
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 720.93
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 714.86
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "42",
+     "score": 651.2
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "43",
+     "score": 635.25
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 580.77
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 565.15
+    }
+   ],
+   "governing_score_orig_descq": 635.25,
+   "rank_desc_descq": 4,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1614.47
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1581.34
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 1544.67
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "43",
+     "score": 1491.43
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "67",
+     "score": 1474.39
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-21",
+     "score": 1451.08
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86-2",
+     "score": 1408.58
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 1383.02
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "85",
+     "score": 1378.09
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1377.38
+    }
+   ],
+   "governing_score_desc_descq": 1491.43
+  },
+  "2023-8": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "87-3",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "87-3",
+     "score": 2190.69
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "85",
+     "score": 2114.48
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "147",
+     "score": 1078.43
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 980.11
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 977.29
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86-2",
+     "score": 973.94
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 973.88
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 938.39
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-6",
+     "score": 909.0
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 893.38
+    }
+   ],
+   "governing_score_descboard_origq": 2190.69,
+   "rank_orig_descq": 1,
+   "top3_orig_descq": true,
+   "top10_orig_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "87-3",
+     "score": 961.67
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "85",
+     "score": 890.61
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 841.51
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 782.32
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 752.09
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 741.49
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 712.24
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 703.12
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 688.04
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 674.24
+    }
+   ],
+   "governing_score_orig_descq": 961.67,
+   "rank_desc_descq": 1,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "87-3",
+     "score": 2396.95
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "85",
+     "score": 2321.62
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 1864.3
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 1826.56
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1776.98
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 1719.18
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-6",
+     "score": 1705.94
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 1692.53
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1689.98
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "score": 1665.48
+    }
+   ],
+   "governing_score_desc_descq": 2396.95
+  },
+  "2023-15": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "52",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 704.03
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "56",
+     "score": 625.15
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "130-7-2",
+     "score": 605.82
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "130-8",
+     "score": 601.16
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "130",
+     "score": 598.56
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "appdx3",
+     "score": 571.54
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "appdx2",
+     "score": 559.03
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5-4",
+     "score": 535.99
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "8",
+     "score": 533.18
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "48",
+     "score": 531.25
+    }
+   ],
+   "governing_score_descboard_origq": 704.03,
+   "rank_orig_descq": 2,
+   "top3_orig_descq": true,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 553.27
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 458.94
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "appdx2",
+     "score": 448.19
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-4",
+     "score": 437.67
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 411.79
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "56",
+     "score": 410.21
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 406.3
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2",
+     "score": 377.99
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "130-9-4",
+     "score": 376.63
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-5",
+     "score": 371.48
+    }
+   ],
+   "governing_score_orig_descq": 458.94,
+   "rank_desc_descq": 2,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "130-2-3",
+     "score": 1216.19
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1211.5
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "9",
+     "score": 1195.14
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-4",
+     "score": 1159.29
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "138",
+     "score": 1130.57
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "appdx2",
+     "score": 1117.04
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "85",
+     "score": 1071.09
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1042.24
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 1028.18
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2",
+     "score": 1014.34
+    }
+   ],
+   "governing_score_desc_descq": 1211.5
+  },
+  "2023-19": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "86",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 1174.79
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1047.52
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1031.17
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86-2",
+     "score": 1006.41
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "23",
+     "score": 1001.26
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "42",
+     "score": 994.63
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 988.78
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 973.69
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "94",
+     "score": 958.78
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 955.46
+    }
+   ],
+   "governing_score_descboard_origq": 1174.79,
+   "rank_orig_descq": 5,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 912.0
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 827.41
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 767.01
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 760.91
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 753.46
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 747.03
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 746.27
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 720.25
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 708.76
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 686.33
+    }
+   ],
+   "governing_score_orig_descq": 753.46,
+   "rank_desc_descq": 1,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 2110.59
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86-2",
+     "score": 2048.36
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 1951.04
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1908.41
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1903.34
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 1892.21
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 1874.77
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 1822.8
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "score": 1805.25
+    },
+    {
+     "law": "325M50004000040",
+     "art": "4-16",
+     "score": 1798.61
+    }
+   ],
+   "governing_score_desc_descq": 2110.59
+  },
+  "2023-9": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "128-5",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 1893.14
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 1228.37
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1182.2
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "35-2",
+     "score": 1112.85
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1046.29
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "20-7",
+     "score": 1045.1
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-7",
+     "score": 931.85
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-4",
+     "score": 909.43
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "115-2",
+     "score": 903.85
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 898.69
+    }
+   ],
+   "governing_score_descboard_origq": 1893.14,
+   "rank_orig_descq": 1,
+   "top3_orig_descq": true,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 1138.83
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 937.63
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 896.92
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "20-7",
+     "score": 755.56
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 687.47
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-7",
+     "score": 659.53
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "115-2",
+     "score": 654.98
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 653.97
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 635.91
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 631.13
+    }
+   ],
+   "governing_score_orig_descq": 1138.83,
+   "rank_desc_descq": 1,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 1983.87
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1703.82
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 1457.86
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1406.85
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "20-7",
+     "score": 1406.77
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 1398.57
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-4",
+     "score": 1397.66
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 1318.14
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1292.14
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1265.32
+    }
+   ],
+   "governing_score_desc_descq": 1983.87
+  },
+  "2023-26": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "17",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_descboard_origq": null,
+   "top3_descboard_origq": false,
+   "rank_orig_descq": null,
+   "top3_orig_descq": false,
+   "rank_desc_descq": null,
+   "top3_desc_descq": false
+  },
+  "2024-28": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "12",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 4,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1151.17
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 1072.01
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "20-2",
+     "score": 1036.4
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "score": 1015.68
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "20-3",
+     "score": 1013.12
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 990.98
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6-3",
+     "score": 987.14
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 941.26
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "10-3",
+     "score": 908.25
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 871.79
+    }
+   ],
+   "governing_score_descboard_origq": 1015.68,
+   "rank_orig_descq": 19,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1017.05
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-7",
+     "score": 845.96
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 827.65
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2",
+     "score": 804.32
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 802.76
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 801.6
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 753.81
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "82-5",
+     "score": 732.8
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 690.97
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "20",
+     "score": 672.63
+    }
+   ],
+   "governing_score_orig_descq": 480.98,
+   "rank_desc_descq": 5,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 2160.23
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 2044.85
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 2043.68
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 2013.18
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "score": 1992.92
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6-3",
+     "score": 1887.63
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 1855.34
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1846.23
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-7",
+     "score": 1826.78
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 1781.35
+    }
+   ],
+   "governing_score_desc_descq": 1992.92
+  },
+  "2024-1": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 2,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "144-3",
+     "score": 847.07
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 703.3
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "37",
+     "score": 662.42
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-10",
+     "score": 612.26
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 608.23
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "137-10",
+     "score": 600.05
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 584.86
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "115",
+     "score": 584.76
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 579.46
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 572.72
+    }
+   ],
+   "governing_score_descboard_origq": 703.3,
+   "rank_orig_descq": 10,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 644.37
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 572.19
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 559.96
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 557.08
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 543.88
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-10",
+     "score": 511.55
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 506.39
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 505.73
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2",
+     "score": 489.56
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 481.03
+    }
+   ],
+   "governing_score_orig_descq": 481.03,
+   "rank_desc_descq": 3,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1228.79
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "137-10",
+     "score": 1193.77
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 1190.15
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "2",
+     "score": 1175.35
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-10",
+     "score": 1168.37
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 1165.48
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 1150.62
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1124.67
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 1123.05
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 1105.7
+    }
+   ],
+   "governing_score_desc_descq": 1190.15
+  },
+  "2024-25": {
+   "governing": {
+    "law_id": "336CO0000000037",
+    "law_name": "消防法施行令",
+    "art": "10",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_descboard_origq": null,
+   "top3_descboard_origq": false,
+   "rank_orig_descq": null,
+   "top3_orig_descq": false,
+   "rank_desc_descq": null,
+   "top3_desc_descq": false
+  },
+  "2024-26": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "17",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_descboard_origq": null,
+   "top3_descboard_origq": false,
+   "rank_orig_descq": null,
+   "top3_orig_descq": false,
+   "rank_desc_descq": null,
+   "top3_desc_descq": false
+  },
+  "2024-6": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "113",
+    "confidence": "medium"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 3,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1682.1
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 1244.39
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "113",
+     "score": 1222.43
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "26",
+     "score": 1162.58
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 1146.26
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 1098.63
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "115-2",
+     "score": 1095.57
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1087.35
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 1067.22
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "114",
+     "score": 1058.17
+    }
+   ],
+   "governing_score_descboard_origq": 1222.43,
+   "rank_orig_descq": 26,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1017.14
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-3",
+     "score": 854.47
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 839.59
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 800.0
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 797.59
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 794.9
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 768.74
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 767.34
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 763.55
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 752.11
+    }
+   ],
+   "governing_score_orig_descq": 445.81,
+   "rank_desc_descq": 26,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 2324.46
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 2086.63
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 1902.8
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1875.99
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "114",
+     "score": 1840.87
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1826.64
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 1819.01
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 1791.92
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 1783.57
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "27",
+     "score": 1735.33
+    }
+   ],
+   "governing_score_desc_descq": 1453.47
+  },
+  "2025-23": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "43",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 9,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 1780.99
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "34",
+     "score": 1180.48
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "32",
+     "score": 1167.73
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "40",
+     "score": 1158.39
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "29",
+     "score": 1143.15
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "30",
+     "score": 989.67
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "39",
+     "score": 988.97
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "13",
+     "score": 974.31
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "43",
+     "score": 954.26
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "35-2",
+     "score": 934.88
+    }
+   ],
+   "governing_score_descboard_origq": 954.26,
+   "rank_orig_descq": 18,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 852.95
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "13",
+     "score": 844.57
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-5",
+     "score": 766.92
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 754.08
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 752.8
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "34",
+     "score": 697.45
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 614.48
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 529.25
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "29",
+     "score": 486.16
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "suppl59-2",
+     "score": 482.17
+    }
+   ],
+   "governing_score_orig_descq": 407.45,
+   "rank_desc_descq": 6,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 2052.72
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "34",
+     "score": 1689.4
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 1605.5
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "13",
+     "score": 1538.1
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "29",
+     "score": 1484.79
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "43",
+     "score": 1442.04
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1425.5
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1425.13
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-5",
+     "score": 1422.5
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86-2",
+     "score": 1396.83
+    }
+   ],
+   "governing_score_desc_descq": 1442.04
+  },
+  "2025-14": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "42",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "42",
+     "score": 1133.5
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "43",
+     "score": 832.55
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 801.37
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "2",
+     "score": 761.74
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "145",
+     "score": 743.08
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 696.54
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 695.2
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "144-4",
+     "score": 692.11
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 687.58
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "131-2",
+     "score": 667.35
+    }
+   ],
+   "governing_score_descboard_origq": 1133.5,
+   "rank_orig_descq": 1,
+   "top3_orig_descq": true,
+   "top10_orig_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "42",
+     "score": 770.28
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 765.36
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 657.69
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "score": 637.89
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 626.75
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 607.08
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-5",
+     "score": 589.35
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "2",
+     "score": 584.44
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "5",
+     "score": 583.3
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 560.69
+    }
+   ],
+   "governing_score_orig_descq": 770.28,
+   "rank_desc_descq": 1,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "42",
+     "score": 1659.58
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86",
+     "score": 1548.61
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1545.95
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 1508.06
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "43",
+     "score": 1470.19
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "86-2",
+     "score": 1454.32
+    },
+    {
+     "law": "325M50004000040",
+     "art": "10-16",
+     "score": 1404.45
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "score": 1374.46
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 1358.82
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "85",
+     "score": 1346.58
+    }
+   ],
+   "governing_score_desc_descq": 1659.58
+  },
+  "2025-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "36",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_descboard_origq": null,
+   "top3_descboard_origq": false,
+   "rank_orig_descq": null,
+   "top3_orig_descq": false,
+   "rank_desc_descq": null,
+   "top3_desc_descq": false
+  },
+  "2025-9": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "129-13-3",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 5,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 2118.33
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1605.87
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 1497.74
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1432.88
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1305.11
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "115-2",
+     "score": 1123.47
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "35-2",
+     "score": 1086.2
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "20-7",
+     "score": 1073.87
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 1060.54
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 1030.51
+    }
+   ],
+   "governing_score_descboard_origq": 1305.11,
+   "rank_orig_descq": 8,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 1372.26
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1182.39
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1028.73
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 931.44
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "115-2",
+     "score": 823.41
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 815.53
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "20-7",
+     "score": 815.5
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 795.33
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 772.02
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-7",
+     "score": 771.49
+    }
+   ],
+   "governing_score_orig_descq": 795.33,
+   "rank_desc_descq": 4,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "128-5",
+     "score": 2399.34
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 2321.68
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 1950.4
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1898.95
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 1815.48
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 1785.44
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 1742.61
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 1709.05
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "20-7",
+     "score": 1677.81
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 1648.83
+    }
+   ],
+   "governing_score_desc_descq": 1898.95
+  },
+  "2025-5": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "23",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "23",
+     "score": 1051.84
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 529.1
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 434.64
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "120",
+     "score": 432.47
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 423.18
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123-2",
+     "score": 379.4
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 379.29
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 377.87
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 372.73
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 371.87
+    }
+   ],
+   "governing_score_descboard_origq": 1051.84,
+   "rank_orig_descq": 1,
+   "top3_orig_descq": true,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "23",
+     "score": 517.76
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 301.08
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 287.32
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2",
+     "score": 260.24
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "122",
+     "score": 251.15
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "suppl79-4",
+     "score": 249.04
+    },
+    {
+     "law": "325M50004000040",
+     "art": "suppl58-2",
+     "score": 243.77
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 242.11
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 238.25
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "124",
+     "score": 234.88
+    }
+   ],
+   "governing_score_orig_descq": 517.76,
+   "rank_desc_descq": 1,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "23",
+     "score": 797.87
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 527.03
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 514.92
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 509.49
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 497.61
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 496.21
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "score": 492.89
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 482.31
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 455.38
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-12",
+     "score": 453.31
+    }
+   ],
+   "governing_score_desc_descq": 797.87
+  },
+  "2026-7": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "2",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 1,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 1154.25
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108-4",
+     "score": 1115.14
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 953.02
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "90-3",
+     "score": 951.23
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2",
+     "score": 837.31
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "21",
+     "score": 825.46
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-7",
+     "score": 822.43
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129",
+     "score": 784.79
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "110",
+     "score": 781.7
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2",
+     "score": 754.44
+    }
+   ],
+   "governing_score_descboard_origq": 1154.25,
+   "rank_orig_descq": 4,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 852.21
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 801.59
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 751.98
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 726.69
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 710.87
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "score": 689.29
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 681.49
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 673.05
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 660.49
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 633.76
+    }
+   ],
+   "governing_score_orig_descq": 726.69,
+   "rank_desc_descq": 2,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1870.97
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "score": 1712.51
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "128-2",
+     "score": 1658.85
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "21",
+     "score": 1571.43
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "27",
+     "score": 1566.34
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2",
+     "score": 1542.67
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "score": 1533.15
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "score": 1524.8
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "90-3",
+     "score": 1521.71
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1509.44
+    }
+   ],
+   "governing_score_desc_descq": 1712.51
+  },
+  "2026-25": {
+   "governing": {
+    "law_id": "418AC0000000091",
+    "law_name": "高齢者、障害者等の移動等の円滑化の促進に関する法律",
+    "art": "suppl0-2",
+    "confidence": "low"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 13,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "418AC0000000091",
+     "art": "14",
+     "score": 1077.0
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "11",
+     "score": 976.12
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "suppl5-72",
+     "score": 899.41
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "2",
+     "score": 895.06
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "10",
+     "score": 876.55
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "13",
+     "score": 869.62
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "4",
+     "score": 859.82
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "8",
+     "score": 795.73
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "24-2",
+     "score": 779.24
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 762.14
+    }
+   ],
+   "governing_score_descboard_origq": 707.74,
+   "rank_orig_descq": 2,
+   "top3_orig_descq": true,
+   "top10_orig_descq": [
+    {
+     "law": "418AC0000000091",
+     "art": "suppl5-72",
+     "score": 840.12
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "suppl0-2",
+     "score": 730.14
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "2",
+     "score": 717.07
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 691.79
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "10",
+     "score": 680.3
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "14",
+     "score": 657.31
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "8",
+     "score": 640.66
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "11",
+     "score": 621.42
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "25",
+     "score": 618.59
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "13",
+     "score": 586.0
+    }
+   ],
+   "governing_score_orig_descq": 730.14,
+   "rank_desc_descq": 23,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "418AC0000000091",
+     "art": "2",
+     "score": 1477.05
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "10",
+     "score": 1242.45
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "11",
+     "score": 1236.68
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1162.93
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "121",
+     "score": 1149.81
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "8",
+     "score": 1148.18
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "14",
+     "score": 1127.56
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "suppl5-72",
+     "score": 1110.41
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "score": 1103.38
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1083.86
+    }
+   ],
+   "governing_score_desc_descq": 737.66
+  },
+  "2026-11": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "82-4",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 15,
+   "top3_descboard_origq": false,
+   "top10_descboard_origq": [
+    {
+     "law": "325CO0000000338",
+     "art": "82-5",
+     "score": 1622.4
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "82",
+     "score": 1612.12
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "88",
+     "score": 1438.14
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1299.68
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-3",
+     "score": 1293.84
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "77",
+     "score": 1205.11
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "82-3",
+     "score": 1198.67
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "81",
+     "score": 1167.31
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "20",
+     "score": 1146.59
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "46",
+     "score": 1133.52
+    }
+   ],
+   "governing_score_descboard_origq": 889.99,
+   "rank_orig_descq": 29,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "82-5",
+     "score": 1227.7
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1048.02
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-3",
+     "score": 929.08
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-4",
+     "score": 917.09
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "77",
+     "score": 843.47
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 839.51
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "82",
+     "score": 817.88
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "20",
+     "score": 807.95
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "88",
+     "score": 747.38
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "46",
+     "score": 735.27
+    }
+   ],
+   "governing_score_orig_descq": 364.44,
+   "rank_desc_descq": 25,
+   "top3_desc_descq": false,
+   "top10_desc_descq": [
+    {
+     "law": "325CO0000000338",
+     "art": "82-5",
+     "score": 2103.31
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "82",
+     "score": 1795.2
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-3",
+     "score": 1725.92
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "score": 1691.9
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "20",
+     "score": 1617.75
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-4",
+     "score": 1576.62
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "81",
+     "score": 1495.71
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 1490.38
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "46",
+     "score": 1460.74
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 1422.08
+    }
+   ],
+   "governing_score_desc_descq": 905.0
+  },
+  "2026-4": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "85",
+    "confidence": "high"
+   },
+   "in_pool": false,
+   "rank_descboard_origq": null,
+   "top3_descboard_origq": false,
+   "rank_orig_descq": null,
+   "top3_orig_descq": false,
+   "rank_desc_descq": null,
+   "top3_desc_descq": false
+  },
+  "2026-3": {
+   "governing": {
+    "law_id": "325AC0000000201",
+    "law_name": "建築基準法",
+    "art": "6",
+    "confidence": "high"
+   },
+   "in_pool": true,
+   "rank_descboard_origq": 3,
+   "top3_descboard_origq": true,
+   "top10_descboard_origq": [
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 1421.8
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-3",
+     "score": 1178.59
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 1133.88
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-4",
+     "score": 1049.73
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 1012.02
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6-3",
+     "score": 1008.75
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "12",
+     "score": 980.13
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6-2",
+     "score": 979.3
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 853.57
+    },
+    {
+     "law": "427AC0000000053",
+     "art": "11",
+     "score": 850.74
+    }
+   ],
+   "governing_score_descboard_origq": 1133.88,
+   "rank_orig_descq": 4,
+   "top3_orig_descq": false,
+   "top10_orig_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 912.63
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 898.27
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "score": 880.85
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 797.7
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "52",
+     "score": 756.71
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 721.38
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-3",
+     "score": 677.32
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "score": 622.81
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6-3",
+     "score": 600.33
+    },
+    {
+     "law": "427AC0000000053",
+     "art": "11",
+     "score": 542.69
+    }
+   ],
+   "governing_score_orig_descq": 797.7,
+   "rank_desc_descq": 2,
+   "top3_desc_descq": true,
+   "top10_desc_descq": [
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "score": 2318.37
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "score": 2070.55
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-3",
+     "score": 2017.77
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6-3",
+     "score": 1975.81
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-6",
+     "score": 1837.8
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6-2",
+     "score": 1813.93
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-4",
+     "score": 1724.03
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "score": 1718.56
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "score": 1711.79
+    },
+    {
+     "law": "427AC0000000053",
+     "art": "11",
+     "score": 1710.35
+    }
+   ],
+   "governing_score_desc_descq": 2070.55
+  }
+ }
+}
