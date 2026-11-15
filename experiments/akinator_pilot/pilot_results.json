@@ -1,0 +1,1913 @@
+{
+ "meta": {
+  "answers_meta": {
+   "model": "/home/hatch/workspace/models/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+   "server": "/home/hatch/workspace/tools/llama.cpp/llama-b12314/llama-server",
+   "threads": 4,
+   "ctx": 4096,
+   "temp": 0.2,
+   "seed": 42,
+   "n_predict": 16,
+   "server_boot_seconds": 13.12,
+   "system_prompt": "あなたは建築法規の検索アシスタントです。指示に厳密に従ってください。",
+   "user_template": "以下は一級建築士試験（法規）の問題です。\n\n問題文:\n{stem}\n\n選択肢:\n{choices}\n\n質問: 問題文と選択肢の中に、{topic}についての記述が出てきますか。出てくる場合は「○」、出てこない場合は「×」だけを答えてください。説明や理由は書かないでください。",
+   "n_calls": 60,
+   "total_answer_seconds": 142.85,
+   "distribution": {
+    "circle": 0,
+    "cross": 60,
+    "invalid": 0,
+    "format_dirty": 0
+   }
+  },
+  "method": "プール内 (baseline上位30条) で、条文タグと回答の一致数の降順、同点は baseline TF-IDF スコア降順で並び替え。oracle は正答条自身のタグを回答に使った天井条件。",
+  "invalid_answer_rule": "判定不能の属性は一致数に数えない (全条文にとって不一致扱い)。"
+ },
+ "results": {
+  "2017-21": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "3"
+   },
+   "baseline_rank_in_pool": 5,
+   "model_answers": {
+    "procedure": "×",
+    "structure": "×",
+    "fire": "×",
+    "use": "×",
+    "scale": "×",
+    "person": "×",
+    "equipment": "×",
+    "site_land": "×",
+    "inspection": "×",
+    "contract": "×",
+    "definition": "×",
+    "sanction": "×"
+   },
+   "akinator": {
+    "rank": 16,
+    "top3_hit": false,
+    "gov_match": 9,
+    "pool_max_match": 11,
+    "gov_match_gap": 2,
+    "n_articles_at_max_match": 6
+   },
+   "oracle": {
+    "rank": 1,
+    "top3_hit": true
+   },
+   "threshold_curve": {
+    "12": {
+     "survivors": 0,
+     "gov_survives": false
+    },
+    "11": {
+     "survivors": 6,
+     "gov_survives": false
+    },
+    "10": {
+     "survivors": 15,
+     "gov_survives": false
+    },
+    "9": {
+     "survivors": 22,
+     "gov_survives": true
+    },
+    "8": {
+     "survivors": 25,
+     "gov_survives": true
+    },
+    "7": {
+     "survivors": 26,
+     "gov_survives": true
+    },
+    "6": {
+     "survivors": 26,
+     "gov_survives": true
+    },
+    "5": {
+     "survivors": 26,
+     "gov_survives": true
+    },
+    "4": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "3": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "2": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "1": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "0": {
+     "survivors": 30,
+     "gov_survives": true
+    }
+   },
+   "hard_elimination": {
+    "gov_eliminated_at_step": 4,
+    "steps": [
+     {
+      "step": 1,
+      "attr_id": "procedure",
+      "answer": "×",
+      "survivors": 19
+     },
+     {
+      "step": 2,
+      "attr_id": "structure",
+      "answer": "×",
+      "survivors": 15
+     },
+     {
+      "step": 3,
+      "attr_id": "fire",
+      "answer": "×",
+      "survivors": 13
+     },
+     {
+      "step": 4,
+      "attr_id": "use",
+      "answer": "×",
+      "survivors": 11
+     },
+     {
+      "step": 5,
+      "attr_id": "scale",
+      "answer": "×",
+      "survivors": 8
+     },
+     {
+      "step": 6,
+      "attr_id": "person",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 7,
+      "attr_id": "equipment",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 8,
+      "attr_id": "site_land",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 9,
+      "attr_id": "inspection",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 10,
+      "attr_id": "contract",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 11,
+      "attr_id": "definition",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 12,
+      "attr_id": "sanction",
+      "answer": "×",
+      "survivors": 0
+     }
+    ]
+   },
+   "ranking_model": [
+    {
+     "law": "325AC0000000201",
+     "art": "5-6",
+     "match": 11,
+     "baseline_score": 1031.96,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "20-2",
+     "match": 11,
+     "baseline_score": 1023.81,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "10-21",
+     "match": 11,
+     "baseline_score": 714.8,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "10-19",
+     "match": 11,
+     "baseline_score": 713.41,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "appdx2",
+     "match": 11,
+     "baseline_score": 693.16,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "22-2",
+     "match": 11,
+     "baseline_score": 644.45,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "10-3",
+     "match": 10,
+     "baseline_score": 1456.18,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "3-3",
+     "match": 10,
+     "baseline_score": 1199.92,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "10-4",
+     "match": 10,
+     "baseline_score": 995.67,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "10-22",
+     "match": 10,
+     "baseline_score": 888.04,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "24-7",
+     "match": 10,
+     "baseline_score": 861.65,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "5",
+     "match": 10,
+     "baseline_score": 676.21,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "11",
+     "match": 10,
+     "baseline_score": 664.78,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "5-2",
+     "match": 10,
+     "baseline_score": 627.15,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "15-2",
+     "match": 10,
+     "baseline_score": 598.78,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "3",
+     "match": 9,
+     "baseline_score": 1147.78,
+     "is_gov": true
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "3-2",
+     "match": 9,
+     "baseline_score": 1136.62,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "22-3-3",
+     "match": 9,
+     "baseline_score": 990.38,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "26",
+     "match": 9,
+     "baseline_score": 696.28,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "10-17",
+     "match": 9,
+     "baseline_score": 634.32,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "suppl29-3",
+     "match": 9,
+     "baseline_score": 632.43,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6-3",
+     "match": 9,
+     "baseline_score": 614.61,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "18",
+     "match": 8,
+     "baseline_score": 1241.16,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "20",
+     "match": 8,
+     "baseline_score": 1200.75,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "20-3",
+     "match": 8,
+     "baseline_score": 980.05,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "2",
+     "match": 7,
+     "baseline_score": 955.04,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "match": 4,
+     "baseline_score": 934.38,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "match": 4,
+     "baseline_score": 767.49,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "match": 4,
+     "baseline_score": 746.78,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "match": 4,
+     "baseline_score": 700.32,
+     "is_gov": false
+    }
+   ]
+  },
+  "2017-22": {
+   "governing": {
+    "law_id": "325AC1000000202",
+    "law_name": "建築士法",
+    "art": "20"
+   },
+   "baseline_rank_in_pool": 7,
+   "model_answers": {
+    "procedure": "×",
+    "structure": "×",
+    "fire": "×",
+    "use": "×",
+    "scale": "×",
+    "person": "×",
+    "equipment": "×",
+    "site_land": "×",
+    "inspection": "×",
+    "contract": "×",
+    "definition": "×",
+    "sanction": "×"
+   },
+   "akinator": {
+    "rank": 24,
+    "top3_hit": false,
+    "gov_match": 8,
+    "pool_max_match": 11,
+    "gov_match_gap": 3,
+    "n_articles_at_max_match": 7
+   },
+   "oracle": {
+    "rank": 1,
+    "top3_hit": true
+   },
+   "threshold_curve": {
+    "12": {
+     "survivors": 0,
+     "gov_survives": false
+    },
+    "11": {
+     "survivors": 7,
+     "gov_survives": false
+    },
+    "10": {
+     "survivors": 17,
+     "gov_survives": false
+    },
+    "9": {
+     "survivors": 23,
+     "gov_survives": false
+    },
+    "8": {
+     "survivors": 26,
+     "gov_survives": true
+    },
+    "7": {
+     "survivors": 27,
+     "gov_survives": true
+    },
+    "6": {
+     "survivors": 27,
+     "gov_survives": true
+    },
+    "5": {
+     "survivors": 27,
+     "gov_survives": true
+    },
+    "4": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "3": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "2": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "1": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "0": {
+     "survivors": 30,
+     "gov_survives": true
+    }
+   },
+   "hard_elimination": {
+    "gov_eliminated_at_step": 2,
+    "steps": [
+     {
+      "step": 1,
+      "attr_id": "procedure",
+      "answer": "×",
+      "survivors": 25
+     },
+     {
+      "step": 2,
+      "attr_id": "structure",
+      "answer": "×",
+      "survivors": 21
+     },
+     {
+      "step": 3,
+      "attr_id": "fire",
+      "answer": "×",
+      "survivors": 20
+     },
+     {
+      "step": 4,
+      "attr_id": "use",
+      "answer": "×",
+      "survivors": 18
+     },
+     {
+      "step": 5,
+      "attr_id": "scale",
+      "answer": "×",
+      "survivors": 14
+     },
+     {
+      "step": 6,
+      "attr_id": "person",
+      "answer": "×",
+      "survivors": 3
+     },
+     {
+      "step": 7,
+      "attr_id": "equipment",
+      "answer": "×",
+      "survivors": 3
+     },
+     {
+      "step": 8,
+      "attr_id": "site_land",
+      "answer": "×",
+      "survivors": 3
+     },
+     {
+      "step": 9,
+      "attr_id": "inspection",
+      "answer": "×",
+      "survivors": 3
+     },
+     {
+      "step": 10,
+      "attr_id": "contract",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 11,
+      "attr_id": "definition",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 12,
+      "attr_id": "sanction",
+      "answer": "×",
+      "survivors": 0
+     }
+    ]
+   },
+   "ranking_model": [
+    {
+     "law": "324AC0000000100",
+     "art": "19",
+     "match": 11,
+     "baseline_score": 894.92,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "22-3-2",
+     "match": 11,
+     "baseline_score": 801.33,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "19-2",
+     "match": 11,
+     "baseline_score": 778.72,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "5-6",
+     "match": 11,
+     "baseline_score": 770.99,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "20-2",
+     "match": 11,
+     "baseline_score": 745.66,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "22-3-4",
+     "match": 11,
+     "baseline_score": 665.94,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "27-5",
+     "match": 11,
+     "baseline_score": 615.94,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "24-7",
+     "match": 10,
+     "baseline_score": 2131.16,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "24",
+     "match": 10,
+     "baseline_score": 1623.08,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "24-8",
+     "match": 10,
+     "baseline_score": 941.63,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "23-6",
+     "match": 10,
+     "baseline_score": 827.89,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "24-6",
+     "match": 10,
+     "baseline_score": 799.69,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "24-3",
+     "match": 10,
+     "baseline_score": 721.77,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "23-2",
+     "match": 10,
+     "baseline_score": 681.97,
+     "is_gov": false
+    },
+    {
+     "law": "324AC0000000100",
+     "art": "20",
+     "match": 10,
+     "baseline_score": 674.13,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "23",
+     "match": 10,
+     "baseline_score": 656.9,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "3-3",
+     "match": 10,
+     "baseline_score": 615.68,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "22-3-3",
+     "match": 9,
+     "baseline_score": 1852.02,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "26",
+     "match": 9,
+     "baseline_score": 971.35,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "27-2",
+     "match": 9,
+     "baseline_score": 954.17,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "suppl29-3",
+     "match": 9,
+     "baseline_score": 661.85,
+     "is_gov": false
+    },
+    {
+     "law": "427AC0000000053",
+     "art": "63",
+     "match": 9,
+     "baseline_score": 661.5,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "3",
+     "match": 9,
+     "baseline_score": 641.3,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "20",
+     "match": 8,
+     "baseline_score": 918.06,
+     "is_gov": true
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "18",
+     "match": 8,
+     "baseline_score": 892.21,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "20-3",
+     "match": 8,
+     "baseline_score": 733.08,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "2",
+     "match": 7,
+     "baseline_score": 638.79,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "match": 4,
+     "baseline_score": 760.66,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "match": 4,
+     "baseline_score": 758.0,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "match": 4,
+     "baseline_score": 704.15,
+     "is_gov": false
+    }
+   ]
+  },
+  "2017-24": {
+   "governing": {
+    "law_id": "343AC0000000100",
+    "law_name": "都市計画法",
+    "art": "58-2"
+   },
+   "baseline_rank_in_pool": 5,
+   "model_answers": {
+    "procedure": "×",
+    "structure": "×",
+    "fire": "×",
+    "use": "×",
+    "scale": "×",
+    "person": "×",
+    "equipment": "×",
+    "site_land": "×",
+    "inspection": "×",
+    "contract": "×",
+    "definition": "×",
+    "sanction": "×"
+   },
+   "akinator": {
+    "rank": 13,
+    "top3_hit": false,
+    "gov_match": 9,
+    "pool_max_match": 11,
+    "gov_match_gap": 2,
+    "n_articles_at_max_match": 3
+   },
+   "oracle": {
+    "rank": 1,
+    "top3_hit": true
+   },
+   "threshold_curve": {
+    "12": {
+     "survivors": 0,
+     "gov_survives": false
+    },
+    "11": {
+     "survivors": 3,
+     "gov_survives": false
+    },
+    "10": {
+     "survivors": 9,
+     "gov_survives": false
+    },
+    "9": {
+     "survivors": 19,
+     "gov_survives": true
+    },
+    "8": {
+     "survivors": 23,
+     "gov_survives": true
+    },
+    "7": {
+     "survivors": 26,
+     "gov_survives": true
+    },
+    "6": {
+     "survivors": 27,
+     "gov_survives": true
+    },
+    "5": {
+     "survivors": 28,
+     "gov_survives": true
+    },
+    "4": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "3": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "2": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "1": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "0": {
+     "survivors": 30,
+     "gov_survives": true
+    }
+   },
+   "hard_elimination": {
+    "gov_eliminated_at_step": 1,
+    "steps": [
+     {
+      "step": 1,
+      "attr_id": "procedure",
+      "answer": "×",
+      "survivors": 8
+     },
+     {
+      "step": 2,
+      "attr_id": "structure",
+      "answer": "×",
+      "survivors": 5
+     },
+     {
+      "step": 3,
+      "attr_id": "fire",
+      "answer": "×",
+      "survivors": 4
+     },
+     {
+      "step": 4,
+      "attr_id": "use",
+      "answer": "×",
+      "survivors": 2
+     },
+     {
+      "step": 5,
+      "attr_id": "scale",
+      "answer": "×",
+      "survivors": 2
+     },
+     {
+      "step": 6,
+      "attr_id": "person",
+      "answer": "×",
+      "survivors": 2
+     },
+     {
+      "step": 7,
+      "attr_id": "equipment",
+      "answer": "×",
+      "survivors": 2
+     },
+     {
+      "step": 8,
+      "attr_id": "site_land",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 9,
+      "attr_id": "inspection",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 10,
+      "attr_id": "contract",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 11,
+      "attr_id": "definition",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 12,
+      "attr_id": "sanction",
+      "answer": "×",
+      "survivors": 0
+     }
+    ]
+   },
+   "ranking_model": [
+    {
+     "law": "343AC0000000100",
+     "art": "14",
+     "match": 11,
+     "baseline_score": 708.46,
+     "is_gov": false
+    },
+    {
+     "law": "324AC0000000100",
+     "art": "9",
+     "match": 11,
+     "baseline_score": 686.29,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "57-2",
+     "match": 11,
+     "baseline_score": 630.51,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "35-2",
+     "match": 10,
+     "baseline_score": 803.41,
+     "is_gov": false
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "24-6",
+     "match": 10,
+     "baseline_score": 641.66,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "38",
+     "match": 10,
+     "baseline_score": 639.23,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "52-2",
+     "match": 10,
+     "baseline_score": 631.55,
+     "is_gov": false
+    },
+    {
+     "law": "323AC1000000186",
+     "art": "11",
+     "match": 10,
+     "baseline_score": 628.76,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "34-2",
+     "match": 10,
+     "baseline_score": 608.9,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "43",
+     "match": 9,
+     "baseline_score": 979.01,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "34",
+     "match": 9,
+     "baseline_score": 920.45,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "29",
+     "match": 9,
+     "baseline_score": 915.63,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "58-2",
+     "match": 9,
+     "baseline_score": 877.11,
+     "is_gov": true
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "42",
+     "match": 9,
+     "baseline_score": 868.18,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-4",
+     "match": 9,
+     "baseline_score": 703.86,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "53",
+     "match": 9,
+     "baseline_score": 674.32,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5",
+     "match": 9,
+     "baseline_score": 655.25,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5-4",
+     "match": 9,
+     "baseline_score": 636.4,
+     "is_gov": false
+    },
+    {
+     "law": "324AC0000000100",
+     "art": "28",
+     "match": 9,
+     "baseline_score": 623.51,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-3",
+     "match": 8,
+     "baseline_score": 679.9,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-5-3",
+     "match": 8,
+     "baseline_score": 659.35,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "41",
+     "match": 8,
+     "baseline_score": 633.53,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "13",
+     "match": 8,
+     "baseline_score": 630.98,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "36",
+     "match": 7,
+     "baseline_score": 749.62,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "12-5",
+     "match": 7,
+     "baseline_score": 735.77,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "53",
+     "match": 7,
+     "baseline_score": 625.77,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "match": 6,
+     "baseline_score": 638.39,
+     "is_gov": false
+    },
+    {
+     "law": "343AC0000000100",
+     "art": "33",
+     "match": 5,
+     "baseline_score": 883.47,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "match": 4,
+     "baseline_score": 623.77,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "match": 4,
+     "baseline_score": 614.34,
+     "is_gov": false
+    }
+   ]
+  },
+  "2017-4": {
+   "governing": {
+    "law_id": "325M50004000040",
+    "law_name": "建築基準法施行規則",
+    "art": "3-2"
+   },
+   "baseline_rank_in_pool": 10,
+   "model_answers": {
+    "procedure": "×",
+    "structure": "×",
+    "fire": "×",
+    "use": "×",
+    "scale": "×",
+    "person": "×",
+    "equipment": "×",
+    "site_land": "×",
+    "inspection": "×",
+    "contract": "×",
+    "definition": "×",
+    "sanction": "×"
+   },
+   "akinator": {
+    "rank": 25,
+    "top3_hit": false,
+    "gov_match": 5,
+    "pool_max_match": 12,
+    "gov_match_gap": 7,
+    "n_articles_at_max_match": 1
+   },
+   "oracle": {
+    "rank": 1,
+    "top3_hit": true
+   },
+   "threshold_curve": {
+    "12": {
+     "survivors": 1,
+     "gov_survives": false
+    },
+    "11": {
+     "survivors": 8,
+     "gov_survives": false
+    },
+    "10": {
+     "survivors": 12,
+     "gov_survives": false
+    },
+    "9": {
+     "survivors": 16,
+     "gov_survives": false
+    },
+    "8": {
+     "survivors": 20,
+     "gov_survives": false
+    },
+    "7": {
+     "survivors": 22,
+     "gov_survives": false
+    },
+    "6": {
+     "survivors": 24,
+     "gov_survives": false
+    },
+    "5": {
+     "survivors": 25,
+     "gov_survives": true
+    },
+    "4": {
+     "survivors": 28,
+     "gov_survives": true
+    },
+    "3": {
+     "survivors": 29,
+     "gov_survives": true
+    },
+    "2": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "1": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "0": {
+     "survivors": 30,
+     "gov_survives": true
+    }
+   },
+   "hard_elimination": {
+    "gov_eliminated_at_step": 1,
+    "steps": [
+     {
+      "step": 1,
+      "attr_id": "procedure",
+      "answer": "×",
+      "survivors": 9
+     },
+     {
+      "step": 2,
+      "attr_id": "structure",
+      "answer": "×",
+      "survivors": 4
+     },
+     {
+      "step": 3,
+      "attr_id": "fire",
+      "answer": "×",
+      "survivors": 4
+     },
+     {
+      "step": 4,
+      "attr_id": "use",
+      "answer": "×",
+      "survivors": 4
+     },
+     {
+      "step": 5,
+      "attr_id": "scale",
+      "answer": "×",
+      "survivors": 3
+     },
+     {
+      "step": 6,
+      "attr_id": "person",
+      "answer": "×",
+      "survivors": 2
+     },
+     {
+      "step": 7,
+      "attr_id": "equipment",
+      "answer": "×",
+      "survivors": 2
+     },
+     {
+      "step": 8,
+      "attr_id": "site_land",
+      "answer": "×",
+      "survivors": 1
+     },
+     {
+      "step": 9,
+      "attr_id": "inspection",
+      "answer": "×",
+      "survivors": 1
+     },
+     {
+      "step": 10,
+      "attr_id": "contract",
+      "answer": "×",
+      "survivors": 1
+     },
+     {
+      "step": 11,
+      "attr_id": "definition",
+      "answer": "×",
+      "survivors": 1
+     },
+     {
+      "step": 12,
+      "attr_id": "sanction",
+      "answer": "×",
+      "survivors": 1
+     }
+    ]
+   },
+   "ranking_model": [
+    {
+     "law": "427AC0000000053",
+     "art": "12",
+     "match": 12,
+     "baseline_score": 1149.14,
+     "is_gov": false
+    },
+    {
+     "law": "427AC0000000053",
+     "art": "30",
+     "match": 11,
+     "baseline_score": 1214.63,
+     "is_gov": false
+    },
+    {
+     "law": "427AC0000000053",
+     "art": "11",
+     "match": 11,
+     "baseline_score": 1195.04,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "89",
+     "match": 11,
+     "baseline_score": 1192.03,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "68-20",
+     "match": 11,
+     "baseline_score": 1145.9,
+     "is_gov": false
+    },
+    {
+     "law": "420AC0000000087",
+     "art": "6",
+     "match": 11,
+     "baseline_score": 980.79,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-4",
+     "match": 11,
+     "baseline_score": 881.43,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18-2",
+     "match": 11,
+     "baseline_score": 835.04,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-11",
+     "match": 10,
+     "baseline_score": 906.98,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "94",
+     "match": 10,
+     "baseline_score": 888.66,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-4",
+     "match": 10,
+     "baseline_score": 873.49,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "8",
+     "match": 10,
+     "baseline_score": 844.29,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6-3",
+     "match": 9,
+     "baseline_score": 1286.77,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6-2",
+     "match": 9,
+     "baseline_score": 1214.82,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-7",
+     "match": 9,
+     "baseline_score": 923.75,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-4",
+     "match": 9,
+     "baseline_score": 832.91,
+     "is_gov": false
+    },
+    {
+     "law": "418AC0000000091",
+     "art": "17",
+     "match": 8,
+     "baseline_score": 958.47,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-3",
+     "match": 8,
+     "baseline_score": 952.79,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "4-16",
+     "match": 8,
+     "baseline_score": 882.71,
+     "is_gov": false
+    },
+    {
+     "law": "325AC1000000202",
+     "art": "18",
+     "match": 8,
+     "baseline_score": 867.14,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "8-2",
+     "match": 7,
+     "baseline_score": 968.74,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "7-6",
+     "match": 7,
+     "baseline_score": 940.36,
+     "is_gov": false
+    },
+    {
+     "law": "407AC0000000123",
+     "art": "17",
+     "match": 6,
+     "baseline_score": 1009.31,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "2-2",
+     "match": 6,
+     "baseline_score": 842.94,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "match": 5,
+     "baseline_score": 1080.07,
+     "is_gov": true
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "18",
+     "match": 4,
+     "baseline_score": 1565.74,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "match": 4,
+     "baseline_score": 1542.56,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "12",
+     "match": 4,
+     "baseline_score": 1031.07,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3",
+     "match": 3,
+     "baseline_score": 905.01,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "match": 2,
+     "baseline_score": 922.74,
+     "is_gov": false
+    }
+   ]
+  },
+  "2017-1": {
+   "governing": {
+    "law_id": "325CO0000000338",
+    "law_name": "建築基準法施行令",
+    "art": "112"
+   },
+   "baseline_rank_in_pool": 1,
+   "model_answers": {
+    "procedure": "×",
+    "structure": "×",
+    "fire": "×",
+    "use": "×",
+    "scale": "×",
+    "person": "×",
+    "equipment": "×",
+    "site_land": "×",
+    "inspection": "×",
+    "contract": "×",
+    "definition": "×",
+    "sanction": "×"
+   },
+   "akinator": {
+    "rank": 23,
+    "top3_hit": false,
+    "gov_match": 7,
+    "pool_max_match": 11,
+    "gov_match_gap": 4,
+    "n_articles_at_max_match": 1
+   },
+   "oracle": {
+    "rank": 1,
+    "top3_hit": true
+   },
+   "threshold_curve": {
+    "12": {
+     "survivors": 0,
+     "gov_survives": false
+    },
+    "11": {
+     "survivors": 1,
+     "gov_survives": false
+    },
+    "10": {
+     "survivors": 9,
+     "gov_survives": false
+    },
+    "9": {
+     "survivors": 15,
+     "gov_survives": false
+    },
+    "8": {
+     "survivors": 22,
+     "gov_survives": false
+    },
+    "7": {
+     "survivors": 25,
+     "gov_survives": true
+    },
+    "6": {
+     "survivors": 26,
+     "gov_survives": true
+    },
+    "5": {
+     "survivors": 27,
+     "gov_survives": true
+    },
+    "4": {
+     "survivors": 29,
+     "gov_survives": true
+    },
+    "3": {
+     "survivors": 29,
+     "gov_survives": true
+    },
+    "2": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "1": {
+     "survivors": 30,
+     "gov_survives": true
+    },
+    "0": {
+     "survivors": 30,
+     "gov_survives": true
+    }
+   },
+   "hard_elimination": {
+    "gov_eliminated_at_step": 2,
+    "steps": [
+     {
+      "step": 1,
+      "attr_id": "procedure",
+      "answer": "×",
+      "survivors": 26
+     },
+     {
+      "step": 2,
+      "attr_id": "structure",
+      "answer": "×",
+      "survivors": 13
+     },
+     {
+      "step": 3,
+      "attr_id": "fire",
+      "answer": "×",
+      "survivors": 1
+     },
+     {
+      "step": 4,
+      "attr_id": "use",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 5,
+      "attr_id": "scale",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 6,
+      "attr_id": "person",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 7,
+      "attr_id": "equipment",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 8,
+      "attr_id": "site_land",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 9,
+      "attr_id": "inspection",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 10,
+      "attr_id": "contract",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 11,
+      "attr_id": "definition",
+      "answer": "×",
+      "survivors": 0
+     },
+     {
+      "step": 12,
+      "attr_id": "sanction",
+      "answer": "×",
+      "survivors": 0
+     }
+    ]
+   },
+   "ranking_model": [
+    {
+     "law": "325CO0000000338",
+     "art": "109-2",
+     "match": 11,
+     "baseline_score": 674.41,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "109-3",
+     "match": 10,
+     "baseline_score": 959.75,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "109-5",
+     "match": 10,
+     "baseline_score": 813.36,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "107-2",
+     "match": 10,
+     "baseline_score": 805.07,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2",
+     "match": 10,
+     "baseline_score": 772.15,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "110-3",
+     "match": 10,
+     "baseline_score": 714.1,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "107",
+     "match": 10,
+     "baseline_score": 663.77,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "109-10",
+     "match": 10,
+     "baseline_score": 659.79,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108",
+     "match": 10,
+     "baseline_score": 650.87,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "137-10",
+     "match": 9,
+     "baseline_score": 940.88,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "108-4",
+     "match": 9,
+     "baseline_score": 936.42,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "144-3",
+     "match": 9,
+     "baseline_score": 658.59,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "50",
+     "match": 9,
+     "baseline_score": 625.11,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "27",
+     "match": 9,
+     "baseline_score": 619.95,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "123",
+     "match": 9,
+     "baseline_score": 619.68,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "114",
+     "match": 8,
+     "baseline_score": 923.88,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "109-8",
+     "match": 8,
+     "baseline_score": 834.46,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "110",
+     "match": 8,
+     "baseline_score": 829.02,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "126-2",
+     "match": 8,
+     "baseline_score": 732.0,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-10",
+     "match": 8,
+     "baseline_score": 729.86,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-13-3",
+     "match": 8,
+     "baseline_score": 655.0,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-9",
+     "match": 8,
+     "baseline_score": 635.22,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "112",
+     "match": 7,
+     "baseline_score": 1144.39,
+     "is_gov": true
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "129-2-4",
+     "match": 7,
+     "baseline_score": 801.17,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "115-2",
+     "match": 7,
+     "baseline_score": 777.61,
+     "is_gov": false
+    },
+    {
+     "law": "325CO0000000338",
+     "art": "136-2-5",
+     "match": 6,
+     "baseline_score": 713.01,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "3-2",
+     "match": 5,
+     "baseline_score": 808.05,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "2",
+     "match": 4,
+     "baseline_score": 849.71,
+     "is_gov": false
+    },
+    {
+     "law": "325AC0000000201",
+     "art": "6",
+     "match": 4,
+     "baseline_score": 692.98,
+     "is_gov": false
+    },
+    {
+     "law": "325M50004000040",
+     "art": "1-3",
+     "match": 2,
+     "baseline_score": 880.16,
+     "is_gov": false
+    }
+   ]
+  }
+ }
+}

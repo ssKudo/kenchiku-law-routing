@@ -1,0 +1,1637 @@
+{
+ "2017-21": {
+  "qid": "2017-21",
+  "governing": {
+   "law_id": "325AC1000000202",
+   "law_name": "建築士法",
+   "art": "3",
+   "confidence": "high"
+  },
+  "baseline_rank_given_full_corpus": 5,
+  "pool": [
+   {
+    "law": "325AC1000000202",
+    "art": "10-3",
+    "baseline_score": 1456.184
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "18",
+    "baseline_score": 1241.156
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20",
+    "baseline_score": 1200.752
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3-3",
+    "baseline_score": 1199.921
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3",
+    "baseline_score": 1147.779
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3-2",
+    "baseline_score": 1136.616
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "5-6",
+    "baseline_score": 1031.963
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20-2",
+    "baseline_score": 1023.814
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "10-4",
+    "baseline_score": 995.672
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "22-3-3",
+    "baseline_score": 990.385
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20-3",
+    "baseline_score": 980.051
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "2",
+    "baseline_score": 955.04
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6",
+    "baseline_score": 934.38
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "10-22",
+    "baseline_score": 888.037
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "24-7",
+    "baseline_score": 861.651
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "18",
+    "baseline_score": 767.489
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "2",
+    "baseline_score": 746.781
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "10-21",
+    "baseline_score": 714.796
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "10-19",
+    "baseline_score": 713.406
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "12",
+    "baseline_score": 700.318
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "26",
+    "baseline_score": 696.28
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "appdx2",
+    "baseline_score": 693.162
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "5",
+    "baseline_score": 676.212
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "11",
+    "baseline_score": 664.784
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "22-2",
+    "baseline_score": 644.454
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "10-17",
+    "baseline_score": 634.323
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "suppl29-3",
+    "baseline_score": 632.427
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "5-2",
+    "baseline_score": 627.146
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6-3",
+    "baseline_score": 614.612
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "15-2",
+    "baseline_score": 598.781
+   }
+  ],
+  "rank_original": 5,
+  "top3_original": false,
+  "top10_original": [
+   {
+    "law": "325AC1000000202",
+    "art": "10-3",
+    "score": 1456.18
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "18",
+    "score": 1241.16
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20",
+    "score": 1200.75
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3-3",
+    "score": 1199.92
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3",
+    "score": 1147.78
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3-2",
+    "score": 1136.62
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "5-6",
+    "score": 1031.96
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20-2",
+    "score": 1023.81
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "10-4",
+    "score": 995.67
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "22-3-3",
+    "score": 990.38
+   }
+  ],
+  "governing_score_original": 1147.78,
+  "rank_with_signboard": 5,
+  "top3_with_signboard": false,
+  "top10_with_signboard": [
+   {
+    "law": "325AC1000000202",
+    "art": "10-3",
+    "score": 1458.29
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "18",
+    "score": 1266.06
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3-3",
+    "score": 1262.49
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3-2",
+    "score": 1234.84
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3",
+    "score": 1232.79
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20",
+    "score": 1185.67
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "5-6",
+    "score": 1063.92
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "10-22",
+    "score": 1057.62
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20-2",
+    "score": 1043.73
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20-3",
+    "score": 1005.75
+   }
+  ],
+  "governing_score_with_signboard": 1232.79,
+  "rank_signboard_only": 6,
+  "top3_signboard_only": false,
+  "top10_signboard_only": [
+   {
+    "law": "325AC1000000202",
+    "art": "10-3",
+    "score": 1286.14
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20-2",
+    "score": 971.64
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20-3",
+    "score": 971.58
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "10-22",
+    "score": 941.73
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3-2",
+    "score": 869.52
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3",
+    "score": 842.22
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3-3",
+    "score": 840.27
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "appdx2",
+    "score": 816.52
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "10-4",
+    "score": 808.01
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "18",
+    "score": 729.32
+   }
+  ],
+  "governing_score_signboard_only": 842.22
+ },
+ "2017-22": {
+  "qid": "2017-22",
+  "governing": {
+   "law_id": "325AC1000000202",
+   "law_name": "建築士法",
+   "art": "20",
+   "confidence": "high"
+  },
+  "baseline_rank_given_full_corpus": 7,
+  "pool": [
+   {
+    "law": "325AC1000000202",
+    "art": "24-7",
+    "baseline_score": 2131.156
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "22-3-3",
+    "baseline_score": 1852.024
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "24",
+    "baseline_score": 1623.081
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "26",
+    "baseline_score": 971.347
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "27-2",
+    "baseline_score": 954.172
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "24-8",
+    "baseline_score": 941.635
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20",
+    "baseline_score": 918.059
+   },
+   {
+    "law": "324AC0000000100",
+    "art": "19",
+    "baseline_score": 894.917
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "18",
+    "baseline_score": 892.212
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "23-6",
+    "baseline_score": 827.894
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "22-3-2",
+    "baseline_score": 801.332
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "24-6",
+    "baseline_score": 799.687
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "19-2",
+    "baseline_score": 778.715
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "5-6",
+    "baseline_score": 770.993
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6",
+    "baseline_score": 760.659
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "18",
+    "baseline_score": 758.002
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20-2",
+    "baseline_score": 745.664
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20-3",
+    "baseline_score": 733.082
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "24-3",
+    "baseline_score": 721.774
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "12",
+    "baseline_score": 704.146
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "23-2",
+    "baseline_score": 681.968
+   },
+   {
+    "law": "324AC0000000100",
+    "art": "20",
+    "baseline_score": 674.13
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "22-3-4",
+    "baseline_score": 665.939
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "suppl29-3",
+    "baseline_score": 661.845
+   },
+   {
+    "law": "427AC0000000053",
+    "art": "63",
+    "baseline_score": 661.504
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "23",
+    "baseline_score": 656.899
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3",
+    "baseline_score": 641.305
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "2",
+    "baseline_score": 638.793
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "27-5",
+    "baseline_score": 615.939
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3-3",
+    "baseline_score": 615.682
+   }
+  ],
+  "rank_original": 7,
+  "top3_original": false,
+  "top10_original": [
+   {
+    "law": "325AC1000000202",
+    "art": "24-7",
+    "score": 2131.16
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "22-3-3",
+    "score": 1852.02
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "24",
+    "score": 1623.08
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "26",
+    "score": 971.35
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "27-2",
+    "score": 954.17
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "24-8",
+    "score": 941.63
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20",
+    "score": 918.06
+   },
+   {
+    "law": "324AC0000000100",
+    "art": "19",
+    "score": 894.92
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "18",
+    "score": 892.21
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "23-6",
+    "score": 827.89
+   }
+  ],
+  "governing_score_original": 918.06,
+  "rank_with_signboard": 8,
+  "top3_with_signboard": false,
+  "top10_with_signboard": [
+   {
+    "law": "325AC1000000202",
+    "art": "24-7",
+    "score": 2212.83
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "22-3-3",
+    "score": 1866.97
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "24",
+    "score": 1655.55
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "24-8",
+    "score": 996.9
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "26",
+    "score": 974.53
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "18",
+    "score": 971.15
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "27-2",
+    "score": 960.13
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "20",
+    "score": 941.73
+   },
+   {
+    "law": "324AC0000000100",
+    "art": "19",
+    "score": 897.94
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "23-6",
+    "score": 875.71
+   }
+  ],
+  "governing_score_with_signboard": 941.73,
+  "rank_signboard_only": 20,
+  "top3_signboard_only": false,
+  "top10_signboard_only": [
+   {
+    "law": "325AC1000000202",
+    "art": "24",
+    "score": 879.96
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "24-7",
+    "score": 816.82
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "18",
+    "score": 815.39
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "5-6",
+    "score": 741.63
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "2",
+    "score": 653.32
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3",
+    "score": 612.15
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "3-3",
+    "score": 599.36
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "23-6",
+    "score": 586.23
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "27-2",
+    "score": 582.74
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "22-3-2",
+    "score": 524.21
+   }
+  ],
+  "governing_score_signboard_only": 334.77
+ },
+ "2017-24": {
+  "qid": "2017-24",
+  "governing": {
+   "law_id": "343AC0000000100",
+   "law_name": "都市計画法",
+   "art": "58-2",
+   "confidence": "high"
+  },
+  "baseline_rank_given_full_corpus": 5,
+  "pool": [
+   {
+    "law": "343AC0000000100",
+    "art": "43",
+    "baseline_score": 979.011
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "34",
+    "baseline_score": 920.452
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "29",
+    "baseline_score": 915.628
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "33",
+    "baseline_score": 883.469
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "58-2",
+    "baseline_score": 877.109
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "42",
+    "baseline_score": 868.178
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "35-2",
+    "baseline_score": 803.413
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "36",
+    "baseline_score": 749.615
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "12-5",
+    "baseline_score": 735.771
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "14",
+    "baseline_score": 708.461
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "68-4",
+    "baseline_score": 703.858
+   },
+   {
+    "law": "324AC0000000100",
+    "art": "9",
+    "baseline_score": 686.294
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "68-3",
+    "baseline_score": 679.905
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "53",
+    "baseline_score": 674.323
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "68-5-3",
+    "baseline_score": 659.352
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "68-5",
+    "baseline_score": 655.247
+   },
+   {
+    "law": "418AC0000000091",
+    "art": "24-6",
+    "baseline_score": 641.66
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "38",
+    "baseline_score": 639.232
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "136-2-5",
+    "baseline_score": 638.387
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "68-5-4",
+    "baseline_score": 636.404
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "41",
+    "baseline_score": 633.532
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "52-2",
+    "baseline_score": 631.555
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "13",
+    "baseline_score": 630.982
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "57-2",
+    "baseline_score": 630.514
+   },
+   {
+    "law": "323AC1000000186",
+    "art": "11",
+    "baseline_score": 628.765
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "53",
+    "baseline_score": 625.77
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "18",
+    "baseline_score": 623.767
+   },
+   {
+    "law": "324AC0000000100",
+    "art": "28",
+    "baseline_score": 623.514
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6",
+    "baseline_score": 614.339
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "34-2",
+    "baseline_score": 608.902
+   }
+  ],
+  "rank_original": 5,
+  "top3_original": false,
+  "top10_original": [
+   {
+    "law": "343AC0000000100",
+    "art": "43",
+    "score": 979.01
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "34",
+    "score": 920.45
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "29",
+    "score": 915.63
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "33",
+    "score": 883.47
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "58-2",
+    "score": 877.11
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "42",
+    "score": 868.18
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "35-2",
+    "score": 803.41
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "36",
+    "score": 749.61
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "12-5",
+    "score": 735.77
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "14",
+    "score": 708.46
+   }
+  ],
+  "governing_score_original": 877.11,
+  "rank_with_signboard": 3,
+  "top3_with_signboard": true,
+  "top10_with_signboard": [
+   {
+    "law": "343AC0000000100",
+    "art": "43",
+    "score": 1134.45
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "29",
+    "score": 1001.89
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "58-2",
+    "score": 957.96
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "34",
+    "score": 945.52
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "42",
+    "score": 900.69
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "33",
+    "score": 892.32
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "53",
+    "score": 850.41
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "35-2",
+    "score": 834.63
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "36",
+    "score": 794.94
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "38",
+    "score": 787.65
+   }
+  ],
+  "governing_score_with_signboard": 957.96,
+  "rank_signboard_only": 6,
+  "top3_signboard_only": false,
+  "top10_signboard_only": [
+   {
+    "law": "343AC0000000100",
+    "art": "43",
+    "score": 1136.02
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "53",
+    "score": 869.11
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "29",
+    "score": 720.36
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "35-2",
+    "score": 620.49
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "34",
+    "score": 612.63
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "58-2",
+    "score": 586.83
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "38",
+    "score": 556.06
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "42",
+    "score": 523.54
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "52-2",
+    "score": 496.67
+   },
+   {
+    "law": "343AC0000000100",
+    "art": "34-2",
+    "score": 482.02
+   }
+  ],
+  "governing_score_signboard_only": 586.83
+ },
+ "2017-4": {
+  "qid": "2017-4",
+  "governing": {
+   "law_id": "325M50004000040",
+   "law_name": "建築基準法施行規則",
+   "art": "3-2",
+   "confidence": "medium"
+  },
+  "baseline_rank_given_full_corpus": 10,
+  "pool": [
+   {
+    "law": "325AC0000000201",
+    "art": "18",
+    "baseline_score": 1565.745
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6",
+    "baseline_score": 1542.564
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6-3",
+    "baseline_score": 1286.766
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6-2",
+    "baseline_score": 1214.819
+   },
+   {
+    "law": "427AC0000000053",
+    "art": "30",
+    "baseline_score": 1214.634
+   },
+   {
+    "law": "427AC0000000053",
+    "art": "11",
+    "baseline_score": 1195.04
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "89",
+    "baseline_score": 1192.034
+   },
+   {
+    "law": "427AC0000000053",
+    "art": "12",
+    "baseline_score": 1149.144
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "68-20",
+    "baseline_score": 1145.897
+   },
+   {
+    "law": "325M50004000040",
+    "art": "3-2",
+    "baseline_score": 1080.066
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "12",
+    "baseline_score": 1031.07
+   },
+   {
+    "law": "407AC0000000123",
+    "art": "17",
+    "baseline_score": 1009.31
+   },
+   {
+    "law": "420AC0000000087",
+    "art": "6",
+    "baseline_score": 980.789
+   },
+   {
+    "law": "325M50004000040",
+    "art": "8-2",
+    "baseline_score": 968.738
+   },
+   {
+    "law": "418AC0000000091",
+    "art": "17",
+    "baseline_score": 958.474
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "7-3",
+    "baseline_score": 952.789
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "7-6",
+    "baseline_score": 940.363
+   },
+   {
+    "law": "325M50004000040",
+    "art": "3-7",
+    "baseline_score": 923.747
+   },
+   {
+    "law": "325M50004000040",
+    "art": "1-3",
+    "baseline_score": 922.738
+   },
+   {
+    "law": "325M50004000040",
+    "art": "3-11",
+    "baseline_score": 906.983
+   },
+   {
+    "law": "325M50004000040",
+    "art": "3",
+    "baseline_score": 905.015
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "94",
+    "baseline_score": 888.661
+   },
+   {
+    "law": "325M50004000040",
+    "art": "4-16",
+    "baseline_score": 882.705
+   },
+   {
+    "law": "325M50004000040",
+    "art": "3-4",
+    "baseline_score": 881.435
+   },
+   {
+    "law": "325M50004000040",
+    "art": "1-4",
+    "baseline_score": 873.488
+   },
+   {
+    "law": "325AC1000000202",
+    "art": "18",
+    "baseline_score": 867.142
+   },
+   {
+    "law": "325M50004000040",
+    "art": "8",
+    "baseline_score": 844.295
+   },
+   {
+    "law": "325M50004000040",
+    "art": "2-2",
+    "baseline_score": 842.936
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "18-2",
+    "baseline_score": 835.04
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "7-4",
+    "baseline_score": 832.908
+   }
+  ],
+  "rank_original": 10,
+  "top3_original": false,
+  "top10_original": [
+   {
+    "law": "325AC0000000201",
+    "art": "18",
+    "score": 1565.74
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6",
+    "score": 1542.56
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6-3",
+    "score": 1286.77
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6-2",
+    "score": 1214.82
+   },
+   {
+    "law": "427AC0000000053",
+    "art": "30",
+    "score": 1214.63
+   },
+   {
+    "law": "427AC0000000053",
+    "art": "11",
+    "score": 1195.04
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "89",
+    "score": 1192.03
+   },
+   {
+    "law": "427AC0000000053",
+    "art": "12",
+    "score": 1149.14
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "68-20",
+    "score": 1145.9
+   },
+   {
+    "law": "325M50004000040",
+    "art": "3-2",
+    "score": 1080.07
+   }
+  ],
+  "governing_score_original": 1080.07,
+  "rank_with_signboard": 10,
+  "top3_with_signboard": false,
+  "top10_with_signboard": [
+   {
+    "law": "325AC0000000201",
+    "art": "18",
+    "score": 1571.51
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6",
+    "score": 1562.52
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "89",
+    "score": 1317.16
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6-3",
+    "score": 1302.28
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6-2",
+    "score": 1298.37
+   },
+   {
+    "law": "427AC0000000053",
+    "art": "11",
+    "score": 1225.63
+   },
+   {
+    "law": "427AC0000000053",
+    "art": "30",
+    "score": 1210.97
+   },
+   {
+    "law": "427AC0000000053",
+    "art": "12",
+    "score": 1172.38
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "68-20",
+    "score": 1148.5
+   },
+   {
+    "law": "325M50004000040",
+    "art": "3-2",
+    "score": 1096.85
+   }
+  ],
+  "governing_score_with_signboard": 1096.85,
+  "rank_signboard_only": 22,
+  "top3_signboard_only": false,
+  "top10_signboard_only": [
+   {
+    "law": "325AC0000000201",
+    "art": "6-2",
+    "score": 851.01
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "18-2",
+    "score": 821.73
+   },
+   {
+    "law": "325M50004000040",
+    "art": "1-4",
+    "score": 776.23
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "89",
+    "score": 767.85
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "7-4",
+    "score": 747.15
+   },
+   {
+    "law": "325M50004000040",
+    "art": "3-4",
+    "score": 724.3
+   },
+   {
+    "law": "325M50004000040",
+    "art": "3-11",
+    "score": 717.2
+   },
+   {
+    "law": "325M50004000040",
+    "art": "3-7",
+    "score": 696.68
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6-3",
+    "score": 621.19
+   },
+   {
+    "law": "427AC0000000053",
+    "art": "11",
+    "score": 494.9
+   }
+  ],
+  "governing_score_signboard_only": 171.6
+ },
+ "2017-1": {
+  "qid": "2017-1",
+  "governing": {
+   "law_id": "325CO0000000338",
+   "law_name": "建築基準法施行令",
+   "art": "112",
+   "confidence": "medium"
+  },
+  "baseline_rank_given_full_corpus": 1,
+  "pool": [
+   {
+    "law": "325CO0000000338",
+    "art": "112",
+    "baseline_score": 1144.394
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "109-3",
+    "baseline_score": 959.753
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "137-10",
+    "baseline_score": 940.882
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "108-4",
+    "baseline_score": 936.421
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "114",
+    "baseline_score": 923.875
+   },
+   {
+    "law": "325M50004000040",
+    "art": "1-3",
+    "baseline_score": 880.164
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "2",
+    "baseline_score": 849.711
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "109-8",
+    "baseline_score": 834.458
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "110",
+    "baseline_score": 829.022
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "109-5",
+    "baseline_score": 813.359
+   },
+   {
+    "law": "325M50004000040",
+    "art": "3-2",
+    "baseline_score": 808.052
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "107-2",
+    "baseline_score": 805.068
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "129-2-4",
+    "baseline_score": 801.166
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "115-2",
+    "baseline_score": 777.609
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "136-2",
+    "baseline_score": 772.151
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "126-2",
+    "baseline_score": 732.001
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "136-10",
+    "baseline_score": 729.859
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "110-3",
+    "baseline_score": 714.095
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "136-2-5",
+    "baseline_score": 713.012
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "6",
+    "baseline_score": 692.983
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "109-2",
+    "baseline_score": 674.411
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "107",
+    "baseline_score": 663.772
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "109-10",
+    "baseline_score": 659.789
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "144-3",
+    "baseline_score": 658.589
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "129-13-3",
+    "baseline_score": 654.997
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "108",
+    "baseline_score": 650.873
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "136-9",
+    "baseline_score": 635.218
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "50",
+    "baseline_score": 625.108
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "27",
+    "baseline_score": 619.95
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "123",
+    "baseline_score": 619.676
+   }
+  ],
+  "rank_original": 1,
+  "top3_original": true,
+  "top10_original": [
+   {
+    "law": "325CO0000000338",
+    "art": "112",
+    "score": 1144.39
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "109-3",
+    "score": 959.75
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "137-10",
+    "score": 940.88
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "108-4",
+    "score": 936.42
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "114",
+    "score": 923.87
+   },
+   {
+    "law": "325M50004000040",
+    "art": "1-3",
+    "score": 880.16
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "2",
+    "score": 849.71
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "109-8",
+    "score": 834.46
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "110",
+    "score": 829.02
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "109-5",
+    "score": 813.36
+   }
+  ],
+  "governing_score_original": 1144.39,
+  "rank_with_signboard": 1,
+  "top3_with_signboard": true,
+  "top10_with_signboard": [
+   {
+    "law": "325CO0000000338",
+    "art": "112",
+    "score": 1143.91
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "109-3",
+    "score": 949.96
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "108-4",
+    "score": 938.13
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "137-10",
+    "score": 932.59
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "114",
+    "score": 921.23
+   },
+   {
+    "law": "325M50004000040",
+    "art": "1-3",
+    "score": 880.56
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "2",
+    "score": 864.02
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "109-8",
+    "score": 833.06
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "107-2",
+    "score": 820.92
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "110",
+    "score": 814.27
+   }
+  ],
+  "governing_score_with_signboard": 1143.91,
+  "rank_signboard_only": 3,
+  "top3_signboard_only": true,
+  "top10_signboard_only": [
+   {
+    "law": "325CO0000000338",
+    "art": "109-2",
+    "score": 422.71
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "110-3",
+    "score": 358.21
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "112",
+    "score": 310.81
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "2",
+    "score": 308.83
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "109-3",
+    "score": 251.06
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "107-2",
+    "score": 247.3
+   },
+   {
+    "law": "325AC0000000201",
+    "art": "27",
+    "score": 229.03
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "136-10",
+    "score": 214.42
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "114",
+    "score": 210.37
+   },
+   {
+    "law": "325CO0000000338",
+    "art": "107",
+    "score": 209.82
+   }
+  ],
+  "governing_score_signboard_only": 310.81
+ }
+}

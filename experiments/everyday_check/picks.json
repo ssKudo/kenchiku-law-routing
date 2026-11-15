@@ -1,0 +1,2981 @@
+{
+ "meta": {
+  "model": "/home/hatch/workspace/models/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+  "server": "/home/hatch/workspace/tools/llama.cpp/llama-b12314/llama-server",
+  "threads": 4,
+  "ctx": 4096,
+  "temp": 0.2,
+  "seed": 42,
+  "n_predict": 32,
+  "server_boot_seconds": 15.31,
+  "system_prompt": "あなたは検索アシスタントです。指示に厳密に従ってください。",
+  "user_template": "以下は短い文です。\n\n文:\n{text}\n\n質問: 次の2つのうち、この文の内容に近いのはどちらですか。選んだ方の言葉だけを、そのまま書いてください。説明や理由は書かないでください。\n\n{first}\n{second}",
+  "rep_orders": [
+   [
+    "rep1",
+    "AB"
+   ],
+   [
+    "rep2",
+    "BA"
+   ],
+   [
+    "rep3",
+    "AB"
+   ]
+  ],
+  "n_calls": 123,
+  "total_answer_seconds": 128.62,
+  "format_failures": 28,
+  "format_dirty": 1,
+  "echo_outputs": 13
+ },
+ "results": [
+  {
+   "id": "S1",
+   "text": "隣の家の犬が夜中も吠え続けるので、うるさくて眠れない日が続いている。",
+   "questions": [
+    {
+     "qid": "S1Q1",
+     "label_A": "動物",
+     "label_B": "食べ物",
+     "correct_side": "A",
+     "correct_label": "動物",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "動物",
+        "食べ物"
+       ],
+       "raw_output": "隣の家の犬が夜中も吠え続けるので、うるさくて眠れない日が続いている。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 8.67,
+       "prompt_tokens": 118,
+       "predicted_tokens": 26,
+       "cache_tokens": 0
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "食べ物",
+        "動物"
+       ],
+       "raw_output": "動物",
+       "pick": "動物",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.597,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "動物",
+        "食べ物"
+       ],
+       "raw_output": "隣の家の犬が夜中も吠え続けるので、うるさくて眠れない日が続いている。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 3.392,
+       "prompt_tokens": 9,
+       "predicted_tokens": 26,
+       "cache_tokens": 109
+      }
+     ]
+    },
+    {
+     "qid": "S1Q2",
+     "label_A": "匂い",
+     "label_B": "音",
+     "correct_side": "B",
+     "correct_label": "音",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "匂い",
+        "音"
+       ],
+       "raw_output": "音",
+       "pick": "音",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.974,
+       "prompt_tokens": 10,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "音",
+        "匂い"
+       ],
+       "raw_output": "匂い",
+       "pick": "匂い",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.723,
+       "prompt_tokens": 10,
+       "predicted_tokens": 4,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "匂い",
+        "音"
+       ],
+       "raw_output": "音",
+       "pick": "音",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.507,
+       "prompt_tokens": 10,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      }
+     ]
+    },
+    {
+     "qid": "S1Q3",
+     "label_A": "昼",
+     "label_B": "夜",
+     "correct_side": "B",
+     "correct_label": "夜",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "昼",
+        "夜"
+       ],
+       "raw_output": "夜",
+       "pick": "夜",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.382,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "夜",
+        "昼"
+       ],
+       "raw_output": "夜",
+       "pick": "夜",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.522,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "昼",
+        "夜"
+       ],
+       "raw_output": "夜",
+       "pick": "夜",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.488,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      }
+     ]
+    },
+    {
+     "qid": "S1Q4",
+     "label_A": "生き物",
+     "label_B": "機械",
+     "correct_side": "A",
+     "correct_label": "生き物",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "生き物",
+        "機械"
+       ],
+       "raw_output": "生き物",
+       "pick": "生き物",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.912,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "機械",
+        "生き物"
+       ],
+       "raw_output": "生き物",
+       "pick": "生き物",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 1.072,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "生き物",
+        "機械"
+       ],
+       "raw_output": "生き物",
+       "pick": "生き物",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.917,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 109
+      }
+     ]
+    },
+    {
+     "qid": "S1Q5",
+     "label_A": "物の話",
+     "label_B": "気持ちの話",
+     "correct_side": "B",
+     "correct_label": "気持ちの話",
+     "type": "abstract",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "物の話",
+        "気持ちの話"
+       ],
+       "raw_output": "気持ちの話",
+       "pick": "気持ちの話",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 1.102,
+       "prompt_tokens": 12,
+       "predicted_tokens": 4,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "気持ちの話",
+        "物の話"
+       ],
+       "raw_output": "気持ちの話",
+       "pick": "気持ちの話",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.783,
+       "prompt_tokens": 12,
+       "predicted_tokens": 4,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "物の話",
+        "気持ちの話"
+       ],
+       "raw_output": "気持ちの話",
+       "pick": "気持ちの話",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.698,
+       "prompt_tokens": 12,
+       "predicted_tokens": 4,
+       "cache_tokens": 109
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "text": "台風のあと、天井からポタポタと水が落ちてきて、バケツで受けている。",
+   "questions": [
+    {
+     "qid": "S2Q1",
+     "label_A": "天気",
+     "label_B": "食べ物",
+     "correct_side": "A",
+     "correct_label": "天気",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "天気",
+        "食べ物"
+       ],
+       "raw_output": "天井からポタポタと水が落ちてきて、バケツで受けている。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 4.003,
+       "prompt_tokens": 81,
+       "predicted_tokens": 21,
+       "cache_tokens": 38
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "食べ物",
+        "天気"
+       ],
+       "raw_output": "天気",
+       "pick": "天気",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.608,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "天気",
+        "食べ物"
+       ],
+       "raw_output": "天井からポタポタと水が落ちてきて、バケツで受けている。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 2.29,
+       "prompt_tokens": 10,
+       "predicted_tokens": 21,
+       "cache_tokens": 109
+      }
+     ]
+    },
+    {
+     "qid": "S2Q2",
+     "label_A": "水",
+     "label_B": "電気",
+     "correct_side": "A",
+     "correct_label": "水",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "水",
+        "電気"
+       ],
+       "raw_output": "水",
+       "pick": "水",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.524,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "電気",
+        "水"
+       ],
+       "raw_output": "水",
+       "pick": "水",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.776,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "水",
+        "電気"
+       ],
+       "raw_output": "水",
+       "pick": "水",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.592,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      }
+     ]
+    },
+    {
+     "qid": "S2Q3",
+     "label_A": "外",
+     "label_B": "家の中",
+     "correct_side": "B",
+     "correct_label": "家の中",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "外",
+        "家の中"
+       ],
+       "raw_output": "家の中",
+       "pick": "家の中",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.429,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "家の中",
+        "外"
+       ],
+       "raw_output": "外",
+       "pick": "外",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.399,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "外",
+        "家の中"
+       ],
+       "raw_output": "家の中",
+       "pick": "家の中",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.591,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 109
+      }
+     ]
+    },
+    {
+     "qid": "S2Q4",
+     "label_A": "家",
+     "label_B": "乗り物",
+     "correct_side": "A",
+     "correct_label": "家",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "家",
+        "乗り物"
+       ],
+       "raw_output": "乗り物",
+       "pick": "乗り物",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.48,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "乗り物",
+        "家"
+       ],
+       "raw_output": "家",
+       "pick": "家",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.922,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "家",
+        "乗り物"
+       ],
+       "raw_output": "乗り物",
+       "pick": "乗り物",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.89,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 109
+      }
+     ]
+    },
+    {
+     "qid": "S2Q5",
+     "label_A": "匂い",
+     "label_B": "音",
+     "correct_side": "B",
+     "correct_label": "音",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "匂い",
+        "音"
+       ],
+       "raw_output": "音",
+       "pick": "音",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.61,
+       "prompt_tokens": 10,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "音",
+        "匂い"
+       ],
+       "raw_output": "バケツで受けている",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.277,
+       "prompt_tokens": 10,
+       "predicted_tokens": 7,
+       "cache_tokens": 109
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "匂い",
+        "音"
+       ],
+       "raw_output": "音",
+       "pick": "音",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.719,
+       "prompt_tokens": 10,
+       "predicted_tokens": 2,
+       "cache_tokens": 109
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "text": "自転車のブレーキが効かなくなったので、自転車屋に持って行って直してもらった。",
+   "questions": [
+    {
+     "qid": "S3Q1",
+     "label_A": "乗り物",
+     "label_B": "動物",
+     "correct_side": "A",
+     "correct_label": "乗り物",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "乗り物",
+        "動物"
+       ],
+       "raw_output": "乗り物",
+       "pick": "乗り物",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 2.584,
+       "prompt_tokens": 83,
+       "predicted_tokens": 3,
+       "cache_tokens": 38
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "動物",
+        "乗り物"
+       ],
+       "raw_output": "乗り物",
+       "pick": "乗り物",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.615,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 112
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "乗り物",
+        "動物"
+       ],
+       "raw_output": "乗り物",
+       "pick": "乗り物",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.505,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 112
+      }
+     ]
+    },
+    {
+     "qid": "S3Q2",
+     "label_A": "料理",
+     "label_B": "修理",
+     "correct_side": "B",
+     "correct_label": "修理",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "料理",
+        "修理"
+       ],
+       "raw_output": "修理",
+       "pick": "修理",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.703,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 112
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "修理",
+        "料理"
+       ],
+       "raw_output": "修理",
+       "pick": "修理",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.696,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 112
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "料理",
+        "修理"
+       ],
+       "raw_output": "修理",
+       "pick": "修理",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.387,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 112
+      }
+     ]
+    },
+    {
+     "qid": "S3Q3",
+     "label_A": "植物",
+     "label_B": "機械",
+     "correct_side": "B",
+     "correct_label": "機械",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "植物",
+        "機械"
+       ],
+       "raw_output": "機械",
+       "pick": "機械",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.623,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 112
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "機械",
+        "植物"
+       ],
+       "raw_output": "機械",
+       "pick": "機械",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.479,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 112
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "植物",
+        "機械"
+       ],
+       "raw_output": "機械",
+       "pick": "機械",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.894,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 112
+      }
+     ]
+    },
+    {
+     "qid": "S3Q4",
+     "label_A": "店",
+     "label_B": "学校",
+     "correct_side": "A",
+     "correct_label": "店",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "店",
+        "学校"
+       ],
+       "raw_output": "自転車屋",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.914,
+       "prompt_tokens": 8,
+       "predicted_tokens": 6,
+       "cache_tokens": 112
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "学校",
+        "店"
+       ],
+       "raw_output": "店",
+       "pick": "店",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.392,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 112
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "店",
+        "学校"
+       ],
+       "raw_output": "自転車屋",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.61,
+       "prompt_tokens": 8,
+       "predicted_tokens": 6,
+       "cache_tokens": 112
+      }
+     ]
+    },
+    {
+     "qid": "S3Q5",
+     "label_A": "家の中",
+     "label_B": "外",
+     "correct_side": "B",
+     "correct_label": "外",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "家の中",
+        "外"
+       ],
+       "raw_output": "外",
+       "pick": "外",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.677,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 112
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "外",
+        "家の中"
+       ],
+       "raw_output": "自転車屋に持って行って直してもらった。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.62,
+       "prompt_tokens": 9,
+       "predicted_tokens": 13,
+       "cache_tokens": 112
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "家の中",
+        "外"
+       ],
+       "raw_output": "外",
+       "pick": "外",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 1.077,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 112
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "text": "冷蔵庫の牛乳を飲んだらすっぱい味がしたので、賞味期限を見たら三日も過ぎていた。",
+   "questions": [
+    {
+     "qid": "S4Q1",
+     "label_A": "食べ物",
+     "label_B": "動物",
+     "correct_side": "A",
+     "correct_label": "食べ物",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "食べ物",
+        "動物"
+       ],
+       "raw_output": "食べ物",
+       "pick": "食べ物",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 2.827,
+       "prompt_tokens": 85,
+       "predicted_tokens": 3,
+       "cache_tokens": 38
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "動物",
+        "食べ物"
+       ],
+       "raw_output": "食べ物",
+       "pick": "食べ物",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.806,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 114
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "食べ物",
+        "動物"
+       ],
+       "raw_output": "食べ物",
+       "pick": "食べ物",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.988,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 114
+      }
+     ]
+    },
+    {
+     "qid": "S4Q2",
+     "label_A": "音",
+     "label_B": "味",
+     "correct_side": "B",
+     "correct_label": "味",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "音",
+        "味"
+       ],
+       "raw_output": "音",
+       "pick": "音",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": true,
+       "seconds": 0.413,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 114
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "味",
+        "音"
+       ],
+       "raw_output": "すっぱい味",
+       "pick": "味",
+       "pick_side": "B",
+       "format_clean": false,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.896,
+       "prompt_tokens": 8,
+       "predicted_tokens": 5,
+       "cache_tokens": 114
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "音",
+        "味"
+       ],
+       "raw_output": "音",
+       "pick": "音",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": true,
+       "seconds": 0.47,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 114
+      }
+     ]
+    },
+    {
+     "qid": "S4Q3",
+     "label_A": "家の中",
+     "label_B": "外",
+     "correct_side": "A",
+     "correct_label": "家の中",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "家の中",
+        "外"
+       ],
+       "raw_output": "外",
+       "pick": "外",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.407,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 114
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "外",
+        "家の中"
+       ],
+       "raw_output": "家の中",
+       "pick": "家の中",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.718,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 114
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "家の中",
+        "外"
+       ],
+       "raw_output": "外",
+       "pick": "外",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.49,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 114
+      }
+     ]
+    },
+    {
+     "qid": "S4Q4",
+     "label_A": "飲み物",
+     "label_B": "野菜",
+     "correct_side": "A",
+     "correct_label": "飲み物",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "飲み物",
+        "野菜"
+       ],
+       "raw_output": "飲料",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.894,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 114
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "野菜",
+        "飲み物"
+       ],
+       "raw_output": "飲み物",
+       "pick": "飲み物",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.799,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 114
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "飲み物",
+        "野菜"
+       ],
+       "raw_output": "飲料",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.807,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 114
+      }
+     ]
+    },
+    {
+     "qid": "S4Q5",
+     "label_A": "食べ物",
+     "label_B": "飲み物",
+     "correct_side": "B",
+     "correct_label": "飲み物",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "食べ物",
+        "飲み物"
+       ],
+       "raw_output": "飲み物",
+       "pick": "飲み物",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.799,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 114
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "飲み物",
+        "食べ物"
+       ],
+       "raw_output": "食べ物",
+       "pick": "食べ物",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.602,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 114
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "食べ物",
+        "飲み物"
+       ],
+       "raw_output": "飲み物",
+       "pick": "飲み物",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.501,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 114
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "text": "公園で走っていて転んで膝をすりむいたので、家に帰って絆創膏を貼った。",
+   "questions": [
+    {
+     "qid": "S5Q1",
+     "label_A": "体",
+     "label_B": "機械",
+     "correct_side": "A",
+     "correct_label": "体",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "体",
+        "機械"
+       ],
+       "raw_output": "体",
+       "pick": "体",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 2.598,
+       "prompt_tokens": 82,
+       "predicted_tokens": 2,
+       "cache_tokens": 38
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "機械",
+        "体"
+       ],
+       "raw_output": "家に帰って絆創膏を貼った。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.288,
+       "prompt_tokens": 9,
+       "predicted_tokens": 13,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "体",
+        "機械"
+       ],
+       "raw_output": "体",
+       "pick": "体",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.498,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 111
+      }
+     ]
+    },
+    {
+     "qid": "S5Q2",
+     "label_A": "病気",
+     "label_B": "けが",
+     "correct_side": "B",
+     "correct_label": "けが",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "病気",
+        "けが"
+       ],
+       "raw_output": "けが",
+       "pick": "けが",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 2.535,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "けが",
+        "病気"
+       ],
+       "raw_output": "けが",
+       "pick": "けが",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.682,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "病気",
+        "けが"
+       ],
+       "raw_output": "けが",
+       "pick": "けが",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.498,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 111
+      }
+     ]
+    },
+    {
+     "qid": "S5Q3",
+     "label_A": "仕事",
+     "label_B": "遊び",
+     "correct_side": "B",
+     "correct_label": "遊び",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "仕事",
+        "遊び"
+       ],
+       "raw_output": "遊び",
+       "pick": "遊び",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.72,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "遊び",
+        "仕事"
+       ],
+       "raw_output": "家に帰って絆創膏を貼った。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.971,
+       "prompt_tokens": 9,
+       "predicted_tokens": 13,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "仕事",
+        "遊び"
+       ],
+       "raw_output": "遊び",
+       "pick": "遊び",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.423,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 111
+      }
+     ]
+    },
+    {
+     "qid": "S5Q4",
+     "label_A": "約束の話",
+     "label_B": "たまたまの話",
+     "correct_side": "B",
+     "correct_label": "たまたまの話",
+     "type": "abstract",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "約束の話",
+        "たまたまの話"
+       ],
+       "raw_output": "約束の話",
+       "pick": "約束の話",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": true,
+       "seconds": 1.178,
+       "prompt_tokens": 15,
+       "predicted_tokens": 5,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "たまたまの話",
+        "約束の話"
+       ],
+       "raw_output": "たまたまの話",
+       "pick": "たまたまの話",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 1.101,
+       "prompt_tokens": 15,
+       "predicted_tokens": 6,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "約束の話",
+        "たまたまの話"
+       ],
+       "raw_output": "約束の話",
+       "pick": "約束の話",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": true,
+       "seconds": 0.803,
+       "prompt_tokens": 15,
+       "predicted_tokens": 5,
+       "cache_tokens": 111
+      }
+     ]
+    },
+    {
+     "qid": "S5Q5",
+     "label_A": "足",
+     "label_B": "頭",
+     "correct_side": "A",
+     "correct_label": "足",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "足",
+        "頭"
+       ],
+       "raw_output": "家に帰って絆創膏を貼った。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.602,
+       "prompt_tokens": 8,
+       "predicted_tokens": 13,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "頭",
+        "足"
+       ],
+       "raw_output": "頭",
+       "pick": "頭",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": true,
+       "seconds": 0.384,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "足",
+        "頭"
+       ],
+       "raw_output": "家に帰って絆創膏を貼った。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.314,
+       "prompt_tokens": 8,
+       "predicted_tokens": 13,
+       "cache_tokens": 111
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "text": "朝からスマホの電池がすぐ減るようになり、出かける前に充電し忘れると一日もたない。",
+   "questions": [
+    {
+     "qid": "S6Q1",
+     "label_A": "機械",
+     "label_B": "生き物",
+     "correct_side": "A",
+     "correct_label": "機械",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "機械",
+        "生き物"
+       ],
+       "raw_output": "説明や理由は書かないでください。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 3.802,
+       "prompt_tokens": 82,
+       "predicted_tokens": 12,
+       "cache_tokens": 38
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "生き物",
+        "機械"
+       ],
+       "raw_output": "機械",
+       "pick": "機械",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.886,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 110
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "機械",
+        "生き物"
+       ],
+       "raw_output": "説明や理由は書かないでください。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.499,
+       "prompt_tokens": 10,
+       "predicted_tokens": 12,
+       "cache_tokens": 110
+      }
+     ]
+    },
+    {
+     "qid": "S6Q2",
+     "label_A": "音",
+     "label_B": "電気",
+     "correct_side": "B",
+     "correct_label": "電気",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "音",
+        "電気"
+       ],
+       "raw_output": "説明や理由は書かないでください。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.629,
+       "prompt_tokens": 9,
+       "predicted_tokens": 12,
+       "cache_tokens": 110
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "電気",
+        "音"
+       ],
+       "raw_output": "説明や理由は書かないでください。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.985,
+       "prompt_tokens": 9,
+       "predicted_tokens": 12,
+       "cache_tokens": 110
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "音",
+        "電気"
+       ],
+       "raw_output": "説明や理由は書かないでください。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.384,
+       "prompt_tokens": 9,
+       "predicted_tokens": 12,
+       "cache_tokens": 110
+      }
+     ]
+    },
+    {
+     "qid": "S6Q3",
+     "label_A": "テレビ",
+     "label_B": "電話",
+     "correct_side": "B",
+     "correct_label": "電話",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "テレビ",
+        "電話"
+       ],
+       "raw_output": "出かける前に充電し忘れると一日もたない。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.733,
+       "prompt_tokens": 8,
+       "predicted_tokens": 14,
+       "cache_tokens": 110
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "電話",
+        "テレビ"
+       ],
+       "raw_output": "出かける前に充電し忘れると一日もたない。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.898,
+       "prompt_tokens": 8,
+       "predicted_tokens": 14,
+       "cache_tokens": 110
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "テレビ",
+        "電話"
+       ],
+       "raw_output": "出かける前に充電し忘れると一日もたない。",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.695,
+       "prompt_tokens": 8,
+       "predicted_tokens": 14,
+       "cache_tokens": 110
+      }
+     ]
+    },
+    {
+     "qid": "S6Q4",
+     "label_A": "朝",
+     "label_B": "夜",
+     "correct_side": "A",
+     "correct_label": "朝",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "朝",
+        "夜"
+       ],
+       "raw_output": "朝",
+       "pick": "朝",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.397,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 110
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "夜",
+        "朝"
+       ],
+       "raw_output": "朝",
+       "pick": "朝",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.606,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 110
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "朝",
+        "夜"
+       ],
+       "raw_output": "朝",
+       "pick": "朝",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.403,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 110
+      }
+     ]
+    },
+    {
+     "qid": "S6Q5",
+     "label_A": "ガソリン",
+     "label_B": "電池",
+     "correct_side": "B",
+     "correct_label": "電池",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "ガソリン",
+        "電池"
+       ],
+       "raw_output": "電池",
+       "pick": "電池",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.684,
+       "prompt_tokens": 11,
+       "predicted_tokens": 3,
+       "cache_tokens": 110
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "電池",
+        "ガソリン"
+       ],
+       "raw_output": "電池",
+       "pick": "電池",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 1.302,
+       "prompt_tokens": 11,
+       "predicted_tokens": 3,
+       "cache_tokens": 110
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "ガソリン",
+        "電池"
+       ],
+       "raw_output": "電池",
+       "pick": "電池",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.581,
+       "prompt_tokens": 11,
+       "predicted_tokens": 3,
+       "cache_tokens": 110
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "text": "畑のトマトが赤く色づいてきたので、カラスに食べられる前に収穫した。",
+   "questions": [
+    {
+     "qid": "S7Q1",
+     "label_A": "野菜",
+     "label_B": "果物",
+     "correct_side": "A",
+     "correct_label": "野菜",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "野菜",
+        "果物"
+       ],
+       "raw_output": "野菜",
+       "pick": "野菜",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 2.325,
+       "prompt_tokens": 83,
+       "predicted_tokens": 3,
+       "cache_tokens": 38
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "果物",
+        "野菜"
+       ],
+       "raw_output": "野菜",
+       "pick": "野菜",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.499,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "野菜",
+        "果物"
+       ],
+       "raw_output": "野菜",
+       "pick": "野菜",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.785,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 111
+      }
+     ]
+    },
+    {
+     "qid": "S7Q2",
+     "label_A": "虫",
+     "label_B": "鳥",
+     "correct_side": "B",
+     "correct_label": "鳥",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "虫",
+        "鳥"
+       ],
+       "raw_output": "鳥",
+       "pick": "鳥",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.798,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "鳥",
+        "虫"
+       ],
+       "raw_output": "鳥",
+       "pick": "鳥",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.317,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "虫",
+        "鳥"
+       ],
+       "raw_output": "鳥",
+       "pick": "鳥",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.401,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 111
+      }
+     ]
+    },
+    {
+     "qid": "S7Q3",
+     "label_A": "音",
+     "label_B": "色",
+     "correct_side": "B",
+     "correct_label": "色",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "音",
+        "色"
+       ],
+       "raw_output": "色",
+       "pick": "色",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.476,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "色",
+        "音"
+       ],
+       "raw_output": "収穫",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.704,
+       "prompt_tokens": 8,
+       "predicted_tokens": 5,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "音",
+        "色"
+       ],
+       "raw_output": "色",
+       "pick": "色",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.393,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 111
+      }
+     ]
+    },
+    {
+     "qid": "S7Q4",
+     "label_A": "外",
+     "label_B": "家の中",
+     "correct_side": "A",
+     "correct_label": "外",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "外",
+        "家の中"
+       ],
+       "raw_output": "収穫した",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.901,
+       "prompt_tokens": 9,
+       "predicted_tokens": 6,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "家の中",
+        "外"
+       ],
+       "raw_output": "外",
+       "pick": "外",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.326,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "外",
+        "家の中"
+       ],
+       "raw_output": "収穫した",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.787,
+       "prompt_tokens": 9,
+       "predicted_tokens": 6,
+       "cache_tokens": 111
+      }
+     ]
+    },
+    {
+     "qid": "S7Q5",
+     "label_A": "海",
+     "label_B": "畑",
+     "correct_side": "B",
+     "correct_label": "畑",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "海",
+        "畑"
+       ],
+       "raw_output": "畑",
+       "pick": "畑",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.915,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "畑",
+        "海"
+       ],
+       "raw_output": "畑",
+       "pick": "畑",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.899,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 111
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "海",
+        "畑"
+       ],
+       "raw_output": "畑",
+       "pick": "畑",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.577,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 111
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "S8",
+   "text": "子供が三十八度の熱を出したので、心配になって小児科に連れて行った。",
+   "questions": [
+    {
+     "qid": "S8Q1",
+     "label_A": "病気",
+     "label_B": "けが",
+     "correct_side": "A",
+     "correct_label": "病気",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "病気",
+        "けが"
+       ],
+       "raw_output": "病気",
+       "pick": "病気",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 2.724,
+       "prompt_tokens": 80,
+       "predicted_tokens": 3,
+       "cache_tokens": 38
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "けが",
+        "病気"
+       ],
+       "raw_output": "病気",
+       "pick": "病気",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.771,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 108
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "病気",
+        "けが"
+       ],
+       "raw_output": "病気",
+       "pick": "病気",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.63,
+       "prompt_tokens": 10,
+       "predicted_tokens": 3,
+       "cache_tokens": 108
+      }
+     ]
+    },
+    {
+     "qid": "S8Q2",
+     "label_A": "学校",
+     "label_B": "病院",
+     "correct_side": "B",
+     "correct_label": "病院",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "学校",
+        "病院"
+       ],
+       "raw_output": "病院",
+       "pick": "病院",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.893,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 108
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "病院",
+        "学校"
+       ],
+       "raw_output": "学校",
+       "pick": "学校",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.399,
+       "prompt_tokens": 9,
+       "predicted_tokens": 2,
+       "cache_tokens": 108
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "学校",
+        "病院"
+       ],
+       "raw_output": "病院",
+       "pick": "病院",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.591,
+       "prompt_tokens": 9,
+       "predicted_tokens": 3,
+       "cache_tokens": 108
+      }
+     ]
+    },
+    {
+     "qid": "S8Q3",
+     "label_A": "子供",
+     "label_B": "お年寄り",
+     "correct_side": "A",
+     "correct_label": "子供",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "子供",
+        "お年寄り"
+       ],
+       "raw_output": "小児科",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 0.815,
+       "prompt_tokens": 12,
+       "predicted_tokens": 5,
+       "cache_tokens": 108
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "お年寄り",
+        "子供"
+       ],
+       "raw_output": "子供",
+       "pick": "子供",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.667,
+       "prompt_tokens": 12,
+       "predicted_tokens": 3,
+       "cache_tokens": 108
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "子供",
+        "お年寄り"
+       ],
+       "raw_output": "小児科",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 1.111,
+       "prompt_tokens": 12,
+       "predicted_tokens": 5,
+       "cache_tokens": 108
+      }
+     ]
+    },
+    {
+     "qid": "S8Q4",
+     "label_A": "物の話",
+     "label_B": "気持ちの話",
+     "correct_side": "B",
+     "correct_label": "気持ちの話",
+     "type": "abstract",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "物の話",
+        "気持ちの話"
+       ],
+       "raw_output": "気持ちの話",
+       "pick": "気持ちの話",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.91,
+       "prompt_tokens": 12,
+       "predicted_tokens": 4,
+       "cache_tokens": 108
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "気持ちの話",
+        "物の話"
+       ],
+       "raw_output": "気持ちの話",
+       "pick": "気持ちの話",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.679,
+       "prompt_tokens": 12,
+       "predicted_tokens": 4,
+       "cache_tokens": 108
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "物の話",
+        "気持ちの話"
+       ],
+       "raw_output": "気持ちの話",
+       "pick": "気持ちの話",
+       "pick_side": "B",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 1.304,
+       "prompt_tokens": 12,
+       "predicted_tokens": 4,
+       "cache_tokens": 108
+      }
+     ]
+    },
+    {
+     "qid": "S8Q5",
+     "label_A": "熱",
+     "label_B": "咳",
+     "correct_side": "A",
+     "correct_label": "熱",
+     "type": "concrete",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "熱",
+        "咳"
+       ],
+       "raw_output": "熱",
+       "pick": "熱",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.314,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 108
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "咳",
+        "熱"
+       ],
+       "raw_output": "熱",
+       "pick": "熱",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": false,
+       "seconds": 0.306,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 108
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "熱",
+        "咳"
+       ],
+       "raw_output": "熱",
+       "pick": "熱",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": true,
+       "picked_presented_first": true,
+       "seconds": 0.706,
+       "prompt_tokens": 8,
+       "predicted_tokens": 2,
+       "cache_tokens": 108
+      }
+     ]
+    },
+    {
+     "qid": "S8Q6",
+     "label_A": "約束の話",
+     "label_B": "たまたまの話",
+     "correct_side": "B",
+     "correct_label": "たまたまの話",
+     "type": "abstract",
+     "reps": [
+      {
+       "rep": "rep1",
+       "order": "AB",
+       "presented": [
+        "約束の話",
+        "たまたまの話"
+       ],
+       "raw_output": "約束の話",
+       "pick": "約束の話",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": true,
+       "seconds": 1.074,
+       "prompt_tokens": 15,
+       "predicted_tokens": 5,
+       "cache_tokens": 108
+      },
+      {
+       "rep": "rep2",
+       "order": "BA",
+       "presented": [
+        "たまたまの話",
+        "約束の話"
+       ],
+       "raw_output": "小児科に連れて行った",
+       "pick": null,
+       "pick_side": null,
+       "format_clean": false,
+       "format_failure": true,
+       "failure_kind": "no_label",
+       "echo": true,
+       "correct": false,
+       "picked_presented_first": false,
+       "seconds": 2.329,
+       "prompt_tokens": 15,
+       "predicted_tokens": 9,
+       "cache_tokens": 108
+      },
+      {
+       "rep": "rep3",
+       "order": "AB",
+       "presented": [
+        "約束の話",
+        "たまたまの話"
+       ],
+       "raw_output": "約束の話",
+       "pick": "約束の話",
+       "pick_side": "A",
+       "format_clean": true,
+       "format_failure": false,
+       "echo": false,
+       "correct": false,
+       "picked_presented_first": true,
+       "seconds": 1.176,
+       "prompt_tokens": 15,
+       "predicted_tokens": 5,
+       "cache_tokens": 108
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

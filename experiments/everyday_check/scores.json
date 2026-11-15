@@ -1,0 +1,1029 @@
+{
+ "summary": {
+  "overall": {
+   "cells": 41,
+   "decided": 31,
+   "correct": 26,
+   "accuracy_decided": 0.839,
+   "accuracy_all_cells": 0.634
+  },
+  "concrete": {
+   "cells": 37,
+   "decided": 27,
+   "correct": 24,
+   "accuracy_decided": 0.889,
+   "accuracy_all_cells": 0.649
+  },
+  "abstract": {
+   "cells": 4,
+   "decided": 4,
+   "correct": 2,
+   "accuracy_decided": 0.5,
+   "accuracy_all_cells": 0.5
+  },
+  "reps": {
+   "n_calls": 123,
+   "valid": 95,
+   "format_failures": 28,
+   "format_failure_rate": 0.228,
+   "failure_kinds": {
+    "no_label": 28
+   },
+   "format_clean_rate": 0.989,
+   "dirty_picks": 1,
+   "echo_outputs": 13,
+   "single_rep_accuracy": 0.842
+  },
+  "swap_consistency_rep1_rep2": {
+   "pairs": 25,
+   "same": 17,
+   "rate": 0.68
+  },
+  "same_order_repro_rep1_rep3": {
+   "pairs": 31,
+   "same": 31,
+   "rate": 1.0
+  },
+  "position_bias": {
+   "overall": {
+    "n": 95,
+    "picked_first": 36,
+    "rate": 0.379
+   },
+   "AB_presentations": {
+    "n": 62,
+    "picked_first": 24,
+    "rate": 0.387
+   },
+   "BA_presentations": {
+    "n": 33,
+    "picked_first": 12,
+    "rate": 0.364
+   }
+  },
+  "side_counts": {
+   "A": 45,
+   "B": 50
+  },
+  "wrong_or_undecided_cells": [
+   {
+    "qid": "S1Q1",
+    "type": "concrete",
+    "labels": [
+     "動物",
+     "食べ物"
+    ],
+    "correct_label": "動物",
+    "majority_side": null,
+    "rep_picks": [
+     null,
+     "動物",
+     null
+    ],
+    "rep_raw": [
+     "隣の家の犬が夜中も吠え続けるので、うるさくて眠れない日が続いている。",
+     "動物",
+     "隣の家の犬が夜中も吠え続けるので、うるさくて眠れない日が続いている。"
+    ]
+   },
+   {
+    "qid": "S2Q1",
+    "type": "concrete",
+    "labels": [
+     "天気",
+     "食べ物"
+    ],
+    "correct_label": "天気",
+    "majority_side": null,
+    "rep_picks": [
+     null,
+     "天気",
+     null
+    ],
+    "rep_raw": [
+     "天井からポタポタと水が落ちてきて、バケツで受けている。",
+     "天気",
+     "天井からポタポタと水が落ちてきて、バケツで受けている。"
+    ]
+   },
+   {
+    "qid": "S2Q4",
+    "type": "concrete",
+    "labels": [
+     "家",
+     "乗り物"
+    ],
+    "correct_label": "家",
+    "majority_side": "B",
+    "rep_picks": [
+     "乗り物",
+     "家",
+     "乗り物"
+    ],
+    "rep_raw": [
+     "乗り物",
+     "家",
+     "乗り物"
+    ]
+   },
+   {
+    "qid": "S3Q4",
+    "type": "concrete",
+    "labels": [
+     "店",
+     "学校"
+    ],
+    "correct_label": "店",
+    "majority_side": null,
+    "rep_picks": [
+     null,
+     "店",
+     null
+    ],
+    "rep_raw": [
+     "自転車屋",
+     "店",
+     "自転車屋"
+    ]
+   },
+   {
+    "qid": "S4Q2",
+    "type": "concrete",
+    "labels": [
+     "音",
+     "味"
+    ],
+    "correct_label": "味",
+    "majority_side": "A",
+    "rep_picks": [
+     "音",
+     "味",
+     "音"
+    ],
+    "rep_raw": [
+     "音",
+     "すっぱい味",
+     "音"
+    ]
+   },
+   {
+    "qid": "S4Q3",
+    "type": "concrete",
+    "labels": [
+     "家の中",
+     "外"
+    ],
+    "correct_label": "家の中",
+    "majority_side": "B",
+    "rep_picks": [
+     "外",
+     "家の中",
+     "外"
+    ],
+    "rep_raw": [
+     "外",
+     "家の中",
+     "外"
+    ]
+   },
+   {
+    "qid": "S4Q4",
+    "type": "concrete",
+    "labels": [
+     "飲み物",
+     "野菜"
+    ],
+    "correct_label": "飲み物",
+    "majority_side": null,
+    "rep_picks": [
+     null,
+     "飲み物",
+     null
+    ],
+    "rep_raw": [
+     "飲料",
+     "飲み物",
+     "飲料"
+    ]
+   },
+   {
+    "qid": "S5Q4",
+    "type": "abstract",
+    "labels": [
+     "約束の話",
+     "たまたまの話"
+    ],
+    "correct_label": "たまたまの話",
+    "majority_side": "A",
+    "rep_picks": [
+     "約束の話",
+     "たまたまの話",
+     "約束の話"
+    ],
+    "rep_raw": [
+     "約束の話",
+     "たまたまの話",
+     "約束の話"
+    ]
+   },
+   {
+    "qid": "S5Q5",
+    "type": "concrete",
+    "labels": [
+     "足",
+     "頭"
+    ],
+    "correct_label": "足",
+    "majority_side": null,
+    "rep_picks": [
+     null,
+     "頭",
+     null
+    ],
+    "rep_raw": [
+     "家に帰って絆創膏を貼った。",
+     "頭",
+     "家に帰って絆創膏を貼った。"
+    ]
+   },
+   {
+    "qid": "S6Q1",
+    "type": "concrete",
+    "labels": [
+     "機械",
+     "生き物"
+    ],
+    "correct_label": "機械",
+    "majority_side": null,
+    "rep_picks": [
+     null,
+     "機械",
+     null
+    ],
+    "rep_raw": [
+     "説明や理由は書かないでください。",
+     "機械",
+     "説明や理由は書かないでください。"
+    ]
+   },
+   {
+    "qid": "S6Q2",
+    "type": "concrete",
+    "labels": [
+     "音",
+     "電気"
+    ],
+    "correct_label": "電気",
+    "majority_side": null,
+    "rep_picks": [
+     null,
+     null,
+     null
+    ],
+    "rep_raw": [
+     "説明や理由は書かないでください。",
+     "説明や理由は書かないでください。",
+     "説明や理由は書かないでください。"
+    ]
+   },
+   {
+    "qid": "S6Q3",
+    "type": "concrete",
+    "labels": [
+     "テレビ",
+     "電話"
+    ],
+    "correct_label": "電話",
+    "majority_side": null,
+    "rep_picks": [
+     null,
+     null,
+     null
+    ],
+    "rep_raw": [
+     "出かける前に充電し忘れると一日もたない。",
+     "出かける前に充電し忘れると一日もたない。",
+     "出かける前に充電し忘れると一日もたない。"
+    ]
+   },
+   {
+    "qid": "S7Q4",
+    "type": "concrete",
+    "labels": [
+     "外",
+     "家の中"
+    ],
+    "correct_label": "外",
+    "majority_side": null,
+    "rep_picks": [
+     null,
+     "外",
+     null
+    ],
+    "rep_raw": [
+     "収穫した",
+     "外",
+     "収穫した"
+    ]
+   },
+   {
+    "qid": "S8Q3",
+    "type": "concrete",
+    "labels": [
+     "子供",
+     "お年寄り"
+    ],
+    "correct_label": "子供",
+    "majority_side": null,
+    "rep_picks": [
+     null,
+     "子供",
+     null
+    ],
+    "rep_raw": [
+     "小児科",
+     "子供",
+     "小児科"
+    ]
+   },
+   {
+    "qid": "S8Q6",
+    "type": "abstract",
+    "labels": [
+     "約束の話",
+     "たまたまの話"
+    ],
+    "correct_label": "たまたまの話",
+    "majority_side": "A",
+    "rep_picks": [
+     "約束の話",
+     null,
+     "約束の話"
+    ],
+    "rep_raw": [
+     "約束の話",
+     "小児科に連れて行った",
+     "約束の話"
+    ]
+   }
+  ]
+ },
+ "cells": [
+  {
+   "qid": "S1Q1",
+   "type": "concrete",
+   "label_A": "動物",
+   "label_B": "食べ物",
+   "correct_side": "A",
+   "correct_label": "動物",
+   "majority_side": null,
+   "majority_correct": false,
+   "valid_reps": 1,
+   "rep_correct": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "qid": "S1Q2",
+   "type": "concrete",
+   "label_A": "匂い",
+   "label_B": "音",
+   "correct_side": "B",
+   "correct_label": "音",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    false,
+    true
+   ]
+  },
+  {
+   "qid": "S1Q3",
+   "type": "concrete",
+   "label_A": "昼",
+   "label_B": "夜",
+   "correct_side": "B",
+   "correct_label": "夜",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S1Q4",
+   "type": "concrete",
+   "label_A": "生き物",
+   "label_B": "機械",
+   "correct_side": "A",
+   "correct_label": "生き物",
+   "majority_side": "A",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S1Q5",
+   "type": "abstract",
+   "label_A": "物の話",
+   "label_B": "気持ちの話",
+   "correct_side": "B",
+   "correct_label": "気持ちの話",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S2Q1",
+   "type": "concrete",
+   "label_A": "天気",
+   "label_B": "食べ物",
+   "correct_side": "A",
+   "correct_label": "天気",
+   "majority_side": null,
+   "majority_correct": false,
+   "valid_reps": 1,
+   "rep_correct": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "qid": "S2Q2",
+   "type": "concrete",
+   "label_A": "水",
+   "label_B": "電気",
+   "correct_side": "A",
+   "correct_label": "水",
+   "majority_side": "A",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S2Q3",
+   "type": "concrete",
+   "label_A": "外",
+   "label_B": "家の中",
+   "correct_side": "B",
+   "correct_label": "家の中",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    false,
+    true
+   ]
+  },
+  {
+   "qid": "S2Q4",
+   "type": "concrete",
+   "label_A": "家",
+   "label_B": "乗り物",
+   "correct_side": "A",
+   "correct_label": "家",
+   "majority_side": "B",
+   "majority_correct": false,
+   "valid_reps": 3,
+   "rep_correct": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "qid": "S2Q5",
+   "type": "concrete",
+   "label_A": "匂い",
+   "label_B": "音",
+   "correct_side": "B",
+   "correct_label": "音",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 2,
+   "rep_correct": [
+    true,
+    false,
+    true
+   ]
+  },
+  {
+   "qid": "S3Q1",
+   "type": "concrete",
+   "label_A": "乗り物",
+   "label_B": "動物",
+   "correct_side": "A",
+   "correct_label": "乗り物",
+   "majority_side": "A",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S3Q2",
+   "type": "concrete",
+   "label_A": "料理",
+   "label_B": "修理",
+   "correct_side": "B",
+   "correct_label": "修理",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S3Q3",
+   "type": "concrete",
+   "label_A": "植物",
+   "label_B": "機械",
+   "correct_side": "B",
+   "correct_label": "機械",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S3Q4",
+   "type": "concrete",
+   "label_A": "店",
+   "label_B": "学校",
+   "correct_side": "A",
+   "correct_label": "店",
+   "majority_side": null,
+   "majority_correct": false,
+   "valid_reps": 1,
+   "rep_correct": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "qid": "S3Q5",
+   "type": "concrete",
+   "label_A": "家の中",
+   "label_B": "外",
+   "correct_side": "B",
+   "correct_label": "外",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 2,
+   "rep_correct": [
+    true,
+    false,
+    true
+   ]
+  },
+  {
+   "qid": "S4Q1",
+   "type": "concrete",
+   "label_A": "食べ物",
+   "label_B": "動物",
+   "correct_side": "A",
+   "correct_label": "食べ物",
+   "majority_side": "A",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S4Q2",
+   "type": "concrete",
+   "label_A": "音",
+   "label_B": "味",
+   "correct_side": "B",
+   "correct_label": "味",
+   "majority_side": "A",
+   "majority_correct": false,
+   "valid_reps": 3,
+   "rep_correct": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "qid": "S4Q3",
+   "type": "concrete",
+   "label_A": "家の中",
+   "label_B": "外",
+   "correct_side": "A",
+   "correct_label": "家の中",
+   "majority_side": "B",
+   "majority_correct": false,
+   "valid_reps": 3,
+   "rep_correct": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "qid": "S4Q4",
+   "type": "concrete",
+   "label_A": "飲み物",
+   "label_B": "野菜",
+   "correct_side": "A",
+   "correct_label": "飲み物",
+   "majority_side": null,
+   "majority_correct": false,
+   "valid_reps": 1,
+   "rep_correct": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "qid": "S4Q5",
+   "type": "concrete",
+   "label_A": "食べ物",
+   "label_B": "飲み物",
+   "correct_side": "B",
+   "correct_label": "飲み物",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    false,
+    true
+   ]
+  },
+  {
+   "qid": "S5Q1",
+   "type": "concrete",
+   "label_A": "体",
+   "label_B": "機械",
+   "correct_side": "A",
+   "correct_label": "体",
+   "majority_side": "A",
+   "majority_correct": true,
+   "valid_reps": 2,
+   "rep_correct": [
+    true,
+    false,
+    true
+   ]
+  },
+  {
+   "qid": "S5Q2",
+   "type": "concrete",
+   "label_A": "病気",
+   "label_B": "けが",
+   "correct_side": "B",
+   "correct_label": "けが",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S5Q3",
+   "type": "concrete",
+   "label_A": "仕事",
+   "label_B": "遊び",
+   "correct_side": "B",
+   "correct_label": "遊び",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 2,
+   "rep_correct": [
+    true,
+    false,
+    true
+   ]
+  },
+  {
+   "qid": "S5Q4",
+   "type": "abstract",
+   "label_A": "約束の話",
+   "label_B": "たまたまの話",
+   "correct_side": "B",
+   "correct_label": "たまたまの話",
+   "majority_side": "A",
+   "majority_correct": false,
+   "valid_reps": 3,
+   "rep_correct": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "qid": "S5Q5",
+   "type": "concrete",
+   "label_A": "足",
+   "label_B": "頭",
+   "correct_side": "A",
+   "correct_label": "足",
+   "majority_side": null,
+   "majority_correct": false,
+   "valid_reps": 1,
+   "rep_correct": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "qid": "S6Q1",
+   "type": "concrete",
+   "label_A": "機械",
+   "label_B": "生き物",
+   "correct_side": "A",
+   "correct_label": "機械",
+   "majority_side": null,
+   "majority_correct": false,
+   "valid_reps": 1,
+   "rep_correct": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "qid": "S6Q2",
+   "type": "concrete",
+   "label_A": "音",
+   "label_B": "電気",
+   "correct_side": "B",
+   "correct_label": "電気",
+   "majority_side": null,
+   "majority_correct": false,
+   "valid_reps": 0,
+   "rep_correct": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "qid": "S6Q3",
+   "type": "concrete",
+   "label_A": "テレビ",
+   "label_B": "電話",
+   "correct_side": "B",
+   "correct_label": "電話",
+   "majority_side": null,
+   "majority_correct": false,
+   "valid_reps": 0,
+   "rep_correct": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "qid": "S6Q4",
+   "type": "concrete",
+   "label_A": "朝",
+   "label_B": "夜",
+   "correct_side": "A",
+   "correct_label": "朝",
+   "majority_side": "A",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S6Q5",
+   "type": "concrete",
+   "label_A": "ガソリン",
+   "label_B": "電池",
+   "correct_side": "B",
+   "correct_label": "電池",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S7Q1",
+   "type": "concrete",
+   "label_A": "野菜",
+   "label_B": "果物",
+   "correct_side": "A",
+   "correct_label": "野菜",
+   "majority_side": "A",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S7Q2",
+   "type": "concrete",
+   "label_A": "虫",
+   "label_B": "鳥",
+   "correct_side": "B",
+   "correct_label": "鳥",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S7Q3",
+   "type": "concrete",
+   "label_A": "音",
+   "label_B": "色",
+   "correct_side": "B",
+   "correct_label": "色",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 2,
+   "rep_correct": [
+    true,
+    false,
+    true
+   ]
+  },
+  {
+   "qid": "S7Q4",
+   "type": "concrete",
+   "label_A": "外",
+   "label_B": "家の中",
+   "correct_side": "A",
+   "correct_label": "外",
+   "majority_side": null,
+   "majority_correct": false,
+   "valid_reps": 1,
+   "rep_correct": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "qid": "S7Q5",
+   "type": "concrete",
+   "label_A": "海",
+   "label_B": "畑",
+   "correct_side": "B",
+   "correct_label": "畑",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S8Q1",
+   "type": "concrete",
+   "label_A": "病気",
+   "label_B": "けが",
+   "correct_side": "A",
+   "correct_label": "病気",
+   "majority_side": "A",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S8Q2",
+   "type": "concrete",
+   "label_A": "学校",
+   "label_B": "病院",
+   "correct_side": "B",
+   "correct_label": "病院",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    false,
+    true
+   ]
+  },
+  {
+   "qid": "S8Q3",
+   "type": "concrete",
+   "label_A": "子供",
+   "label_B": "お年寄り",
+   "correct_side": "A",
+   "correct_label": "子供",
+   "majority_side": null,
+   "majority_correct": false,
+   "valid_reps": 1,
+   "rep_correct": [
+    false,
+    true,
+    false
+   ]
+  },
+  {
+   "qid": "S8Q4",
+   "type": "abstract",
+   "label_A": "物の話",
+   "label_B": "気持ちの話",
+   "correct_side": "B",
+   "correct_label": "気持ちの話",
+   "majority_side": "B",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S8Q5",
+   "type": "concrete",
+   "label_A": "熱",
+   "label_B": "咳",
+   "correct_side": "A",
+   "correct_label": "熱",
+   "majority_side": "A",
+   "majority_correct": true,
+   "valid_reps": 3,
+   "rep_correct": [
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "qid": "S8Q6",
+   "type": "abstract",
+   "label_A": "約束の話",
+   "label_B": "たまたまの話",
+   "correct_side": "B",
+   "correct_label": "たまたまの話",
+   "majority_side": "A",
+   "majority_correct": false,
+   "valid_reps": 2,
+   "rep_correct": [
+    false,
+    false,
+    false
+   ]
+  }
+ ]
+}

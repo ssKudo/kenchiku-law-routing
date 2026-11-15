@@ -1,0 +1,146 @@
+{
+  "2": {
+    "strict": {
+      "counts": {
+        "RECEIVER": 10,
+        "BORROWER": 1,
+        "OTHER": 0,
+        "MISSING": 0
+      },
+      "detail": {
+        "建築基準法施行令 第2-2条": "RECEIVER",
+        "建築基準法施行令 第107条": "RECEIVER",
+        "建築基準法施行令 第107-2条": "RECEIVER",
+        "建築基準法施行令 第108条": "RECEIVER",
+        "建築基準法施行令 第108-2条": "RECEIVER",
+        "建築基準法施行令 第108-3条": "RECEIVER",
+        "建築基準法施行令 第108-4条": "RECEIVER",
+        "建築基準法施行令 第109条": "RECEIVER",
+        "建築基準法施行令 第109-2条": "RECEIVER",
+        "建築基準法施行令 第109-3条": "RECEIVER",
+        "建築基準法施行令 第129-13-2条": "BORROWER"
+      }
+    },
+    "family": {
+      "counts": {
+        "RECEIVER": 10,
+        "BORROWER": 1,
+        "OTHER": 0,
+        "MISSING": 0
+      },
+      "detail": {
+        "建築基準法施行令 第2-2条": "RECEIVER",
+        "建築基準法施行令 第107条": "RECEIVER",
+        "建築基準法施行令 第107-2条": "RECEIVER",
+        "建築基準法施行令 第108条": "RECEIVER",
+        "建築基準法施行令 第108-2条": "RECEIVER",
+        "建築基準法施行令 第108-3条": "RECEIVER",
+        "建築基準法施行令 第108-4条": "RECEIVER",
+        "建築基準法施行令 第109条": "RECEIVER",
+        "建築基準法施行令 第109-2条": "RECEIVER",
+        "建築基準法施行令 第109-3条": "RECEIVER",
+        "建築基準法施行令 第129-13-2条": "BORROWER"
+      }
+    }
+  },
+  "6": {
+    "strict": {
+      "counts": {
+        "RECEIVER": 5,
+        "BORROWER": 6,
+        "OTHER": 7,
+        "MISSING": 0
+      },
+      "detail": {
+        "建築基準法施行令 第8-4条": "BORROWER",
+        "建築基準法施行令 第9条": "RECEIVER",
+        "建築基準法施行令 第9-2条": "OTHER",
+        "建築基準法施行令 第9-3条": "OTHER",
+        "建築基準法施行令 第10条": "RECEIVER",
+        "建築基準法施行令 第14-2条": "BORROWER",
+        "建築基準法施行令 第16条": "BORROWER",
+        "建築基準法施行令 第138-2条": "RECEIVER",
+        "建築基準法施行令 第148条": "BORROWER",
+        "建築基準法施行令 第150条": "BORROWER",
+        "建築基準法施行規則 第2条": "RECEIVER",
+        "建築基準法施行規則 第3-2条": "RECEIVER",
+        "建築基準法施行規則 第3-5条": "OTHER",
+        "建築基準法施行規則 第3-9条": "OTHER",
+        "建築基準法施行規則 第3-11条": "OTHER",
+        "建築基準法施行規則 第3-13条": "OTHER",
+        "建築基準法施行規則 第6-3条": "OTHER",
+        "建築基準法施行規則 第8-2条": "BORROWER"
+      }
+    },
+    "family": {
+      "counts": {
+        "RECEIVER": 11,
+        "BORROWER": 7,
+        "OTHER": 0,
+        "MISSING": 0
+      },
+      "detail": {
+        "建築基準法施行令 第8-4条": "BORROWER",
+        "建築基準法施行令 第9条": "RECEIVER",
+        "建築基準法施行令 第9-2条": "RECEIVER",
+        "建築基準法施行令 第9-3条": "RECEIVER",
+        "建築基準法施行令 第10条": "RECEIVER",
+        "建築基準法施行令 第14-2条": "BORROWER",
+        "建築基準法施行令 第16条": "BORROWER",
+        "建築基準法施行令 第138-2条": "RECEIVER",
+        "建築基準法施行令 第148条": "BORROWER",
+        "建築基準法施行令 第150条": "BORROWER",
+        "建築基準法施行規則 第2条": "RECEIVER",
+        "建築基準法施行規則 第3-2条": "RECEIVER",
+        "建築基準法施行規則 第3-5条": "RECEIVER",
+        "建築基準法施行規則 第3-9条": "RECEIVER",
+        "建築基準法施行規則 第3-11条": "RECEIVER",
+        "建築基準法施行規則 第3-13条": "RECEIVER",
+        "建築基準法施行規則 第6-3条": "BORROWER",
+        "建築基準法施行規則 第8-2条": "BORROWER"
+      }
+    }
+  },
+  "12": {
+    "strict": {
+      "counts": {
+        "RECEIVER": 5,
+        "BORROWER": 4,
+        "OTHER": 1,
+        "MISSING": 0
+      },
+      "detail": {
+        "建築基準法施行令 第16条": "RECEIVER",
+        "建築基準法施行令 第109条": "RECEIVER",
+        "建築基準法施行令 第138-3条": "RECEIVER",
+        "建築基準法施行令 第148条": "BORROWER",
+        "建築基準法施行規則 第5条": "BORROWER",
+        "建築基準法施行規則 第6条": "BORROWER",
+        "建築基準法施行規則 第6-2-2条": "RECEIVER",
+        "建築基準法施行規則 第6-3条": "RECEIVER",
+        "建築基準法施行規則 第6-6条": "BORROWER",
+        "建築基準法施行規則 第6-16-2条": "OTHER"
+      }
+    },
+    "family": {
+      "counts": {
+        "RECEIVER": 7,
+        "BORROWER": 3,
+        "OTHER": 0,
+        "MISSING": 0
+      },
+      "detail": {
+        "建築基準法施行令 第16条": "RECEIVER",
+        "建築基準法施行令 第109条": "RECEIVER",
+        "建築基準法施行令 第138-3条": "RECEIVER",
+        "建築基準法施行令 第148条": "BORROWER",
+        "建築基準法施行規則 第5条": "BORROWER",
+        "建築基準法施行規則 第6条": "BORROWER",
+        "建築基準法施行規則 第6-2-2条": "RECEIVER",
+        "建築基準法施行規則 第6-3条": "RECEIVER",
+        "建築基準法施行規則 第6-6条": "RECEIVER",
+        "建築基準法施行規則 第6-16-2条": "RECEIVER"
+      }
+    }
+  }
+}

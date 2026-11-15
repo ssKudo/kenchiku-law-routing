@@ -1,0 +1,669 @@
+{
+ "layer": "kokuji v0.2",
+ "corpus": {
+  "kokuji_total": 301,
+  "kokuji_with_text": 275,
+  "kokuji_with_basis": 251,
+  "spots_total": 190,
+  "spots_linked": 103,
+  "spots_by_law": [
+   [
+    "施行令",
+    135
+   ],
+   [
+    "施行規則",
+    24
+   ],
+   [
+    "建築基準法",
+    20
+   ],
+   [
+    "建築士法",
+    5
+   ],
+   [
+    "耐震改修促進法",
+    3
+   ],
+   [
+    "建設業法",
+    3
+   ]
+  ]
+ },
+ "seeds": {
+  "2": {
+   "article": "法第二条",
+   "note": "法2条（用語の定義：耐火構造ほか）— 委任の逆引きの代表例",
+   "context_article_count_v01": 79,
+   "kokuji_direct": [
+    {
+     "slug": "2014-08-22_mlit_860",
+     "name": "間仕切壁を準耐火構造としないこと等に関して防火上支障がない部分を定める件",
+     "number": "国土交通省告示第八百六十号",
+     "date": "2014-08-22",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006570.pdf",
+     "chars": 1210,
+     "via": "text"
+    },
+    {
+     "slug": "2000-05-30_kensetsu_1399",
+     "name": "耐火構造の構造方法を定める件",
+     "number": "建設省告示第千三百九十九号",
+     "date": "2000-05-30",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201706/00006704.pdf",
+     "chars": 7891,
+     "via": "text"
+    },
+    {
+     "slug": "2000-05-30_kensetsu_1400",
+     "name": "不燃材料を定める件",
+     "number": "建設省告示第千四百号",
+     "date": "2000-05-30",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006465.pdf",
+     "chars": 674,
+     "via": "text"
+    },
+    {
+     "slug": "2000-05-24_kensetsu_1359",
+     "name": "防火構造の構造方法を定める件",
+     "number": "建設省告示第千三百五十九号",
+     "date": "2000-05-24",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006450.pdf",
+     "chars": 2700,
+     "via": "text"
+    },
+    {
+     "slug": "2000-05-24_kensetsu_1358",
+     "name": "準耐火構造の構造方法を定める件",
+     "number": "建設省告示第千三百五十八号",
+     "date": "2000-05-24",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201706/00006703.pdf",
+     "chars": 9436,
+     "via": "text"
+    },
+    {
+     "slug": "2000-05-24_kensetsu_1360",
+     "name": "防火設備の構造方法を定める件",
+     "number": "建設省告示第千三百六十号",
+     "date": "2000-05-24",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006451.pdf",
+     "chars": 944,
+     "via": "text"
+    },
+    {
+     "slug": "1973-12-28_kensetsu_2564",
+     "name": "防火区画に用いる遮煙性能を有する防火設備の構造方法を定める件",
+     "number": "建設省告示第二千五百六十四号",
+     "date": "1973-12-28",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006616.pdf",
+     "chars": 1380,
+     "via": "text"
+    },
+    {
+     "slug": "1970-05-01_kensetsu_1730",
+     "name": "地下街の各構えの接する地下道に設ける非常用の照明設備、排煙設備及び排水設備の構造方法を定める件",
+     "number": "建設省告示第千七百三十号",
+     "date": "1970-05-01",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006604.pdf",
+     "chars": 2857,
+     "via": "text"
+    },
+    {
+     "slug": "1965-12-18_kensetsu_3411",
+     "name": "地階を除く階数が十一以上である建築物の屋上に設ける冷却塔設備の防火上支障のない構造方法、建築物の他の部分までの距離及び建築物の他の部分の温度を定める件",
+     "number": "建設省告示第三千四百十一号",
+     "date": "1965-12-18",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006602.pdf",
+     "chars": 1827,
+     "via": "text"
+    }
+   ],
+   "kokuji_via_receivers": [
+    {
+     "slug": "1993-06-24_kensetsu_1437",
+     "name": "建築基準法施行令第二条第一項第二号の規定に基づく国土交通大臣が高い開放性を有すると認めて指定する構造",
+     "number": "建設省告示第千四百三十七号",
+     "date": "1993-06-24",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006436.pdf",
+     "chars": 421,
+     "via": "title",
+     "via_article": "施行令第2条"
+    },
+    {
+     "slug": "1975-04-01_kensetsu_644",
+     "name": "建築基準法施行令第二条第一項第五号の規定に基づく工作物の築造面積の算定方法",
+     "number": "建設省告示第六百四十四号",
+     "date": "1975-04-01",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006619.pdf",
+     "chars": 251,
+     "via": "title",
+     "via_article": "施行令第2条"
+    },
+    {
+     "slug": "2000-05-31_kensetsu_1432",
+     "name": "可燃物燃焼温度を定める件",
+     "number": "建設省告示第千四百三十二号",
+     "date": "2000-05-31",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006486.pdf",
+     "chars": 293,
+     "via": "text",
+     "via_article": "施行令第107条"
+    },
+    {
+     "slug": "2016-04-22_mlit_692",
+     "name": "内装の仕上げを不燃材料ですることその他これに準ずる措置の基準等を定める件",
+     "number": "国土交通省告示第六百九十二号",
+     "date": "2016-04-22",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006587.pdf",
+     "chars": 479,
+     "via": "text",
+     "via_article": "施行令第108-3条"
+    },
+    {
+     "slug": "2000-05-31_kensetsu_1433",
+     "name": "耐火性能検証法に関する算出方法等を定める件",
+     "number": "建設省告示第千四百三十三号",
+     "date": "2000-05-31",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006487.pdf",
+     "chars": 21792,
+     "via": "text",
+     "via_article": "施行令第108-3条"
+    },
+    {
+     "slug": "2015-02-23_mlit_254",
+     "name": "ひさしその他これに類するものの構造方法を定める件",
+     "number": "国土交通省告示第二百五十四号",
+     "date": "2015-02-23",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006577.pdf",
+     "chars": 415,
+     "via": "text",
+     "via_article": "施行令第109-3条"
+    },
+    {
+     "slug": "2000-05-25_kensetsu_1367",
+     "name": "準耐火建築物と同等の性能を有する建築物等の屋根の構造方法を定める件",
+     "number": "建設省告示第千三百六十七号",
+     "date": "2000-05-25",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006455.pdf",
+     "chars": 887,
+     "via": "text",
+     "via_article": "施行令第109-3条"
+    },
+    {
+     "slug": "2000-05-25_kensetsu_1368",
+     "name": "床又はその直下の天井の構造方法を定める件",
+     "number": "建設省告示第千三百六十八号",
+     "date": "2000-05-25",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006456.pdf",
+     "chars": 1162,
+     "via": "text",
+     "via_article": "施行令第109-3条"
+    },
+    {
+     "slug": "1987-11-10_kensetsu_1905",
+     "name": "外壁、主要構造部である柱及びはり、床、床の直下の天井、屋根、屋根の直下の天井並びに国土交通大臣が指定する建築物の部分の構造方法を定める件",
+     "number": "建設省告示第千九百五号",
+     "date": "1987-11-10",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006641.pdf",
+     "chars": 3180,
+     "via": "text",
+     "via_article": "施行令第109-3条"
+    },
+    {
+     "slug": "1971-01-29_kensetsu_112",
+     "name": "建築基準法施行令第百二十九条の十三の三第六項の規定に基づく非常用エレベーターのかご及びその出入口の寸法並びにかごの積載荷重の数値を定める日本工業規格",
+     "number": "建設省告示第百十二号",
+     "date": "1971-01-29",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006614.pdf",
+     "chars": 304,
+     "via": "title",
+     "via_article": "施行令第129-13条"
+    },
+    {
+     "slug": "2016-04-22_mlit_697",
+     "name": "非常用エレベーターの昇降路又は乗降ロビーの構造方法を定める件",
+     "number": "国土交通省告示第六百九十七号",
+     "date": "2016-04-22",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006592.pdf",
+     "chars": 515,
+     "via": "text",
+     "via_article": "施行令第129-13条"
+    },
+    {
+     "slug": "2008-12-09_mlit_1446",
+     "name": "小荷物専用昇降機の昇降路外の人又は物がかご又は釣合おもりに触れるおそれのない壁又は囲い及び出し入れ口の戸の基準を定める件",
+     "number": "国土交通省告示第千四百四十六号",
+     "date": "2008-12-09",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006552.pdf",
+     "chars": 1634,
+     "via": "text",
+     "via_article": "施行令第129-13条"
+    },
+    {
+     "slug": "2000-05-31_kensetsu_1428",
+     "name": "非常用エレベーターの機能を確保するために必要な構造方法を定める件",
+     "number": "建設省告示第千四百二十八号",
+     "date": "2000-05-31",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006483.pdf",
+     "chars": 327,
+     "via": "text",
+     "via_article": "施行令第129-13条"
+    }
+   ]
+  },
+  "6": {
+   "article": "法第六条",
+   "note": "法6条（建築物の建築等に関する申請及び確認）— 過去問『確認申請』の起点",
+   "context_article_count_v01": 173,
+   "kokuji_direct": [],
+   "kokuji_via_receivers": [
+    {
+     "slug": "2016-01-21_mlit_240",
+     "name": "定期報告を要しない通常の火災時において避難上著しい支障が生ずるおそれの少ない建築物等を定める件",
+     "number": "国土交通省告示第二百四十号",
+     "date": "2016-01-21",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006582.pdf",
+     "chars": 2115,
+     "via": "text",
+     "via_article": "施行令第16条"
+    },
+    {
+     "slug": "2000-05-31_kensetsu_1449",
+     "name": "煙突、鉄筋コンクリート造の柱等、広告塔又は高架水槽及び擁壁並びに乗用エレベーター又はエスカレーターの構造計算の基準を改める件",
+     "number": "建設省告示第千四百四十九号",
+     "date": "2000-05-31",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006497.pdf",
+     "chars": 3426,
+     "via": "text",
+     "via_article": "施行令第138条"
+    },
+    {
+     "slug": "1975-04-01_kensetsu_644",
+     "name": "建築基準法施行令第二条第一項第五号の規定に基づく工作物の築造面積の算定方法",
+     "number": "建設省告示第六百四十四号",
+     "date": "1975-04-01",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006619.pdf",
+     "chars": 251,
+     "via": "text",
+     "via_article": "施行令第138条"
+    },
+    {
+     "slug": "2016-12-26_mlit_1438",
+     "name": "安全上、防火上及び避難上の危険の度並びに衛生上及び市街地の環境の保全上の有害の度に著しい変更を及ぼさない変更を定める件",
+     "number": "国土交通省告示第千四百三十八号",
+     "date": "2016-12-26",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201704/00006678.pdf",
+     "chars": 751,
+     "via": "text",
+     "via_article": "施行規則第3-2条"
+    },
+    {
+     "slug": "2015-01-29_mlit_180",
+     "name": "構造計算基準に適合する部分の計画を定める件",
+     "number": "国土交通省告示第百八十号",
+     "date": "2015-01-29",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006573.pdf",
+     "chars": 932,
+     "via": "text",
+     "via_article": "施行規則第3-2条"
+    },
+    {
+     "slug": "2015-01-29_mlit_178",
+     "name": "建築基準法施行規則第三条の十三第一項第四号の規定に基づき国土交通大臣が定める者を定める件",
+     "number": "国土交通省告示第百七十八号",
+     "date": "2015-01-29",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006572.pdf",
+     "chars": 597,
+     "via": "title",
+     "via_article": "施行規則第3-13条"
+    },
+    {
+     "slug": "2016-05-02_mlit_723",
+     "name": "防火設備の定期検査報告における検査及び定期点検における点検の項目、事項、方法及び結果の判定基準並びに検査結果表を定める件",
+     "number": "国土交通省告示第七百二十三号",
+     "date": "2016-05-02",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006598.pdf",
+     "chars": 12024,
+     "via": "text",
+     "via_article": "施行規則第6条"
+    },
+    {
+     "slug": "2008-03-10_mlit_285",
+     "name": "建築設備（昇降機を除く。）の定期検査報告における検査及び定期点検における点検の項目、事項、方法及び結果の判定基準並びに検査結果表を定める件",
+     "number": "国土交通省告示第二百八十五号",
+     "date": "2008-03-10",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201706/00006706.pdf",
+     "chars": 29221,
+     "via": "text",
+     "via_article": "施行規則第6条"
+    },
+    {
+     "slug": "2008-03-10_mlit_283",
+     "name": "昇降機の定期検査報告における検査及び定期点検における点検の項目、事項、方法及び結果の判定基準並びに検査結果表を定める件",
+     "number": "国土交通省告示第二百八十三号",
+     "date": "2008-03-10",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201706/00006708.pdf",
+     "chars": 83258,
+     "via": "text",
+     "via_article": "施行規則第6条"
+    },
+    {
+     "slug": "2008-03-10_mlit_284",
+     "name": "遊戯施設の定期検査報告における検査及び定期点検における点検の項目、事項、方法及び結果の判定基準並びに検査結果表を定める件",
+     "number": "国土交通省告示第二百八十四号",
+     "date": "2008-03-10",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006550.pdf",
+     "chars": 35971,
+     "via": "text",
+     "via_article": "施行規則第6条"
+    }
+   ]
+  },
+  "12": {
+   "article": "法第十二条",
+   "note": "法12条（報告、検査等）— 過去問『定期報告』の起点",
+   "context_article_count_v01": 65,
+   "kokuji_direct": [],
+   "kokuji_via_receivers": [
+    {
+     "slug": "2016-01-21_mlit_240",
+     "name": "定期報告を要しない通常の火災時において避難上著しい支障が生ずるおそれの少ない建築物等を定める件",
+     "number": "国土交通省告示第二百四十号",
+     "date": "2016-01-21",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006582.pdf",
+     "chars": 2115,
+     "via": "text",
+     "via_article": "施行令第16条"
+    },
+    {
+     "slug": "2000-05-31_kensetsu_1449",
+     "name": "煙突、鉄筋コンクリート造の柱等、広告塔又は高架水槽及び擁壁並びに乗用エレベーター又はエスカレーターの構造計算の基準を改める件",
+     "number": "建設省告示第千四百四十九号",
+     "date": "2000-05-31",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006497.pdf",
+     "chars": 3426,
+     "via": "text",
+     "via_article": "施行令第138条"
+    },
+    {
+     "slug": "1975-04-01_kensetsu_644",
+     "name": "建築基準法施行令第二条第一項第五号の規定に基づく工作物の築造面積の算定方法",
+     "number": "建設省告示第六百四十四号",
+     "date": "1975-04-01",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006619.pdf",
+     "chars": 251,
+     "via": "text",
+     "via_article": "施行令第138条"
+    },
+    {
+     "slug": "2008-03-10_mlit_282",
+     "name": "建築物の定期調査報告における調査及び定期点検における点検の項目、方法及び結果の判定基準並びに調査結果表を定める件",
+     "number": "国土交通省告示第二百八十二号",
+     "date": "2008-03-10",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006549.pdf",
+     "chars": 18399,
+     "via": "text",
+     "via_article": "施行規則第5条"
+    },
+    {
+     "slug": "2016-05-02_mlit_723",
+     "name": "防火設備の定期検査報告における検査及び定期点検における点検の項目、事項、方法及び結果の判定基準並びに検査結果表を定める件",
+     "number": "国土交通省告示第七百二十三号",
+     "date": "2016-05-02",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006598.pdf",
+     "chars": 12024,
+     "via": "text",
+     "via_article": "施行規則第6条"
+    },
+    {
+     "slug": "2008-03-10_mlit_285",
+     "name": "建築設備（昇降機を除く。）の定期検査報告における検査及び定期点検における点検の項目、事項、方法及び結果の判定基準並びに検査結果表を定める件",
+     "number": "国土交通省告示第二百八十五号",
+     "date": "2008-03-10",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201706/00006706.pdf",
+     "chars": 29221,
+     "via": "text",
+     "via_article": "施行規則第6条"
+    },
+    {
+     "slug": "2008-03-10_mlit_283",
+     "name": "昇降機の定期検査報告における検査及び定期点検における点検の項目、事項、方法及び結果の判定基準並びに検査結果表を定める件",
+     "number": "国土交通省告示第二百八十三号",
+     "date": "2008-03-10",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201706/00006708.pdf",
+     "chars": 83258,
+     "via": "text",
+     "via_article": "施行規則第6条"
+    },
+    {
+     "slug": "2008-03-10_mlit_284",
+     "name": "遊戯施設の定期検査報告における検査及び定期点検における点検の項目、事項、方法及び結果の判定基準並びに検査結果表を定める件",
+     "number": "国土交通省告示第二百八十四号",
+     "date": "2008-03-10",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006550.pdf",
+     "chars": 35971,
+     "via": "text",
+     "via_article": "施行規則第6条"
+    }
+   ]
+  },
+  "87": {
+   "article": "法第八十七条",
+   "note": "法87条（建築物の用途変更等）— 包括委任・候補が広がる例",
+   "context_article_count_v01": 139,
+   "kokuji_direct": [],
+   "kokuji_via_receivers": [
+    {
+     "slug": "1980-12-01_kensetsu_1800",
+     "name": "建築基準法施行令第十九条第三項ただし書の規定に基づく照明設備の設置、有効な採光方法の確保その他これらに準ずる措置の基準及び居室の窓その他の開口部で採光に有効な部分の面積のその床面積に対する割合で国土交通大臣が別に定めるもの",
+     "number": "建設省告示第千八百号",
+     "date": "1980-12-01",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006624.pdf",
+     "chars": 1189,
+     "via": "title",
+     "via_article": "施行令第19条"
+    },
+    {
+     "slug": "1970-12-28_kensetsu_1832",
+     "name": "中央管理方式の空気調和設備の構造方法を定める件",
+     "number": "建設省告示第千八百三十二号",
+     "date": "1970-12-28",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006611.pdf",
+     "chars": 1154,
+     "via": "text",
+     "via_article": "施行令第20-2条"
+    },
+    {
+     "slug": "1970-12-28_kensetsu_1826",
+     "name": "換気設備の構造方法を定める件",
+     "number": "建設省告示第千八百二十六号",
+     "date": "1970-12-28",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006606.pdf",
+     "chars": 6000,
+     "via": "text",
+     "via_article": "施行令第20-2条"
+    },
+    {
+     "slug": "2000-05-31_kensetsu_1430",
+     "name": "地階における住宅等の居室に設ける開口部及び防水層の設置方法を定める件",
+     "number": "建設省告示第千四百三十号",
+     "date": "2000-05-31",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006485.pdf",
+     "chars": 862,
+     "via": "text",
+     "via_article": "施行令第22-2条"
+    },
+    {
+     "slug": "1981-06-01_kensetsu_1098",
+     "name": "建築基準法施行令第百十五条第一項第一号から第三号までの規定を適用しないことにつき防火上支障がない煙突の基準を定める件",
+     "number": "建設省告示第千九十八号",
+     "date": "1981-06-01",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006625.pdf",
+     "chars": 1837,
+     "via": "title",
+     "via_article": "施行令第115条"
+    },
+    {
+     "slug": "1981-06-01_kensetsu_1112",
+     "name": "建築基準法施行令第百十五条第一項第八号の規定に基づくボイラーの燃料消費量並びにボイラーの煙突の煙道接続口の中心から頂部までの高さの基準及び防火上必要な構造の基準",
+     "number": "建設省告示第千百十二号",
+     "date": "1981-06-01",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006631.pdf",
+     "chars": 1765,
+     "via": "title",
+     "via_article": "施行令第115条"
+    },
+    {
+     "slug": "2004-09-29_mlit_1168",
+     "name": "煙突の上又は周囲にたまるほこりを煙突内の廃ガスその他の生成物の熱により燃焼させない煙突の小屋裏、天井裏、床裏等にある部分の構造方法を定める件",
+     "number": "国土交通省告示第千百六十八号",
+     "date": "2004-09-29",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006536.pdf",
+     "chars": 715,
+     "via": "text",
+     "via_article": "施行令第115条"
+    },
+    {
+     "slug": "1969-05-01_kensetsu_1729",
+     "name": "建築基準法施行令第百二十八条の三第一項第一号の規定に基づく地下街の各構えの接する地下道の壁等の耐火性能",
+     "number": "建設省告示第千七百二十九号",
+     "date": "1969-05-01",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006603.pdf",
+     "chars": 347,
+     "via": "title",
+     "via_article": "施行令第128-3条"
+    },
+    {
+     "slug": "1970-05-01_kensetsu_1730",
+     "name": "地下街の各構えの接する地下道に設ける非常用の照明設備、排煙設備及び排水設備の構造方法を定める件",
+     "number": "建設省告示第千七百三十号",
+     "date": "1970-05-01",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006604.pdf",
+     "chars": 2857,
+     "via": "text",
+     "via_article": "施行令第128-3条"
+    },
+    {
+     "slug": "1970-12-28_kensetsu_1836",
+     "name": "建築基準法施行令第百三十条の四第五号の規定により国土交通大臣が指定する建築物",
+     "number": "建設省告示第千八百三十六号",
+     "date": "1970-12-28",
+     "url": "http://www.mlit.go.jp/notice/noticedata/sgml/1970/26087000/26087000.html",
+     "chars": 917,
+     "via": "title",
+     "via_article": "施行令第130-4条"
+    },
+    {
+     "slug": "2005-03-29_mlit_359",
+     "name": "建築基準法施行令第百三十条の九の四第二号ロの規定により国土交通大臣が定める基準",
+     "number": "国土交通省告示第三百五十九号",
+     "date": "2005-03-29",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006538.pdf",
+     "chars": 341,
+     "via": "title",
+     "via_article": "施行令第130-9条"
+    },
+    {
+     "slug": "1993-06-24_kensetsu_1439",
+     "name": "建築基準法施行令第百三十条の九第一項の規定による屋内貯蔵所のうち位置、構造及び設備について国土交通大臣が定める基準に適合するもの",
+     "number": "建設省告示第千四百三十九号",
+     "date": "1993-06-24",
+     "url": "http://www.mlit.go.jp/notice/noticedata/sgml/1993/26088040/26088040.html",
+     "chars": 0,
+     "via": "title",
+     "via_article": "施行令第130-9条"
+    },
+    {
+     "slug": "1993-06-24_kensetsu_1441",
+     "name": "建築基準法施行令第百三十条の九の四第四号の規定により国土交通大臣が石綿の粉じんの飛散の防止上有効であると認めて定める方法",
+     "number": "建設省告示第千四百四十一号",
+     "date": "1993-06-24",
+     "url": "http://www.mlit.go.jp/notice/noticedata/sgml/1993/26088060/26088060.html",
+     "chars": 0,
+     "via": "title",
+     "via_article": "施行令第130-9条"
+    },
+    {
+     "slug": "1993-06-24_kensetsu_1440",
+     "name": "建築基準法施行令第百三十条の九の四第二号の規定による合成繊維の製造のうち、国土交通大臣が安全上及び防火上支障がないと認めて定める物質を原料とするもの及び国土交通大臣が安全上及び防火上支障がないと認めて定める工程によるもの",
+     "number": "建設省告示第千四百四十号",
+     "date": "1993-06-24",
+     "url": "http://www.mlit.go.jp/notice/noticedata/sgml/1993/26088050/26088050.html",
+     "chars": 0,
+     "via": "title",
+     "via_article": "施行令第130-9条"
+    },
+    {
+     "slug": "2014-12-26_mlit_1203",
+     "name": "圧縮ガス又は液化ガスを燃料電池又は内燃機関の燃料として用いる自動車にこれらのガスを充填するための設備の基準を定める件",
+     "number": "国土交通省告示第千二百三号",
+     "date": "2014-12-26",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006571.pdf",
+     "chars": 638,
+     "via": "text",
+     "via_article": "施行令第130-9条"
+    },
+    {
+     "slug": "2016-12-26_mlit_1438",
+     "name": "安全上、防火上及び避難上の危険の度並びに衛生上及び市街地の環境の保全上の有害の度に著しい変更を及ぼさない変更を定める件",
+     "number": "国土交通省告示第千四百三十八号",
+     "date": "2016-12-26",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201704/00006678.pdf",
+     "chars": 751,
+     "via": "text",
+     "via_article": "施行規則第3-2条"
+    },
+    {
+     "slug": "2015-01-29_mlit_180",
+     "name": "構造計算基準に適合する部分の計画を定める件",
+     "number": "国土交通省告示第百八十号",
+     "date": "2015-01-29",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006573.pdf",
+     "chars": 932,
+     "via": "text",
+     "via_article": "施行規則第3-2条"
+    },
+    {
+     "slug": "2015-02-23_mlit_247",
+     "name": "建築基準法第七条の六第一項第二号の国土交通大臣が定める基準等を定める件",
+     "number": "国土交通省告示第二百四十七号",
+     "date": "2015-02-23",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006575.pdf",
+     "chars": 3968,
+     "via": "text",
+     "via_article": "施行規則第4-16条"
+    },
+    {
+     "slug": "2016-05-02_mlit_723",
+     "name": "防火設備の定期検査報告における検査及び定期点検における点検の項目、事項、方法及び結果の判定基準並びに検査結果表を定める件",
+     "number": "国土交通省告示第七百二十三号",
+     "date": "2016-05-02",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201703/00006598.pdf",
+     "chars": 12024,
+     "via": "text",
+     "via_article": "施行規則第6条"
+    },
+    {
+     "slug": "2008-03-10_mlit_285",
+     "name": "建築設備（昇降機を除く。）の定期検査報告における検査及び定期点検における点検の項目、事項、方法及び結果の判定基準並びに検査結果表を定める件",
+     "number": "国土交通省告示第二百八十五号",
+     "date": "2008-03-10",
+     "url": "http://www.mlit.go.jp/notice/noticedata/pdf/201706/00006706.pdf",
+     "chars": 29221,
+     "via": "text",
+     "via_article": "施行規則第6条"
+    }
+   ]
+  },
+  "77-35": {
+   "article": "法第七十七条の三十五",
+   "note": "法77条の35 — 受け手が別省令へ飛ぶ例外例",
+   "context_article_count_v01": 93,
+   "kokuji_direct": [],
+   "kokuji_via_receivers": []
+  }
+ }
+}
